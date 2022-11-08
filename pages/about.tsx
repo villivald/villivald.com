@@ -1,14 +1,14 @@
 import Head from "next/head";
 
 import Footer from "../components/Footer";
-import Grid from "../components/Grid";
+import About from "../components/About";
 import Header from "../components/Header";
 
-export default function Home() {
+export default function about() {
   return (
     <>
       <Head>
-        <title>Main page</title>
+        <title>About Me</title>
         <meta
           name="description"
           content="my personal website made with next js"
@@ -17,7 +17,7 @@ export default function Home() {
       </Head>
 
       <Header />
-      <Grid />
+      <About />
       <Footer />
     </>
   );

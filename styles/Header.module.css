@@ -6,6 +6,14 @@
   height: 15vh;
 }
 
+.header > a {
+  text-decoration: none;
+}
+
+.header > a:focus-visible {
+  outline: 2px solid #fff;
+}
+
 .title {
   font-size: clamp(1.5rem, 5vw, 4rem);
   font-family: "Nabla", cursive;
