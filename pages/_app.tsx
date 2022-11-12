@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 import "../styles/globals.css";
+import Layout from "../components/layout";
 
 const lightTheme = createTheme({
   palette: {
@@ -31,12 +32,9 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <ThemeProvider theme={activeTheme}>
-      <Component
-        {...pageProps}
-        toggleTheme={toggleTheme}
-        selectedTheme={selectedTheme}
-        lightTheme={lightTheme}
-      />
+      <Layout toggleTheme={toggleTheme} selectedTheme={selectedTheme}>
+        <Component {...pageProps} />
+      </Layout>
     </ThemeProvider>
   );
 }

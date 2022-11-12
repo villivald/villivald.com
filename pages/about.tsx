@@ -1,8 +1,6 @@
 import Head from "next/head";
 
-import Footer from "../components/Footer";
 import About from "../components/About";
-import Header from "../components/Header";
 
 export default function about() {
   return (
@@ -15,10 +13,7 @@ export default function about() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <Header />
       <About />
-      <Footer />
     </>
   );
 }

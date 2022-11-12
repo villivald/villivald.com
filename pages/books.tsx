@@ -1,8 +1,6 @@
 import Head from "next/head";
 
-import Footer from "../components/Footer";
 import Books from "../components/Books";
-import Header from "../components/Header";
 
 export default function books() {
   return (
@@ -16,9 +14,7 @@ export default function books() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header />
       <Books />
-      <Footer />
     </>
   );
 }
