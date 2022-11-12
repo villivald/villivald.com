@@ -4,7 +4,12 @@ import Footer from "../components/Footer";
 import Grid from "../components/Grid";
 import Header from "../components/Header";
 
-export default function Home() {
+type Props = {
+  toggleTheme: () => void;
+  selectedTheme: string;
+};
+
+export default function Home({ toggleTheme, selectedTheme }: Props) {
   return (
     <>
       <Head>
@@ -16,9 +21,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header />
+      <Header toggleTheme={toggleTheme} theme={selectedTheme} />
       <Grid />
-      <Footer />
+      <Footer theme={selectedTheme} />
     </>
   );
 }
