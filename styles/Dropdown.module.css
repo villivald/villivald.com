@@ -1,0 +1,13 @@
+.dropdownMenu {
+  position: absolute;
+  justify-self: end;
+}
+
+.dropdownMenu > button {
+  color: red;
+}
+
+.innerMenuComponent li > a {
+  color: black;
+  text-decoration: none;
+}

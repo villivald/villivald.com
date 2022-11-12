@@ -23,7 +23,7 @@ const Grid = () => {
       <Link href="/about">
         <div></div>
       </Link>
-      <Link href="/">
+      <Link href="/contact">
         <div></div>
       </Link>
       <Link href="/">

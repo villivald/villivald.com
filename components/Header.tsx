@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import styles from "../styles/Header.module.css";
+import DropdownMenu from "./DropdownMenu";
 
 const Header = () => {
   return (
@@ -8,6 +9,7 @@ const Header = () => {
       <Link href="/">
         <h1 className={styles.title}>villivald</h1>
       </Link>
+      <DropdownMenu />
     </header>
   );
 };
