@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Switch } from "@mui/material";
 
 import styles from "../styles/Header.module.css";
 
@@ -8,9 +9,10 @@ import ThemeToggle from "./ThemeToggle";
 type Props = {
   toggleTheme: () => void;
   theme: string;
+  changeLocale: () => void;
 };
 
-const Header = ({ toggleTheme, theme }: Props) => {
+const Header = ({ toggleTheme, theme, changeLocale }: Props) => {
   return (
     <header
       className={styles.header}
@@ -20,6 +22,7 @@ const Header = ({ toggleTheme, theme }: Props) => {
       <Link href="/">
         <h1 className={styles.title}>villivald</h1>
       </Link>
+      <Switch onChange={() => changeLocale()} />
       <DropdownMenu />
     </header>
   );

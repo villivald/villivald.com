@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Link from "next/link";
+import { FormattedMessage } from "react-intl";
 
 import { Button, Menu, MenuItem } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -35,25 +36,39 @@ const DropdownMenu = () => {
         }}
       >
         <MenuItem>
-          <Link href="/about">About</Link>
+          <Link href="/about">
+            <FormattedMessage id="about" />
+          </Link>
         </MenuItem>
         <MenuItem>
-          <Link href="/books">Books</Link>
+          <Link href="/books">
+            <FormattedMessage id="books" />
+          </Link>
         </MenuItem>
         <MenuItem>
-          <Link href="/contact">Contact</Link>
+          <Link href="/contact">
+            <FormattedMessage id="contact" />
+          </Link>
         </MenuItem>
         <MenuItem>
-          <Link href="/koripallopaikat">Koripallopaikat</Link>
+          <Link href="/koripallopaikat">
+            <FormattedMessage id="koripallopaikat" />
+          </Link>
         </MenuItem>
         <MenuItem>
-          <Link href="/projects">Projects</Link>
+          <Link href="/projects">
+            <FormattedMessage id="projects" />
+          </Link>
         </MenuItem>
         <MenuItem>
-          <Link href="/study">Study</Link>
+          <Link href="/study">
+            <FormattedMessage id="study" />
+          </Link>
         </MenuItem>
         <MenuItem>
-          <Link href="/uses">Uses</Link>
+          <Link href="/uses">
+            <FormattedMessage id="uses" />
+          </Link>
         </MenuItem>
       </Menu>
     </div>
