@@ -1,0 +1,18 @@
+.languageSwitch {
+  position: absolute;
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  margin-right: 10rem;
+  color: white;
+}
+
+.languageSwitch__span {
+  font-size: 1.2rem;
+  transition: all 0.5s ease-in-out;
+}
+
+.languageSwitch__span_checked {
+  font-size: 1.8rem;
+  transition: all 0.5s ease-in-out;
+}
