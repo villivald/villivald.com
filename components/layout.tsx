@@ -3,26 +3,16 @@ import Footer from "./Footer";
 
 type Props = {
   children: React.ReactNode;
-  toggleTheme: () => void;
-  selectedTheme: string;
+  changeTheme: () => void;
   changeLocale: () => void;
 };
 
-export default function Layout({
-  children,
-  toggleTheme,
-  selectedTheme,
-  changeLocale,
-}: Props) {
+export default function Layout({ children, changeTheme, changeLocale }: Props) {
   return (
     <>
-      <Header
-        toggleTheme={toggleTheme}
-        theme={selectedTheme}
-        changeLocale={changeLocale}
-      />
+      <Header changeTheme={changeTheme} changeLocale={changeLocale} />
       <main>{children}</main>
-      <Footer theme={selectedTheme} />
+      <Footer />
     </>
   );
 }

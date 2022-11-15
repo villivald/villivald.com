@@ -1,14 +1,14 @@
+import { useTheme } from "@mui/material/styles";
+
 import styles from "../styles/Footer.module.css";
 
-type Props = {
-  theme: string;
-};
+const Footer = () => {
+  const theme = useTheme().palette.mode;
 
-const Footer = ({ theme }: Props) => {
   return (
     <footer
       className={styles.footer}
-      style={{ backgroundColor: theme === "dark" ? "black" : "" }}
+      style={{ backgroundColor: theme === "dark" ? "black" : "#5B5B5B" }}
     ></footer>
   );
 };

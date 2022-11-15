@@ -5,11 +5,11 @@ import LightModeIcon from "@mui/icons-material/LightMode";
 import styles from "../styles/ThemeToggle.module.css";
 
 type Props = {
-  toggleTheme: () => void;
+  changeTheme: () => void;
   theme: string;
 };
 
-const ThemeToggle = ({ toggleTheme, theme }: Props) => {
+const ThemeToggle = ({ changeTheme, theme }: Props) => {
   return (
     <div className={styles.themeToggle}>
       <LightModeIcon
@@ -19,7 +19,7 @@ const ThemeToggle = ({ toggleTheme, theme }: Props) => {
             : styles.lightModeIcon_light
         }
       />
-      <Switch checked={theme === "dark"} onChange={toggleTheme} />
+      <Switch checked={theme === "dark"} onChange={changeTheme} />
       <DarkModeIcon
         className={
           theme === "dark"
