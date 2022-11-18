@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useTheme } from "@mui/material/styles";
 
-import styles from "../styles/Header.module.css";
+import styles from "../../styles/Header.module.css";
 
 import DropdownMenu from "./DropdownMenu";
 import ThemeToggle from "./ThemeToggle";

@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import About from "../components/About";
+import About from "../components/pageComponents/About";
 
 export default function about() {
   return (

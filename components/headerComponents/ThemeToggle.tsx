@@ -2,7 +2,7 @@ import Switch from "@mui/material/Switch";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LightModeIcon from "@mui/icons-material/LightMode";
 
-import styles from "../styles/ThemeToggle.module.css";
+import styles from "../../styles/ThemeToggle.module.css";
 
 type Props = {
   changeTheme: () => void;

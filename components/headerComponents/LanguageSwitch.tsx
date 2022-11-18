@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useTheme } from "@mui/material/styles";
 import { Switch } from "@mui/material";
 
-import styles from "../styles/Switch.module.css";
+import styles from "../../styles/Switch.module.css";
 
 type Props = {
   changeLocale: () => void;

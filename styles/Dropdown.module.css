@@ -12,3 +12,8 @@
   color: black;
   text-decoration: none;
 }
+
+.darkMenuComponent li > a {
+  color: white;
+  text-decoration: none;
+}

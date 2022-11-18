@@ -1,4 +1,4 @@
-import styles from "../styles/Blog.module.css";
+import styles from "../../styles/Blog.module.css";
 
 const Blog = () => {
   return <div className={styles.mainContainer}></div>;

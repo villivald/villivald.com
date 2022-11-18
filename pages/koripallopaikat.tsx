@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import Koripallopaikat from "../components/Koripallopaikat";
+import Koripallopaikat from "../components/pageComponents/Koripallopaikat";
 
 export default function koripallopaikat() {
   return (

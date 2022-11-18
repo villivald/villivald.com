@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import Uses from "../components/Uses";
+import Uses from "../components/pageComponents/Uses";
 
 export default function uses() {
   return (

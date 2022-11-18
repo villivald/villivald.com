@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import Studies from "../components/Studies";
+import Studies from "../components/pageComponents/Studies";
 
 export default function study() {
   return (

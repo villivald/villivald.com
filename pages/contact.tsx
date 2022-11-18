@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import Contact from "../components/Contact";
+import Contact from "../components/pageComponents/Contact";
 
 export default function contact() {
   return (

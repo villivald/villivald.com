@@ -2,12 +2,15 @@ import { useState } from "react";
 import Link from "next/link";
 import { FormattedMessage } from "react-intl";
 
+import { useTheme } from "@mui/material/styles";
 import { Button, Menu, MenuItem } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 
-import styles from "../styles/Dropdown.module.css";
+import styles from "../../styles/Dropdown.module.css";
 
 const DropdownMenu = () => {
+  const theme = useTheme().palette.mode;
+
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
 
@@ -27,7 +30,11 @@ const DropdownMenu = () => {
         <MenuIcon fontSize="large" />
       </Button>
       <Menu
-        className={styles.innerMenuComponent}
+        className={
+          theme === "dark"
+            ? styles.darkMenuComponent
+            : styles.innerMenuComponent
+        }
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
@@ -35,7 +42,7 @@ const DropdownMenu = () => {
           "aria-labelledby": "basic-button",
         }}
       >
-        <MenuItem>
+        <MenuItem className={styles.menuLink}>
           <Link href="/about">
             <FormattedMessage id="about" />
           </Link>
