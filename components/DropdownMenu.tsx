@@ -46,6 +46,11 @@ const DropdownMenu = () => {
           </Link>
         </MenuItem>
         <MenuItem>
+          <Link href="/blog">
+            <FormattedMessage id="blog" />
+          </Link>
+        </MenuItem>
+        <MenuItem>
           <Link href="/contact">
             <FormattedMessage id="contact" />
           </Link>

@@ -14,6 +14,9 @@ const Grid = () => {
       <Link href="/koripallopaikat">
         <div></div>
       </Link>
+      <Link href="/blog">
+        <div></div>
+      </Link>
       <Link href="/uses">
         <div></div>
       </Link>
@@ -24,9 +27,6 @@ const Grid = () => {
         <div></div>
       </Link>
       <Link href="/contact">
-        <div></div>
-      </Link>
-      <Link href="/">
         <div></div>
       </Link>
       <Link href="/">
