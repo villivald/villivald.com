@@ -1,15 +1,11 @@
 {
-  "projects": "Projects",
-  "uses": "Uses",
-  "books": "Books",
-  "studies": "Studies",
   "about": "About",
-  "skills": "Skills",
-  "studies": "Studies",
-  "blogPosts": "Blog Posts",
-  "contacts": "Contacts",
-  "ects": " ECTS",
-  "bachelor": "Bachelor of Engineering, Software engineering ",
-  "master": "Master of Arts, Russian literature ",
-  "timeline": "Timeline"
+  "books": "Books",
+  "blog": "Blog",
+  "contact": "Contact",
+  "koripallopaikat": "Basketball courts",
+  "projects": "Projects",
+  "study": "Study",
+  "timeline": "Timeline",
+  "uses": "Uses"
 }
