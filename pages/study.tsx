@@ -1,6 +1,8 @@
 import Head from "next/head";
 
-import Studies from "../components/pageComponents/Studies";
+import styles from "../styles/Studies.module.css";
+
+import Studies from "../components/pageComponents/Studies.mdx";
 
 export default function study() {
   return (
@@ -14,7 +16,9 @@ export default function study() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Studies />
+      <div className={styles.mainContainer}>
+        <Studies />
+      </div>
     </>
   );
 }
