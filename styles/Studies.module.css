@@ -1,3 +1,24 @@
 .mainContainer {
   min-height: 70vh;
+  margin-top: 1rem;
+}
+
+.mainContainer h1 {
+  margin-bottom: 1rem;
+  text-decoration: underline 8px #f36b53;
+  text-underline-offset: 0.5rem;
+}
+
+.mainContainer > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+}
+
+.mainContainer > div > div:nth-child(2) {
+  align-self: flex-start;
+}
+
+.mainContainer > div > div > div {
+  margin-bottom: 2rem;
 }

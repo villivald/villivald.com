@@ -2,7 +2,7 @@ import Head from "next/head";
 
 import styles from "../styles/Studies.module.css";
 
-import Studies from "../components/pageComponents/Studies.mdx";
+import Studies from "../components/pageComponents/Studies/Studies.mdx";
 
 export default function study() {
   return (
