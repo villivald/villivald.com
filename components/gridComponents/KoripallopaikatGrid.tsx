@@ -1,6 +1,5 @@
-import { useState } from "react";
 import Image from "next/image";
-import styles from "../../styles/Grid.module.css";
+import styles from "../../styles/grid/KorippallopaikatGrid.module.css";
 
 const KoripallopaikatGrid = () => {
   return (

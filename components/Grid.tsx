@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import styles from "../styles/Grid.module.css";
+import BooksGrid from "./gridComponents/BooksGrid";
 import KoripallopaikatGrid from "./gridComponents/KoripallopaikatGrid";
 
 const Grid = () => {
@@ -10,7 +11,7 @@ const Grid = () => {
         <div></div>
       </Link>
       <Link href="/books">
-        <div></div>
+        <BooksGrid />
       </Link>
       <Link href="/koripallopaikat">
         <KoripallopaikatGrid />
