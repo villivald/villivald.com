@@ -3,6 +3,7 @@ import Link from "next/link";
 import styles from "../styles/Grid.module.css";
 import BooksGrid from "./gridComponents/BooksGrid";
 import KoripallopaikatGrid from "./gridComponents/KoripallopaikatGrid";
+import BlogGrid from "./gridComponents/BlogGrid";
 
 const Grid = () => {
   return (
@@ -17,7 +18,7 @@ const Grid = () => {
         <KoripallopaikatGrid />
       </Link>
       <Link href="/blog">
-        <div></div>
+        <BlogGrid />
       </Link>
       <Link href="/uses">
         <div></div>

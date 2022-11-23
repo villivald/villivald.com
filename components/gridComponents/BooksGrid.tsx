@@ -6,7 +6,11 @@ import styles from "../../styles/grid/BooksGrid.module.css";
 const BooksGrid = () => {
   const [isOpen, setIsOpen] = useState(false);
   const variants = {
-    open: { scale: 2, rotate: [0, 0, 180, 180, 360, 360] },
+    open: {
+      scale: 2,
+      rotate: [0, 0, 180, 180, 360, 360],
+      backgroundColor: "#000",
+    },
     closed: { scale: 1, rotate: 0 },
   };
 
