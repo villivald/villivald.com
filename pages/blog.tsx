@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import Blog from "../components/pageComponents/Blog";
+import Blog from "../components/pageComponents/Blog/Blog";
 
 export default function blog() {
   return (
