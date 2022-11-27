@@ -4,6 +4,7 @@ import styles from "../styles/Grid.module.css";
 import BooksGrid from "./gridComponents/BooksGrid";
 import KoripallopaikatGrid from "./gridComponents/KoripallopaikatGrid";
 import BlogGrid from "./gridComponents/BlogGrid";
+import OldGrid from "./gridComponents/OldGrid";
 
 const Grid = () => {
   return (
@@ -32,8 +33,8 @@ const Grid = () => {
       <Link href="/contact">
         <div></div>
       </Link>
-      <Link href="/">
-        <div></div>
+      <Link href="/old">
+        <OldGrid />
       </Link>
     </main>
   );

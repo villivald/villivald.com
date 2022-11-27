@@ -6,8 +6,8 @@ const KoripallopaikatGrid = () => {
     <div className={styles.container}>
       <Image
         src="/images/caruso.webp"
-        width={100}
-        height={100}
+        width={400}
+        height={400}
         alt="Avatar"
         className={styles.image}
       />

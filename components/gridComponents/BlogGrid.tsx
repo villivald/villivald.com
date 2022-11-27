@@ -9,8 +9,8 @@ const BlogGrid = () => {
     <Atropos className={styles.atropos}>
       <Image
         src="/images/cra.png"
-        width={100}
-        height={100}
+        width={400}
+        height={400}
         alt="Avatar"
         className={styles.image}
       />
