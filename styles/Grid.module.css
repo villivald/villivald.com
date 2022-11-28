@@ -2,13 +2,22 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   place-items: center;
-  width: 100%;
-  height: 120vh;
+  gap: 1rem;
+  margin: 1rem 0;
 }
 
 .main > a {
   background-color: #b0b0b0;
-  width: clamp(100px, 30vw, 400px);
+  width: 30vw;
   aspect-ratio: 1/1;
   text-decoration: none;
+}
+
+@media screen and (max-width: 730px) {
+  .main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .main > a {
+    width: 45vw;
+  }
 }

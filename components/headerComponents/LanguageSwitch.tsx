@@ -2,7 +2,8 @@ import { useState } from "react";
 import Image from "next/image";
 
 import { useTheme } from "@mui/material/styles";
-import { Switch } from "@mui/material";
+import { Switch, IconButton } from "@mui/material";
+import LanguageIcon from "@mui/icons-material/Language";
 
 import styles from "../../styles/Switch.module.css";
 
@@ -20,37 +21,44 @@ const LanguageSwitch = ({ changeLocale }: Props) => {
   };
 
   return (
-    <p className={styles.languageSwitch}>
-      <span
-        className={
-          checked
-            ? styles.languageSwitch__span
-            : styles.languageSwitch__span_checked
-        }
-      >
-        EN 🇺🇸
-      </span>
-      <Image
-        className={checked ? styles.arrowRight : styles.arrowLeft}
-        style={{
-          filter: theme === "dark" ? "invert(1)" : "invert(0)",
-        }}
-        src="/images/arrow.svg"
-        alt="Arrow pointing to the chosen language"
-        width={100}
-        height={100}
-      />
-      <Switch checked={checked} onChange={handleChange} />
-      <span
-        className={
-          checked
-            ? styles.languageSwitch__span_checked
-            : styles.languageSwitch__span
-        }
-      >
-        FI 🇫🇮
-      </span>
-    </p>
+    <>
+      <p className={styles.mobileLanguageSwitch}>
+        <IconButton aria-label="change language" onClick={handleChange}>
+          <LanguageIcon /> {checked ? "EN" : "FI"}
+        </IconButton>
+      </p>
+      <p className={styles.languageSwitch}>
+        <span
+          className={
+            checked
+              ? styles.languageSwitch__span
+              : styles.languageSwitch__span_checked
+          }
+        >
+          EN 🇺🇸
+        </span>
+        <Image
+          className={checked ? styles.arrowRight : styles.arrowLeft}
+          style={{
+            filter: theme === "dark" ? "invert(1)" : "invert(0)",
+          }}
+          src="/images/arrow.svg"
+          alt="Arrow pointing to the chosen language"
+          width={100}
+          height={100}
+        />
+        <Switch checked={checked} onChange={handleChange} />
+        <span
+          className={
+            checked
+              ? styles.languageSwitch__span_checked
+              : styles.languageSwitch__span
+          }
+        >
+          FI 🇫🇮
+        </span>
+      </p>
+    </>
   );
 };
 

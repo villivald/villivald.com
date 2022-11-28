@@ -9,6 +9,17 @@
   color: white;
 }
 
+.mobileLanguageSwitch {
+  position: absolute;
+  justify-self: end;
+  display: grid;
+  margin-right: 10rem;
+}
+
+.mobileLanguageSwitch > button {
+  color: white;
+}
+
 .languageSwitch__span {
   text-shadow: none;
   transition: all 0.5s ease-in-out;
@@ -31,4 +42,16 @@
   top: 0.8rem;
   transform: translateX(-37px) rotate(312deg) scaleX(-1);
   transition: transform 0.5s ease-in-out;
+}
+
+@media screen and (max-width: 1000px) {
+  .languageSwitch {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .mobileLanguageSwitch {
+    display: none;
+  }
 }
