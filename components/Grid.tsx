@@ -12,9 +12,6 @@ const Grid = () => {
       <Link href="/study">
         <div></div>
       </Link>
-      <Link href="/books">
-        <BooksGrid />
-      </Link>
       <Link href="/koripallopaikat">
         <KoripallopaikatGrid />
       </Link>
@@ -23,6 +20,9 @@ const Grid = () => {
       </Link>
       <Link href="/uses">
         <div></div>
+      </Link>
+      <Link href="/books">
+        <BooksGrid />
       </Link>
       <Link href="/projects">
         <div></div>

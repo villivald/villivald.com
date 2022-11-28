@@ -21,12 +21,13 @@ const DropdownMenu = () => {
   return (
     <div className={styles.dropdownMenu}>
       <Button
-        id="basic-button"
+        className={styles.dropdownButton}
         aria-controls={open ? "basic-menu" : undefined}
         aria-haspopup="true"
         aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
       >
+        <span>MENU</span>
         <MenuIcon fontSize="large" />
       </Button>
       <Menu
@@ -48,11 +49,6 @@ const DropdownMenu = () => {
           </Link>
         </MenuItem>
         <MenuItem>
-          <Link href="/books">
-            <FormattedMessage id="books" />
-          </Link>
-        </MenuItem>
-        <MenuItem>
           <Link href="/blog">
             <FormattedMessage id="blog" />
           </Link>
@@ -65,6 +61,11 @@ const DropdownMenu = () => {
         <MenuItem>
           <Link href="/koripallopaikat">
             <FormattedMessage id="koripallopaikat" />
+          </Link>
+        </MenuItem>
+        <MenuItem>
+          <Link href="/books">
+            <FormattedMessage id="books" />
           </Link>
         </MenuItem>
         <MenuItem>
