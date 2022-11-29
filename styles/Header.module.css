@@ -18,3 +18,12 @@
   font-size: clamp(1.5rem, 5vw, 4rem);
   font-family: "Nabla", cursive;
 }
+
+@media screen and (max-width: 500px) {
+  .header {
+    position: sticky;
+    top: 0;
+    height: 10vh;
+    z-index: 999;
+  }
+}
