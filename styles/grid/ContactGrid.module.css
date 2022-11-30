@@ -1,0 +1,45 @@
+@property --a {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 30deg;
+}
+
+.container {
+  --a: 30deg;
+  background-image: linear-gradient(
+    var(--a),
+    #617cff,
+    #8a73ff,
+    #a769f4,
+    #bf5ee6,
+    #d253d7,
+    #e247c6,
+    #ee3cb4,
+    #f733a2,
+    #fd2d8f,
+    #ff2c7c,
+    #ff306a,
+    #ff3858,
+    #fb4246,
+    #f44d34,
+    #ec5721,
+    #e26204,
+    #d66b00,
+    #c97400,
+    #bb7c00
+  );
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: --a 3s ease-in-out;
+}
+
+.container h1 {
+  color: white;
+}
+
+.container:hover {
+  --a: 240deg;
+}

@@ -5,6 +5,7 @@ import BooksGrid from "./gridComponents/BooksGrid";
 import KoripallopaikatGrid from "./gridComponents/KoripallopaikatGrid";
 import BlogGrid from "./gridComponents/BlogGrid";
 import OldGrid from "./gridComponents/OldGrid";
+import ContactGrid from "./gridComponents/ContactGrid";
 
 const Grid = () => {
   return (
@@ -31,7 +32,7 @@ const Grid = () => {
         <div></div>
       </Link>
       <Link href="/contact">
-        <div></div>
+        <ContactGrid />
       </Link>
       <Link href="/old">
         <OldGrid />
