@@ -14,6 +14,10 @@ const BlogGrid = () => {
         alt="Avatar"
         className={styles.image}
       />
+      <div className={styles.gridFooter}>
+        <p>✏️Blog</p>
+        <p>↗</p>
+      </div>
     </Atropos>
   );
 };

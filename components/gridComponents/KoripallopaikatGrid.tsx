@@ -15,6 +15,10 @@ const KoripallopaikatGrid = () => {
         <div>
           <h1>Koripallopaikat</h1>
         </div>
+        <div className={styles.gridFooter}>
+          <p>🏀Koripallo</p>
+          <p>↗</p>
+        </div>
       </div>
     </div>
   );

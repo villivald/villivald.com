@@ -30,3 +30,14 @@
 .overlay div h1 {
   color: white;
 }
+
+.gridFooter {
+  width: 100%;
+  height: 3rem;
+  background-color: rgb(229, 207, 79);
+  align-self: flex-end;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
