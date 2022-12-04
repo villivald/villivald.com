@@ -1,0 +1,47 @@
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: grid;
+}
+
+.about,
+.cat {
+  width: 100%;
+  background-size: cover;
+  background-repeat: round;
+}
+
+.about {
+  height: 200%;
+}
+
+.cat {
+  height: 100%;
+}
+
+.about {
+  background-image: url(/images/about.png);
+}
+
+.cat {
+  background-image: url(/images/cat.png);
+  position: absolute;
+  opacity: 0;
+  transition: 2s ease;
+}
+
+.container:hover .cat {
+  opacity: 1;
+}
+
+.gridFooter {
+  width: 100%;
+  height: 3rem;
+  background-color: rgb(229, 207, 79);
+  align-self: flex-end;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
