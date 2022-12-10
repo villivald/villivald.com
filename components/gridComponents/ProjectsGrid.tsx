@@ -1,10 +1,10 @@
-import styles from "../../styles/grid/ContactGrid.module.css";
+import styles from "../../styles/grid/ProjectsGrid.module.css";
 
-const ContactGrid = () => {
+const ProjectsGrid = () => {
   return (
     <div className={styles.container}>
       <div>
-        <h1>Contact</h1>
+        <h1>Projects</h1>
       </div>
       <div className={styles.gridFooter}>
         <p>✏️Projects</p>
@@ -14,4 +14,4 @@ const ContactGrid = () => {
   );
 };
 
-export default ContactGrid;
+export default ProjectsGrid;

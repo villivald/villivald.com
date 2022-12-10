@@ -4,6 +4,7 @@
   height: 100%;
   display: grid;
   place-items: center;
+  grid-template-rows: 8fr 1fr;
 }
 
 .image {
@@ -20,7 +21,7 @@
   transition: 0.5s ease;
   background-color: #008cba;
   display: grid;
-  place-items: center;
+  grid-template-rows: 8fr 1fr;
 }
 
 .container:hover .overlay {
@@ -33,9 +34,7 @@
 
 .gridFooter {
   width: 100%;
-  height: 3rem;
   background-color: rgb(229, 207, 79);
-  align-self: flex-end;
   display: flex;
   align-items: center;
   justify-content: space-between;

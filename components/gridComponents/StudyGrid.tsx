@@ -1,11 +1,10 @@
-import styles from "../../styles/grid/OldGrid.module.css";
+import styles from "../../styles/grid/StudyGrid.module.css";
 
-const OldGrid = () => {
+const StudyGrid = () => {
   return (
     <div className={styles.container}>
       <div>
-        <div className={styles.proto} />
-        <div className={styles.done} />
+        <h1>Study</h1>
       </div>
       <div className={styles.gridFooter}>
         <p>✏️Study</p>
@@ -15,4 +14,4 @@ const OldGrid = () => {
   );
 };
 
-export default OldGrid;
+export default StudyGrid;

@@ -28,6 +28,10 @@ const BooksGrid = () => {
       }}
     >
       <h1>Books</h1>
+      <div className={styles.gridFooter}>
+        <p>✏️Projects</p>
+        <p>↗</p>
+      </div>
     </motion.div>
   );
 };

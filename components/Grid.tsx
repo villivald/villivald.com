@@ -7,12 +7,15 @@ import BlogGrid from "./gridComponents/BlogGrid";
 import OldGrid from "./gridComponents/OldGrid";
 import ContactGrid from "./gridComponents/ContactGrid";
 import AboutGrid from "./gridComponents/AboutGrid";
+import StudyGrid from "./gridComponents/StudyGrid";
+import UsesGrid from "./gridComponents/UsesGrid";
+import ProjectsGrid from "./gridComponents/ProjectsGrid";
 
 const Grid = () => {
   return (
     <main className={styles.main}>
       <Link href="/study">
-        <div></div>
+        <StudyGrid />
       </Link>
       <Link href="/koripallopaikat">
         <KoripallopaikatGrid />
@@ -21,13 +24,13 @@ const Grid = () => {
         <BlogGrid />
       </Link>
       <Link href="/uses">
-        <div></div>
+        <UsesGrid />
       </Link>
       <Link href="/books">
         <BooksGrid />
       </Link>
       <Link href="/projects">
-        <div></div>
+        <ProjectsGrid />
       </Link>
       <Link href="/about">
         <AboutGrid />

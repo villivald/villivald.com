@@ -6,19 +6,20 @@ import styles from "../../styles/grid/BlogGrid.module.css";
 
 const BlogGrid = () => {
   return (
-    <Atropos className={styles.atropos}>
-      <Image
-        src="/images/cra.png"
-        width={400}
-        height={400}
-        alt="Avatar"
-        className={styles.image}
-      />
+    <div className={styles.container}>
+      <Atropos className={styles.atropos}>
+        <Image
+          src="/images/cra.png"
+          fill
+          alt="Avatar"
+          className={styles.image}
+        />
+      </Atropos>
       <div className={styles.gridFooter}>
         <p>✏️Blog</p>
         <p>↗</p>
       </div>
-    </Atropos>
+    </div>
   );
 };
 

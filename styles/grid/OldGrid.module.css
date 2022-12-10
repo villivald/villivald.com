@@ -2,6 +2,8 @@
   position: relative;
   width: 100%;
   height: 100%;
+  display: grid;
+  grid-template-rows: 8fr 1fr;
 }
 
 .container:hover {
@@ -32,6 +34,23 @@
 
 .container:hover .proto {
   opacity: 0;
+}
+
+.container:hover .gridFooter {
+  display: none;
+}
+
+.container:hover .done {
+  height: 112.5%;
+}
+
+.gridFooter {
+  background-color: rgb(229, 207, 79);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  z-index: 100;
 }
 
 @keyframes grow-and-shrink {

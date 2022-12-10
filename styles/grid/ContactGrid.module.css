@@ -30,10 +30,9 @@
   );
   width: 100%;
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
   transition: --a 3s ease-in-out;
+  grid-template-rows: 8fr 1fr;
 }
 
 .container h1 {
@@ -42,4 +41,16 @@
 
 .container:hover {
   --a: 240deg;
+}
+
+.container:hover .gridFooter {
+  display: none;
+}
+
+.gridFooter {
+  background-color: rgb(229, 207, 79);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
 }
