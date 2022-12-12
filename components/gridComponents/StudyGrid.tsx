@@ -1,11 +1,62 @@
+import { useState } from "react";
+import { motion } from "framer-motion";
+
 import styles from "../../styles/grid/StudyGrid.module.css";
 
 const StudyGrid = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const variants = {
+    open: {
+      opacity: 0,
+      scale: 0.1,
+      rotate: 720,
+    },
+    closed: {
+      opacity: 1,
+      scale: 1,
+      rotate: 0,
+    },
+  };
+
+  const variants_alt = {
+    open: {
+      opacity: 1,
+      scale: 1,
+      rotate: 0,
+    },
+    closed: {
+      opacity: 0,
+      scale: 0.1,
+      rotate: 720,
+    },
+  };
+
   return (
     <div className={styles.container}>
-      <div>
-        <h1>Study</h1>
-      </div>
+      <motion.div
+        className={styles.image}
+        animate={isOpen ? "open" : "closed"}
+        variants={variants}
+        onMouseEnter={() => setIsOpen(true)}
+        onMouseLeave={() => setIsOpen(false)}
+        transition={{
+          duration: 3,
+          ease: "easeInOut",
+          times: [0, 0.2, 0.5, 0.8, 1],
+        }}
+      ></motion.div>
+      <motion.div
+        className={styles.image_alt}
+        animate={isOpen ? "open" : "closed"}
+        variants={variants_alt}
+        onMouseEnter={() => setIsOpen(true)}
+        onMouseLeave={() => setIsOpen(false)}
+        transition={{
+          duration: 3,
+          ease: "easeInOut",
+          times: [0, 0.2, 0.5, 0.8, 1],
+        }}
+      ></motion.div>
       <div className={styles.gridFooter}>
         <p>✏️Study</p>
         <p>↗</p>

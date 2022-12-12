@@ -3,6 +3,7 @@
   height: 100%;
   display: grid;
   grid-template-rows: 8fr 1fr;
+  position: relative;
 }
 
 .gridFooter {
@@ -11,4 +12,30 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 1rem;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.image_alt {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.image,
+.image_alt {
+  background-size: cover;
+  background-repeat: round;
+}
+
+.image {
+  background-image: url(/images/studies_it.webp);
+}
+
+.image_alt {
+  background-image: url(/images/studies_literature.webp);
 }
