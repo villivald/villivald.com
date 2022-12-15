@@ -46,6 +46,7 @@ const StudyGrid = () => {
         }}
       ></motion.div>
       <motion.div
+        initial={{ opacity: 0, scale: 0.1, rotate: 720 }}
         className={styles.image_alt}
         animate={isOpen ? "open" : "closed"}
         variants={variants_alt}
