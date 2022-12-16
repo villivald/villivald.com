@@ -9,7 +9,7 @@ const BlogGrid = () => {
     <div className={styles.container}>
       <Atropos className={styles.atropos}>
         <Image
-          src="/images/cra.png"
+          src="/images/cra.webp"
           fill
           alt="Avatar"
           className={styles.image}
