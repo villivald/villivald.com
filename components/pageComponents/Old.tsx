@@ -9,7 +9,7 @@ const Old = () => {
           <div>
             <p>First version of my website from 2019</p>
             <Image
-              src="/images/cat.png"
+              src="/images/cat.webp"
               width={300}
               height={300}
               alt={"First version of my website from 2019"}
@@ -21,7 +21,7 @@ const Old = () => {
           <div>
             <p>First version of my website from 2019</p>
             <Image
-              src="/images/cat.png"
+              src="/images/cat.webp"
               width={300}
               height={300}
               alt={"First version of my website from 2019"}

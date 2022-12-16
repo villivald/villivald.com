@@ -18,11 +18,11 @@
 }
 
 .about {
-  background-image: url(/images/about.png);
+  background-image: url(/images/about.webp);
 }
 
 .cat {
-  background-image: url(/images/cat.png);
+  background-image: url(/images/cat.webp);
   position: absolute;
   opacity: 0;
   transition: 2s ease;
