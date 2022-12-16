@@ -3,6 +3,8 @@
   height: 100%;
   display: grid;
   grid-template-rows: 8fr 1fr;
+  background-color: #f107a3;
+  position: relative;
 }
 
 .gridFooter {
@@ -11,4 +13,48 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 1rem;
+}
+
+.parent {
+  background: white;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.parent[data-isOpen="true"] {
+  width: 100%;
+  height: 100%;
+  border-radius: 0 !important;
+}
+
+.child {
+  width: 40px;
+  height: 40px;
+  background: #f107a3;
+  border-radius: 50%;
+}
+
+.child[data-isOpen="true"] {
+  width: 200px;
+  height: 200px;
+}
+
+.to {
+  position: absolute;
+  bottom: 12%;
+  left: 4%;
+  rotate: -45deg;
+  font-size: clamp(4rem, 2vw, 8rem);
+}
+
+.ls {
+  position: absolute;
+  top: 0;
+  right: 9%;
+  rotate: -45deg;
+  font-size: clamp(4rem, 2vw, 8rem);
 }
