@@ -8,7 +8,7 @@ const OldGrid = () => {
         <div className={styles.done} />
       </div>
       <div className={styles.gridFooter}>
-        <p>✏️Study</p>
+        <p>👵Old websites</p>
         <p>↗</p>
       </div>
     </div>

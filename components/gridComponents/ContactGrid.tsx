@@ -7,7 +7,7 @@ const ContactGrid = () => {
         <h1>Contact</h1>
       </div>
       <div className={styles.gridFooter}>
-        <p>✏️Projects</p>
+        <p>📞Contact</p>
         <p>↗</p>
       </div>
     </div>

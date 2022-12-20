@@ -21,7 +21,7 @@ const UsesGrid = () => {
       {!isOpen && <p className={styles.ls}>LS</p>}
 
       <div className={styles.gridFooter}>
-        <p>✏️Uses</p>
+        <p>🛠️Uses</p>
         <p>↗</p>
       </div>
     </div>

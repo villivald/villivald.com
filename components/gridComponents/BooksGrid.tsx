@@ -29,7 +29,7 @@ const BooksGrid = () => {
     >
       <h1>Books</h1>
       <div className={styles.gridFooter}>
-        <p>✏️Projects</p>
+        <p>📖Books</p>
         <p>↗</p>
       </div>
     </motion.div>
