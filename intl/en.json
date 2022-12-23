@@ -7,5 +7,15 @@
   "projects": "Projects",
   "study": "Study",
   "timeline": "Timeline",
-  "uses": "Uses"
+  "old": "Old websites",
+  "uses": "Uses",
+  "lab": "LAB University of Applied Sciences",
+  "unihelsinki": "University of Helsinki",
+  "russianStudies": "Russian Language and Literature",
+  "unihelGraduated": "Graduated as a Master of Arts (300 ECTS)",
+  "computerScience": "Computer Science",
+  "labStudies": "Currently studying - 4th year (190/240 ECTS)",
+  "coursesAndCertificates": "Courses & Certificates",
+  "courses": "Courses",
+  "certificates": "Certificates"
 }

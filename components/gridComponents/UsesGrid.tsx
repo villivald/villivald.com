@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { FormattedMessage } from "react-intl";
 
 import styles from "../../styles/grid/UsesGrid.module.css";
 
@@ -21,7 +22,9 @@ const UsesGrid = () => {
       {!isOpen && <p className={styles.ls}>LS</p>}
 
       <div className={styles.gridFooter}>
-        <p>🛠️Uses</p>
+        <p>
+          🛠️ <FormattedMessage id="uses" />
+        </p>
         <p>↗</p>
       </div>
     </div>

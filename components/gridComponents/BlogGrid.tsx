@@ -1,7 +1,8 @@
 import Image from "next/image";
+import { FormattedMessage } from "react-intl";
 import Atropos from "atropos/react";
-import "atropos/css";
 
+import "atropos/css";
 import styles from "../../styles/grid/BlogGrid.module.css";
 
 const BlogGrid = () => {
@@ -16,7 +17,9 @@ const BlogGrid = () => {
         />
       </Atropos>
       <div className={styles.gridFooter}>
-        <p>✏️Blog</p>
+        <p>
+          ✏️ <FormattedMessage id="blog" />
+        </p>
         <p>↗</p>
       </div>
     </div>

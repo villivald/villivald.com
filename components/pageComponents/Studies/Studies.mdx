@@ -1,17 +1,18 @@
 import { LabProgress, HelsinkiProgress } from "./LinearProgress";
+import { FormattedMessage } from "react-intl";
 
 <div>
 
 <div>
 
-# Studies 🎓
+# <FormattedMessage id="study" /> 🎓
 
 <div>
 
-### 📚 University of Helsinki (2011-2015)
+### 📚 <FormattedMessage id="unihelsinki" /> (2011-2015)
 
-- Russian Language and Literature
-- Graduated as a Master of Arts (300 ECTS)
+- <FormattedMessage id="russianStudies" />
+- <FormattedMessage id="unihelGraduated" />
 
 <HelsinkiProgress />
 
@@ -19,10 +20,10 @@ import { LabProgress, HelsinkiProgress } from "./LinearProgress";
 
 <div>
 
-### 💻 LAB University of Applied Sciences (2019 →)
+### 💻 <FormattedMessage id="lab" /> (2019 →)
 
-- Computer Science
-- Currently studying - 4th year (190/240 ECTS)
+- <FormattedMessage id="computerScience" />
+- <FormattedMessage id="labStudies" />
 
 <LabProgress />
 
@@ -32,11 +33,11 @@ import { LabProgress, HelsinkiProgress } from "./LinearProgress";
 
 <div>
 
-# Courses & Certificates 📝
+# <FormattedMessage id="coursesAndCertificates" /> 📝
 
-### ⚡️ Courses
+### ⚡️ <FormattedMessage id="courses" />
 
-### 🔥 Certificates
+### 🔥 <FormattedMessage id="certificates" />
 
 </div>
 

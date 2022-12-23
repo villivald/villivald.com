@@ -1,3 +1,5 @@
+import { FormattedMessage } from "react-intl";
+
 import styles from "../../styles/grid/OldGrid.module.css";
 
 const OldGrid = () => {
@@ -8,7 +10,9 @@ const OldGrid = () => {
         <div className={styles.done} />
       </div>
       <div className={styles.gridFooter}>
-        <p>👵Old websites</p>
+        <p>
+          👵 <FormattedMessage id="old" />
+        </p>
         <p>↗</p>
       </div>
     </div>

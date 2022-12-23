@@ -1,3 +1,5 @@
+import { FormattedMessage } from "react-intl";
+
 import styles from "../../styles/grid/ProjectsGrid.module.css";
 
 const ProjectsGrid = () => {
@@ -14,7 +16,9 @@ const ProjectsGrid = () => {
         <p className={styles.s}>S</p>
       </div>
       <div className={styles.gridFooter}>
-        <p>✏️Projects</p>
+        <p>
+          💻 <FormattedMessage id="projects" />
+        </p>
         <p>↗</p>
       </div>
     </div>

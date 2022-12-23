@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { FormattedMessage } from "react-intl";
 
 import styles from "../../styles/grid/StudyGrid.module.css";
 
@@ -59,7 +60,9 @@ const StudyGrid = () => {
         }}
       ></motion.div>
       <div className={styles.gridFooter}>
-        <p>✏️Study</p>
+        <p>
+          🎓 <FormattedMessage id="study" />
+        </p>
         <p>↗</p>
       </div>
     </div>

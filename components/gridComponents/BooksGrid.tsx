@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { FormattedMessage } from "react-intl";
 
 import styles from "../../styles/grid/BooksGrid.module.css";
 
@@ -27,9 +28,13 @@ const BooksGrid = () => {
         times: [0, 0.2, 0.5, 0.8, 1],
       }}
     >
-      <h1>Books</h1>
+      <h1>
+        <FormattedMessage id="books" />
+      </h1>
       <div className={styles.gridFooter}>
-        <p>📖Books</p>
+        <p>
+          📖 <FormattedMessage id="books" />
+        </p>
         <p>↗</p>
       </div>
     </motion.div>

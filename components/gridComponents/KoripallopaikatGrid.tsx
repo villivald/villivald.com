@@ -1,4 +1,6 @@
 import Image from "next/image";
+import { FormattedMessage } from "react-intl";
+
 import styles from "../../styles/grid/KorippallopaikatGrid.module.css";
 
 const KoripallopaikatGrid = () => {
@@ -13,10 +15,14 @@ const KoripallopaikatGrid = () => {
       />
       <div className={styles.overlay}>
         <div>
-          <h1>Koripallopaikat</h1>
+          <h1>
+            <FormattedMessage id="koripallopaikat" />
+          </h1>
         </div>
         <div className={styles.gridFooter}>
-          <p>🏀Koripallo</p>
+          <p>
+            🏀 <FormattedMessage id="koripallopaikat" />
+          </p>
           <p>↗</p>
         </div>
       </div>
