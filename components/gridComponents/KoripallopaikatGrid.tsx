@@ -15,9 +15,12 @@ const KoripallopaikatGrid = () => {
       />
       <div className={styles.overlay}>
         <div>
-          <h1>
-            <FormattedMessage id="koripallopaikat" />
-          </h1>
+          <Image
+            fill
+            src="/images/koripallopaikat.svg"
+            alt="Koripallopaikat"
+            className={styles.logo}
+          />
         </div>
         <div className={styles.gridFooter}>
           <p>

@@ -12,6 +12,7 @@ const BlogGrid = () => {
         <Image
           src="/images/cra.webp"
           fill
+          sizes="(max-width: 600px) 100vw, 600px"
           alt="Avatar"
           className={styles.image}
         />
