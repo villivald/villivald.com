@@ -11,13 +11,13 @@ const UsesGrid = () => {
       {!isOpen && <p className={styles.to}>TO</p>}
       <motion.div
         layout
-        data-isOpen={isOpen}
+        data-isopen={isOpen}
         initial={{ borderRadius: 50 }}
         className={styles.parent}
         onMouseEnter={() => setIsOpen(true)}
         onMouseLeave={() => setIsOpen(false)}
       >
-        <motion.div layout data-isOpen={isOpen} className={styles.child} />
+        <motion.div layout data-isopen={isOpen} className={styles.child} />
       </motion.div>
       {!isOpen && <p className={styles.ls}>LS</p>}
 

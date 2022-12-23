@@ -14,7 +14,7 @@ export default function Layout({ children, changeTheme, changeLocale }: Props) {
   return (
     <>
       <Header changeTheme={changeTheme} changeLocale={changeLocale} />
-      <main style={{ backgroundColor: theme === "dark" ? "#5B5B5B" : "" }}>
+      <main style={{ backgroundColor: theme === "dark" ? "#5B5B5B" : "white" }}>
         {children}
       </main>
       <Footer />
