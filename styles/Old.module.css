@@ -7,7 +7,7 @@
 .cardWrapper {
   height: 35rem;
   width: 90%;
-  background-color: #fff;
+  background-color: var(--color-white);
   align-self: center;
   display: flex;
   justify-content: space-around;
@@ -19,7 +19,7 @@
 .card {
   height: 80%;
   width: 30%;
-  background-color: #fff;
+  background-color: var(--color-white);
   border-radius: 1rem;
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
   display: flex;
@@ -29,7 +29,7 @@
 }
 
 .card > div {
-  border: 1px solid green;
+  border: 1px solid var(--color-brand-green);
   border-radius: 1rem;
 }
 

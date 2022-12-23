@@ -6,7 +6,7 @@
   gap: 0.8rem;
   place-items: center;
   margin-right: 10rem;
-  color: white;
+  color: var(--color-white);
 }
 
 .mobileLanguageSwitch {
@@ -17,7 +17,7 @@
 }
 
 .mobileLanguageSwitch > button {
-  color: white;
+  color: var(--color-white);
 }
 
 .languageSwitch__span {
@@ -26,7 +26,7 @@
 }
 
 .languageSwitch__span_checked {
-  text-shadow: 0 0 20px white;
+  text-shadow: 0 0 20px var(--color-white);
   transition: all 0.5s ease-in-out;
 }
 

@@ -17,6 +17,7 @@ const KoripallopaikatGrid = () => {
         <div>
           <Image
             fill
+            sizes="100%"
             src="/images/koripallopaikat.svg"
             alt="Koripallopaikat"
             className={styles.logo}

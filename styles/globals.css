@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Nabla&display=swap");
 
+:root {
+  --color-brand-yellow: hsl(51, 74%, 60%);
+  --color-brand-green: hsl(141, 40%, 65%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-black: hsl(0, 0%, 0%);
+}
+
 /* CSS Reset */
 
 /*

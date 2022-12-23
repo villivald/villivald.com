@@ -3,11 +3,11 @@
   height: 100%;
   display: grid;
   grid-template-rows: 8fr 1fr;
-  background-color: #70b486;
+  background-color: var(--color-brand-green);
 }
 
 .gridFooter {
-  background-color: rgb(229, 207, 79);
+  background-color: var(--color-brand-yellow);
   display: flex;
   align-items: center;
   justify-content: space-between;
