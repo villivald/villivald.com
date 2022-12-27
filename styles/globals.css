@@ -1,10 +1,29 @@
-@import url("https://fonts.googleapis.com/css2?family=Nabla&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nabla&family=Amiko&family=Crete+Round&family=Istok+Web&display=swap");
 
 :root {
+  /* Colors */
   --color-brand-yellow: hsl(51, 74%, 60%);
   --color-brand-green: hsl(141, 40%, 65%);
+  --color-brand-red: hsl(10, 94%, 60%);
+  --color-brand-grey: hsl(258, 10%, 80%);
+  --color-brand-dark: hsl(236, 21%, 14%);
   --color-white: hsl(0, 0%, 100%);
   --color-black: hsl(0, 0%, 0%);
+
+  /* Fonts */
+  --font-header: "Crete Round", serif;
+  --font-subheader: Amiko, sans-serif;
+  --font-body: "Istok Web", sans-serif;
+
+  /* Typescale */
+  --fontSize-header1: 1.8rem;
+  --fontSize-header2: 1.6rem;
+  --fontSize-header3: 1.4rem;
+  --fontSize-header4: 1.2rem;
+  --fontSize-header5: 1.1em;
+  --fontSize-paragraph: 1rem;
+  --fontSize-helperText: 0.8rem;
+  --fontSize-copyrightText: 0.7rem;
 }
 
 /* CSS Reset */
@@ -77,4 +96,42 @@ h6 {
 #root,
 #__next {
   isolation: isolate;
+}
+
+p,
+li,
+a {
+  font-family: var(--font-body);
+  font-size: var(--fontSize-paragraph);
+  color: var(--color-brand-dark);
+}
+
+h1 {
+  font-family: var(--font-header);
+  font-size: var(--fontSize-header1);
+  color: var(--color-brand-dark);
+}
+
+h2 {
+  font-family: var(--font-header);
+  font-size: var(--fontSize-header2);
+  color: var(--color-brand-dark);
+}
+
+h3 {
+  font-family: var(--font-subheader);
+  font-size: var(--fontSize-header3);
+  color: var(--color-brand-dark);
+}
+
+h4 {
+  font-family: var(--font-subheader);
+  font-size: var(--fontSize-header4);
+  color: var(--color-brand-dark);
+}
+
+h5 {
+  font-family: var(--font-subheader);
+  font-size: var(--fontSize-header5);
+  color: var(--color-brand-dark);
 }
