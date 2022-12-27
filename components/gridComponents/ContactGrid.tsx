@@ -5,11 +5,7 @@ import styles from "../../styles/grid/ContactGrid.module.css";
 const ContactGrid = () => {
   return (
     <div className={styles.container}>
-      <div>
-        <h1>
-          <FormattedMessage id="contact" />
-        </h1>
-      </div>
+      <div></div>
       <div className={styles.gridFooter}>
         <p>
           📞 <FormattedMessage id="contact" />

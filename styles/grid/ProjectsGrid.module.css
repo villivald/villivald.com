@@ -4,6 +4,7 @@
   display: grid;
   grid-template-rows: 8fr 1fr;
   background-color: var(--color-brand-green);
+  overflow: hidden;
 }
 
 .gridFooter {

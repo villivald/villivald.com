@@ -1,9 +1,11 @@
-.box {
-  display: grid;
+.container {
   width: 100%;
   height: 100%;
-  background: orange;
+  display: grid;
   grid-template-rows: 8fr 1fr;
+  position: relative;
+  z-index: 1;
+  background: orange;
 }
 
 .gridFooter {
