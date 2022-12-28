@@ -1,17 +1,11 @@
-import { FormattedMessage } from "react-intl";
-
+import CardFooter from "./subComponents/CardFooter";
 import styles from "../../styles/grid/ContactGrid.module.css";
 
 const ContactGrid = () => {
   return (
     <div className={styles.container}>
       <div></div>
-      <div className={styles.gridFooter}>
-        <p>
-          📞 <FormattedMessage id="contact" />
-        </p>
-        <p>↗</p>
-      </div>
+      <CardFooter emoji="📞" text="contact" />
     </div>
   );
 };

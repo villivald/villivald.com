@@ -1,5 +1,4 @@
-import { FormattedMessage } from "react-intl";
-
+import CardFooter from "./subComponents/CardFooter";
 import styles from "../../styles/grid/OldGrid.module.css";
 
 const OldGrid = () => {
@@ -9,12 +8,7 @@ const OldGrid = () => {
         <div className={styles.proto} />
         <div className={styles.done} />
       </div>
-      <div className={styles.gridFooter}>
-        <p>
-          👵 <FormattedMessage id="old" />
-        </p>
-        <p>↗</p>
-      </div>
+      <CardFooter emoji="👵" text="old" />
     </div>
   );
 };

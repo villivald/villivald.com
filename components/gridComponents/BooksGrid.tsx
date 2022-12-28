@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { FormattedMessage } from "react-intl";
+
+import CardFooter from "./subComponents/CardFooter";
 
 import styles from "../../styles/grid/BooksGrid.module.css";
 
@@ -37,12 +38,7 @@ const BooksGrid = () => {
           times: [0, 0.2, 0.5, 0.8, 1],
         }}
       ></motion.div>
-      <div className={styles.gridFooter}>
-        <p>
-          📖 <FormattedMessage id="books" />
-        </p>
-        <p>↗</p>
-      </div>
+      <CardFooter emoji="📖" text="books" />
     </div>
   );
 };

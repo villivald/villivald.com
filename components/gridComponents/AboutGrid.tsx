@@ -1,18 +1,12 @@
-import { FormattedMessage } from "react-intl";
-
 import styles from "../../styles/grid/AboutGrid.module.css";
+import CardFooter from "./subComponents/CardFooter";
 
 const AboutGrid = () => {
   return (
     <div className={styles.container}>
       <div className={styles.about} />
       <div className={styles.cat} />
-      <div className={styles.gridFooter}>
-        <p>
-          🚴‍♂️ <FormattedMessage id="about" />
-        </p>
-        <p>↗</p>
-      </div>
+      <CardFooter emoji="🚴‍♂️" text="about" />
     </div>
   );
 };

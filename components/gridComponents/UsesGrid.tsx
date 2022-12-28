@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { FormattedMessage } from "react-intl";
+
+import CardFooter from "./subComponents/CardFooter";
 
 import styles from "../../styles/grid/UsesGrid.module.css";
 
@@ -20,13 +21,7 @@ const UsesGrid = () => {
         <motion.div layout data-isopen={isOpen} className={styles.child} />
       </motion.div>
       {!isOpen && <p className={styles.ls}>LS</p>}
-
-      <div className={styles.gridFooter}>
-        <p>
-          🛠️ <FormattedMessage id="uses" />
-        </p>
-        <p>↗</p>
-      </div>
+      <CardFooter emoji="🛠️" text="uses" />
     </div>
   );
 };

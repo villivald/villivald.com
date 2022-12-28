@@ -54,15 +54,6 @@
   opacity: 0;
 }
 
-.gridFooter {
-  width: 100%;
-  background-color: var(--color-brand-yellow);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 1rem;
-}
-
 @keyframes slide-in {
   20% {
     opacity: 0;

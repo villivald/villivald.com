@@ -1,6 +1,7 @@
 import Image from "next/image";
-import { FormattedMessage } from "react-intl";
 import Atropos from "atropos/react";
+
+import CardFooter from "./subComponents/CardFooter";
 
 import "atropos/css";
 import styles from "../../styles/grid/BlogGrid.module.css";
@@ -17,12 +18,7 @@ const BlogGrid = () => {
           className={styles.image}
         />
       </Atropos>
-      <div className={styles.gridFooter}>
-        <p>
-          ✏️ <FormattedMessage id="blog" />
-        </p>
-        <p>↗</p>
-      </div>
+      <CardFooter emoji="✏️" text="blog" />
     </div>
   );
 };

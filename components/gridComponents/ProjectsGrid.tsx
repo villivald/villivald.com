@@ -1,5 +1,4 @@
-import { FormattedMessage } from "react-intl";
-
+import CardFooter from "./subComponents/CardFooter";
 import styles from "../../styles/grid/ProjectsGrid.module.css";
 
 const ProjectsGrid = () => {
@@ -15,12 +14,7 @@ const ProjectsGrid = () => {
         <p className={styles.t}>T</p>
         <p className={styles.s}>S</p>
       </div>
-      <div className={styles.gridFooter}>
-        <p>
-          💻 <FormattedMessage id="projects" />
-        </p>
-        <p>↗</p>
-      </div>
+      <CardFooter emoji="💻" text="projects" />
     </div>
   );
 };
