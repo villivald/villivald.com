@@ -11,6 +11,7 @@
   --color-black: hsl(0, 0%, 0%);
 
   /* Fonts */
+  --font-brand: "Nabla", serif;
   --font-header: "Crete Round", serif;
   --font-subheader: Amiko, sans-serif;
   --font-body: "Istok Web", sans-serif;

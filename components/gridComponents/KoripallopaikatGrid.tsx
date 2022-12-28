@@ -13,6 +13,7 @@ const KoripallopaikatGrid = () => {
         alt="Avatar"
         className={styles.image}
       />
+      <p className={styles.goat}>GOAT</p>
       <div className={styles.overlay}>
         <div>
           <Image

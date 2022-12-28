@@ -13,19 +13,41 @@
   height: auto;
 }
 
+.logo {
+  scale: 0.8;
+}
+
+.goat {
+  font-family: var(--font-brand);
+  font-size: calc(var(--fontSize-header1) * 2);
+  letter-spacing: 1rem;
+  transform: translateX(-200%);
+  opacity: 0;
+}
+
+.container:hover .goat {
+  animation: slide-in 1.5s cubic-bezier(0.5, 0.1, 0.5, 1) forwards;
+}
+
 .overlay {
   position: absolute;
   height: 100%;
   width: 100%;
   opacity: 1;
   transition: 0.5s ease;
-  background-color: var(--color-brand-green);
+  background-size: cover;
+  background-repeat: round;
+  background-image: url(/images/basketball_pattern.webp);
   display: grid;
   grid-template-rows: 8fr 1fr;
 }
 
 .overlay > div {
   position: relative;
+}
+
+.overlay > div:first-child {
+  background: hsla(0, 0%, 0%, 0.2);
 }
 
 .container:hover .overlay {
@@ -39,4 +61,20 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 1rem;
+}
+
+@keyframes slide-in {
+  20% {
+    opacity: 0;
+  }
+  60% {
+    transform: translateX(5%);
+  }
+  75% {
+    transform: translateX(-2%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-0%);
+  }
 }

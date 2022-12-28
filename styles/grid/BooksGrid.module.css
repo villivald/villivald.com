@@ -5,7 +5,9 @@
   grid-template-rows: 8fr 1fr;
   position: relative;
   z-index: 1;
-  background: orange;
+  background-size: cover;
+  background-repeat: round;
+  background-image: url(/images/library.webp);
 }
 
 .gridFooter {
