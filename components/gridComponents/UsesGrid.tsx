@@ -21,7 +21,7 @@ const UsesGrid = () => {
         <motion.div layout data-isopen={isOpen} className={styles.child} />
       </motion.div>
       {!isOpen && <p className={styles.ls}>LS</p>}
-      <CardFooter emoji="🛠️" text="uses" />
+      <CardFooter emoji="tools" text="uses" />
     </div>
   );
 };

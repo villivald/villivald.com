@@ -6,7 +6,7 @@ const AboutGrid = () => {
     <div className={styles.container}>
       <div className={styles.about} />
       <div className={styles.cat} />
-      <CardFooter emoji="🚴‍♂️" text="about" />
+      <CardFooter emoji="bike" text="about" />
     </div>
   );
 };

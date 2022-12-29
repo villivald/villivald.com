@@ -8,7 +8,7 @@ const OldGrid = () => {
         <div className={styles.proto} />
         <div className={styles.done} />
       </div>
-      <CardFooter emoji="👵" text="old" />
+      <CardFooter emoji="old" text="old" />
     </div>
   );
 };

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { FormattedMessage } from "react-intl";
 
 import styles from "../../../styles/grid/SubComponents.module.css";
@@ -11,7 +12,13 @@ const CardFooter = ({ emoji, text }: Props) => {
   return (
     <div className={styles.gridFooter}>
       <p>
-        {emoji} <FormattedMessage id={text} />
+        <Image
+          src={`/emojis/${emoji}.svg`}
+          alt={`emoji icon - ${emoji}`}
+          width={24}
+          height={24}
+        />
+        <FormattedMessage id={text} />
       </p>
       <p>↗</p>
     </div>

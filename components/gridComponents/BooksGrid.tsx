@@ -38,7 +38,7 @@ const BooksGrid = () => {
           times: [0, 0.2, 0.5, 0.8, 1],
         }}
       ></motion.div>
-      <CardFooter emoji="📖" text="books" />
+      <CardFooter emoji="books" text="books" />
     </div>
   );
 };

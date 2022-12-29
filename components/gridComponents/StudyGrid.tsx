@@ -60,7 +60,7 @@ const StudyGrid = () => {
           times: [0, 0.2, 0.5, 0.8, 1],
         }}
       ></motion.div>
-      <CardFooter emoji="🎓" text="study" />
+      <CardFooter emoji="student" text="study" />
     </div>
   );
 };

@@ -5,7 +5,7 @@ const ContactGrid = () => {
   return (
     <div className={styles.container}>
       <div></div>
-      <CardFooter emoji="📞" text="contact" />
+      <CardFooter emoji="phone" text="contact" />
     </div>
   );
 };

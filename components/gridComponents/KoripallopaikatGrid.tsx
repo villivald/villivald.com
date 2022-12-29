@@ -24,7 +24,7 @@ const KoripallopaikatGrid = () => {
             className={styles.logo}
           />
         </div>
-        <CardFooter emoji="🏀" text="koripallopaikat" />
+        <CardFooter emoji="basketball" text="koripallopaikat" />
       </div>
     </div>
   );

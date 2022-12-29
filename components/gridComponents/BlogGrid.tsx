@@ -18,7 +18,7 @@ const BlogGrid = () => {
           className={styles.image}
         />
       </Atropos>
-      <CardFooter emoji="✏️" text="blog" />
+      <CardFooter emoji="pen" text="blog" />
     </div>
   );
 };
