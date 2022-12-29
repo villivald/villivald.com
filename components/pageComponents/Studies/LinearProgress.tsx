@@ -1,40 +1,21 @@
-import LinearProgress, {
-  linearProgressClasses,
-} from "@mui/material/LinearProgress";
-import { styled } from "@mui/material/styles";
+import styles from "../../../styles/LinearProgress.module.css";
 
 export const LabProgress = () => {
-  const BorderLinearProgress = styled(LinearProgress)(() => ({
-    height: 10,
-    borderRadius: 5,
-    [`&.${linearProgressClasses.colorPrimary}`]: {
-      backgroundColor: "#b2dfdb",
-    },
-    [`& .${linearProgressClasses.bar}`]: {
-      borderRadius: 5,
-      backgroundColor: "#00e676",
-    },
-    width: "80%",
-    margin: "1% 0 0 6.5%",
-  }));
-  return <BorderLinearProgress variant="determinate" value={79} />;
+  return (
+    <div className={styles.progressContainer}>
+      <progress id="file" value="79" max="100">
+        79%
+      </progress>
+    </div>
+  );
 };
 
 export const HelsinkiProgress = () => {
-  const BorderLinearProgress = styled(LinearProgress)(() => ({
-    height: 10,
-    borderRadius: 5,
-    [`&.${linearProgressClasses.colorPrimary}`]: {
-      backgroundColor: "#b2dfdb",
-    },
-    [`& .${linearProgressClasses.bar}`]: {
-      borderRadius: 5,
-      backgroundColor: "#00e676",
-    },
-    width: "80%",
-    margin: "1% 0 0 6.5%",
-  }));
   return (
-    <BorderLinearProgress color="success" variant="determinate" value={100} />
+    <div className={styles.progressContainer}>
+      <progress id="file" value="100" max="100">
+        100%
+      </progress>
+    </div>
   );
 };
