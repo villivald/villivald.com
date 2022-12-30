@@ -29,3 +29,9 @@
 .mainContainer > div > div > div {
   margin-bottom: 2rem;
 }
+
+.emojiContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}

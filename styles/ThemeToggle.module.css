@@ -5,17 +5,3 @@
   align-items: center;
   margin-left: 4rem;
 }
-
-.lightModeIcon_dark,
-.darkModeIcon_light {
-  color: var(--color-white);
-  font-size: 1.2rem;
-  transition: all 0.5s ease-in-out;
-}
-
-.lightModeIcon_light,
-.darkModeIcon_dark {
-  color: var(--color-white);
-  font-size: 2rem;
-  transition: all 0.5s ease-in-out;
-}

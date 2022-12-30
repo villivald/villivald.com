@@ -1,6 +1,5 @@
-import Switch from "@mui/material/Switch";
-import DarkModeIcon from "@mui/icons-material/DarkMode";
-import LightModeIcon from "@mui/icons-material/LightMode";
+import Image from "next/image";
+import { IconButton } from "@mui/material";
 
 import styles from "../../styles/ThemeToggle.module.css";
 
@@ -12,21 +11,15 @@ type Props = {
 const ThemeToggle = ({ changeTheme, theme }: Props) => {
   return (
     <div className={styles.themeToggle}>
-      <LightModeIcon
-        className={
-          theme === "dark"
-            ? styles.lightModeIcon_dark
-            : styles.lightModeIcon_light
-        }
-      />
-      <Switch checked={theme === "dark"} onChange={changeTheme} />
-      <DarkModeIcon
-        className={
-          theme === "dark"
-            ? styles.darkModeIcon_dark
-            : styles.darkModeIcon_light
-        }
-      />
+      <IconButton aria-label="changeThemeButton" onClick={changeTheme}>
+        <Image
+          className={theme === "dark" ? styles.dark : styles.light}
+          src={`/emojis/${theme === "dark" ? "dark" : "light"}.svg`}
+          alt="emoji icon - light/dark theme switcher"
+          width={48}
+          height={48}
+        />
+      </IconButton>
     </div>
   );
 };

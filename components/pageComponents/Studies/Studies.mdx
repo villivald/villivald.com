@@ -1,15 +1,18 @@
+import Image from "next/image";
 import { FormattedMessage } from "react-intl";
 import { LabProgress, HelsinkiProgress } from "./LinearProgress";
 
-<div>
+import styles from "../../../styles/Studies.module.css";
 
 <div>
 
-# <FormattedMessage id="study" /> 🎓
+<div>
+
+# <div className={styles.emojiContainer}><FormattedMessage id="study" /> <Image src='/emojis/student.svg' alt='emoji icon - student' width={36} height={36}/></div>
 
 <div>
 
-### 📚 <FormattedMessage id="unihelsinki" /> (2011-2015)
+### <div className={styles.emojiContainer}><Image src='/emojis/book.svg' alt='emoji icon - book' width={24} height={24}/> <FormattedMessage id="unihelsinki" /> (2011-2015)</div>
 
 - <FormattedMessage id="russianStudies" />
 - <FormattedMessage id="unihelGraduated" />
@@ -20,7 +23,7 @@ import { LabProgress, HelsinkiProgress } from "./LinearProgress";
 
 <div>
 
-### 💻 <FormattedMessage id="lab" /> (2019 →)
+### <div className={styles.emojiContainer}><Image src='/emojis/floppy.svg' alt='emoji icon - floppy disk' width={24} height={24}/> <FormattedMessage id="lab" /> (2019 →)</div>
 
 - <FormattedMessage id="computerScience" />
 - <FormattedMessage id="labStudies" />
@@ -33,11 +36,11 @@ import { LabProgress, HelsinkiProgress } from "./LinearProgress";
 
 <div>
 
-# <FormattedMessage id="coursesAndCertificates" /> 📝
+# <div className={styles.emojiContainer}><FormattedMessage id="coursesAndCertificates" /> <Image src='/emojis/writing.svg' alt='emoji icon - writing hand' width={36} height={36}/></div>
 
-### ⚡️ <FormattedMessage id="courses" />
+### <div className={styles.emojiContainer}><Image src='/emojis/comet.svg' alt='emoji icon - comet' width={24} height={24}/> <FormattedMessage id="courses" /></div>
 
-### 🔥 <FormattedMessage id="certificates" />
+### <div className={styles.emojiContainer}><Image src='/emojis/fire.svg' alt='emoji icon - fire' width={24} height={24}/> <FormattedMessage id="certificates" /></div>
 
 </div>
 

@@ -1,8 +1,8 @@
 import { useState } from "react";
 import Image from "next/image";
 
-import { useTheme } from "@mui/material/styles";
 import { Switch, IconButton } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
 import LanguageIcon from "@mui/icons-material/Language";
 
 import styles from "../../styles/Switch.module.css";
@@ -35,7 +35,13 @@ const LanguageSwitch = ({ changeLocale }: Props) => {
               : styles.languageSwitch__span_checked
           }
         >
-          EN 🇺🇸
+          EN
+          <Image
+            src="/emojis/eng.svg"
+            alt="emoji icon - english (usa flag)"
+            width={24}
+            height={24}
+          />
         </span>
         <Image
           className={checked ? styles.arrowRight : styles.arrowLeft}
@@ -55,7 +61,13 @@ const LanguageSwitch = ({ changeLocale }: Props) => {
               : styles.languageSwitch__span
           }
         >
-          FI 🇫🇮
+          FI
+          <Image
+            src="/emojis/fin.svg"
+            alt="emoji icon - finnish (flag)"
+            width={24}
+            height={24}
+          />
         </span>
       </p>
     </>
