@@ -13,7 +13,9 @@ const ThemeToggle = ({ changeTheme, theme }: Props) => {
     <div className={styles.themeToggle}>
       <IconButton aria-label="changeThemeButton" onClick={changeTheme}>
         <Image
-          className={theme === "dark" ? styles.dark : styles.light}
+          style={{
+            filter: theme === "dark" ? "invert(1)" : "invert(0)",
+          }}
           src={`/emojis/${theme === "dark" ? "dark" : "light"}.svg`}
           alt="emoji icon - light/dark theme switcher"
           width={48}
