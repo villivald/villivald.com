@@ -6,6 +6,8 @@ import { useTheme } from "@mui/material/styles";
 import { Button, Menu, MenuItem } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 
+import { colors } from "../../utils/colors";
+
 import styles from "../../styles/Dropdown.module.css";
 
 const DropdownMenu = () => {
@@ -26,6 +28,7 @@ const DropdownMenu = () => {
         aria-haspopup="true"
         aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
+        style={{ color: theme === "dark" ? colors.white : colors.dark }}
       >
         <span>MENU</span>
         <MenuIcon fontSize="large" />

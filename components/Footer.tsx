@@ -1,5 +1,7 @@
 import { useTheme } from "@mui/material/styles";
 
+import { colors } from "../utils/colors";
+
 import styles from "../styles/Footer.module.css";
 
 const Footer = () => {
@@ -8,7 +10,7 @@ const Footer = () => {
   return (
     <footer
       className={styles.footer}
-      style={{ backgroundColor: theme === "dark" ? "black" : "#5B5B5B" }}
+      style={{ backgroundColor: theme === "dark" ? colors.dark : colors.green }}
     ></footer>
   );
 };

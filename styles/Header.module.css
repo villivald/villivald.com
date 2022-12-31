@@ -17,6 +17,12 @@
 .title {
   font-size: clamp(1.5rem, 5vw, 4rem);
   font-family: "Nabla", cursive;
+  transition: all 0.3s ease-in-out;
+}
+
+.title:hover {
+  text-shadow: 0 0 0.5rem var(--color-white);
+  transition: all 0.3s ease-in-out;
 }
 
 @media screen and (max-width: 500px) {

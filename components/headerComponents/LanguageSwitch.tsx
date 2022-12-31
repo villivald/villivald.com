@@ -23,18 +23,15 @@ const LanguageSwitch = ({ changeLocale }: Props) => {
   return (
     <>
       <p className={styles.mobileLanguageSwitch}>
-        <IconButton aria-label="change language" onClick={handleChange}>
+        <IconButton
+          aria-label="website language switcher"
+          onClick={handleChange}
+        >
           <LanguageIcon /> {checked ? "EN" : "FI"}
         </IconButton>
       </p>
       <p className={styles.languageSwitch}>
-        <span
-          className={
-            checked
-              ? styles.languageSwitch__span
-              : styles.languageSwitch__span_checked
-          }
-        >
+        <span>
           EN
           <Image
             src="/emojis/eng.svg"
@@ -49,18 +46,12 @@ const LanguageSwitch = ({ changeLocale }: Props) => {
             filter: theme === "dark" ? "invert(1)" : "invert(0)",
           }}
           src="/images/arrow.svg"
-          alt="Arrow pointing to the chosen language"
+          alt="Arrow pointing to the chosen language of the website"
           width={100}
           height={100}
         />
         <Switch checked={checked} onChange={handleChange} />
-        <span
-          className={
-            checked
-              ? styles.languageSwitch__span_checked
-              : styles.languageSwitch__span
-          }
-        >
+        <span>
           FI
           <Image
             src="/emojis/fin.svg"

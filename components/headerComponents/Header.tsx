@@ -3,6 +3,8 @@ import { useTheme } from "@mui/material/styles";
 
 import styles from "../../styles/Header.module.css";
 
+import { colors } from "../../utils/colors";
+
 import DropdownMenu from "./DropdownMenu";
 import ThemeToggle from "./ThemeToggle";
 import LanguageSwitch from "./LanguageSwitch";
@@ -18,7 +20,7 @@ const Header = ({ changeTheme, changeLocale }: Props) => {
   return (
     <header
       className={styles.header}
-      style={{ backgroundColor: theme === "dark" ? "black" : "#5B5B5B" }}
+      style={{ backgroundColor: theme === "dark" ? colors.dark : colors.green }}
     >
       <ThemeToggle changeTheme={changeTheme} theme={theme} />
       <Link href="/">

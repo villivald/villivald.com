@@ -5,11 +5,20 @@
 }
 
 .dropdownMenu > button {
-  color: var(--color-white);
+  color: var(--color-dark);
+}
+
+.dropdownMenu > button > span {
+  font-size: var(--fontSize-header4);
+  font-family: var(--font-header);
+}
+
+.dropdownMenu > button > svg {
+  font-size: var(--fontSize-header1);
 }
 
 .innerMenuComponent li > a {
-  color: var(--color-black);
+  color: var(--color-brand-dark);
   text-decoration: none;
 }
 
