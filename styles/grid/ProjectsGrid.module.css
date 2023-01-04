@@ -3,7 +3,14 @@
   height: 100%;
   display: grid;
   grid-template-rows: 8fr 1fr;
-  background-color: var(--color-brand-green);
+  background: linear-gradient(
+    to right,
+    var(--color-brand-dark),
+    #482d53,
+    #8a3366,
+    #cb385d,
+    var(--color-brand-red)
+  );
   overflow: hidden;
 }
 
@@ -12,12 +19,11 @@
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   place-items: center;
-  gap: 1rem;
   text-align: center;
 }
 
 .letters > p {
-  font-size: 2rem;
+  font-size: clamp(1rem, 2.5vw, 2rem);
   font-family: "Nabla", cursive;
   width: 2rem;
   height: 2rem;
