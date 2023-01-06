@@ -5,6 +5,8 @@ import { Switch, IconButton } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import LanguageIcon from "@mui/icons-material/Language";
 
+import { colors } from "../../utils/colors";
+
 import styles from "../../styles/Switch.module.css";
 
 type Props = {
@@ -26,18 +28,20 @@ const LanguageSwitch = ({ changeLocale }: Props) => {
         <IconButton
           aria-label="website language switcher"
           onClick={handleChange}
+          style={{ color: theme === "dark" ? colors.white : colors.dark }}
         >
           <LanguageIcon /> {checked ? "EN" : "FI"}
         </IconButton>
       </p>
       <p className={styles.languageSwitch}>
         <span>
-          EN
+          <span></span>
+
           <Image
             src="/emojis/eng.svg"
             alt="emoji icon - english (usa flag)"
-            width={24}
-            height={24}
+            width={60}
+            height={60}
           />
         </span>
         <Image
@@ -52,12 +56,13 @@ const LanguageSwitch = ({ changeLocale }: Props) => {
         />
         <Switch checked={checked} onChange={handleChange} />
         <span>
-          FI
+          <span></span>
+
           <Image
             src="/emojis/fin.svg"
             alt="emoji icon - finnish (flag)"
-            width={24}
-            height={24}
+            width={60}
+            height={60}
           />
         </span>
       </p>

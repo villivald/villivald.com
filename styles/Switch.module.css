@@ -18,6 +18,8 @@
 
 .mobileLanguageSwitch > button {
   color: var(--color-white);
+  font-family: var(--font-header);
+  font-size: var(--fontSize-header4);
 }
 
 .arrowLeft,
@@ -38,6 +40,7 @@
 .languageSwitch > span {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   font-family: var(--font-subheader);
   font-size: var(--fontSize-paragraph);
@@ -45,11 +48,17 @@
 
 .languageSwitch > span:first-child,
 .languageSwitch > span:last-child {
-  padding: 0.5rem;
-  border: 4px solid var(--color-white);
   border-radius: 50%;
-  box-shadow: 0 0 10px var(--color-white);
-  background-color: var(--color-brand-dark);
+}
+
+.languageSwitch > span:first-child > span,
+.languageSwitch > span:last-child > span {
+  background-color: transparent;
+  width: 4rem;
+  height: 4rem;
+  border: 1.1rem solid var(--color-brand-green);
+  border-radius: 50%;
+  position: absolute;
 }
 
 @media screen and (max-width: 1000px) {

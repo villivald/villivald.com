@@ -1,7 +1,6 @@
 .header {
   display: grid;
   place-items: center;
-  background-color: #5b5b5b;
   width: 100%;
   height: 15vh;
 }
@@ -16,7 +15,7 @@
 
 .title {
   font-size: clamp(1.5rem, 5vw, 4rem);
-  font-family: "Nabla", cursive;
+  font-family: var(--font-brand);
   transition: all 0.3s ease-in-out;
 }
 
