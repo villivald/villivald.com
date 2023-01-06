@@ -1,3 +1,49 @@
 .mainContainer {
   min-height: 70vh;
+  background-color: hsl(24, 71.4%, 76.7%);
+}
+
+.eyes,
+.leftEye,
+.leftIris,
+.rightEye,
+.rightIris {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.eyes {
+  gap: 20rem;
+}
+
+.leftEye,
+.rightEye {
+  width: 10rem;
+  height: 5rem;
+  background-color: var(--color-white);
+}
+
+.leftEye {
+  border-radius: 50% 60%;
+}
+
+.rightEye {
+  border-radius: 60% 50%;
+}
+
+.leftIris,
+.rightIris {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: var(--color-brand-teal);
+}
+
+.leftPupil,
+.rightPupil {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background-color: var(--color-black);
 }
