@@ -38,6 +38,7 @@
   height: 3rem;
   border-radius: 50%;
   background-color: var(--color-brand-teal);
+  transform: translate(var(--x), var(--y));
 }
 
 .leftPupil,

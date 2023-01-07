@@ -2,26 +2,30 @@ import styles from "../../styles/About.module.css";
 
 const About = () => {
   const handleEyeMove = (e: React.PointerEvent<HTMLDivElement>) => {
+    // get the x and y coordinates of the pointer
     const { clientX, clientY } = e;
+    // get the left and top boundaries of the element
     const { left, top } = e.currentTarget.getBoundingClientRect();
 
-    const x = clientX - left;
-    const y = clientY - top;
+    // calculate the x and y coordinates of the pointer relative to the element
+    const x = (clientX - left) / 10 - 60;
+    const y = (clientY - top) / 30;
 
-    const leftPupil = document.querySelector(
-      `.${styles.leftPupil}`
+    // select the left and right iris elements
+    const leftIris = document.querySelector(
+      `.${styles.leftIris}`
     ) as HTMLDivElement;
 
-    const rightPupil = document.querySelector(
-      `.${styles.rightPupil}`
+    const rightIris = document.querySelector(
+      `.${styles.rightIris}`
     ) as HTMLDivElement;
 
-    leftPupil.style.transform = `translate(-50%, -50%) translate(${x / 30}px, ${
-      y / 30
-    }px)`;
-    rightPupil.style.transform = `translate(-50%, -50%) translate(${
-      x / 30
-    }px, ${y / 30}px)`;
+    // set css variables for the x and y coordinates of the pointer
+    leftIris.style.setProperty("--x", `${x}%`);
+    leftIris.style.setProperty("--y", `${y}%`);
+
+    rightIris.style.setProperty("--x", `${x}%`);
+    rightIris.style.setProperty("--y", `${y}%`);
   };
 
   return (
