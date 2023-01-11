@@ -1,6 +1,9 @@
+import { useTheme } from "@mui/material/styles";
+
+import { colors, gradients } from "../utils/colors";
+
 import Header from "./headerComponents/Header";
 import Footer from "./Footer";
-import { useTheme } from "@mui/material/styles";
 
 type Props = {
   children: React.ReactNode;
@@ -14,7 +17,12 @@ export default function Layout({ children, changeTheme, changeLocale }: Props) {
   return (
     <>
       <Header changeTheme={changeTheme} changeLocale={changeLocale} />
-      <main style={{ backgroundColor: theme === "dark" ? "#5B5B5B" : "white" }}>
+      <main
+        style={{
+          backgroundColor: theme === "dark" ? colors.dark80 : colors.grey,
+          backgroundImage: theme === "dark" ? "none" : gradients.light,
+        }}
+      >
         {children}
       </main>
       <Footer />

@@ -35,7 +35,11 @@ const LanguageSwitch = ({ changeLocale }: Props) => {
       </p>
       <p className={styles.languageSwitch}>
         <span>
-          <span></span>
+          <span
+            style={{
+              borderColor: theme === "dark" ? colors.dark : colors.green,
+            }}
+          ></span>
 
           <Image
             src="/emojis/eng.svg"
@@ -56,7 +60,11 @@ const LanguageSwitch = ({ changeLocale }: Props) => {
         />
         <Switch checked={checked} onChange={handleChange} />
         <span>
-          <span></span>
+          <span
+            style={{
+              borderColor: theme === "dark" ? colors.dark : colors.green,
+            }}
+          ></span>
 
           <Image
             src="/emojis/fin.svg"

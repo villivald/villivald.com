@@ -56,7 +56,7 @@
   background-color: transparent;
   width: 4rem;
   height: 4rem;
-  border: 1.1rem solid var(--color-brand-green);
+  border: 1.1rem solid;
   border-radius: 50%;
   position: absolute;
 }

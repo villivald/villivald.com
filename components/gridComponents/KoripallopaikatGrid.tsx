@@ -5,7 +5,7 @@ import styles from "../../styles/grid/KoripallopaikatGrid.module.css";
 
 const KoripallopaikatGrid = () => {
   return (
-    <div className={styles.container}>
+    <div className={styles.koripallopaikatContainer}>
       <Image
         src="/images/caruso.webp"
         width={400}
