@@ -33,6 +33,7 @@
   display: grid;
   transition: --a 3s ease-in-out;
   grid-template-rows: 8fr 1fr;
+  container-type: inline-size;
 }
 
 .container h1 {
@@ -45,4 +46,15 @@
 
 .container:hover .gridFooter {
   display: none;
+}
+
+.phone {
+  position: absolute;
+  border-radius: 50%;
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  margin-bottom: 5%;
+  width: 55%;
+  height: 55%;
 }
