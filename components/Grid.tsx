@@ -1,6 +1,5 @@
 import Link from "next/link";
 
-import styles from "../styles/Grid.module.css";
 import BooksGrid from "./gridComponents/BooksGrid";
 import KoripallopaikatGrid from "./gridComponents/KoripallopaikatGrid";
 import BlogGrid from "./gridComponents/BlogGrid";
@@ -10,6 +9,8 @@ import AboutGrid from "./gridComponents/AboutGrid";
 import StudyGrid from "./gridComponents/StudyGrid";
 import UsesGrid from "./gridComponents/UsesGrid";
 import ProjectsGrid from "./gridComponents/ProjectsGrid";
+
+import styles from "../styles/Grid.module.css";
 
 const Grid = () => {
   return (
