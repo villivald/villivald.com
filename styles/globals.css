@@ -26,6 +26,9 @@
   --fontSize-paragraph: 1rem;
   --fontSize-helperText: 0.8rem;
   --fontSize-copyrightText: 0.7rem;
+
+  /* Animation */
+  --easing-normal: cubic-bezier(0.5, 0.1, 0.5, 1);
 }
 
 /* CSS Reset */
