@@ -1,21 +1,34 @@
 import Image from "next/image";
 import { FormattedMessage } from "react-intl";
-import { LabProgress, HelsinkiProgress } from "./LinearProgress";
+import { useTheme } from "@mui/material/styles";
 
+import { LabProgress, HelsinkiProgress } from "./LinearProgress";
 import styles from "../../../styles/Studies.module.css";
 
 <div>
 
 <div>
 
-# <div className={styles.emojiContainer}><FormattedMessage id="study" /> <Image src='/emojis/student.svg' alt='emoji icon - student' width={36} height={36}/></div>
+# <div className={useTheme().palette.mode === "dark" ? styles.emojiContainerDark : styles.emojiContainerLight}><FormattedMessage id="study" /> <Image src='/emojis/student.svg' alt='emoji icon - student' width={36} height={36}/></div>
 
 <div>
 
-### <div className={styles.emojiContainer}><Image src='/emojis/book.svg' alt='emoji icon - book' width={24} height={24}/> <FormattedMessage id="unihelsinki" /> (2011-2015)</div>
+### <div className={useTheme().palette.mode === "dark" ? styles.emojiContainerDark : styles.emojiContainerLight}><Image src='/emojis/book.svg' alt='emoji icon - book' width={24} height={24}/> <FormattedMessage id="unihelsinki" /> (2011-2015)</div>
 
-- <FormattedMessage id="russianStudies" />
-- <FormattedMessage id="unihelGraduated" />
+- <span
+    className={
+      useTheme().palette.mode === "dark" ? styles.textDark : styles.textLight
+    }
+  >
+    <FormattedMessage id="russianStudies" />
+  </span>
+- <span
+    className={
+      useTheme().palette.mode === "dark" ? styles.textDark : styles.textLight
+    }
+  >
+    <FormattedMessage id="unihelGraduated" />
+  </span>
 
 <HelsinkiProgress />
 
@@ -23,10 +36,22 @@ import styles from "../../../styles/Studies.module.css";
 
 <div>
 
-### <div className={styles.emojiContainer}><Image src='/emojis/floppy.svg' alt='emoji icon - floppy disk' width={24} height={24}/> <FormattedMessage id="lab" /> (2019 →)</div>
+### <div className={useTheme().palette.mode === "dark" ? styles.emojiContainerDark : styles.emojiContainerLight}><Image src='/emojis/floppy.svg' alt='emoji icon - floppy disk' width={24} height={24}/> <FormattedMessage id="lab" /> (2019 →)</div>
 
-- <FormattedMessage id="computerScience" />
-- <FormattedMessage id="labStudies" />
+- <span
+    className={
+      useTheme().palette.mode === "dark" ? styles.textDark : styles.textLight
+    }
+  >
+    <FormattedMessage id="computerScience" />
+  </span>
+- <span
+    className={
+      useTheme().palette.mode === "dark" ? styles.textDark : styles.textLight
+    }
+  >
+    <FormattedMessage id="labStudies" />
+  </span>
 
 <LabProgress />
 
@@ -36,11 +61,11 @@ import styles from "../../../styles/Studies.module.css";
 
 <div>
 
-# <div className={styles.emojiContainer}><FormattedMessage id="coursesAndCertificates" /> <Image src='/emojis/writing.svg' alt='emoji icon - writing hand' width={36} height={36}/></div>
+# <div className={useTheme().palette.mode === "dark" ? styles.emojiContainerDark : styles.emojiContainerLight}><FormattedMessage id="coursesAndCertificates" /> <Image src='/emojis/writing.svg' alt='emoji icon - writing hand' width={36} height={36}/></div>
 
-### <div className={styles.emojiContainer}><Image src='/emojis/comet.svg' alt='emoji icon - comet' width={24} height={24}/> <FormattedMessage id="courses" /></div>
+### <div className={useTheme().palette.mode === "dark" ? styles.emojiContainerDark : styles.emojiContainerLight}><Image src='/emojis/comet.svg' alt='emoji icon - comet' width={24} height={24}/> <FormattedMessage id="courses" /></div>
 
-### <div className={styles.emojiContainer}><Image src='/emojis/fire.svg' alt='emoji icon - fire' width={24} height={24}/> <FormattedMessage id="certificates" /></div>
+### <div className={useTheme().palette.mode === "dark" ? styles.emojiContainerDark : styles.emojiContainerLight}><Image src='/emojis/fire.svg' alt='emoji icon - fire' width={24} height={24}/> <FormattedMessage id="certificates" /></div>
 
 </div>
 

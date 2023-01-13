@@ -1,3 +1,7 @@
 .mainContainer {
   min-height: 70vh;
 }
+
+.textDark {
+  color: var(--color-white);
+}

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { FormattedMessage } from "react-intl";
+import { useTheme } from "@mui/material/styles";
 
 import styles from "../../../styles/grid/SubComponents.module.css";
 
@@ -9,8 +10,14 @@ type Props = {
 };
 
 const CardFooter = ({ emoji, text }: Props) => {
+  const theme = useTheme().palette.mode;
+
   return (
-    <div className={styles.gridFooter}>
+    <div
+      className={
+        theme === "dark" ? styles.gridFooterDark : styles.gridFooterLight
+      }
+    >
       <p>
         <Image
           src={`/emojis/${emoji}.svg`}

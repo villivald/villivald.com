@@ -30,8 +30,21 @@
   margin-bottom: 2rem;
 }
 
-.emojiContainer {
+.emojiContainerLight,
+.emojiContainerDark {
   display: flex;
   align-items: center;
   gap: 0.2rem;
+}
+
+.emojiContainerDark {
+  color: var(--color-white);
+}
+
+.textDark {
+  color: var(--color-white);
+}
+
+li:has(span.textDark) {
+  color: var(--color-white);
 }
