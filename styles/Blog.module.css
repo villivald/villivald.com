@@ -1,7 +1,85 @@
 .mainContainer {
   min-height: 70vh;
+  display: grid;
+  place-items: center;
+}
+
+.mainContainer h1 {
+  padding: 1rem 0;
 }
 
 .textDark {
   color: var(--color-white);
+}
+
+.blogList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.blogCard {
+  background-color: var(--color-white);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px var(--shadow-1);
+  height: 95%;
+}
+
+.blogCard a {
+  display: grid;
+  gap: 1rem;
+  text-decoration: none;
+}
+
+.blogCard a:hover {
+  text-decoration: underline;
+}
+
+.blogCard a img {
+  width: auto;
+  height: auto;
+}
+
+.animatedCard {
+  perspective: 1000px;
+}
+
+.innerCard {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s var(--easing-normal);
+  transform-style: preserve-3d;
+}
+
+.animatedCard:hover .innerCard {
+  transform: rotateY(180deg);
+}
+
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 95%;
+  backface-visibility: hidden;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px var(--shadow-1);
+}
+
+.front {
+  display: grid;
+  place-items: center;
+  background-color: var(--color-brand-teal);
+  color: var(--color-white);
+  font-size: 10rem;
+  font-family: var(--font-body);
+}
+
+.back {
+  background-color: var(--color-white);
+  transform: rotateY(180deg);
 }

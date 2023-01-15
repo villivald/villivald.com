@@ -4,7 +4,7 @@ import BlogCardList from "./BlogCardList";
 import styles from "../../../styles/Blog.module.css";
 
 const Blog = () => {
-  const [data, setData] = useState();
+  const [data, setData] = useState([]);
 
   async function fetchData() {
     const res = await fetch(
@@ -20,7 +20,7 @@ const Blog = () => {
 
   return (
     <div className={styles.mainContainer}>
-      <BlogCardList data={data} />
+      {data.length && <BlogCardList data={data} />}
     </div>
   );
 };
