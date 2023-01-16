@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 
 import BlogCardList from "./BlogCardList";
+import Spinner from "../../Spinner";
 import styles from "../../../styles/Blog.module.css";
 
 const Blog = () => {
@@ -20,7 +21,7 @@ const Blog = () => {
 
   return (
     <div className={styles.mainContainer}>
-      {data.length && <BlogCardList data={data} />}
+      {data.length ? <BlogCardList data={data} /> : <Spinner />}
     </div>
   );
 };

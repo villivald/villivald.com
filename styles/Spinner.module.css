@@ -1,0 +1,16 @@
+.balls {
+  display: flex;
+  gap: 3rem;
+}
+
+@keyframes moveRight {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(20vw);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

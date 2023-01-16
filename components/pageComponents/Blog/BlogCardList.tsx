@@ -29,36 +29,35 @@ const BlogCardList = ({ data }: Props) => {
         <FormattedMessage id="blogPosts" />
       </h1>
       <div className={styles.blogList}>
-        {data &&
-          Object.values(formattedData).map((post: any) =>
-            post.title ? (
-              <div key={post.id} className={styles.blogCard}>
-                <a href={post.canonical_url}>
-                  <Image
-                    priority
-                    src={post.cover_image}
-                    alt={post.title}
-                    height={200}
-                    width={400}
-                  />
-                  <h4
-                    className={
-                      theme === "dark" ? styles.textDark : styles.textLight
-                    }
-                  >
-                    {post.title}
-                  </h4>
-                </a>
+        {Object.values(formattedData).map((post: any) =>
+          post.title ? (
+            <div key={post.id} className={styles.blogCard}>
+              <a href={post.canonical_url}>
+                <Image
+                  priority
+                  src={post.cover_image}
+                  alt={post.title}
+                  height={200}
+                  width={400}
+                />
+                <h4
+                  className={
+                    theme === "dark" ? styles.textDark : styles.textLight
+                  }
+                >
+                  {post.title}
+                </h4>
+              </a>
+            </div>
+          ) : (
+            <div key={post.id} className={styles.animatedCard}>
+              <div className={styles.innerCard}>
+                <div className={styles.front}>?</div>
+                <div className={styles.back}></div>
               </div>
-            ) : (
-              <div key={post.id} className={styles.animatedCard}>
-                <div className={styles.innerCard}>
-                  <div className={styles.front}>?</div>
-                  <div className={styles.back}></div>
-                </div>
-              </div>
-            )
-          )}
+            </div>
+          )
+        )}
       </div>
     </>
   );
