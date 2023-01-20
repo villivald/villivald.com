@@ -18,6 +18,7 @@
 .footer > div:nth-of-type(odd) > div:hover {
   transform: skew(20deg);
   transition: all 0.5s var(--easing-normal);
+  cursor: cell;
 }
 
 .footer > div:nth-of-type(even) {
