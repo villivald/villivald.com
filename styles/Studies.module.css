@@ -48,3 +48,43 @@
 li:has(span.textDark) {
   color: var(--color-white);
 }
+
+.toggle > details > summary {
+  color: var(--color-brand-dark) !important;
+  font-family: var(--font-body);
+  font-size: var(--fontSize-paragraph);
+  cursor: pointer;
+  margin-left: 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.toggle > details > div {
+  margin-left: 3.6rem;
+}
+
+.toggle > details > summary {
+  list-style: none;
+}
+
+.toggle > details > summary::-webkit-details-marker {
+  display: none;
+}
+
+.toggle > details summary::before,
+.toggle > details[open] summary::before {
+  content: "";
+  background: url("/emojis/arrowCurved.svg");
+  transition: 0.25s transform var(--easing-normal);
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.toggle > details summary::before {
+  transform: rotate(0);
+}
+
+.toggle > details[open] summary::before {
+  transform: rotate(90deg);
+}

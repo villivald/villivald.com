@@ -3,6 +3,7 @@ import { FormattedMessage } from "react-intl";
 import { useTheme } from "@mui/material/styles";
 
 import { LabProgress, HelsinkiProgress } from "./LinearProgress";
+import { Details } from "./Details";
 import styles from "../../../styles/Studies.module.css";
 
 <div>
@@ -30,6 +31,8 @@ import styles from "../../../styles/Studies.module.css";
     <FormattedMessage id="unihelGraduated" />
   </span>
 
+<Details title="The Master's Thesis" text="Name" link="Link" />
+
 <HelsinkiProgress />
 
 </div>
@@ -52,6 +55,8 @@ import styles from "../../../styles/Studies.module.css";
   >
     <FormattedMessage id="labStudies" />
   </span>
+
+<Details title="Description" text="Name" link="Link" />
 
 <LabProgress />
 
