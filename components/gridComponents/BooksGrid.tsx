@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 
+import { colors } from "../../utils/colors";
 import CardFooter from "./subComponents/CardFooter";
 
 import styles from "../../styles/grid/BooksGrid.module.css";
@@ -16,7 +17,8 @@ const BooksGrid = () => {
     open: {
       scale: 2,
       rotate: [0, 0, 180, 180, 360, 360],
-      backgroundColor: "#000",
+      backgroundColor: colors.dark,
+      zIndex: 1,
     },
     closed: {
       scale: 1,
