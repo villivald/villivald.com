@@ -6,28 +6,42 @@
   position: relative;
 }
 
+.image,
+.image_alt {
+  background-size: cover;
+  background-repeat: round;
+  transition: all 2s var(--easing-normal);
+}
+
 .image {
   display: block;
   width: 100%;
   height: auto;
+  border-radius: 0%;
+  background-image: url(/images/studies_it.webp);
 }
 
 .image_alt {
   position: absolute;
   height: 100%;
   width: 100%;
-}
-
-.image,
-.image_alt {
-  background-size: cover;
-  background-repeat: round;
-}
-
-.image {
-  background-image: url(/images/studies_it.webp);
-}
-
-.image_alt {
+  border-radius: 50%;
+  opacity: 0;
+  z-index: 1;
   background-image: url(/images/studies_literature.webp);
+  transform: rotate(720deg) scale(0.1);
+}
+
+.container:hover .image {
+  opacity: 0;
+  border-radius: 50%;
+  transform: rotate(720deg) scale(0.1);
+  transition: all 2s var(--easing-normal);
+}
+
+.container:hover .image_alt {
+  opacity: 1;
+  border-radius: 0%;
+  transform: rotate(0deg) scale(1);
+  transition: all 2s var(--easing-normal);
 }
