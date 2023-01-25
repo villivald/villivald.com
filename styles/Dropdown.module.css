@@ -17,14 +17,27 @@
   font-size: var(--fontSize-header1);
 }
 
+.darkMenuComponent ul,
+.innerMenuComponent ul {
+  padding: 0rem;
+}
+
+.darkMenuComponent li:not(:last-child),
+.innerMenuComponent li:not(:last-child) {
+  border-bottom: 1px solid var(--color-brand-grey85);
+}
+
+.innerMenuComponent li > a,
+.darkMenuComponent li > a {
+  text-decoration: none;
+}
+
 .innerMenuComponent li > a {
   color: var(--color-brand-dark);
-  text-decoration: none;
 }
 
 .darkMenuComponent li > a {
   color: var(--color-white);
-  text-decoration: none;
 }
 
 @media screen and (max-width: 1000px) {

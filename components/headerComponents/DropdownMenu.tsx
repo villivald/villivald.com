@@ -46,7 +46,7 @@ const DropdownMenu = () => {
           "aria-labelledby": "basic-button",
         }}
       >
-        <MenuItem className={styles.menuLink}>
+        <MenuItem>
           <Link href="/about">
             <FormattedMessage id="about" />
           </Link>
