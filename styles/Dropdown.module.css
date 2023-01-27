@@ -1,9 +1,3 @@
-.dropdownMenu {
-  position: absolute;
-  justify-self: end;
-  margin-right: 3rem;
-}
-
 .dropdownMenu > button {
   color: var(--color-dark);
 }

@@ -1,23 +1,32 @@
 .languageSwitch {
-  position: absolute;
-  justify-self: end;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0.8rem;
   place-items: center;
-  margin-right: 10rem;
   color: var(--color-white);
+}
+
+.languageSwitch > span:first-child {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.languageSwitch > span:nth-child(3) {
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.languageSwitch > span:nth-child(2) {
+  grid-area: 1 / 3 / 2 / 4;
+}
+
+.languageSwitch > img {
+  grid-area: 2 / 2 / 3 / 4;
 }
 
 .mobileLanguageSwitch {
-  position: absolute;
-  justify-self: end;
   display: grid;
-  margin-right: 10rem;
 }
 
 .mobileLanguageSwitch > button {
-  color: var(--color-white);
   font-family: var(--font-header);
   font-size: var(--fontSize-header4);
 }
@@ -25,7 +34,7 @@
 .arrowLeft,
 .arrowRight {
   position: absolute;
-  top: 0.8rem;
+  top: 4.5rem;
   transition: transform 0.5s ease-in-out;
 }
 
@@ -41,9 +50,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  font-family: var(--font-subheader);
-  font-size: var(--fontSize-paragraph);
 }
 
 .languageSwitch > span:first-child,

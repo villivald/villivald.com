@@ -1,8 +1,8 @@
 .header {
   display: grid;
   place-items: center;
-  width: 100%;
   height: 15vh;
+  grid-template-columns: 2fr 2fr 1fr 1fr;
 }
 
 .header > a {

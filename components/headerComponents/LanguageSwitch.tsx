@@ -30,7 +30,7 @@ const LanguageSwitch = ({ changeLocale }: Props) => {
           onClick={handleChange}
           style={{ color: theme === "dark" ? colors.white : colors.dark }}
         >
-          <LanguageIcon /> {checked ? "EN" : "FI"}
+          <LanguageIcon /> {checked ? "FI" : "EN"}
         </IconButton>
       </p>
       <p className={styles.languageSwitch}>

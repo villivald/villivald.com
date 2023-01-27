@@ -1,8 +1,6 @@
 import Image from "next/image";
 import { IconButton } from "@mui/material";
 
-import styles from "../../styles/ThemeToggle.module.css";
-
 type Props = {
   changeTheme: () => void;
   theme: string;
@@ -10,7 +8,7 @@ type Props = {
 
 const ThemeToggle = ({ changeTheme, theme }: Props) => {
   return (
-    <div className={styles.themeToggle}>
+    <div>
       <IconButton aria-label="changeThemeButton" onClick={changeTheme}>
         <Image
           style={{
