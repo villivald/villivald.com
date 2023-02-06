@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { FormattedMessage } from "react-intl";
 
 import { useTheme } from "@mui/material/styles";
@@ -19,6 +20,45 @@ const DropdownMenu = () => {
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) =>
     setAnchorEl(event.currentTarget);
   const handleClose = () => setAnchorEl(null);
+
+  const menuItems = [
+    {
+      id: "about",
+      emoji: "bike",
+    },
+    {
+      id: "blog",
+      emoji: "pen",
+    },
+    {
+      id: "contact",
+      emoji: "phone",
+    },
+    {
+      id: "koripallopaikat",
+      emoji: "basketball",
+    },
+    {
+      id: "books",
+      emoji: "books",
+    },
+    {
+      id: "projects",
+      emoji: "coding",
+    },
+    {
+      id: "study",
+      emoji: "student",
+    },
+    {
+      id: "uses",
+      emoji: "tools",
+    },
+    {
+      id: "old",
+      emoji: "old",
+    },
+  ];
 
   return (
     <div className={styles.dropdownMenu}>
@@ -46,46 +86,19 @@ const DropdownMenu = () => {
           "aria-labelledby": "basic-button",
         }}
       >
-        <MenuItem>
-          <Link href="/about">
-            <FormattedMessage id="about" />
-          </Link>
-        </MenuItem>
-        <MenuItem>
-          <Link href="/blog">
-            <FormattedMessage id="blog" />
-          </Link>
-        </MenuItem>
-        <MenuItem>
-          <Link href="/contact">
-            <FormattedMessage id="contact" />
-          </Link>
-        </MenuItem>
-        <MenuItem>
-          <Link href="/koripallopaikat">
-            <FormattedMessage id="koripallopaikat" />
-          </Link>
-        </MenuItem>
-        <MenuItem>
-          <Link href="/books">
-            <FormattedMessage id="books" />
-          </Link>
-        </MenuItem>
-        <MenuItem>
-          <Link href="/projects">
-            <FormattedMessage id="projects" />
-          </Link>
-        </MenuItem>
-        <MenuItem>
-          <Link href="/study">
-            <FormattedMessage id="study" />
-          </Link>
-        </MenuItem>
-        <MenuItem>
-          <Link href="/uses">
-            <FormattedMessage id="uses" />
-          </Link>
-        </MenuItem>
+        {menuItems.map((item) => (
+          <MenuItem key={item.id}>
+            <Link href={`/${item.id}`}>
+              <Image
+                src={`/emojis/${item.emoji}.svg`}
+                width={24}
+                height={24}
+                alt={item.id}
+              />
+              <FormattedMessage id={item.id} />
+            </Link>
+          </MenuItem>
+        ))}
       </Menu>
     </div>
   );
