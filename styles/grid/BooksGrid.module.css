@@ -4,12 +4,86 @@
   display: grid;
   grid-template-rows: 8fr 1fr;
   position: relative;
-  z-index: 1;
   background-size: cover;
   background-repeat: round;
   background-image: url(/images/library.webp);
 }
 
-.box:hover .gridFooter {
-  display: none;
+.box {
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr 1fr;
+  opacity: 0;
+  transition: all 0.5s var(--easing-normal);
+}
+
+.container:hover .box {
+  opacity: 1;
+  background-size: cover;
+  background-repeat: round;
+  background-image: url(/images/books.webp);
+}
+
+.box div {
+  opacity: 0;
+  color: var(--color-white);
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  text-shadow: 0 0 0.5rem black;
+}
+
+.box div:nth-child(1) {
+  transform: rotate(-15deg);
+}
+
+.box div:nth-child(2) {
+  transform: rotate(15deg);
+}
+
+.box div:nth-child(3) {
+  transform: rotate(10deg);
+}
+
+.box div:nth-child(4) {
+  transform: rotate(-38deg);
+}
+
+.box div:nth-child(5) {
+  transform: rotate(-5deg);
+}
+
+.box div:nth-child(6) {
+  transform: rotate(1deg);
+}
+
+.container:hover .box div {
+  opacity: 1;
+  font-family: var(--font-header);
+  transition: all 0.5s var(--easing-normal);
+}
+
+.container:hover .box div:nth-child(1) {
+  transition-delay: 0.5s;
+}
+
+.container:hover .box div:nth-child(2) {
+  transition-delay: 1s;
+}
+
+.container:hover .box div:nth-child(3) {
+  transition-delay: 1.5s;
+}
+
+.container:hover .box div:nth-child(4) {
+  transition-delay: 2s;
+}
+
+.container:hover .box div:nth-child(5) {
+  transition-delay: 2.5s;
+}
+
+.container:hover .box div:nth-child(6) {
+  transition-delay: 3s;
 }

@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
 
 import CardFooter from "./subComponents/CardFooter";
 
@@ -10,16 +9,14 @@ const UsesGrid = () => {
   return (
     <div className={styles.container}>
       {!isOpen && <p className={styles.to}>TO</p>}
-      <motion.div
-        layout
+      <div
         data-isopen={isOpen}
-        initial={{ borderRadius: 50 }}
         className={styles.parent}
         onMouseEnter={() => setIsOpen(true)}
         onMouseLeave={() => setIsOpen(false)}
       >
-        <motion.div layout data-isopen={isOpen} className={styles.child} />
-      </motion.div>
+        <div data-isopen={isOpen} className={styles.child} />
+      </div>
       {!isOpen && <p className={styles.ls}>LS</p>}
       <CardFooter emoji="tools" text="uses" />
     </div>

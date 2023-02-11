@@ -22,7 +22,6 @@
     "@types/react": "18.0.27",
     "@types/react-dom": "18.0.10",
     "atropos": "^1.0.2",
-    "framer-motion": "^8.5.2",
     "next": "13.1.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -37,9 +36,9 @@
     "@storybook/nextjs": "^7.0.0-beta.15",
     "@storybook/react": "^7.0.0-beta.15",
     "@storybook/testing-library": "^0.0.13",
-    "eslint-plugin-storybook": "^0.6.8",
     "eslint": "8.32.0",
     "eslint-config-next": "13.1.4",
+    "eslint-plugin-storybook": "^0.6.8",
     "storybook": "^7.0.0-beta.15"
   }
 }
