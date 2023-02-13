@@ -41,18 +41,20 @@
   height: 200px;
 }
 
-.to {
+.to,
+.ls {
   position: absolute;
+  font-family: var(--font-brand);
+  rotate: -45deg;
+  font-size: clamp(2.5rem, 5vw, 8rem);
+}
+
+.to {
   bottom: 12%;
   left: 4%;
-  rotate: -45deg;
-  font-size: clamp(4rem, 2vw, 8rem);
 }
 
 .ls {
-  position: absolute;
   top: 0;
   right: 9%;
-  rotate: -45deg;
-  font-size: clamp(4rem, 2vw, 8rem);
 }

@@ -27,7 +27,7 @@
 .box div {
   opacity: 0;
   color: var(--color-white);
-  font-size: 2rem;
+  font-size: clamp(1rem, 2vw, 2.5rem);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.2rem;

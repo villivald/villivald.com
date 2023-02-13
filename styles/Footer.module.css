@@ -35,10 +35,53 @@
   transition: all 0.5s var(--easing-normal);
 }
 
+@media screen and (min-width: 1200px) {
+  .footer > div:nth-of-type(even) {
+    gap: 3rem;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  .footer > div:nth-of-type(even) {
+    gap: 5rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .footer > div > a > img {
+    width: 3rem;
+  }
+
+  .footer > div:nth-of-type(odd) > div {
+    height: 4rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .footer > div:nth-of-type(odd) > div {
+    height: 3rem;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .footer > div > a > img {
+    width: 2rem;
+  }
+}
+
 @media screen and (max-width: 500px) {
   .footer {
     position: fixed;
     bottom: 0;
     height: 10vh;
+  }
+
+  .footer > div > a > img {
+    width: 1.5rem;
+  }
+
+  .footer > div:nth-of-type(odd) > div {
+    height: 2rem;
+    width: 0.3rem;
   }
 }

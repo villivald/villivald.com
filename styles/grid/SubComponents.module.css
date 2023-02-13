@@ -1,9 +1,9 @@
 .gridFooterLight,
 .gridFooterDark {
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 25vw;
   padding: 0 1rem;
 }
 
@@ -24,4 +24,11 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+}
+
+@media (max-width: 730px) {
+  .gridFooterLight,
+  .gridFooterDark {
+    width: 45vw;
+  }
 }

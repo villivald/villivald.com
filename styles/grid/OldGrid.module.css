@@ -45,6 +45,12 @@
   height: 112.5%;
 }
 
+@media (max-width: 450px) {
+  .proto {
+    height: 88%;
+  }
+}
+
 @keyframes grow-and-shrink {
   0% {
     transform: scale(1) rotate(0deg);
