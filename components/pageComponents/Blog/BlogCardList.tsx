@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { FormattedMessage } from "react-intl";
 import { useTheme } from "@mui/material/styles";
@@ -9,7 +10,20 @@ type Props = {
 };
 
 const BlogCardList = ({ data }: Props) => {
+  const [randomPostData, setRandomPostData] = useState([]);
+  const [loadRandomPost, setLoadRandomPost] = useState(false);
+
   const theme = useTheme().palette.mode;
+
+  async function fetchRandomPost() {
+    const res = await fetch("https://dev.to/api/articles?username=villivald");
+    const json = await res.json();
+    setRandomPostData(json.slice(3, -1));
+  }
+
+  useEffect(() => {
+    loadRandomPost && fetchRandomPost();
+  }, [loadRandomPost]);
 
   const formattedData = data && [
     data[0],
@@ -22,6 +36,14 @@ const BlogCardList = ({ data }: Props) => {
     { id: 6 },
     data[2],
   ];
+
+  // get 6 random posts from the randomPost array
+  const randomPosts: Array<{
+    id: number;
+    canonical_url: string;
+    cover_image: string;
+    title: string;
+  }> = [...randomPostData].sort(() => 0.5 - Math.random()).slice(0, 6);
 
   return (
     <>
@@ -50,10 +72,37 @@ const BlogCardList = ({ data }: Props) => {
               </a>
             </div>
           ) : (
-            <div key={post.id} className={styles.animatedCard}>
+            <div
+              key={post.id}
+              className={styles.animatedCard}
+              onMouseEnter={() => setLoadRandomPost(true)}
+            >
               <div className={styles.innerCard}>
                 <div className={styles.front}>?</div>
-                <div className={styles.back}></div>
+                <div
+                  key={randomPosts[post.id - 1]?.id}
+                  className={[styles.blogCard, styles.back].join(" ")}
+                >
+                  <a href={randomPosts[post.id - 1]?.canonical_url}>
+                    <Image
+                      priority
+                      src={
+                        randomPosts[post.id - 1]?.cover_image ||
+                        "https://via.placeholder.com/400x200"
+                      }
+                      alt={randomPosts[post.id - 1]?.title || "placeholder"}
+                      height={200}
+                      width={400}
+                    />
+                    <h4
+                      className={
+                        theme === "dark" ? styles.textDark : styles.textLight
+                      }
+                    >
+                      {randomPosts[post.id - 1]?.title}
+                    </h4>
+                  </a>
+                </div>
               </div>
             </div>
           )
