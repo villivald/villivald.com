@@ -54,6 +54,16 @@
   opacity: 0;
 }
 
+@media (max-width: 500px) {
+  .image {
+    width: 80%;
+  }
+
+  .goat {
+    font-size: calc(var(--fontSize-header1) * 1.5);
+  }
+}
+
 @keyframes slide-in {
   20% {
     opacity: 0;

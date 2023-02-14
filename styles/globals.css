@@ -3,6 +3,7 @@
 :root {
   /* Colors */
   --color-brand-yellow: hsl(51, 74%, 60%);
+  --color-brand-yellow-saturated: hsl(55, 100%, 60%);
   --color-brand-green: hsl(141, 40%, 65%);
   --color-brand-teal: hsl(187, 52%, 22%);
   --color-brand-red: hsl(10, 94%, 60%);
@@ -153,4 +154,10 @@ h5 {
   font-family: var(--font-subheader);
   font-size: var(--fontSize-header5);
   color: var(--color-brand-dark);
+}
+
+@media (max-width: 900px) {
+  :root {
+    --font-brand: var(--font-header);
+  }
 }

@@ -105,3 +105,16 @@
   transform: none;
   transition: all 5s cubic-bezier(0.5, 0, 0.5, 1);
 }
+
+@media (max-width: 900px) {
+  .letters > p {
+    color: var(--color-brand-yellow-saturated);
+    text-shadow: 3px 3px var(--color-brand-dark);
+  }
+}
+
+@media (max-width: 500px) {
+  .letters > p {
+    width: 0.5rem;
+  }
+}

@@ -9,7 +9,6 @@
 }
 
 .main > a {
-  background-color: var(--color-brand-green);
   width: 25vw;
   max-width: 30rem;
   aspect-ratio: 1/1;

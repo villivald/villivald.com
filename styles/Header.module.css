@@ -14,7 +14,7 @@
 }
 
 .title {
-  font-size: clamp(1.5rem, 5vw, 4rem);
+  font-size: clamp(2rem, 5.5vw, 4rem);
   font-family: var(--font-brand);
   transition: all 0.3s ease-in-out;
 }
@@ -22,6 +22,13 @@
 .title:hover {
   text-shadow: 0 0 0.5rem var(--color-white);
   transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 900px) {
+  .title {
+    color: var(--color-brand-yellow-saturated);
+    text-shadow: 3px 3px var(--color-brand-dark);
+  }
 }
 
 @media screen and (max-width: 500px) {
