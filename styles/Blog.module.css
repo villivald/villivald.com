@@ -83,3 +83,31 @@
   background-color: var(--color-white);
   transform: rotateY(180deg);
 }
+
+@media screen and (max-width: 800px) {
+  .blogCard,
+  .front,
+  .back {
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .blogList {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+  }
+
+  .blogList > div:nth-child(2),
+  .blogList > div:nth-child(3),
+  .blogList > div:nth-child(6),
+  .blogList > div:nth-child(7) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .blogList {
+    margin-bottom: 7rem;
+  }
+}
