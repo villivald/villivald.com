@@ -39,3 +39,15 @@
     z-index: 999;
   }
 }
+
+@media screen and (max-height: 450px) {
+  .header {
+    height: 25vh;
+  }
+}
+
+@media screen and (max-height: 300px) {
+  .header {
+    height: 30vh;
+  }
+}

@@ -85,3 +85,9 @@
     width: 0.3rem;
   }
 }
+
+@media screen and (max-height: 350px) {
+  .footer {
+    height: 30vh;
+  }
+}
