@@ -54,13 +54,22 @@
   opacity: 0;
 }
 
+@media (max-width: 1100px) {
+  .goat {
+    font-size: calc(var(--fontSize-header1) * 1.5);
+  }
+}
+
+@media (max-width: 900px) {
+  .goat {
+    color: var(--color-brand-yellow-saturated);
+    text-shadow: 3px 3px var(--color-brand-dark);
+  }
+}
+
 @media (max-width: 500px) {
   .image {
     width: 80%;
-  }
-
-  .goat {
-    font-size: calc(var(--fontSize-header1) * 1.5);
   }
 }
 

@@ -1,4 +1,6 @@
 import { useState } from "react";
+import Image from "next/image";
+import Atropos from "atropos/react";
 
 import CardFooter from "./subComponents/CardFooter";
 
@@ -15,7 +17,17 @@ const UsesGrid = () => {
         onMouseEnter={() => setIsOpen(true)}
         onMouseLeave={() => setIsOpen(false)}
       >
-        <div data-isopen={isOpen} className={styles.child} />
+        <div data-isopen={isOpen} className={styles.child}>
+          <Atropos>
+            <Image
+              className={styles.emoji}
+              width={100}
+              height={100}
+              src="/emojis/toolbox.svg"
+              alt="toolbox emoji"
+            />
+          </Atropos>
+        </div>
       </div>
       {!isOpen && <p className={styles.ls}>LS</p>}
       <CardFooter emoji="tools" text="uses" />
