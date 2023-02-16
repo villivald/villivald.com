@@ -1,13 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useTheme } from "@mui/material/styles";
+import { useContext } from "react";
 
 import { colors } from "../utils/colors";
+import { ThemeContext } from "../context";
 
 import styles from "../styles/Footer.module.css";
 
 const Footer = () => {
-  const theme = useTheme().palette.mode;
+  const theme = useContext(ThemeContext);
 
   const socialIcons = [
     { name: "gitlab", link: "https://version.helsinki.fi/villival" },

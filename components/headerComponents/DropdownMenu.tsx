@@ -1,18 +1,18 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { FormattedMessage } from "react-intl";
 
-import { useTheme } from "@mui/material/styles";
 import { Button, Menu, MenuItem } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 
+import { ThemeContext } from "../../context";
 import { colors } from "../../utils/colors";
 
 import styles from "../../styles/Dropdown.module.css";
 
 const DropdownMenu = () => {
-  const theme = useTheme().palette.mode;
+  const theme = useContext(ThemeContext);
 
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);

@@ -1,8 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import Image from "next/image";
 import { FormattedMessage } from "react-intl";
-import { useTheme } from "@mui/material/styles";
 
+import { ThemeContext } from "../../../context";
 import styles from "../../../styles/Blog.module.css";
 
 type Props = {
@@ -13,7 +13,7 @@ const BlogCardList = ({ data }: Props) => {
   const [randomPostData, setRandomPostData] = useState([]);
   const [loadRandomPost, setLoadRandomPost] = useState(false);
 
-  const theme = useTheme().palette.mode;
+  const theme = useContext(ThemeContext);
 
   async function fetchRandomPost() {
     const res = await fetch("https://dev.to/api/articles?username=villivald");
@@ -47,7 +47,7 @@ const BlogCardList = ({ data }: Props) => {
 
   return (
     <>
-      <h1>
+      <h1 className={theme === "dark" ? styles.textDark : styles.textLight}>
         <FormattedMessage id="blogPosts" />
       </h1>
       <div className={styles.blogList}>
@@ -62,13 +62,7 @@ const BlogCardList = ({ data }: Props) => {
                   height={200}
                   width={400}
                 />
-                <h4
-                  className={
-                    theme === "dark" ? styles.textDark : styles.textLight
-                  }
-                >
-                  {post.title}
-                </h4>
+                <h4>{post.title}</h4>
               </a>
             </div>
           ) : (
@@ -94,13 +88,7 @@ const BlogCardList = ({ data }: Props) => {
                       height={200}
                       width={400}
                     />
-                    <h4
-                      className={
-                        theme === "dark" ? styles.textDark : styles.textLight
-                      }
-                    >
-                      {randomPosts[post.id - 1]?.title}
-                    </h4>
+                    <h4>{randomPosts[post.id - 1]?.title}</h4>
                   </a>
                 </div>
               </div>

@@ -1,7 +1,8 @@
 import Image from "next/image";
 import { FormattedMessage } from "react-intl";
-import { useTheme } from "@mui/material/styles";
+import { useContext } from "react";
 
+import { ThemeContext } from "../../../context";
 import styles from "../../../styles/grid/SubComponents.module.css";
 
 type Props = {
@@ -10,7 +11,7 @@ type Props = {
 };
 
 const CardFooter = ({ emoji, text }: Props) => {
-  const theme = useTheme().palette.mode;
+  const theme = useContext(ThemeContext);
 
   return (
     <div

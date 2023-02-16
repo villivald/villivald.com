@@ -1,8 +1,7 @@
 import Link from "next/link";
-import { useTheme } from "@mui/material/styles";
-
+import { useContext } from "react";
+import { ThemeContext } from "../../context";
 import styles from "../../styles/Header.module.css";
-
 import { colors } from "../../utils/colors";
 
 import DropdownMenu from "./DropdownMenu";
@@ -15,7 +14,7 @@ type Props = {
 };
 
 const Header = ({ changeTheme, changeLocale }: Props) => {
-  const theme = useTheme().palette.mode;
+  const theme = useContext(ThemeContext);
 
   return (
     <header

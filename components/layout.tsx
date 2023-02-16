@@ -1,5 +1,6 @@
-import { useTheme } from "@mui/material/styles";
+import { useContext } from "react";
 
+import { ThemeContext } from "../context";
 import { colors, gradients } from "../utils/colors";
 
 import Header from "./headerComponents/Header";
@@ -12,7 +13,7 @@ type Props = {
 };
 
 export default function Layout({ children, changeTheme, changeLocale }: Props) {
-  const theme = useTheme().palette.mode;
+  const theme = useContext(ThemeContext);
 
   return (
     <>

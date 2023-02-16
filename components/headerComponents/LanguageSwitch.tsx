@@ -1,11 +1,12 @@
 import { useState } from "react";
 import Image from "next/image";
+import { useContext } from "react";
 
 import { Switch, IconButton } from "@mui/material";
-import { useTheme } from "@mui/material/styles";
 import LanguageIcon from "@mui/icons-material/Language";
 
 import { colors } from "../../utils/colors";
+import { ThemeContext } from "../../context";
 
 import styles from "../../styles/Switch.module.css";
 
@@ -15,7 +16,7 @@ type Props = {
 
 const LanguageSwitch = ({ changeLocale }: Props) => {
   const [checked, setChecked] = useState(false);
-  const theme = useTheme().palette.mode;
+  const theme = useContext(ThemeContext);
 
   const handleChange = () => {
     setChecked(!checked);
