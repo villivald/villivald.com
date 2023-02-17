@@ -59,3 +59,9 @@
   height: 100%;
   grid-area: 3 / 1 / 4 / 3;
 }
+
+@media (max-width: 500px) {
+  .mainContainer {
+    min-height: 80vh;
+  }
+}

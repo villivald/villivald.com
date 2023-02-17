@@ -48,3 +48,9 @@
   border-radius: 50%;
   background-color: var(--color-black);
 }
+
+@media (max-width: 500px) {
+  .mainContainer {
+    min-height: 80vh;
+  }
+}

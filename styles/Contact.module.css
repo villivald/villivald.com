@@ -1,3 +1,9 @@
 .mainContainer {
   min-height: 70vh;
 }
+
+@media (max-width: 500px) {
+  .mainContainer {
+    min-height: 80vh;
+  }
+}
