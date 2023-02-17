@@ -88,3 +88,46 @@ li:has(span.textDark) {
 .toggle > details[open] summary::before {
   transform: rotate(90deg);
 }
+
+@media (max-width: 1000px) {
+  .mainContainer li,
+  .toggle > details > summary {
+    font-size: 0.8rem;
+  }
+
+  .mainContainer h3 > div {
+    font-size: 1.2rem;
+  }
+
+  .mainContainer h1 > div {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .mainContainer > div {
+    grid-template-columns: 1fr;
+    place-items: stretch;
+  }
+}
+
+@media (max-width: 600px) {
+  .mainContainer li,
+  .toggle > details > summary {
+    font-size: 0.8rem;
+  }
+
+  .mainContainer h3 > div {
+    font-size: 1rem;
+  }
+
+  .mainContainer h1 > div {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .mainContainer {
+    min-height: 80vh;
+  }
+}
