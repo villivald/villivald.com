@@ -105,6 +105,10 @@ li:has(span.textDark) {
 }
 
 @media (max-width: 800px) {
+  .mainContainer {
+    padding-bottom: 2rem;
+  }
+
   .mainContainer > div {
     grid-template-columns: 1fr;
     place-items: stretch;
@@ -129,5 +133,6 @@ li:has(span.textDark) {
 @media (max-width: 500px) {
   .mainContainer {
     min-height: 80vh;
+    padding-bottom: 6rem;
   }
 }

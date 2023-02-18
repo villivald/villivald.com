@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   min-height: 70vh;
+  padding-bottom: 1rem;
 }
 
 .cardWrapper {
@@ -81,5 +82,6 @@
 @media (max-width: 500px) {
   .mainContainer {
     min-height: 80vh;
+    padding-bottom: 4rem;
   }
 }

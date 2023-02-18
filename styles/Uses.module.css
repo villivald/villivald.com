@@ -22,3 +22,9 @@
 .mainContainer > div > div > ul {
   align-self: flex-start;
 }
+
+@media (max-width: 500px) {
+  .mainContainer {
+    padding-bottom: 3rem;
+  }
+}
