@@ -49,8 +49,24 @@
   background-color: var(--color-black);
 }
 
+@media (max-width: 700px) {
+  .eyes {
+    gap: 15rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .eyes {
+    gap: 10rem;
+  }
+}
+
 @media (max-width: 500px) {
   .mainContainer {
     min-height: 80vh;
+  }
+
+  .eyes {
+    gap: 5rem;
   }
 }
