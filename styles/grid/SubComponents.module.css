@@ -7,6 +7,11 @@
   padding: 0 1rem;
 }
 
+.gridFooterLight p,
+.gridFooterDark p {
+  font-family: var(--font-header);
+}
+
 .gridFooterLight {
   background-color: var(--color-brand-yellow);
 }

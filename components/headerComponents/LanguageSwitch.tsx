@@ -3,7 +3,6 @@ import Image from "next/image";
 import { useContext } from "react";
 
 import { Switch, IconButton } from "@mui/material";
-import LanguageIcon from "@mui/icons-material/Language";
 
 import { colors } from "../../utils/colors";
 import { ThemeContext } from "../../context";
@@ -29,9 +28,13 @@ const LanguageSwitch = ({ changeLocale }: Props) => {
         <IconButton
           aria-label="website language switcher"
           onClick={handleChange}
-          style={{ color: theme === "dark" ? colors.white : colors.dark }}
         >
-          <LanguageIcon /> {checked ? "FI" : "EN"}
+          <Image
+            src={checked ? "/emojis/fin.svg" : "/emojis/eng.svg"}
+            alt="emoji icon - flag of chosen language (finnish or english)"
+            width={40}
+            height={40}
+          />
         </IconButton>
       </p>
       <p className={styles.languageSwitch}>

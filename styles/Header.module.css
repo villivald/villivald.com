@@ -27,7 +27,11 @@
 @media (max-width: 900px) {
   .title {
     color: var(--color-brand-yellow-saturated);
-    text-shadow: 3px 3px var(--color-brand-dark);
+    text-shadow: var(--font-shadow);
+  }
+
+  .title:hover {
+    text-shadow: 0.3rem 0.3rem var(--color-black);
   }
 }
 
