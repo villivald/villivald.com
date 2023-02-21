@@ -1,12 +1,14 @@
 import Link from "next/link";
 import { useContext } from "react";
+
 import { ThemeContext } from "../../context";
-import styles from "../../styles/Header.module.css";
 import { colors } from "../../utils/colors";
 
 import DropdownMenu from "./DropdownMenu";
 import ThemeToggle from "./ThemeToggle";
 import LanguageSwitch from "./LanguageSwitch";
+
+import styles from "../../styles/Header.module.css";
 
 type Props = {
   changeTheme: () => void;

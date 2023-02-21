@@ -31,7 +31,15 @@
   }
 
   .title:hover {
-    text-shadow: 0.3rem 0.3rem var(--color-black);
+    text-shadow: 0 -1.25rem 0 var(--color-brand-teal),
+      0 1.25rem 0 var(--color-brand-red);
+  }
+}
+
+@media (max-width: 600px) {
+  .title:hover {
+    text-shadow: 0 -1rem 0 var(--color-brand-teal),
+      0 1rem 0 var(--color-brand-red);
   }
 }
 
@@ -40,7 +48,7 @@
     position: sticky;
     top: 0;
     height: 10vh;
-    z-index: 999;
+    z-index: 2;
   }
 }
 
