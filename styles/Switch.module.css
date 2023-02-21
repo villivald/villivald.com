@@ -18,9 +18,25 @@
   grid-area: 1 / 3 / 2 / 4;
 }
 
+.mobileLanguageSwitch {
+  display: flex;
+}
+
+.mobileLanguageSwitch > button:hover {
+  box-shadow: 3px 3px 1rem 0rem white;
+  transition: box-shadow 0.5s var(--easing-normal);
+}
+
 .mobileLanguageSwitch > button {
-  font-family: var(--font-header);
-  font-size: var(--fontSize-header4);
+  border: none;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: transparent;
+  background-size: 4rem;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .arrowLeft,

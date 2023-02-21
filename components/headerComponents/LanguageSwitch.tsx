@@ -2,7 +2,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { useContext } from "react";
 
-import { Switch, IconButton } from "@mui/material";
+import { Switch } from "@mui/material";
 
 import { colors } from "../../utils/colors";
 import { ThemeContext } from "../../context";
@@ -25,17 +25,16 @@ const LanguageSwitch = ({ changeLocale }: Props) => {
   return (
     <>
       <p className={styles.mobileLanguageSwitch}>
-        <IconButton
+        <button
           aria-label="website language switcher"
           onClick={handleChange}
-        >
-          <Image
-            src={checked ? "/emojis/fin.svg" : "/emojis/eng.svg"}
-            alt="emoji icon - flag of chosen language (finnish or english)"
-            width={40}
-            height={40}
-          />
-        </IconButton>
+          className={styles.mobileLanguageSwitchButton}
+          style={{
+            backgroundImage: `url(${
+              checked ? "/emojis/fin.svg" : "/emojis/eng.svg"
+            })`,
+          }}
+        ></button>
       </p>
       <p className={styles.languageSwitch}>
         <span>
