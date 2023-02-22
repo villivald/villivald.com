@@ -23,7 +23,7 @@
 }
 
 .mobileLanguageSwitch > button:hover {
-  box-shadow: 3px 3px 1rem 0rem white;
+  box-shadow: 3px 3px 1rem 0rem var(--color-white);
   transition: box-shadow 0.5s var(--easing-normal);
 }
 
@@ -68,6 +68,48 @@
   border: 1.1rem solid;
   border-radius: 50%;
   position: absolute;
+}
+
+.switch input {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+.switch label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 3.2rem;
+  height: 1.5rem;
+  background: grey;
+  display: grid;
+  place-items: center;
+  border-radius: 1rem;
+  position: relative;
+}
+
+.switch label:after {
+  content: "";
+  position: absolute;
+  left: 0.3rem;
+  width: 1rem;
+  height: 1rem;
+  background: var(--color-white);
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.switch input:checked + label {
+  background: var(--color-brand-teal);
+}
+
+.switch input:checked + label:after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+
+.switch label:active:after {
+  width: 2rem;
 }
 
 @media screen and (max-width: 75rem) {

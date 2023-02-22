@@ -2,8 +2,6 @@ import { useState } from "react";
 import Image from "next/image";
 import { useContext } from "react";
 
-import { Switch } from "@mui/material";
-
 import { colors } from "../../utils/colors";
 import { ThemeContext } from "../../context";
 
@@ -43,7 +41,6 @@ const LanguageSwitch = ({ changeLocale }: Props) => {
               borderColor: theme === "dark" ? colors.dark : colors.green,
             }}
           ></span>
-
           <Image
             src="/emojis/eng.svg"
             alt="emoji icon - english (usa flag)"
@@ -61,14 +58,21 @@ const LanguageSwitch = ({ changeLocale }: Props) => {
           width={100}
           height={100}
         />
-        <Switch checked={checked} onChange={handleChange} />
+        <span className={styles.switch}>
+          <input
+            type="checkbox"
+            id="switch"
+            checked={checked}
+            onClick={handleChange}
+          />
+          <label htmlFor="switch">Toggle</label>
+        </span>
         <span>
           <span
             style={{
               borderColor: theme === "dark" ? colors.dark : colors.green,
             }}
           ></span>
-
           <Image
             src="/emojis/fin.svg"
             alt="emoji icon - finnish (flag)"
