@@ -58,15 +58,10 @@ const LanguageSwitch = ({ changeLocale }: Props) => {
           width={100}
           height={100}
         />
-        <span className={styles.switch}>
-          <input
-            type="checkbox"
-            id="switch"
-            checked={checked}
-            onClick={handleChange}
-          />
-          <label htmlFor="switch">Toggle</label>
-        </span>
+        <label className={styles.switch}>
+          <input type="checkbox" checked={checked} onChange={handleChange} />
+          <span></span>
+        </label>
         <span>
           <span
             style={{
