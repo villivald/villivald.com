@@ -1,6 +1,5 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import Image from "next/image";
-import { useContext } from "react";
 
 import { colors } from "../../utils/colors";
 import { ThemeContext } from "../../context";
