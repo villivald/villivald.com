@@ -1,10 +1,7 @@
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { FormattedMessage } from "react-intl";
-
-import { Button, Menu, MenuItem } from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
 
 import { ThemeContext } from "../../context";
 import { colors } from "../../utils/colors";
@@ -13,13 +10,6 @@ import styles from "../../styles/Dropdown.module.css";
 
 const DropdownMenu = () => {
   const theme = useContext(ThemeContext);
-
-  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
-  const open = Boolean(anchorEl);
-
-  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) =>
-    setAnchorEl(event.currentTarget);
-  const handleClose = () => setAnchorEl(null);
 
   const menuItems = [
     {
@@ -61,45 +51,31 @@ const DropdownMenu = () => {
   ];
 
   return (
-    <div className={styles.dropdownMenu}>
-      <Button
+    <div className={styles.dropdown}>
+      <button
         className={styles.dropdownButton}
-        aria-controls={open ? "basic-menu" : undefined}
         aria-haspopup="true"
-        aria-expanded={open ? "true" : undefined}
-        onClick={handleClick}
+        data-theme={theme}
         style={{ color: theme === "dark" ? colors.white : colors.dark }}
       >
         <span>MENU</span>
-        <MenuIcon fontSize="large" />
-      </Button>
-      <Menu
-        className={
-          theme === "dark"
-            ? styles.darkMenuComponent
-            : styles.innerMenuComponent
-        }
-        anchorEl={anchorEl}
-        open={open}
-        onClose={handleClose}
-        MenuListProps={{
-          "aria-labelledby": "basic-button",
-        }}
-      >
+      </button>
+      <ul className={theme === "dark" ? styles.darkMenu : styles.lightMenu}>
         {menuItems.map((item) => (
-          <MenuItem key={item.id}>
+          <li key={item.id}>
             <Link href={`/${item.id}`}>
               <Image
                 src={`/emojis/${item.emoji}.svg`}
+                data-name={item.emoji}
                 width={24}
                 height={24}
                 alt={item.id}
               />
               <FormattedMessage id={item.id} />
             </Link>
-          </MenuItem>
+          </li>
         ))}
-      </Menu>
+      </ul>
     </div>
   );
 };

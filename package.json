@@ -11,9 +11,9 @@
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
+    "@headlessui/react": "^1.7.12",
     "@mdx-js/loader": "^2.2.1",
     "@mdx-js/react": "^2.2.1",
-    "@mui/icons-material": "^5.11.0",
     "@mui/material": "^5.11.5",
     "@next/mdx": "^13.1.4",
     "@types/node": "18.11.18",

@@ -1,44 +1,116 @@
-.dropdownMenu > button {
-  color: var(--color-dark);
+.lightMenu {
+  background-color: var(--color-brand-grey95);
 }
 
-.dropdownMenu > button > span {
+.darkMenu {
+  background-color: var(--color-brand-teal);
+}
+
+.dropdownButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.darkMenu,
+.lightMenu {
+  display: none;
+  position: absolute;
+  z-index: 2;
+  list-style: none;
+  padding: 0;
+  width: 10rem;
+  transform: translateX(-5rem);
+  border-radius: 0.25rem;
+  box-shadow: rgb(0 0 0 / 20%) 0px 5px 5px -3px,
+    rgb(0 0 0 / 14%) 0px 8px 10px 1px, rgb(0 0 0 / 12%) 0px 3px 14px 2px;
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.darkMenu img[data-name="bike"] {
+  filter: invert(1);
+}
+
+/* Display the dropdown menu on hover or focus */
+.dropdown:hover .darkMenu,
+.dropdown:focus .darkMenu,
+.dropdown:hover .lightMenu,
+.dropdown:focus .lightMenu {
+  display: block;
+}
+
+.darkMenu > li,
+.lightMenu > li {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.lightMenu > li:hover {
+  background-color: var(--color-brand-grey85);
+}
+
+.lightMenu li:not(:last-child) {
+  border-bottom: 1px solid var(--color-brand-grey85);
+}
+
+.darkMenu li:not(:last-child) {
+  border-bottom: 1px solid var(--color-brand-grey);
+}
+
+.darkMenu > li > a,
+.lightMenu > li > a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.lightMenu li > a {
+  color: var(--color-brand-dark);
+}
+
+.darkMenu li > a {
+  color: var(--color-white);
+}
+
+.dropdown > button > span {
   font-size: var(--fontSize-header4);
   font-family: var(--font-header);
 }
 
-.dropdownMenu > button > svg {
-  font-size: var(--fontSize-header1);
+.dropdown > button:hover::after,
+.dropdown > button::after {
+  content: "";
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 1.2rem;
+  height: 1.2rem;
 }
 
-.darkMenuComponent ul,
-.innerMenuComponent ul {
-  padding: 0rem;
+.dropdown > button:hover::after {
+  background-image: url("/emojis/up.svg");
 }
 
-.darkMenuComponent li:not(:last-child),
-.innerMenuComponent li:not(:last-child) {
-  border-bottom: 1px solid var(--color-brand-grey85);
+.dropdown > button::after {
+  background-image: url("/emojis/down.svg");
 }
 
-.innerMenuComponent li > a,
-.darkMenuComponent li > a {
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.innerMenuComponent li > a {
-  color: var(--color-brand-dark);
-}
-
-.darkMenuComponent li > a {
-  color: var(--color-white);
+.dropdown > button[data-theme="dark"]::after {
+  filter: invert(1);
 }
 
 @media screen and (max-width: 1000px) {
   .dropdownButton span {
     display: none;
+  }
+
+  .dropdown > button:hover::after,
+  .dropdown > button::after {
+    background-image: url("/emojis/menu.svg");
   }
 }
