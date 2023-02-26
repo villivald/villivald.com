@@ -114,3 +114,17 @@
     background-image: url("/emojis/menu.svg");
   }
 }
+
+@media screen and (max-width: 650px) {
+  .darkMenu,
+  .lightMenu {
+    margin-left: -1rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .darkMenu,
+  .lightMenu {
+    margin-left: -2rem;
+  }
+}
