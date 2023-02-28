@@ -56,6 +56,10 @@
   position: absolute;
 }
 
+.languageSwitch > span > img {
+  height: auto;
+}
+
 .switch {
   position: relative;
   cursor: pointer;
