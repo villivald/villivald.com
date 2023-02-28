@@ -154,3 +154,28 @@
     display: none;
   }
 }
+
+@media screen and (max-height: 1000px) {
+  .arrowLeft,
+  .arrowRight {
+    top: 3.5rem;
+  }
+}
+@media screen and (max-height: 900px) {
+  .arrowLeft,
+  .arrowRight {
+    top: 3rem;
+  }
+}
+@media screen and (max-height: 800px) {
+  .arrowLeft,
+  .arrowRight {
+    top: 2.5rem;
+  }
+}
+@media screen and (max-height: 700px) {
+  .arrowLeft,
+  .arrowRight {
+    top: 2rem;
+  }
+}
