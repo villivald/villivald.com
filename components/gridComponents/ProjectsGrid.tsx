@@ -14,7 +14,7 @@ const ProjectsGrid = () => {
         <p className={styles.t}>T</p>
         <p className={styles.s}>S</p>
       </div>
-      <CardFooter emoji="coding" text="projects" />
+      <CardFooter emoji="projects" text="projects" />
     </div>
   );
 };

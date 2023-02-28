@@ -18,9 +18,9 @@ const Footer = () => {
   ];
 
   const otherIcons = [
-    { name: "basketball", link: "https://www.koripallopaikat.com" },
+    { name: "koripallopaikat", link: "https://www.koripallopaikat.com" },
     { name: "email", link: "mailto:maxim@villivald.com" },
-    { name: "pen", link: "https://www.create-react-app.com/" },
+    { name: "blog", link: "https://www.create-react-app.com/" },
     { name: "hackernoon", link: "https://hackernoon.com/u/villivald" },
   ];
 

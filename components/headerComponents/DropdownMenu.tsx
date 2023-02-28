@@ -12,42 +12,15 @@ const DropdownMenu = () => {
   const theme = useContext(ThemeContext);
 
   const menuItems = [
-    {
-      id: "about",
-      emoji: "bike",
-    },
-    {
-      id: "blog",
-      emoji: "pen",
-    },
-    {
-      id: "contact",
-      emoji: "phone",
-    },
-    {
-      id: "koripallopaikat",
-      emoji: "basketball",
-    },
-    {
-      id: "books",
-      emoji: "books",
-    },
-    {
-      id: "projects",
-      emoji: "coding",
-    },
-    {
-      id: "study",
-      emoji: "student",
-    },
-    {
-      id: "uses",
-      emoji: "tools",
-    },
-    {
-      id: "old",
-      emoji: "old",
-    },
+    "about",
+    "blog",
+    "contact",
+    "koripallopaikat",
+    "books",
+    "projects",
+    "study",
+    "uses",
+    "old",
   ];
 
   return (
@@ -62,16 +35,16 @@ const DropdownMenu = () => {
       </button>
       <ul className={theme === "dark" ? styles.darkMenu : styles.lightMenu}>
         {menuItems.map((item) => (
-          <li key={item.id}>
-            <Link href={`/${item.id}`}>
+          <li key={item}>
+            <Link href={`/${item}`}>
               <Image
-                src={`/emojis/${item.emoji}.svg`}
-                data-name={item.emoji}
+                src={`/emojis/${item}.svg`}
+                data-name={item}
                 width={24}
                 height={24}
-                alt={item.id}
+                alt={`${item} emoji`}
               />
-              <FormattedMessage id={item.id} />
+              <FormattedMessage id={item} />
             </Link>
           </li>
         ))}

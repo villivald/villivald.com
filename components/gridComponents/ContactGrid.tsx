@@ -14,7 +14,7 @@ const ContactGrid = () => {
         width={200}
         height={200}
       />
-      <CardFooter emoji="phone" text="contact" />
+      <CardFooter emoji="contact" text="contact" />
     </div>
   );
 };

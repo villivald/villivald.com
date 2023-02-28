@@ -30,7 +30,7 @@ const UsesGrid = () => {
         </div>
       </div>
       {!isOpen && <p className={styles.ls}>LS</p>}
-      <CardFooter emoji="tools" text="uses" />
+      <CardFooter emoji="uses" text="uses" />
     </div>
   );
 };

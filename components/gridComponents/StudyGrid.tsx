@@ -9,7 +9,7 @@ const StudyGrid = () => {
     <div className={styles.container}>
       <div className={styles.image}></div>
       <div className={styles.image_alt}></div>
-      <CardFooter emoji="student" text="study" />
+      <CardFooter emoji="study" text="study" />
     </div>
   );
 };
