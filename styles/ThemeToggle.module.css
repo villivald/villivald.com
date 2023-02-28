@@ -1,0 +1,16 @@
+.button {
+  width: 3.75rem;
+  height: 3.75rem;
+  background: transparent;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.button:active {
+  background-color: rgba(0, 0, 0, 0.08);
+}

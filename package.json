@@ -1,6 +1,6 @@
 {
   "name": "villivald.com",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
     "dev": "next dev -p 3500",
@@ -9,11 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@emotion/react": "^11.10.5",
-    "@emotion/styled": "^11.10.5",
     "@mdx-js/loader": "^2.2.1",
     "@mdx-js/react": "^2.2.1",
-    "@mui/material": "^5.11.5",
     "@next/mdx": "^13.1.4",
     "@types/node": "18.11.18",
     "@types/react": "18.0.27",

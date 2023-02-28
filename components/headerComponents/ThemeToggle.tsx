@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { IconButton } from "@mui/material";
+
+import styles from "../../styles/ThemeToggle.module.css";
 
 type Props = {
   changeTheme: () => void;
@@ -8,19 +9,21 @@ type Props = {
 
 const ThemeToggle = ({ changeTheme, theme }: Props) => {
   return (
-    <div>
-      <IconButton aria-label="changeThemeButton" onClick={changeTheme}>
-        <Image
-          style={{
-            filter: theme === "dark" ? "invert(1)" : "invert(0)",
-          }}
-          src={`/emojis/${theme === "dark" ? "dark" : "light"}.svg`}
-          alt="emoji icon - light/dark theme switcher"
-          width={48}
-          height={48}
-        />
-      </IconButton>
-    </div>
+    <button
+      aria-label="changeThemeButton"
+      onClick={changeTheme}
+      className={styles.button}
+    >
+      <Image
+        style={{
+          filter: theme === "dark" ? "invert(1)" : "invert(0)",
+        }}
+        src={`/emojis/${theme === "dark" ? "dark" : "light"}.svg`}
+        alt="emoji icon - light/dark theme switcher"
+        width={48}
+        height={48}
+      />
+    </button>
   );
 };
 

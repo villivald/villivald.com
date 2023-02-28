@@ -3,6 +3,34 @@
   gap: 3rem;
 }
 
+.ball {
+  background-color: var(--color-brand-dark80);
+  border-radius: 50%;
+  height: 2rem;
+  width: 2rem;
+  animation: moveRight 2s both cubic-bezier(0.5, 0.1, 0.5, 1) infinite;
+}
+
+.ball[data-delay="0"] {
+  animation-delay: 0s;
+}
+
+.ball[data-delay="1"] {
+  animation-delay: 0.1s;
+}
+
+.ball[data-delay="2"] {
+  animation-delay: 0.2s;
+}
+
+.ball[data-delay="3"] {
+  animation-delay: 0.3s;
+}
+
+.ball[data-delay="4"] {
+  animation-delay: 0.4s;
+}
+
 @keyframes moveRight {
   0% {
     transform: translateX(0);
