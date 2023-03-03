@@ -1,9 +1,7 @@
 import { useState, useContext } from "react";
 import Image from "next/image";
 
-import { colors } from "../../utils/colors";
 import { ThemeContext } from "../../context";
-
 import styles from "../../styles/Switch.module.css";
 
 type Props = {
@@ -25,21 +23,12 @@ const LanguageSwitch = ({ changeLocale }: Props) => {
         <button
           aria-label="website language switcher"
           onClick={handleChange}
-          className={styles.mobileLanguageSwitchButton}
-          style={{
-            backgroundImage: `url(${
-              checked ? "/emojis/fin.svg" : "/emojis/eng.svg"
-            })`,
-          }}
+          data-checked={checked}
         ></button>
       </p>
       <p className={styles.languageSwitch}>
         <span>
-          <span
-            style={{
-              borderColor: theme === "dark" ? colors.dark : colors.green,
-            }}
-          ></span>
+          <span data-theme={theme}></span>
           <Image
             src="/emojis/eng.svg"
             alt="emoji icon - english (usa flag)"
@@ -49,9 +38,7 @@ const LanguageSwitch = ({ changeLocale }: Props) => {
         </span>
         <Image
           className={checked ? styles.arrowRight : styles.arrowLeft}
-          style={{
-            filter: theme === "dark" ? "invert(1)" : "invert(0)",
-          }}
+          data-theme={theme}
           src="/images/arrow.svg"
           alt="Arrow pointing to the chosen language of the website"
           width={100}
@@ -59,14 +46,10 @@ const LanguageSwitch = ({ changeLocale }: Props) => {
         />
         <label className={styles.switch}>
           <input type="checkbox" checked={checked} onChange={handleChange} />
-          <span></span>
+          <span data-theme={theme}></span>
         </label>
         <span>
-          <span
-            style={{
-              borderColor: theme === "dark" ? colors.dark : colors.green,
-            }}
-          ></span>
+          <span data-theme={theme}></span>
           <Image
             src="/emojis/fin.svg"
             alt="emoji icon - finnish (flag)"

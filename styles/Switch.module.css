@@ -24,6 +24,11 @@
   background-size: 4rem;
   background-repeat: no-repeat;
   background-position: center;
+  background-image: url("/emojis/eng.svg");
+}
+
+.mobileLanguageSwitch > button[data-checked="true"] {
+  background-image: url("/emojis/fin.svg");
 }
 
 .arrowLeft,
@@ -31,6 +36,12 @@
   position: absolute;
   top: 4.5rem;
   transition: transform 0.5s ease-in-out;
+  filter: invert(0);
+}
+
+.arrowLeft[data-theme="dark"],
+.arrowRight[data-theme="dark"] {
+  filter: invert(1);
 }
 
 .arrowRight {
@@ -54,6 +65,12 @@
   border: 1.1rem solid;
   border-radius: 50%;
   position: absolute;
+  border-color: var(--color-brand-green);
+}
+
+.languageSwitch > span:first-child > span[data-theme="dark"],
+.languageSwitch > span:last-child > span[data-theme="dark"] {
+  border-color: var(--color-brand-dark);
 }
 
 .languageSwitch > span > img {
@@ -83,6 +100,10 @@
   background-color: var(--color-black-38);
   vertical-align: top;
   transition: background-color 0.2s, opacity 0.2s;
+}
+
+.switch > span[data-theme="dark"]::before {
+  background-color: var(--color-brand-grey);
 }
 
 /* Thumb */
