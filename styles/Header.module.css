@@ -3,6 +3,11 @@
   place-items: center;
   height: 15vh;
   grid-template-columns: 2fr 2fr 1fr 1fr;
+  background-color: var(--color-brand-green);
+}
+
+.header[data-theme="dark"] {
+  background-color: var(--color-brand-dark);
 }
 
 .header > a {

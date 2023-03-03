@@ -1,10 +1,11 @@
 import { useContext } from "react";
 
 import { ThemeContext } from "../context";
-import { colors, gradients } from "../utils/colors";
 
 import Header from "./headerComponents/Header";
 import Footer from "./Footer";
+
+import styles from "../styles/Layout.module.css";
 
 type Props = {
   children: React.ReactNode;
@@ -18,12 +19,7 @@ export default function Layout({ children, changeTheme, changeLocale }: Props) {
   return (
     <>
       <Header changeTheme={changeTheme} changeLocale={changeLocale} />
-      <main
-        style={{
-          backgroundColor: theme === "dark" ? colors.dark80 : colors.grey,
-          backgroundImage: theme === "dark" ? "none" : gradients.light,
-        }}
-      >
+      <main className={styles.main} data-theme={theme}>
         {children}
       </main>
       <Footer />

@@ -4,8 +4,6 @@ import Image from "next/image";
 import { FormattedMessage } from "react-intl";
 
 import { ThemeContext } from "../../context";
-import { colors } from "../../utils/colors";
-
 import styles from "../../styles/Dropdown.module.css";
 
 const DropdownMenu = () => {
@@ -29,7 +27,6 @@ const DropdownMenu = () => {
         className={styles.dropdownButton}
         aria-haspopup="true"
         data-theme={theme}
-        style={{ color: theme === "dark" ? colors.white : colors.dark }}
       >
         <span>MENU</span>
       </button>

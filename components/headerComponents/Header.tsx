@@ -2,7 +2,6 @@ import Link from "next/link";
 import { useContext } from "react";
 
 import { ThemeContext } from "../../context";
-import { colors } from "../../utils/colors";
 
 import DropdownMenu from "./DropdownMenu";
 import ThemeToggle from "./ThemeToggle";
@@ -19,10 +18,7 @@ const Header = ({ changeTheme, changeLocale }: Props) => {
   const theme = useContext(ThemeContext);
 
   return (
-    <header
-      className={styles.header}
-      style={{ backgroundColor: theme === "dark" ? colors.dark : colors.green }}
-    >
+    <header className={styles.header} data-theme={theme}>
       <ThemeToggle changeTheme={changeTheme} theme={theme} />
       <Link href="/">
         <h1 className={styles.title}>villivald</h1>

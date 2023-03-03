@@ -7,6 +7,14 @@
   cursor: pointer;
 }
 
+.button > img {
+  filter: invert(0);
+}
+
+.button > img[data-theme="dark"] {
+  filter: invert(1);
+}
+
 .button:hover {
   background-color: rgba(0, 0, 0, 0.04);
 }

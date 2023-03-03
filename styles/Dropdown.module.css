@@ -15,6 +15,11 @@
   cursor: pointer;
   padding: 0.5rem 1rem;
   transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  color: var(--color-brand-dark);
+}
+
+.dropdownButton[data-theme="dark"] {
+  color: var(--color-white);
 }
 
 .darkMenu,

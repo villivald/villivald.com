@@ -23,10 +23,7 @@ const CardFooter = ({ emoji, text }: Props) => {
         <Image
           src={`/emojis/${emoji}.svg`}
           alt={`emoji icon - ${emoji}`}
-          style={{
-            filter:
-              theme === "dark" && text === "about" ? "invert(1)" : "invert(0)",
-          }}
+          data-theme={theme === "dark" && text === "about"}
           width={24}
           height={24}
         />
@@ -35,9 +32,7 @@ const CardFooter = ({ emoji, text }: Props) => {
       <p>
         <Image
           src="/emojis/arrow.svg"
-          style={{
-            filter: theme === "dark" ? "invert(1)" : "invert(0)",
-          }}
+          data-theme={theme}
           alt="emoji icon - arrow"
           width={24}
           height={24}

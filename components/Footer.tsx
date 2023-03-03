@@ -2,9 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useContext } from "react";
 
-import { colors } from "../utils/colors";
 import { ThemeContext } from "../context";
-
 import styles from "../styles/Footer.module.css";
 
 const Footer = () => {
@@ -26,19 +24,12 @@ const Footer = () => {
 
   const Divider = () => (
     <div>
-      <div
-        style={{
-          backgroundColor: theme === "dark" ? colors.white : colors.dark,
-        }}
-      ></div>
+      <div data-theme={theme}></div>
     </div>
   );
 
   return (
-    <footer
-      className={styles.footer}
-      style={{ backgroundColor: theme === "dark" ? colors.dark : colors.green }}
-    >
+    <footer className={styles.footer} data-theme={theme}>
       <Divider />
       <div>
         {socialIcons.map((icon) => (
@@ -61,11 +52,7 @@ const Footer = () => {
               alt="logo"
               width={64}
               height={icon.name === "hackernoon" ? 48 : 64}
-              style={
-                icon.name === "hackernoon" && theme === "dark"
-                  ? { filter: "invert(1)" }
-                  : {}
-              }
+              data-theme={icon.name === "hackernoon" && theme === "dark"}
             />
           </Link>
         ))}

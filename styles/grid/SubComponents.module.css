@@ -12,6 +12,18 @@
   font-family: var(--font-header);
 }
 
+.gridFooterLight p img,
+.gridFooterDark p img {
+  filter: invert(0);
+}
+
+.gridFooterLight p:first-child img[data-theme="true"],
+.gridFooterDark p:first-child img[data-theme="true"],
+.gridFooterLight p:last-child img[data-theme="dark"],
+.gridFooterDark p:last-child img[data-theme="dark"] {
+  filter: invert(1);
+}
+
 .gridFooterLight {
   background-color: var(--color-brand-yellow);
 }

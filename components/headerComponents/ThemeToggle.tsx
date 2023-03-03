@@ -15,9 +15,7 @@ const ThemeToggle = ({ changeTheme, theme }: Props) => {
       className={styles.button}
     >
       <Image
-        style={{
-          filter: theme === "dark" ? "invert(1)" : "invert(0)",
-        }}
+        data-theme={theme}
         src={`/emojis/${theme === "dark" ? "dark" : "light"}.svg`}
         alt="emoji icon - light/dark theme switcher"
         width={48}

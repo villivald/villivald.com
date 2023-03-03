@@ -4,6 +4,11 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  background-color: var(--color-brand-green);
+}
+
+.footer[data-theme="dark"] {
+  background-color: var(--color-brand-dark);
 }
 
 .footer > div:nth-of-type(odd) > div {
@@ -11,6 +16,11 @@
   height: 5rem;
   transform: skew(-20deg);
   transition: all 0.5s var(--easing-normal);
+  background-color: var(--color-brand-dark);
+}
+
+.footer > div:nth-of-type(odd) > div[data-theme="dark"] {
+  background-color: var(--color-white);
 }
 
 .footer > div:nth-of-type(odd) > div:hover {
@@ -36,6 +46,10 @@
 
 .footer > div > a > img {
   height: auto;
+}
+
+.footer > div > a > img[data-theme="true"] {
+  filter: invert(1);
 }
 
 @media screen and (min-width: 1200px) {
