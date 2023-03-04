@@ -42,10 +42,8 @@
 }
 
 /* Display the dropdown menu on hover or focus */
-.dropdown:hover .darkMenu,
-.dropdown:focus .darkMenu,
-.dropdown:hover .lightMenu,
-.dropdown:focus .lightMenu {
+.darkMenu[data-open="true"],
+.lightMenu[data-open="true"] {
   display: block;
 }
 
@@ -97,12 +95,12 @@
   height: 1.2rem;
 }
 
-.dropdown > button:hover::after {
-  background-image: url("/emojis/up.svg");
-}
-
 .dropdown > button::after {
   background-image: url("/emojis/down.svg");
+}
+
+.dropdown > button[data-open="true"]::after {
+  background-image: url("/emojis/up.svg");
 }
 
 .dropdown > button[data-theme="dark"]::after {

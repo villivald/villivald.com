@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { FormattedMessage } from "react-intl";
@@ -8,6 +8,7 @@ import styles from "../../styles/Dropdown.module.css";
 
 const DropdownMenu = () => {
   const theme = useContext(ThemeContext);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const menuItems = [
     "about",
@@ -22,15 +23,25 @@ const DropdownMenu = () => {
   ];
 
   return (
-    <div className={styles.dropdown}>
+    <div
+      className={styles.dropdown}
+      onMouseEnter={() => setMenuOpen(true)}
+      onMouseLeave={() => setMenuOpen(false)}
+    >
       <button
         className={styles.dropdownButton}
         aria-haspopup="true"
         data-theme={theme}
+        data-open={menuOpen}
       >
-        <span>MENU</span>
+        <span>
+          <FormattedMessage id="menu" />
+        </span>
       </button>
-      <ul className={theme === "dark" ? styles.darkMenu : styles.lightMenu}>
+      <ul
+        className={theme === "dark" ? styles.darkMenu : styles.lightMenu}
+        data-open={menuOpen}
+      >
         {menuItems.map((item) => (
           <li key={item}>
             <Link href={`/${item}`}>
