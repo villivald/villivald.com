@@ -4,16 +4,19 @@ type DetailsProps = {
   title: string;
   text: string;
   link: string;
+  theme: string;
 };
 
-export const Details = ({ title, text, link }: DetailsProps) => {
+export const Details = ({ title, text, link, theme }: DetailsProps) => {
   return (
     <div className={styles.toggle}>
       <details>
-        <summary>{title}</summary>
+        <summary data-theme={theme}>{title}</summary>
         <div>
-          <p>{text}</p>
-          <a href={link}>Link</a>
+          <p data-theme={theme}>{text}</p>
+          <a data-theme={theme} href={link}>
+            Link
+          </a>
         </div>
       </details>
     </div>

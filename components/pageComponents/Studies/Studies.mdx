@@ -33,7 +33,12 @@ import { Details } from "./Details";
     <FormattedMessage id="unihelGraduated" />
   </span>
 
-<Details title="The Master's Thesis" text="Name" link="Link" />
+<Details
+  title="The Master's Thesis"
+  text="Name"
+  link="Link"
+  theme={useContext(ThemeContext)}
+/>
 
 <HelsinkiProgress />
 
@@ -41,7 +46,7 @@ import { Details } from "./Details";
 
 <div>
 
-### <div className={useContext(ThemeContext) === "dark" ? styles.emojiContainerDark : styles.emojiContainerLight}><Image src='/emojis/floppy.svg' alt='emoji icon - floppy disk' width={24} height={24}/> <FormattedMessage id="lab" /> (2019 →)</div>
+### <div className={useContext(ThemeContext) === "dark" ? styles.emojiContainerDark : styles.emojiContainerLight}><Image data-theme={useContext(ThemeContext)} src='/emojis/floppy.svg' alt='emoji icon - floppy disk' width={24} height={24}/> <FormattedMessage id="lab" /> (2019 →)</div>
 
 - <span
     className={
@@ -58,7 +63,12 @@ import { Details } from "./Details";
     <FormattedMessage id="labStudies" />
   </span>
 
-<Details title="Description" text="Name" link="Link" />
+<Details
+  title="Description"
+  text="Name"
+  link="Link"
+  theme={useContext(ThemeContext)}
+/>
 
 <LabProgress />
 
@@ -70,7 +80,7 @@ import { Details } from "./Details";
 
 # <div className={useContext(ThemeContext) === "dark" ? styles.emojiContainerDark : styles.emojiContainerLight}><FormattedMessage id="coursesAndCertificates" /> <Image src='/emojis/writing.svg' alt='emoji icon - writing hand' width={36} height={36}/></div>
 
-### <div className={useContext(ThemeContext) === "dark" ? styles.emojiContainerDark : styles.emojiContainerLight}><Image src='/emojis/comet.svg' alt='emoji icon - comet' width={24} height={24}/> <FormattedMessage id="courses" /></div>
+### <div className={useContext(ThemeContext) === "dark" ? styles.emojiContainerDark : styles.emojiContainerLight}><Image data-theme={useContext(ThemeContext)} src='/emojis/comet.svg' alt='emoji icon - comet' width={24} height={24}/> <FormattedMessage id="courses" /></div>
 
 ### <div className={useContext(ThemeContext) === "dark" ? styles.emojiContainerDark : styles.emojiContainerLight}><Image src='/emojis/fire.svg' alt='emoji icon - fire' width={24} height={24}/> <FormattedMessage id="certificates" /></div>
 

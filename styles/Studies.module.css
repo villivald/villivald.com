@@ -41,6 +41,10 @@
   color: var(--color-white);
 }
 
+.emojiContainerDark > img[data-theme="dark"] {
+  filter: invert(1);
+}
+
 .textDark {
   color: var(--color-white);
 }
@@ -50,7 +54,7 @@ li:has(span.textDark) {
 }
 
 .toggle > details > summary {
-  color: var(--color-brand-dark) !important;
+  color: var(--color-brand-dark);
   font-family: var(--font-body);
   font-size: var(--fontSize-paragraph);
   cursor: pointer;
@@ -60,8 +64,17 @@ li:has(span.textDark) {
   gap: 0.5rem;
 }
 
+.toggle > details > summary[data-theme="dark"] {
+  color: var(--color-white);
+}
+
 .toggle > details > div {
   margin-left: 3.6rem;
+}
+
+.toggle > details > div > p[data-theme="dark"],
+.toggle > details > div > a[data-theme="dark"] {
+  color: var(--color-white);
 }
 
 .toggle > details > summary {
@@ -79,6 +92,11 @@ li:has(span.textDark) {
   transition: 0.25s transform var(--easing-normal);
   width: 1.2rem;
   height: 1.2rem;
+}
+
+.toggle > details summary[data-theme="dark"]::before,
+.toggle > details[open] summary[data-theme="dark"]::before {
+  filter: invert(1);
 }
 
 .toggle > details summary::before {
