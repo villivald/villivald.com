@@ -7,7 +7,7 @@
 
 .cardWrapper {
   min-height: 55vh;
-  min-width: 90%;
+  min-width: 95%;
   background-color: var(--color-white);
   align-self: center;
   display: flex;
@@ -18,8 +18,8 @@
 }
 
 .card {
-  height: 80%;
-  width: 30%;
+  height: 30rem;
+  width: 28rem;
   background-color: var(--color-white);
   border-radius: 1rem;
   padding: 2rem;
@@ -31,24 +31,75 @@
 }
 
 .card > div {
+  width: 100%;
   border: 1px solid var(--color-brand-green);
   border-radius: 1rem;
+  box-shadow: 0.25rem 0.25rem var(--color-brand-green);
 }
 
 .card > div > p:first-child {
+  background-color: var(--color-brand-yellow);
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
   padding: 1rem 0;
   text-align: center;
+  font-family: var(--font-header);
+}
+
+.card > div > img {
+  width: 100%;
 }
 
 .card > div > p:last-child {
-  background-color: bisque;
+  background-color: var(--color-brand-yellow);
   padding: 1rem 0;
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-@media (max-width: 1100px) {
+.card > div > p:last-child > span {
+  padding: 0 0.25rem;
+  font-family: var(--font-subheader);
+}
+
+.card > div > p:last-child > span:first-child {
+  background-color: var(--color-brand-green50);
+}
+
+.card > div > p:last-child > span:nth-child(2) {
+  background-color: var(--color-brand-violet30);
+}
+
+.card > div > p:last-child > span:nth-child(3) {
+  background-color: var(--color-brand-teal30);
+}
+
+.card > div > p:last-child > span:nth-child(4) {
+  background-color: var(--color-brand-red30);
+}
+
+@media (min-width: 1800px) {
+  .card {
+    width: 34rem;
+  }
+}
+
+@media (max-width: 1500px) {
+  .card {
+    width: 25rem;
+  }
+
+  .card > div {
+    width: 95%;
+  }
+}
+
+@media (max-width: 1350px) {
   .cardWrapper {
     flex-direction: column;
     min-width: 60%;
@@ -56,20 +107,21 @@
   }
 
   .card {
-    width: 60%;
-    margin: 1rem 0;
-  }
-}
-
-@media (max-width: 900px) {
-  .card {
     width: 80%;
+    margin: 1rem 0;
   }
 }
 
 @media (max-width: 800px) {
   .cardWrapper {
     min-width: 80%;
+  }
+}
+
+@media (max-width: 700px) {
+  .cardWrapper {
+    background-color: transparent;
+    box-shadow: none;
   }
 }
 
@@ -80,6 +132,14 @@
 }
 
 @media (max-width: 500px) {
+  .card {
+    width: 92%;
+  }
+
+  .cardWrapper {
+    margin-bottom: 6rem;
+  }
+
   .mainContainer {
     min-height: 80vh;
     padding-bottom: 4rem;

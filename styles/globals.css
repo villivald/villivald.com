@@ -5,8 +5,12 @@
   --color-brand-yellow: hsl(51, 74%, 60%);
   --color-brand-yellow-saturated: hsl(55, 100%, 60%);
   --color-brand-green: hsl(141, 40%, 65%);
+  --color-brand-green50: hsla(141, 40%, 65%, 0.5);
   --color-brand-teal: hsl(187, 52%, 22%);
+  --color-brand-teal30: hsla(187, 52%, 22%, 0.3);
   --color-brand-red: hsl(10, 94%, 60%);
+  --color-brand-red30: hsla(10, 94%, 60%, 0.3);
+  --color-brand-violet30: hsla(258, 100%, 60%, 0.3);
   --color-brand-grey: hsl(258, 10%, 80%);
   --color-brand-grey85: hsl(258, 10%, 85%);
   --color-brand-grey95: hsl(258, 10%, 95%);
