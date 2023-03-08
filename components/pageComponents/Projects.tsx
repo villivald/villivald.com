@@ -25,7 +25,10 @@ const Projects = () => {
       </div>
       <div></div>
       <div></div>
-      <div></div>
+      <div>
+        <p>Work</p>
+        <p>Pet projects</p>
+      </div>
     </div>
   );
 };

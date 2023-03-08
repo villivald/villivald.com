@@ -17,7 +17,7 @@ const sites = [
   {
     title: "React version that was live from 2020 to 2023",
     image: "/images/website3.webp",
-    alt: "Screenshot of the third iteration of my website which was live in from 2020 to 2023",
+    alt: "Screenshot of the third iteration of my website which was live from 2020 to 2023",
     description: ["javascript", "css", "html", "react"],
   },
 ];
