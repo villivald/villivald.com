@@ -17,7 +17,7 @@
   grid-template-columns: 1fr 1fr;
   place-items: center;
   width: 90%;
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 1rem var(--color-black-20);
   padding: 2rem;
   border-radius: 1rem;
 }

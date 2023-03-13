@@ -1,6 +1,6 @@
 .mainContainer {
   min-height: 70vh;
-  background-color: hsl(24, 71.4%, 76.7%);
+  background-color: var(--color-skin);
 }
 
 .eyes,

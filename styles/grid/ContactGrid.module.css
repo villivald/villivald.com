@@ -6,6 +6,7 @@
 
 .container {
   --a: 30deg;
+
   background-image: linear-gradient(
     var(--a),
     #617cff,

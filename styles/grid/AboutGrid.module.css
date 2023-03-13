@@ -16,17 +16,14 @@
 .cat {
   height: 100%;
   z-index: 1;
-}
-
-.about {
-  background-image: url(/images/about.webp);
-}
-
-.cat {
-  background-image: url(/images/cat.webp);
+  background-image: url("/images/cat.webp");
   position: absolute;
   opacity: 0;
   transition: 2s ease;
+}
+
+.about {
+  background-image: url("/images/about.webp");
 }
 
 .container:hover .cat {

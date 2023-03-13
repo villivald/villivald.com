@@ -18,7 +18,7 @@
   width: 100%;
   height: auto;
   border-radius: 0%;
-  background-image: url(/images/studies_it.webp);
+  background-image: url("/images/studies_it.webp");
 }
 
 .image_alt {
@@ -28,7 +28,7 @@
   border-radius: 50%;
   opacity: 0;
   z-index: 1;
-  background-image: url(/images/studies_literature.webp);
+  background-image: url("/images/studies_literature.webp");
   transform: rotate(720deg) scale(0.1);
 }
 

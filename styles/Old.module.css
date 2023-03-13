@@ -14,7 +14,7 @@
   justify-content: space-around;
   align-items: center;
   border-radius: 1rem;
-  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 1rem 0 var(--color-black-20);
 }
 
 .card {
@@ -23,7 +23,7 @@
   background-color: var(--color-white);
   border-radius: 1rem;
   padding: 2rem;
-  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 1rem 0 var(--color-black-20);
   display: flex;
   flex-direction: column;
   align-items: center;

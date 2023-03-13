@@ -7,7 +7,7 @@
 .progressContainer > progress {
   width: 26rem;
   height: 0.8rem;
-  box-shadow: 1px 1px 4px hsla(0, 0%, 0%, 0.2);
+  box-shadow: 1px 1px 4px var(--color-black-20);
 }
 
 .progressContainer > progress::-webkit-progress-bar {

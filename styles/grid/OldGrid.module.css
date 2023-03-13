@@ -22,11 +22,11 @@
 }
 
 .done {
-  background-image: url(/images/old_website_done.webp);
+  background-image: url("/images/old_website_done.webp");
 }
 
 .proto {
-  background-image: url(/images/old_website_proto.webp);
+  background-image: url("/images/old_website_proto.webp");
   position: absolute;
   opacity: 1;
   transition: 2s ease;
@@ -55,6 +55,7 @@
   0% {
     transform: scale(1) rotate(0deg);
   }
+
   100% {
     transform: scale(1.2) rotate(3deg);
   }

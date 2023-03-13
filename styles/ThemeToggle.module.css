@@ -16,9 +16,9 @@
 }
 
 .button:hover {
-  background-color: rgba(0, 0, 0, 0.04);
+  background-color: var(--color-black-4);
 }
 
 .button:active {
-  background-color: rgba(0, 0, 0, 0.08);
+  background-color: var(--color-black-8);
 }

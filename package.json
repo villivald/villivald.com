@@ -1,6 +1,6 @@
 {
   "name": "villivald.com",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "private": true,
   "scripts": {
     "dev": "next dev -p 3500",
@@ -24,6 +24,8 @@
   },
   "devDependencies": {
     "eslint": "8.35.0",
-    "eslint-config-next": "13.2.3"
+    "eslint-config-next": "13.2.3",
+    "stylelint": "^15.2.0",
+    "stylelint-config-standard": "^30.0.1"
   }
 }

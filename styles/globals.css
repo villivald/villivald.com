@@ -17,8 +17,16 @@
   --color-brand-dark: hsl(236, 21%, 14%);
   --color-brand-dark80: hsl(236, 21%, 26%);
   --color-white: hsl(0, 0%, 100%);
+  --color-skin: hsl(24, 71.4%, 76.7%);
+  /* Shades of black */
   --color-black: hsl(0, 0%, 0%);
   --color-black-38: hsla(0, 0%, 0%, 0.38);
+  --color-black-20: hsla(0, 0%, 0%, 0.2);
+  --color-black-14: hsla(0, 0%, 0%, 0.14);
+  --color-black-12: hsla(0, 0%, 0%, 0.12);
+  --color-black-10: hsla(0, 0%, 0%, 0.1);
+  --color-black-8: hsla(0, 0%, 0%, 0.08);
+  --color-black-4: hsla(0, 0%, 0%, 0.04);
 
   /* Fonts */
   --font-brand: "Nabla", serif;
@@ -40,14 +48,19 @@
   --easing-normal: cubic-bezier(0.5, 0.1, 0.5, 1);
 
   /* Shadows */
-  --shadow-1: 0 0 10px rgba(0, 0, 0, 0.1);
-  --font-shadow: 4px 4px 1px #000, -1px 1px 0 #000, 1px -1px 0 #000,
-    -1px -1px 0 #000, 0px 1px 0 #000, 0px -1px 0 #000, -1px 0px 0 #000,
-    1px 0px 0 #000, 2px 2px 0 #000, -2px 2px 0 #000, 2px -2px 0 #000,
-    -2px -2px 0 #000, 0px 2px 0 #000, 0px -2px 0 #000, -2px 0px 0 #000,
-    2px 0px 0 #000, 1px 2px 0 #000, -1px 2px 0 #000, 1px -2px 0 #000,
-    -1px -2px 0 #000, 2px 1px 0 #000, -2px 1px 0 #000, 2px -1px 0 #000,
-    -2px -1px 0 #000;
+  --shadow-1: 0 0 10px var(--color-black-10);
+  --font-shadow: 4px 4px 1px var(--color-black), -1px 1px 0 var(--color-black),
+    1px -1px 0 var(--color-black), -1px -1px 0 var(--color-black),
+    0px 1px 0 var(--color-black), 0px -1px 0 var(--color-black),
+    -1px 0px 0 var(--color-black), 1px 0px 0 var(--color-black),
+    2px 2px 0 var(--color-black), -2px 2px 0 var(--color-black),
+    2px -2px 0 var(--color-black), -2px -2px 0 var(--color-black),
+    0px 2px 0 var(--color-black), 0px -2px 0 var(--color-black),
+    -2px 0px 0 var(--color-black), 2px 0px 0 var(--color-black),
+    1px 2px 0 var(--color-black), -1px 2px 0 var(--color-black),
+    1px -2px 0 var(--color-black), -1px -2px 0 var(--color-black),
+    2px 1px 0 var(--color-black), -2px 1px 0 var(--color-black),
+    2px -1px 0 var(--color-black), -2px -1px 0 var(--color-black);
 
   /* Gradients */
   --gradient-light: radial-gradient(
@@ -82,12 +95,14 @@
 *::after {
   box-sizing: border-box;
 }
+
 /*
   2. Remove default margin
 */
 * {
   margin: 0;
 }
+
 /*
   3. Allow percentage-based heights in the application
 */
@@ -95,6 +110,7 @@ html,
 body {
   height: 100%;
 }
+
 /*
   Typographic tweaks!
   4. Add accessible line-height
@@ -105,6 +121,7 @@ body {
   -webkit-font-smoothing: antialiased;
   background-color: var(--color-brand-green);
 }
+
 /*
   6. Improve media defaults
 */
@@ -116,6 +133,7 @@ svg {
   display: block;
   max-width: 100%;
 }
+
 /*
   7. Remove built-in form typography styles
 */
@@ -125,6 +143,7 @@ textarea,
 select {
   font: inherit;
 }
+
 /*
   8. Avoid text overflows
 */
@@ -137,6 +156,7 @@ h5,
 h6 {
   overflow-wrap: break-word;
 }
+
 /*
   9. Create a root stacking context
 */
