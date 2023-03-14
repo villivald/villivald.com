@@ -63,6 +63,12 @@
   place-items: center;
 }
 
+@media (max-height: 1000px) {
+  .mainContainer > div:nth-child(1) {
+    height: 90%;
+  }
+}
+
 @media (min-width: 1400px) {
   .mainContainer > div:nth-child(1) {
     height: 80%;

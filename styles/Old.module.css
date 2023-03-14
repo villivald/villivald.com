@@ -83,6 +83,16 @@
   background-color: var(--color-brand-red30);
 }
 
+@media (max-height: 750px) {
+  .mainContainer {
+    min-height: 80vh;
+  }
+
+  .cardWrapper {
+    min-height: 72vh;
+  }
+}
+
 @media (min-width: 1800px) {
   .card {
     width: 34rem;
