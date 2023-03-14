@@ -1,5 +1,19 @@
 .mainContainer {
   min-height: 70vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.mainContainer > div:nth-child(1) {
+  background-color: var(--color-brand-yellow);
+}
+
+.mainContainer > div:nth-child(2) {
+  background-color: var(--color-brand-green50);
+}
+
+.mainContainer > div:nth-child(3) {
+  background-color: var(--color-brand-red30);
 }
 
 @media (max-width: 500px) {
