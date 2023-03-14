@@ -107,6 +107,12 @@ li:has(span.textDark) {
   transform: rotate(90deg);
 }
 
+@media (max-height: 800px) {
+  .mainContainer {
+    padding-bottom: 2rem;
+  }
+}
+
 @media (max-width: 1000px) {
   .mainContainer li,
   .toggle > details > summary {
