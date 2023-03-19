@@ -146,6 +146,10 @@
     width: 92%;
   }
 
+  .card > div {
+    width: initial;
+  }
+
   .cardWrapper {
     margin-bottom: 6rem;
   }

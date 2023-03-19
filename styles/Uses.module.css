@@ -31,6 +31,17 @@
   align-self: flex-start;
 }
 
+.mainContainer > div > div > ul > li:hover::after {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-image: url("/images/uses.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 200px;
+}
+
 .mainContainer > div > div:first-of-type > ul {
   list-style-type: hardware-emoji;
 }

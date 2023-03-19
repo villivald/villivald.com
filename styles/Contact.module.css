@@ -4,6 +4,11 @@
   grid-template-columns: repeat(3, 1fr);
 }
 
+.mainContainer > div {
+  display: grid;
+  place-items: center;
+}
+
 .mainContainer > div:nth-child(1) {
   background-color: var(--color-brand-yellow);
 }
@@ -14,6 +19,12 @@
 
 .mainContainer > div:nth-child(3) {
   background-color: var(--color-brand-red30);
+}
+
+@media (max-width: 1000px) {
+  .mainContainer {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 500px) {
