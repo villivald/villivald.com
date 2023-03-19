@@ -47,7 +47,7 @@
 }
 
 .overlay > div:first-child {
-  background: hsla(0, 0%, 0%, 7.5%);
+  background: hsla(0deg 0% 0% / 7.5%);
 }
 
 .koripallopaikatContainer:hover .overlay {
