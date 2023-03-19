@@ -5,6 +5,10 @@
   grid-template-rows: 5fr 1fr 8fr;
 }
 
+.mainContainer > figure {
+  margin-top: 2rem;
+}
+
 .mainContainer > p {
   max-width: 38rem;
 }
@@ -25,6 +29,36 @@
 
 .mainContainer > div > div > ul {
   align-self: flex-start;
+}
+
+.mainContainer > div > div:first-of-type > ul {
+  list-style-type: hardware-emoji;
+}
+
+.mainContainer > div > div:nth-of-type(2) > ul {
+  list-style-type: software-emoji;
+}
+
+.mainContainer > div > div:last-of-type > ul {
+  list-style-type: other-emoji;
+}
+
+@counter-style hardware-emoji {
+  system: cyclic;
+  symbols: "→" "🤓" "✅";
+  suffix: " ";
+}
+
+@counter-style software-emoji {
+  system: cyclic;
+  symbols: "👨‍💻" "👩‍💻" "👨‍💻" "👩‍💻";
+  suffix: " ";
+}
+
+@counter-style other-emoji {
+  system: cyclic;
+  symbols: "�" "👨‍👩‍👧‍👦" "👨‍👩‍👧‍👦" "👨‍👩‍👧‍👦";
+  suffix: " ";
 }
 
 @media (max-width: 650px) {
