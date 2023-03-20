@@ -19,5 +19,14 @@
   "coursesAndCertificates": "Courses & Certificates",
   "courses": "Courses",
   "certificates": "Certificates",
-  "menu": "Menu"
+  "menu": "Menu",
+  "usesText": "The following is a list of the tools, software and any other things that I use on a daily basis. This page was inspired by Wes Bos and his project - ",
+  "work": "Work",
+  "petProjects": "Pet projects",
+  "old.title.1": "First version of my website from early 2019",
+  "old.title.2": "The second iteration published in late 2019",
+  "old.title.3": "React version that was live from 2020 to 2023",
+  "old.alt.1": "Screenshot of the first version of my website from 2019",
+  "old.alt.2": "Screenshot of the second iteration of my website from late 2019",
+  "old.alt.3": "Screenshot of the third iteration of my website which was live from 2020 to 2023"
 }

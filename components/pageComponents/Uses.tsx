@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { FormattedMessage } from "react-intl";
 
 import styles from "../../styles/Uses.module.css";
 
@@ -120,9 +121,8 @@ const Uses = () => {
         </map>
       </figure>
       <p>
-        The following is a list of the tools, software and any other things that
-        I use on a daily basis. This page was inspired by Wes Bos and his
-        project - <Link href="https://uses.tech/">uses.tech</Link>.
+        <FormattedMessage id="usesText" />
+        <Link href="https://uses.tech/">uses.tech</Link>.
       </p>
       <div>
         <div>

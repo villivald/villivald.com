@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { FormattedMessage } from "react-intl";
 
 import styles from "../../styles/Projects.module.css";
 
@@ -26,8 +27,12 @@ const Projects = () => {
       <div></div>
       <div></div>
       <div>
-        <p>Work</p>
-        <p>Pet projects</p>
+        <p>
+          <FormattedMessage id="work" />
+        </p>
+        <p>
+          <FormattedMessage id="petProjects" />
+        </p>
       </div>
     </div>
   );

@@ -19,5 +19,14 @@
   "coursesAndCertificates": "Kurssit ja sertifikaatit",
   "courses": "Kurssit",
   "certificates": "Sertifikaatit",
-  "menu": "Valikko"
+  "menu": "Valikko",
+  "usesText": "Tässä on lista työkaluista ja sovelluksista joita käytän päivittäin. Tämä sivu on saanut inspiraationsa Wes Bosin projektista - ",
+  "work": "Työ",
+  "petProjects": "Harrasteprojektit",
+  "old.title.1": "Ensimmäinen versio minun verkkosivusta vuodelta 2019",
+  "old.title.2": "Toinen iteratio oli julkaistu loppuvuodesta 2019",
+  "old.title.3": "Reactilla tehty versio oli livenä vuodesta 2020 vuoteen 2023",
+  "old.alt.1": "Kuvakaappaus ensimmäisestä versiosta verkkosivustosta alkuvuodesta 2019",
+  "old.alt.2": "Kuvakaappaus toisesta versiosta verkkosivustosta lopuvuodesta 2019",
+  "old.alt.3": "Kuvakaappaus kolmannesta versiosta joka oli livenä vuodesta 2020 vuoteen 2023"
 }
