@@ -28,5 +28,8 @@
   "old.title.3": "Reactilla tehty versio oli livenä vuodesta 2020 vuoteen 2023",
   "old.alt.1": "Kuvakaappaus ensimmäisestä versiosta verkkosivustosta alkuvuodesta 2019",
   "old.alt.2": "Kuvakaappaus toisesta versiosta verkkosivustosta lopuvuodesta 2019",
-  "old.alt.3": "Kuvakaappaus kolmannesta versiosta joka oli livenä vuodesta 2020 vuoteen 2023"
+  "old.alt.3": "Kuvakaappaus kolmannesta versiosta joka oli livenä vuodesta 2020 vuoteen 2023",
+  "contact.link.mastodon": "Mastodon logo kuvake - linkki minun Mastodon profiiliini",
+  "contact.link.mail": "Sähköposti kuvake - linkki minun sähköpostiini",
+  "contact.link.linkedin": "LinkedIn logo kuvake - linkki minun LinkedIn profiiliini"
 }

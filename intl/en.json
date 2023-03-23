@@ -28,5 +28,8 @@
   "old.title.3": "React version that was live from 2020 to 2023",
   "old.alt.1": "Screenshot of the first version of my website from 2019",
   "old.alt.2": "Screenshot of the second iteration of my website from late 2019",
-  "old.alt.3": "Screenshot of the third iteration of my website which was live from 2020 to 2023"
+  "old.alt.3": "Screenshot of the third iteration of my website which was live from 2020 to 2023",
+  "contact.link.mastodon": "Mastodon logo icon - link to my Mastodon profile",
+  "contact.link.mail": "Email icon - link to my email address",
+  "contact.link.linkedin": "LinkedIn logo icon - link to my LinkedIn profile"
 }
