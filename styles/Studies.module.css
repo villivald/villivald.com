@@ -20,14 +20,25 @@
   box-shadow: 0 0 1rem var(--color-black-20);
   padding: 2rem;
   border-radius: 1rem;
+  min-height: 64vh;
 }
 
-.mainContainer > div > div:nth-child(2) {
-  align-self: flex-start;
+.toggle > details > div {
+  margin-left: 3.6rem;
+}
+
+.mainContainer > div > div {
+  display: grid;
+  grid-template-rows: 1fr 2fr 2fr;
+  height: 100%;
 }
 
 .mainContainer > div > div > div {
   margin-bottom: 2rem;
+}
+
+.mainContainer > div > div:nth-child(2) {
+  align-self: flex-start;
 }
 
 .emojiContainerLight,
@@ -62,14 +73,11 @@ li:has(span.textDark) {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  list-style: none;
 }
 
 .toggle > details > summary[data-theme="dark"] {
   color: var(--color-white);
-}
-
-.toggle > details > div {
-  margin-left: 3.6rem;
 }
 
 .toggle > details > div > p[data-theme="dark"],
@@ -77,8 +85,8 @@ li:has(span.textDark) {
   color: var(--color-white);
 }
 
-.toggle > details > summary {
-  list-style: none;
+.toggle > details summary::before {
+  transform: rotate(0);
 }
 
 .toggle > details > summary::-webkit-details-marker {
@@ -97,10 +105,6 @@ li:has(span.textDark) {
 .toggle > details summary[data-theme="dark"]::before,
 .toggle > details[open] summary[data-theme="dark"]::before {
   filter: invert(1);
-}
-
-.toggle > details summary::before {
-  transform: rotate(0);
 }
 
 .toggle > details[open] summary::before {
