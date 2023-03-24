@@ -144,10 +144,15 @@
 @media (max-width: 500px) {
   .card {
     width: 92%;
+    height: 100%;
   }
 
   .card > div {
     width: initial;
+  }
+
+  .card > div > img {
+    height: 20vh;
   }
 
   .cardWrapper {
