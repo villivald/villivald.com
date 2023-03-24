@@ -24,6 +24,17 @@
 @media (max-width: 1000px) {
   .mainContainer {
     grid-template-columns: 1fr;
+    min-height: 10vh;
+  }
+
+  .mainContainer a {
+    display: grid;
+  }
+
+  .mainContainer img {
+    width: 50%;
+    height: 24vh;
+    justify-self: center;
   }
 }
 
