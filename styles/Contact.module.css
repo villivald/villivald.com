@@ -21,6 +21,14 @@
   background-color: var(--color-brand-red30);
 }
 
+.mainContainer img {
+  transition: all 0.5s ease;
+}
+
+.mainContainer img:hover {
+  transform: scale(1.1);
+}
+
 @media (max-width: 1000px) {
   .mainContainer {
     grid-template-columns: 1fr;
@@ -32,9 +40,14 @@
   }
 
   .mainContainer img {
-    width: 50%;
     height: 24vh;
     justify-self: center;
+  }
+}
+
+@media (max-width: 750px) {
+  .mainContainer img {
+    width: 25vw;
   }
 }
 
