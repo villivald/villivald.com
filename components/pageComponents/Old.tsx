@@ -1,5 +1,8 @@
 import Image from "next/image";
+import { useContext } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
+
+import { ThemeContext } from "../../context";
 
 import styles from "../../styles/Old.module.css";
 
@@ -20,10 +23,11 @@ const sites = [
 
 const Old = () => {
   const intl = useIntl();
+  const theme = useContext(ThemeContext);
 
   return (
     <div className={styles.mainContainer}>
-      <div className={styles.cardWrapper}>
+      <div className={styles.cardWrapper} data-theme={theme}>
         {sites.map((site) => (
           <div className={styles.card} key={site.id}>
             <div>

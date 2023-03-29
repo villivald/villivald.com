@@ -11,6 +11,7 @@
   --color-brand-red: hsl(10deg 94% 60%);
   --color-brand-red30: hsla(10deg 94% 60% / 30%);
   --color-brand-violet30: hsla(258deg 100% 60% / 30%);
+  --color-brand-grey50: hsl(258deg 10% 50%);
   --color-brand-grey: hsl(258deg 10% 80%);
   --color-brand-grey85: hsl(258deg 10% 85%);
   --color-brand-grey95: hsl(258deg 10% 95%);

@@ -17,6 +17,10 @@
   box-shadow: 0 0 1rem 0 var(--color-black-20);
 }
 
+.cardWrapper[data-theme="dark"] {
+  background-color: var(--color-brand-grey50);
+}
+
 .card {
   height: 30rem;
   width: 28rem;
@@ -30,11 +34,20 @@
   justify-content: center;
 }
 
+.cardWrapper[data-theme="dark"] > .card {
+  background-color: var(--color-brand-grey);
+}
+
 .card > div {
   width: 100%;
   border: 1px solid var(--color-brand-green);
   border-radius: 1rem;
   box-shadow: 0.25rem 0.25rem var(--color-brand-green);
+}
+
+.cardWrapper[data-theme="dark"] > .card > div {
+  border-color: var(--color-brand-dark);
+  box-shadow: 0.25rem 0.25rem var(--color-brand-dark);
 }
 
 .card > div > p:first-child {
