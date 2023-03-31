@@ -60,7 +60,9 @@
   color: var(--color-white);
 }
 
-li:has(span.textDark) {
+li:has(span.textDark),
+li:has(span.textDark) a,
+li:has(span.textDark) p {
   color: var(--color-white);
 }
 
