@@ -13,6 +13,13 @@
   max-width: 38rem;
 }
 
+.mainContainer > p[data-theme="dark"],
+.mainContainer > p[data-theme="dark"] a,
+.mainContainer > div[data-theme="dark"] h1,
+.mainContainer > div[data-theme="dark"] a {
+  color: var(--color-white);
+}
+
 .mainContainer > div {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

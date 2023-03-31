@@ -1,9 +1,10 @@
-import { CSSProperties } from "react";
+import { CSSProperties, useContext } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FormattedMessage } from "react-intl";
 
 import styles from "../../styles/Uses.module.css";
+import { ThemeContext } from "../../context";
 
 interface CSSPropertiesWithVars extends CSSProperties {
   "--url"?: string;
@@ -109,6 +110,8 @@ const other = [
 ];
 
 const Uses = () => {
+  const theme = useContext(ThemeContext);
+
   const renderList = (
     items: { name: string; link: string; description: string; image: string }[]
   ) => {
@@ -153,11 +156,11 @@ const Uses = () => {
           />
         </map>
       </figure>
-      <p>
+      <p data-theme={theme}>
         <FormattedMessage id="usesText" />
         <Link href="https://uses.tech/">uses.tech</Link>.
       </p>
-      <div>
+      <div data-theme={theme}>
         <div>
           <h1>
             <FormattedMessage id="hardware" />
