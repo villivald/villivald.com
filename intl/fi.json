@@ -32,5 +32,7 @@
   "contact.link.mastodon": "Mastodon logo kuvake - linkki minun Mastodon profiiliini",
   "contact.link.mail": "Sähköposti kuvake - linkki minun sähköpostiini",
   "contact.link.linkedin": "LinkedIn logo kuvake - linkki minun LinkedIn profiiliini",
-  "other": "Muu"
+  "other": "Muu",
+  "hardware": "Laitteisto",
+  "software": "Ohjelmisto"
 }

@@ -32,5 +32,7 @@
   "contact.link.mastodon": "Mastodon logo icon - link to my Mastodon profile",
   "contact.link.mail": "Email icon - link to my email address",
   "contact.link.linkedin": "LinkedIn logo icon - link to my LinkedIn profile",
-  "other": "Other"
+  "other": "Other",
+  "hardware": "Hardware",
+  "software": "Software"
 }

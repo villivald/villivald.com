@@ -36,7 +36,7 @@
   position: absolute;
   width: 200px;
   height: 200px;
-  background-image: url("/images/uses.webp");
+  background-image: var(--url);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 200px;
