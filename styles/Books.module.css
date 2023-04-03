@@ -2,6 +2,43 @@
   min-height: 70vh;
 }
 
+.mainContainer > div > div {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.mainContainer > div > div > div {
+  display: flex;
+  justify-content: center;
+  width: 20%;
+  box-sizing: border-box;
+  padding: 0.5rem;
+}
+
+@media (min-width: 1300px) {
+  .mainContainer > div > div > div {
+    width: 14.285%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .mainContainer > div > div > div {
+    width: 25%;
+  }
+}
+
+@media (max-width: 750px) {
+  .mainContainer > div > div > div {
+    width: 33%;
+  }
+}
+
+@media (max-width: 550px) {
+  .mainContainer > div > div > div {
+    width: 50%;
+  }
+}
+
 @media (max-width: 500px) {
   .mainContainer {
     min-height: 80vh;

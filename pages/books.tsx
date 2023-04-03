@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import Books from "../components/pageComponents/Books";
+import Books from "../components/pageComponents/Books/Books";
 
 export default function books() {
   return (
