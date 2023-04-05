@@ -22,6 +22,7 @@
 
   /* Shades of black */
   --color-black: hsl(0deg 0% 0%);
+  --color-black-75: hsla(0deg 0% 0% / 75%);
   --color-black-38: hsla(0deg 0% 0% / 38%);
   --color-black-20: hsla(0deg 0% 0% / 20%);
   --color-black-14: hsla(0deg 0% 0% / 14%);

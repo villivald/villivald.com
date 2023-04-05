@@ -13,6 +13,32 @@
   width: 20%;
   box-sizing: border-box;
   padding: 0.5rem;
+  transition: all 0.25s ease;
+}
+
+.mainContainer > div > div > div > p {
+  display: none;
+}
+
+.mainContainer > div > div > div:hover {
+  scale: 1.15;
+}
+
+/* scale next div on hover */
+.mainContainer > div > div > div:hover + div {
+  scale: 1.05;
+}
+
+.mainContainer > div > div > div:hover > p {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 2%;
+  width: calc(100% - (100% - 200px));
+  height: 30%;
+  background-color: var(--color-black-75);
+  color: var(--color-white);
+  padding: 0.5rem;
 }
 
 @media (min-width: 1300px) {

@@ -15,12 +15,23 @@ const Books = () => {
         className={styles.mainContainer}
         data={sortedBooks}
         itemContent={(_index, book) => (
-          <Image
-            src={`/covers/${book.image}`}
-            alt={book.title}
-            width={200}
-            height={300}
-          />
+          <>
+            <Image
+              src={`/covers/${book.image}`}
+              alt={book.title}
+              width={200}
+              height={300}
+            />
+            <p>
+              <span>
+                {book.title} - {book.author}
+              </span>
+              <span>
+                {book.date} <span>📅</span>
+              </span>
+              <span>{"⭐️".repeat(book.rating)}</span>
+            </p>
+          </>
         )}
       />
     </div>

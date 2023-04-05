@@ -4,91 +4,106 @@
       "title": "test",
       "author": "test",
       "date": "2019-01-01",
-      "image": "1.jpeg"
+      "image": "1.jpeg",
+      "rating": 5
     },
     {
       "title": "test",
       "author": "test",
       "date": "2019-01-01",
-      "image": "2.jpeg"
+      "image": "2.jpeg",
+      "rating": 5
     },
     {
       "title": "test",
       "author": "test",
       "date": "2019-01-01",
-      "image": "3.jpeg"
+      "image": "3.jpeg",
+      "rating": 5
     },
     {
       "title": "test",
       "author": "test",
       "date": "2019-01-01",
-      "image": "4.jpeg"
+      "image": "4.jpeg",
+      "rating": 5
     },
     {
       "title": "test",
       "author": "test",
       "date": "2019-01-01",
-      "image": "5.jpeg"
+      "image": "5.jpeg",
+      "rating": 5
     },
     {
       "title": "test",
       "author": "test",
       "date": "2019-01-01",
-      "image": "6.jpeg"
+      "image": "6.jpeg",
+      "rating": 5
     },
     {
       "title": "test",
       "author": "test",
       "date": "2019-01-01",
-      "image": "7.jpeg"
+      "image": "7.jpeg",
+      "rating": 5
     },
     {
       "title": "test",
       "author": "test",
       "date": "2019-01-01",
-      "image": "8.jpeg"
+      "image": "8.jpeg",
+      "rating": 5
     },
     {
       "title": "test",
       "author": "test",
       "date": "2019-01-01",
-      "image": "9.jpeg"
+      "image": "9.jpeg",
+      "rating": 5
     },
     {
       "title": "test",
       "author": "test",
       "date": "2019-01-01",
-      "image": "10.jpeg"
+      "image": "10.jpeg",
+      "rating": 5
     },
     {
       "title": "test",
       "author": "test",
       "date": "2019-01-01",
-      "image": "11.jpeg"
+      "image": "11.jpeg",
+      "rating": 5
     },
     {
       "title": "test",
       "author": "test",
       "date": "2019-01-01",
-      "image": "12.jpeg"
+      "image": "12.jpeg",
+      "rating": 5
     },
     {
       "title": "test",
       "author": "test",
       "date": "2019-01-01",
-      "image": "13.jpeg"
+      "image": "13.jpeg",
+      "rating": 5
     },
     {
       "title": "test",
       "author": "test",
       "date": "2019-01-01",
-      "image": "14.jpeg"
+      "image": "14.jpeg",
+      "rating": 5
     },
     {
       "title": "test",
       "author": "test",
       "date": "2019-01-01",
-      "image": "15.jpeg"
+      "image": "15.jpeg",
+      "rating": 5
     }
   ]
 }
