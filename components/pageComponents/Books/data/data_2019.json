@@ -1,0 +1,81 @@
+{
+  "books": [
+    {
+      "title": "Обломов",
+      "author": "Гончаров",
+      "date": "16.11.2019",
+      "image": "1.webp",
+      "rating": 4
+    },
+    {
+      "title": "Красный свет",
+      "author": "М. Кантор",
+      "date": "17.11.2019",
+      "image": "2.webp",
+      "rating": 2
+    },
+    {
+      "title": "Страна багровых туч",
+      "author": "Стругацкие",
+      "date": "01.12.2019",
+      "image": "3.webp",
+      "rating": 5
+    },
+    {
+      "title": "Путь на Амальтею",
+      "author": "Стругацкие",
+      "date": "02.12.2019",
+      "image": "4.webp",
+      "rating": 4
+    },
+    {
+      "title": "Стажеры",
+      "author": "Стругацкие",
+      "date": "08.12.2019",
+      "image": "5.webp",
+      "rating": 4
+    },
+    {
+      "title": "Хищные вещи века",
+      "author": "Стругацкие",
+      "date": "13.12.2019",
+      "image": "6.webp",
+      "rating": 4
+    },
+    {
+      "title": "Октябрь",
+      "author": "Мьевиль",
+      "date": "17.12.2019",
+      "image": "7.webp",
+      "rating": 3
+    },
+    {
+      "title": "Homo Deus",
+      "author": "Харари",
+      "date": "17.12.2019",
+      "image": "8.webp",
+      "rating": 2
+    },
+    {
+      "title": "Полдень, XXII век",
+      "author": "Стругацкие",
+      "date": "22.12.2019",
+      "image": "9.webp",
+      "rating": 4
+    },
+    {
+      "title": "Краткая история русских хакеров",
+      "author": "Туровский",
+      "date": "25.12.2019",
+      "image": "10.webp",
+      "rating": 4
+    },
+    {
+      "title": "Трудно быть богом",
+      "author": "Стругацкие",
+      "date": "29.12.2019",
+      "image": "11.webp",
+      "rating": 4
+    }
+  ]
+}

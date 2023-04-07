@@ -2,6 +2,14 @@
   min-height: 70vh;
 }
 
+.yearHeader {
+  text-align: center;
+}
+
+.mainContainer > div {
+  padding: 1rem 0;
+}
+
 .mainContainer > div > div {
   display: flex;
   flex-wrap: wrap;
