@@ -24,9 +24,10 @@
   scale: 1.15;
 }
 
-/* scale next div on hover */
+.mainContainer > div > div > div:has(+ div:hover),
 .mainContainer > div > div > div:hover + div {
-  scale: 1.05;
+  scale: 1.01;
+  transition: all 0.9s ease;
 }
 
 .mainContainer > div > div > div:hover > p {
