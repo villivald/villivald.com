@@ -2,54 +2,55 @@ import { useMemo } from "react";
 import Image from "next/image";
 import { VirtuosoGrid } from "react-virtuoso";
 
-import data_2019 from "./data/data_2019.json";
-import data_2020 from "./data/data_2020.json";
-import data_2021 from "./data/data_2021.json";
+import data from "./data.json";
 
 import styles from "../../../styles/Books.module.css";
 
-const Books = () => {
-  const sortedBooks_2019 = useMemo(() => [...data_2019.books].reverse(), []);
-  const sortedBooks_2020 = useMemo(() => [...data_2020.books].reverse(), []);
-  const sortedBooks_2021 = useMemo(() => [...data_2021.books].reverse(), []);
+type Book = {
+  title: string;
+  author: string;
+  date: string;
+  rating: number;
+  image: string;
+  year?: number;
+};
 
-  const books = [
-    { year: 2021, books: sortedBooks_2021 },
-    { year: 2020, books: sortedBooks_2020 },
-    { year: 2019, books: sortedBooks_2019 },
-  ];
+const Books = () => {
+  const sortedBooks = useMemo(() => [...data.books].reverse(), []);
 
   return (
-    <div>
-      {books.map((item) => (
-        <div key={item.year}>
-          <h1 className={styles.yearHeader}>{item.year}</h1>
-          <VirtuosoGrid
-            className={styles.mainContainer}
-            data={item.books}
-            itemContent={(_index, book) => (
-              <>
-                <Image
-                  src={`/covers/${book.image}`}
-                  alt={book.title}
-                  width={200}
-                  height={300}
-                />
-                <p>
-                  <span>
-                    {book.title} - {book.author}
-                  </span>
-                  <span>
-                    {book.date} <span>📅</span>
-                  </span>
-                  <span>{"⭐️".repeat(book.rating)}</span>
-                </p>
-              </>
-            )}
-          />
-        </div>
-      ))}
-    </div>
+    <VirtuosoGrid
+      className={styles.mainContainer}
+      data={sortedBooks}
+      itemContent={(_index, book: Book) =>
+        book.year ? (
+          <div>
+            <p>
+              <span>{book.year}</span>
+              <span>→</span>
+            </p>
+          </div>
+        ) : (
+          <>
+            <Image
+              src={`/covers/${book.image}`}
+              alt={book.title}
+              width={200}
+              height={300}
+            />
+            <p>
+              <span>
+                {book.title} - {book.author}
+              </span>
+              <span>
+                {book.date} <span>📅</span>
+              </span>
+              <span>{"⭐️".repeat(book.rating)}</span>
+            </p>
+          </>
+        )
+      }
+    />
   );
 };
 

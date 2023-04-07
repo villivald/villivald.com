@@ -2,10 +2,6 @@
   min-height: 70vh;
 }
 
-.yearHeader {
-  text-align: center;
-}
-
 .mainContainer > div {
   padding: 1rem 0;
 }
@@ -32,12 +28,6 @@
   scale: 1.15;
 }
 
-.mainContainer > div > div > div:has(+ div:hover),
-.mainContainer > div > div > div:hover + div {
-  scale: 1.01;
-  transition: all 0.9s ease;
-}
-
 .mainContainer > div > div > div:hover > p {
   display: flex;
   flex-direction: column;
@@ -48,6 +38,31 @@
   background-color: var(--color-black-75);
   color: var(--color-white);
   padding: 0.5rem;
+}
+
+.mainContainer > div > div > div[data-index="10"] > div {
+  display: grid;
+  place-items: center;
+  background-color: var(--color-brand-red);
+  width: 200px;
+  height: 300px;
+}
+
+.mainContainer > div > div > div[data-index="10"] > div > p {
+  display: flex;
+  gap: 0.5rem;
+  font-size: var(--fontSize-header2);
+  font-family: var(--font-subheader);
+}
+
+.mainContainer > div > div > div[data-index="10"]:hover {
+  scale: none;
+}
+
+.mainContainer > div > div > div:has(+ div:hover),
+.mainContainer > div > div > div:hover + div {
+  scale: 1.01;
+  transition: all 0.9s ease;
 }
 
 @media (min-width: 1300px) {
