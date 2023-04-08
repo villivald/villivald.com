@@ -154,6 +154,427 @@
       "date": "09.02.2020",
       "image": "21.webp",
       "rating": 1
+    },
+    {
+      "title": "Карта и территория",
+      "author": "М. Уельбек",
+      "date": "10.02.2020",
+      "image": "22.webp",
+      "rating": 3
+    },
+    {
+      "title": "Норма",
+      "author": "Сорокин",
+      "date": "21.02.2020",
+      "image": "23.webp",
+      "rating": 3
+    },
+    {
+      "title": "Sapiens. Краткая история человечества",
+      "author": "Харари",
+      "date": "23.02.2020",
+      "image": "24.webp",
+      "rating": 4
+    },
+    {
+      "title": "Необычайные похождения Хулио Хуренито",
+      "author": "Эренбург",
+      "date": "29.02.2020",
+      "image": "25.webp",
+      "rating": 4
+    },
+    {
+      "title": "Соглядатай",
+      "author": "Роб-Грийе",
+      "date": "21.03.2020",
+      "image": "26.webp",
+      "rating": 4
+    },
+    {
+      "title": "Палач",
+      "author": "Лимонов",
+      "date": "29.03.2020",
+      "image": "27.webp",
+      "rating": 4
+    },
+    {
+      "title": "Воры",
+      "author": "Галеотти",
+      "date": "29.03.2020",
+      "image": "28.webp",
+      "rating": 4
+    },
+    {
+      "title": "Зарубежная Россия",
+      "author": "Ковалевский",
+      "date": "06.04.2020",
+      "image": "29.webp",
+      "rating": 4
+    },
+    {
+      "title": "Почему распался СССР",
+      "author": "А. Дубнов",
+      "date": "11.04.2020",
+      "image": "30.webp",
+      "rating": 3
+    },
+    {
+      "title": "Frontend developer handbook",
+      "author": "Frontendmasters",
+      "date": "19.04.2020",
+      "image": "31.webp",
+      "rating": 5
+    },
+    {
+      "title": "Дневник неудачника",
+      "author": "Лимонов",
+      "date": "30.04.2020",
+      "image": "32.webp",
+      "rating": 4
+    },
+    {
+      "title": "Refactoring UI",
+      "author": "Wathan & Schoger",
+      "date": "03.05.2020",
+      "image": "33.webp",
+      "rating": 5
+    },
+    {
+      "title": "Торжество метафизики",
+      "author": "Лимонов",
+      "date": "06.05.2020",
+      "image": "34.webp",
+      "rating": 5
+    },
+    {
+      "title": "Ководство",
+      "author": "Лебедев",
+      "date": "12.05.2020",
+      "image": "35.webp",
+      "rating": 4
+    },
+    {
+      "title": "The Complete Software Developer's Career Guide",
+      "author": "Sonmez",
+      "date": "13.05.2020",
+      "image": "36.webp",
+      "rating": 4
+    },
+    {
+      "title": "Первая сверхдержава",
+      "author": "Акунин",
+      "date": "23.05.2020",
+      "image": "37.webp",
+      "rating": 4
+    },
+    {
+      "title": "Предатель в Северной Корее",
+      "author": "М. Тровик",
+      "date": "24.05.2020",
+      "image": "38.webp",
+      "rating": 4
+    },
+    {
+      "title": "Азазель",
+      "author": "Акунин",
+      "date": "27.05.2020",
+      "image": "39.webp",
+      "rating": 4
+    },
+    {
+      "title": "Soft skills",
+      "author": "Sonmez",
+      "date": "31.05.2020",
+      "image": "40.webp",
+      "rating": 3
+    },
+    {
+      "title": "Турецкий гамбит",
+      "author": "Акунин",
+      "date": "03.06.2020",
+      "image": "41.webp",
+      "rating": 4
+    },
+    {
+      "title": "Pragmatic programmer",
+      "author": "Thomas & Hunt",
+      "date": "04.06.2020",
+      "image": "42.webp",
+      "rating": 2
+    },
+    {
+      "title": "Хрущев",
+      "author": "Млечин",
+      "date": "05.06.2020",
+      "image": "43.webp",
+      "rating": 3
+    },
+    {
+      "title": "Левиафан",
+      "author": "Акунин",
+      "date": "13.06.2020",
+      "image": "44.webp",
+      "rating": 3
+    },
+    {
+      "title": "Зависть",
+      "author": "Олеша",
+      "date": "20.06.2020",
+      "image": "45.webp",
+      "rating": 4
+    },
+    {
+      "title": "Расстрига",
+      "author": "Доренко",
+      "date": "25.06.2020",
+      "image": "46.webp",
+      "rating": 4
+    },
+    {
+      "title": "Смерть Ахиллеса",
+      "author": "Акунин",
+      "date": "06.07.2020",
+      "image": "47.webp",
+      "rating": 5
+    },
+    {
+      "title": "Дом правительства",
+      "author": "Слезкин",
+      "date": "08.07.2020",
+      "image": "48.webp",
+      "rating": 5
+    },
+    {
+      "title": "Пиковый валет",
+      "author": "Акунин",
+      "date": "09.07.2020",
+      "image": "49.webp",
+      "rating": 4
+    },
+    {
+      "title": "Отъявленный программист",
+      "author": "Савчук",
+      "date": "16.07.2020",
+      "image": "50.webp",
+      "rating": 4
+    },
+    {
+      "title": "Декоратор",
+      "author": "Акунин",
+      "date": "16.07.2020",
+      "image": "51.webp",
+      "rating": 4
+    },
+    {
+      "title": "Конармия",
+      "author": "Бабель",
+      "date": "17.07.2020",
+      "image": "52.webp",
+      "rating": 1
+    },
+    {
+      "title": "Статский советник",
+      "author": "Акунин",
+      "date": "26.07.2020",
+      "image": "53.webp",
+      "rating": 4
+    },
+    {
+      "title": "Беседы с дочерью об экономике",
+      "author": "Варуфакис",
+      "date": "30.07.2020",
+      "image": "54.webp",
+      "rating": 3
+    },
+    {
+      "title": "Lingo",
+      "author": "G. Dorren",
+      "date": "02.08.2020",
+      "image": "55.webp",
+      "rating": 4
+    },
+    {
+      "title": "Elon Musk",
+      "author": "A. Vance",
+      "date": "07.08.2020",
+      "image": "56.webp",
+      "rating": 3
+    },
+    {
+      "title": "Коронация",
+      "author": "Акунин",
+      "date": "19.08.2020",
+      "image": "57.webp",
+      "rating": 4
+    },
+    {
+      "title": "Juoppohullun päiväkirja",
+      "author": "Vuorinen",
+      "date": "29.08.2020",
+      "image": "58.webp",
+      "rating": 4
+    },
+    {
+      "title": "Век тревожности",
+      "author": "С. Стоссел",
+      "date": "30.08.2020",
+      "image": "59.webp",
+      "rating": 3
+    },
+    {
+      "title": "Горький",
+      "author": "Быков",
+      "date": "30.08.2020",
+      "image": "60.webp",
+      "rating": 4
+    },
+    {
+      "title": "Шум времени",
+      "author": "Мандельштам",
+      "date": "30.08.2020",
+      "image": "61.webp",
+      "rating": 2
+    },
+    {
+      "title": "The Four",
+      "author": "S. Galloway",
+      "date": "01.09.2020",
+      "image": "62.webp",
+      "rating": 3
+    },
+    {
+      "title": "The 2084 Report",
+      "author": "J. Powell",
+      "date": "11.09.2020",
+      "image": "63.webp",
+      "rating": 4
+    },
+    {
+      "title": "Крестовые сестры",
+      "author": "Ремизов",
+      "date": "13.09.2020",
+      "image": "64.webp",
+      "rating": 3
+    },
+    {
+      "title": "Карамора",
+      "author": "Горький",
+      "date": "14.09.2020",
+      "image": "65.webp",
+      "rating": 3
+    },
+    {
+      "title": "If Hemingway Wrote JavaScript",
+      "author": "A.Croll",
+      "date": "25.10.2020",
+      "image": "66.webp",
+      "rating": 3
+    },
+    {
+      "title": "Будущее",
+      "author": "Глуховский",
+      "date": "25.10.2020",
+      "image": "67.webp",
+      "rating": 3
+    },
+    {
+      "title": "Любовница смерти",
+      "author": "Акунин",
+      "date": "31.10.2020",
+      "image": "68.webp",
+      "rating": 4
+    },
+    {
+      "title": "Ослепление",
+      "author": "Канетти",
+      "date": "05.11.2020",
+      "image": "69.webp",
+      "rating": 4
+    },
+    {
+      "title": "Москва - Петушки",
+      "author": "Ерофеев",
+      "date": "06.11.2020",
+      "image": "70.webp",
+      "rating": 5
+    },
+    {
+      "title": "Убик",
+      "author": "Ф. Дик",
+      "date": "13.11.2020",
+      "image": "71.webp",
+      "rating": 4
+    },
+    {
+      "title": "Теоретический минимум по Computer Science",
+      "author": "В. Фило",
+      "date": "18.11.2020",
+      "image": "72.webp",
+      "rating": 3
+    },
+    {
+      "title": "Babel",
+      "author": "G. Dorren",
+      "date": "22.11.2020",
+      "image": "73.webp",
+      "rating": 4
+    },
+    {
+      "title": "Москва и москвичи",
+      "author": "Гиляровский",
+      "date": "29.11.2020",
+      "image": "74.webp",
+      "rating": 4
+    },
+    {
+      "title": "Котлован",
+      "author": "Платонов",
+      "date": "10.12.2020",
+      "image": "75.webp",
+      "rating": 2
+    },
+    {
+      "title": "Все свободны",
+      "author": "Зыгарь",
+      "date": "14.12.2020",
+      "image": "76.webp",
+      "rating": 4
+    },
+    {
+      "title": "Как работает пропаганда",
+      "author": "Эйдельман",
+      "date": "15.12.2020",
+      "image": "77.webp",
+      "rating": 4
+    },
+    {
+      "title": "В кварталах дальних и печальных",
+      "author": "Рыжий",
+      "date": "16.12.2020",
+      "image": "78.webp",
+      "rating": 5
+    },
+    {
+      "title": "Любовник смерти",
+      "author": "Акунин",
+      "date": "20.12.2020",
+      "image": "79.webp",
+      "rating": 4
+    },
+    {
+      "title": "Белые ночи",
+      "author": "Достоевский",
+      "date": "30.12.2020",
+      "image": "80.webp",
+      "rating": 3
+    },
+    {
+      "title": "",
+      "author": "",
+      "date": "",
+      "image": "",
+      "rating": 0,
+      "year": 2020
     }
   ]
 }
