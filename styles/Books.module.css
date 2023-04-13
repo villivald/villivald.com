@@ -45,11 +45,16 @@
   background-color: var(--color-brand-yellow);
 }
 
-.mainContainer > div > div > div[data-index="70"] > div {
+.mainContainer > div > div > div[data-index="57"] > div {
   background-color: var(--color-brand-red);
 }
 
-.mainContainer > div > div > div[data-index="70"] > div,
+.mainContainer > div > div > div[data-index="127"] > div {
+  background-color: var(--color-brand-green50);
+}
+
+.mainContainer > div > div > div[data-index="127"] > div,
+.mainContainer > div > div > div[data-index="57"] > div,
 .mainContainer > div > div > div[data-index="0"] > div {
   display: grid;
   place-items: center;
@@ -57,7 +62,8 @@
   height: 300px;
 }
 
-.mainContainer > div > div > div[data-index="70"] > div > p,
+.mainContainer > div > div > div[data-index="127"] > div > p,
+.mainContainer > div > div > div[data-index="57"] > div > p,
 .mainContainer > div > div > div[data-index="0"] > div > p {
   display: flex;
   gap: 0.5rem;
@@ -65,7 +71,8 @@
   font-family: var(--font-subheader);
 }
 
-.mainContainer > div > div > div[data-index="70"]:hover,
+.mainContainer > div > div > div[data-index="127"]:hover,
+.mainContainer > div > div > div[data-index="57"]:hover,
 .mainContainer > div > div > div[data-index="0"]:hover {
   scale: none;
 }

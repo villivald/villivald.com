@@ -575,6 +575,406 @@
       "image": "",
       "rating": 0,
       "year": 2020
+    },
+    {
+      "title": "Несовременная страна",
+      "author": "Иноземцев",
+      "date": "10.01.2021",
+      "image": "81.webp",
+      "rating": 4
+    },
+    {
+      "title": "Иосиф Сталин. Начало",
+      "author": "Радзинский",
+      "date": "26.01.2021",
+      "image": "82.webp",
+      "rating": 4
+    },
+    {
+      "title": "Blood, Sweat, and Pixels",
+      "author": "Schreier",
+      "date": "29.01.2021",
+      "image": "83.webp",
+      "rating": 4
+    },
+    {
+      "title": "Третий Рейх",
+      "author": "Боланьо",
+      "date": "06.02.2021",
+      "image": "84.webp",
+      "rating": 5
+    },
+    {
+      "title": "Алмазная колесница",
+      "author": "Акунин",
+      "date": "04.03.2021",
+      "image": "85.webp",
+      "rating": 4
+    },
+    {
+      "title": "10 дней которые потрясли мир",
+      "author": "Д. Рид",
+      "date": "21.03.2021",
+      "image": "86.webp",
+      "rating": 3
+    },
+    {
+      "title": "Инь и Ян",
+      "author": "Акунин",
+      "date": "25.03.2021",
+      "image": "87.webp",
+      "rating": 4
+    },
+    {
+      "title": "The Body",
+      "author": "Bryson",
+      "date": "28.03.2021",
+      "image": "88.webp",
+      "rating": 4
+    },
+    {
+      "title": "Автостопом по галактике",
+      "author": "Д. Адамс",
+      "date": "14.04.2021",
+      "image": "89.webp",
+      "rating": 4
+    },
+    {
+      "title": "Ресторан в конце Вселенной",
+      "author": "Д. Адамс",
+      "date": "14.04.2021",
+      "image": "90.webp",
+      "rating": 4
+    },
+    {
+      "title": "Дорогая редакция",
+      "author": "Тимченко",
+      "date": "24.04.2021",
+      "image": "91.webp",
+      "rating": 4
+    },
+    {
+      "title": "Нефритовые четки",
+      "author": "Акунин",
+      "date": "28.04.2021",
+      "image": "92.webp",
+      "rating": 3
+    },
+    {
+      "title": "Безлюдное место",
+      "author": "Сулим",
+      "date": "01.05.2021",
+      "image": "93.webp",
+      "rating": 4
+    },
+    {
+      "title": "Весь мир театр",
+      "author": "Акунин",
+      "date": "06.05.2021",
+      "image": "94.webp",
+      "rating": 3
+    },
+    {
+      "title": "Clean Code",
+      "author": "R. Martin",
+      "date": "09.05.2021",
+      "image": "95.webp",
+      "rating": 2
+    },
+    {
+      "title": "Средневековая Англия",
+      "author": "Я. Мортимер",
+      "date": "14.05.2021",
+      "image": "96.webp",
+      "rating": 5
+    },
+    {
+      "title": "Солнце мертвых",
+      "author": "Шмелев",
+      "date": "15.05.2021",
+      "image": "97.webp",
+      "rating": 2
+    },
+    {
+      "title": "Иосиф Сталин. Гибель богов",
+      "author": "Радзинский",
+      "date": "23.05.2021",
+      "image": "98.webp",
+      "rating": 4
+    },
+    {
+      "title": "Debugging CSS",
+      "author": "Shadeed",
+      "date": "25.05.2021",
+      "image": "99.webp",
+      "rating": 4
+    },
+    {
+      "title": "Планета Вода",
+      "author": "Акунин",
+      "date": "05.06.2021",
+      "image": "100.webp",
+      "rating": 3
+    },
+    {
+      "title": "Парус одинокий",
+      "author": "Акунин",
+      "date": "06.06.2021",
+      "image": "101.webp",
+      "rating": 3
+    },
+    {
+      "title": "Русский дневник",
+      "author": "Стейнбек",
+      "date": "07.06.2021",
+      "image": "102.webp",
+      "rating": 4
+    },
+    {
+      "title": "Unelmien NBA",
+      "author": "Häyrinen, Möttölä",
+      "date": "11.06.2021",
+      "image": "103.webp",
+      "rating": 4
+    },
+    {
+      "title": "Иосиф Сталин. Последняя загадка",
+      "author": "Радзинский",
+      "date": "12.06.2021",
+      "image": "104.webp",
+      "rating": 4
+    },
+    {
+      "title": "Преступление и наказание",
+      "author": "Достоевский",
+      "date": "04.07.2021",
+      "image": "105.webp",
+      "rating": 5
+    },
+    {
+      "title": "Вы хотите поговорить об этом?",
+      "author": "Л. Готтлиб",
+      "date": "12.07.2021",
+      "image": "106.webp",
+      "rating": 5
+    },
+    {
+      "title": "Доктор Гарин",
+      "author": "Сорокин",
+      "date": "19.07.2021",
+      "image": "107.webp",
+      "rating": 3
+    },
+    {
+      "title": "Куда ж нам плыть?",
+      "author": "Акунин",
+      "date": "24.07.2021",
+      "image": "108.webp",
+      "rating": 4
+    },
+    {
+      "title": "Revolutions",
+      "author": "P. Furtado",
+      "date": "01.08.2021",
+      "image": "109.webp",
+      "rating": 4
+    },
+    {
+      "title": "Герои книг на приеме у психотерапевта",
+      "author": "A. Боттлингер",
+      "date": "02.08.2021",
+      "image": "110.webp",
+      "rating": 3
+    },
+    {
+      "title": "Думай медленно… решай быстро",
+      "author": "Канеман",
+      "date": "15.08.2021",
+      "image": "108.webp",
+      "rating": 3
+    },
+    {
+      "title": "Черный город",
+      "author": "Акунин",
+      "date": "19.08.2021",
+      "image": "109.webp",
+      "rating": 4
+    },
+    {
+      "title": "Намедни 1921-1930",
+      "author": "Парфенов",
+      "date": "21.08.2021",
+      "image": "110.webp",
+      "rating": 5
+    },
+    {
+      "title": "Птица за птицей",
+      "author": "Ламотт",
+      "date": "27.08.2021",
+      "image": "111.webp",
+      "rating": 3
+    },
+    {
+      "title": "Не прощаюсь",
+      "author": "Акунин",
+      "date": "29.08.2021",
+      "image": "112.webp",
+      "rating": 4
+    },
+    {
+      "title": "Make VS Code Awesome",
+      "author": "Porzio",
+      "date": "01.09.2021",
+      "image": "113.webp",
+      "rating": 4
+    },
+    {
+      "title": "Пить или не пить?",
+      "author": "Д. Натт",
+      "date": "04.09.2021",
+      "image": "114.webp",
+      "rating": 3
+    },
+    {
+      "title": "Дневники",
+      "author": "З. Гиппиус",
+      "date": "20.09.2021",
+      "image": "115.webp",
+      "rating": 5
+    },
+    {
+      "title": "100 рассказов из истории медицины",
+      "author": "Шифрин",
+      "date": "30.09.2021",
+      "image": "116.webp",
+      "rating": 3
+    },
+    {
+      "title": "Собачье сердце",
+      "author": "Булгаков",
+      "date": "01.10.2021",
+      "image": "117.webp",
+      "rating": 4
+    },
+    {
+      "title": "Бывший сын",
+      "author": "Филипенко",
+      "date": "09.10.2021",
+      "image": "118.webp",
+      "rating": 4
+    },
+    {
+      "title": "Голем",
+      "author": "Майринк",
+      "date": "16.10.2021",
+      "image": "119.webp",
+      "rating": 4
+    },
+    {
+      "title": "Замыслы",
+      "author": "Филипенко",
+      "date": "17.10.2021",
+      "image": "120.webp",
+      "rating": 3
+    },
+    {
+      "title": "Swannin tie",
+      "author": "Proust",
+      "date": "22.10.2021",
+      "image": "121.webp",
+      "rating": 2
+    },
+    {
+      "title": "Макулатура",
+      "author": "Буковски",
+      "date": "30.10.2021",
+      "image": "122.webp",
+      "rating": 4
+    },
+    {
+      "title": "Язвительные заметки о Царе, Сталине и Муже",
+      "author": "З. Гиппиус",
+      "date": "31.10.2021",
+      "image": "123.webp",
+      "rating": 4
+    },
+    {
+      "title": "Hytti nro 6",
+      "author": "Hytti nro",
+      "date": "07.11.2021",
+      "image": "124.webp",
+      "rating": 2
+    },
+    {
+      "title": "Yhden miehen enemmistö",
+      "author": "T.Soini",
+      "date": "20.11.2021",
+      "image": "125.webp",
+      "rating": 4
+    },
+    {
+      "title": "Иностранец в смутное время",
+      "author": "Лимонов",
+      "date": "22.11.2021",
+      "image": "126.webp",
+      "rating": 4
+    },
+    {
+      "title": "Kaikki elämästä(ni)",
+      "author": "A. Holma",
+      "date": "01.12.2021",
+      "image": "127.webp",
+      "rating": 3
+    },
+    {
+      "title": "Ход царем",
+      "author": "И. Жегулев",
+      "date": "08.12.2021",
+      "image": "128.webp",
+      "rating": 4
+    },
+    {
+      "title": "Frontend Unicorn",
+      "author": "S. Adamiak",
+      "date": "13.12.2021",
+      "image": "129.webp",
+      "rating": 3
+    },
+    {
+      "title": "Опасные советские вещи",
+      "author": "А. Архипова",
+      "date": "14.12.2021",
+      "image": "130.webp",
+      "rating": 3
+    },
+    {
+      "title": "Mielensäpahoittaja",
+      "author": "T. Kyrö",
+      "date": "19.12.2021",
+      "image": "131.webp",
+      "rating": 4
+    },
+    {
+      "title": "Mielensäpahoittaja ja ruskeakastike",
+      "author": "T. Kyrö",
+      "date": "20.12.2021",
+      "image": "132.webp",
+      "rating": 3
+    },
+    {
+      "title": "Ilosia aikoja, Mielensäpahoittaja",
+      "author": "T. Kyrö",
+      "date": "29.12.2021",
+      "image": "133.webp",
+      "rating": 3
+    },
+    {
+      "title": "",
+      "author": "",
+      "date": "",
+      "image": "",
+      "rating": 0,
+      "year": 2021
     }
   ]
 }
