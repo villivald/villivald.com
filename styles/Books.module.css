@@ -84,6 +84,24 @@
   scale: none;
 }
 
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.button {
+  border: none;
+  cursor: pointer;
+  font-size: var(--fontSize-header4);
+  padding: 0.5rem 1rem;
+}
+
+.button[data-active="true"] {
+  background-color: var(--color-brand-yellow);
+}
+
 @media (min-width: 1300px) {
   .mainContainer > div > div > div {
     width: 14.285%;
