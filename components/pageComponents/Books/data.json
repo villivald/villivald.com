@@ -83,7 +83,8 @@
       "date": "",
       "image": "",
       "rating": 0,
-      "year": 2019
+      "year": 2019,
+      "total": 11
     },
     {
       "title": "Попытка к бегству",
@@ -574,7 +575,8 @@
       "date": "",
       "image": "",
       "rating": 0,
-      "year": 2020
+      "year": 2020,
+      "total": 69
     },
     {
       "title": "Несовременная страна",
@@ -790,182 +792,182 @@
       "title": "Думай медленно… решай быстро",
       "author": "Канеман",
       "date": "15.08.2021",
-      "image": "108.webp",
+      "image": "111.webp",
       "rating": 3
     },
     {
       "title": "Черный город",
       "author": "Акунин",
       "date": "19.08.2021",
-      "image": "109.webp",
+      "image": "112.webp",
       "rating": 4
     },
     {
       "title": "Намедни 1921-1930",
       "author": "Парфенов",
       "date": "21.08.2021",
-      "image": "110.webp",
+      "image": "113.webp",
       "rating": 5
     },
     {
       "title": "Птица за птицей",
       "author": "Ламотт",
       "date": "27.08.2021",
-      "image": "111.webp",
+      "image": "114.webp",
       "rating": 3
     },
     {
       "title": "Не прощаюсь",
       "author": "Акунин",
       "date": "29.08.2021",
-      "image": "112.webp",
+      "image": "115.webp",
       "rating": 4
     },
     {
       "title": "Make VS Code Awesome",
       "author": "Porzio",
       "date": "01.09.2021",
-      "image": "113.webp",
+      "image": "116.webp",
       "rating": 4
     },
     {
       "title": "Пить или не пить?",
       "author": "Д. Натт",
       "date": "04.09.2021",
-      "image": "114.webp",
+      "image": "117.webp",
       "rating": 3
     },
     {
       "title": "Дневники",
       "author": "З. Гиппиус",
       "date": "20.09.2021",
-      "image": "115.webp",
+      "image": "118.webp",
       "rating": 5
     },
     {
       "title": "100 рассказов из истории медицины",
       "author": "Шифрин",
       "date": "30.09.2021",
-      "image": "116.webp",
+      "image": "119.webp",
       "rating": 3
     },
     {
       "title": "Собачье сердце",
       "author": "Булгаков",
       "date": "01.10.2021",
-      "image": "117.webp",
+      "image": "120.webp",
       "rating": 4
     },
     {
       "title": "Бывший сын",
       "author": "Филипенко",
       "date": "09.10.2021",
-      "image": "118.webp",
+      "image": "121.webp",
       "rating": 4
     },
     {
       "title": "Голем",
       "author": "Майринк",
       "date": "16.10.2021",
-      "image": "119.webp",
+      "image": "122.webp",
       "rating": 4
     },
     {
       "title": "Замыслы",
       "author": "Филипенко",
       "date": "17.10.2021",
-      "image": "120.webp",
+      "image": "123.webp",
       "rating": 3
     },
     {
       "title": "Swannin tie",
       "author": "Proust",
       "date": "22.10.2021",
-      "image": "121.webp",
+      "image": "124.webp",
       "rating": 2
     },
     {
       "title": "Макулатура",
       "author": "Буковски",
       "date": "30.10.2021",
-      "image": "122.webp",
+      "image": "125.webp",
       "rating": 4
     },
     {
       "title": "Язвительные заметки о Царе, Сталине и Муже",
       "author": "З. Гиппиус",
       "date": "31.10.2021",
-      "image": "123.webp",
+      "image": "126.webp",
       "rating": 4
     },
     {
       "title": "Hytti nro 6",
       "author": "Hytti nro",
       "date": "07.11.2021",
-      "image": "124.webp",
+      "image": "127.webp",
       "rating": 2
     },
     {
       "title": "Yhden miehen enemmistö",
       "author": "T.Soini",
       "date": "20.11.2021",
-      "image": "125.webp",
+      "image": "128.webp",
       "rating": 4
     },
     {
       "title": "Иностранец в смутное время",
       "author": "Лимонов",
       "date": "22.11.2021",
-      "image": "126.webp",
+      "image": "129.webp",
       "rating": 4
     },
     {
       "title": "Kaikki elämästä(ni)",
       "author": "A. Holma",
       "date": "01.12.2021",
-      "image": "127.webp",
+      "image": "130.webp",
       "rating": 3
     },
     {
       "title": "Ход царем",
       "author": "И. Жегулев",
       "date": "08.12.2021",
-      "image": "128.webp",
+      "image": "131.webp",
       "rating": 4
     },
     {
       "title": "Frontend Unicorn",
       "author": "S. Adamiak",
       "date": "13.12.2021",
-      "image": "129.webp",
+      "image": "132.webp",
       "rating": 3
     },
     {
       "title": "Опасные советские вещи",
       "author": "А. Архипова",
       "date": "14.12.2021",
-      "image": "130.webp",
+      "image": "133.webp",
       "rating": 3
     },
     {
       "title": "Mielensäpahoittaja",
       "author": "T. Kyrö",
       "date": "19.12.2021",
-      "image": "131.webp",
+      "image": "134.webp",
       "rating": 4
     },
     {
       "title": "Mielensäpahoittaja ja ruskeakastike",
       "author": "T. Kyrö",
       "date": "20.12.2021",
-      "image": "132.webp",
+      "image": "135.webp",
       "rating": 3
     },
     {
       "title": "Ilosia aikoja, Mielensäpahoittaja",
       "author": "T. Kyrö",
       "date": "29.12.2021",
-      "image": "133.webp",
+      "image": "136.webp",
       "rating": 3
     },
     {
@@ -974,7 +976,8 @@
       "date": "",
       "image": "",
       "rating": 0,
-      "year": 2021
+      "year": 2021,
+      "total": 56
     }
   ]
 }

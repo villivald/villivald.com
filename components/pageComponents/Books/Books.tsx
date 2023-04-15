@@ -5,6 +5,7 @@ import { VirtuosoGrid } from "react-virtuoso";
 import data from "./data.json";
 
 import styles from "../../../styles/Books.module.css";
+import { FormattedMessage } from "react-intl";
 
 type Book = {
   title: string;
@@ -13,6 +14,7 @@ type Book = {
   rating: number;
   image: string;
   year?: number;
+  total?: number;
 };
 
 const Books = () => {
@@ -24,10 +26,16 @@ const Books = () => {
       data={sortedBooks}
       itemContent={(_index, book: Book) =>
         book.year ? (
-          <div>
+          <div className={styles.yearCard}>
             <p>
-              <span>{book.year}</span>
-              <span>→</span>
+              <span>
+                <span>{book.year}</span>
+                <span>→</span>
+              </span>
+              <span>
+                <FormattedMessage id="total" />
+                {book.total}
+              </span>
             </p>
           </div>
         ) : (

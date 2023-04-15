@@ -20,6 +20,27 @@
   transition: all 0.25s ease;
 }
 
+.yearCard {
+  display: grid;
+  place-items: center;
+  width: 200px;
+  height: 300px;
+}
+
+.yearCard > p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: var(--fontSize-header2);
+  font-family: var(--font-subheader);
+}
+
+.yearCard > p > span:last-child {
+  font-family: var(--font-body);
+  color: var(--color-brand-grey30);
+}
+
 .mainContainer > div > div > div > p {
   display: none;
 }
@@ -53,34 +74,14 @@
   background-color: var(--color-brand-green50);
 }
 
-.mainContainer > div > div > div[data-index="127"] > div,
-.mainContainer > div > div > div[data-index="57"] > div,
-.mainContainer > div > div > div[data-index="0"] > div {
-  display: grid;
-  place-items: center;
-  width: 200px;
-  height: 300px;
-}
-
-.mainContainer > div > div > div[data-index="127"] > div > p,
-.mainContainer > div > div > div[data-index="57"] > div > p,
-.mainContainer > div > div > div[data-index="0"] > div > p {
-  display: flex;
-  gap: 0.5rem;
-  font-size: var(--fontSize-header2);
-  font-family: var(--font-subheader);
-}
-
-.mainContainer > div > div > div[data-index="127"]:hover,
-.mainContainer > div > div > div[data-index="57"]:hover,
-.mainContainer > div > div > div[data-index="0"]:hover {
-  scale: none;
-}
-
 .mainContainer > div > div > div:has(+ div:hover),
 .mainContainer > div > div > div:hover + div {
   scale: 1.01;
   transition: all 0.9s ease;
+}
+
+.mainContainer > div > div > div:has(.yearCard):hover {
+  scale: none;
 }
 
 @media (min-width: 1300px) {
