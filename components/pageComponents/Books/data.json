@@ -978,6 +978,286 @@
       "rating": 0,
       "year": 2021,
       "total": 56
+    },
+    {
+      "title": "1947. Год, в который все началось",
+      "author": "Э. Осбринк",
+      "date": "03.01.2022",
+      "image": "137.webp",
+      "rating": 4
+    },
+    {
+      "title": "Средневековье крупным планом",
+      "author": "Воскобойников",
+      "date": "14.01.2022",
+      "image": "138.webp",
+      "rating": 3
+    },
+    {
+      "title": "The little ice age",
+      "author": "B. Fagan",
+      "date": "15.01.2022",
+      "image": "139.webp",
+      "rating": 2
+    },
+    {
+      "title": "Томас Манн",
+      "author": "С. Апт",
+      "date": "19.02.2022",
+      "image": "140.webp",
+      "rating": 4
+    },
+    {
+      "title": "Старик путешествует",
+      "author": "Лимонов",
+      "date": "23.02.2022",
+      "image": "141.webp",
+      "rating": 5
+    },
+    {
+      "title": "Икс",
+      "author": "Быков",
+      "date": "24.02.2022",
+      "image": "142.webp",
+      "rating": 3
+    },
+    {
+      "title": "Град обреченных",
+      "author": "Меркачева",
+      "date": "24.02.2022",
+      "image": "143.webp",
+      "rating": 4
+    },
+    {
+      "title": "Двойная звезда",
+      "author": "Б. Вишневский",
+      "date": "06.03.2022",
+      "image": "144.webp",
+      "rating": 4
+    },
+    {
+      "title": "Моя жизнь",
+      "author": "Троцкий",
+      "date": "31.03.2022",
+      "image": "145.webp",
+      "rating": 4
+    },
+    {
+      "title": "Navalny",
+      "author": "J.M. Dollbaum",
+      "date": "06.04.2022",
+      "image": "146.webp",
+      "rating": 3
+    },
+    {
+      "title": "Первая сверхдержава",
+      "author": "Акунин",
+      "date": "09.04.2022",
+      "image": "147.webp",
+      "rating": 4
+    },
+    {
+      "title": "Триптих",
+      "author": "С. Соколов",
+      "date": "10.04.2022",
+      "image": "148.webp",
+      "rating": 3
+    },
+    {
+      "title": "Тайные виды на гору Фудзи",
+      "author": "Пелевин",
+      "date": "16.04.2022",
+      "image": "149.webp",
+      "rating": 3
+    },
+    {
+      "title": "Программист-прагматик",
+      "author": "Д. Томас",
+      "date": "08.05.2022",
+      "image": "150.webp",
+      "rating": 3
+    },
+    {
+      "title": "Breathe",
+      "author": "J. Nestor",
+      "date": "12.05.2022",
+      "image": "151.webp",
+      "rating": 3
+    },
+    {
+      "title": "Spin Dictators",
+      "author": "S. Guriev & D. Treisman",
+      "date": "15.05.2022",
+      "image": "152.webp",
+      "rating": 4
+    },
+    {
+      "title": "Пост",
+      "author": "Глуховский",
+      "date": "18.05.2022",
+      "image": "153.webp",
+      "rating": 4
+    },
+    {
+      "title": "Уравнение Бога",
+      "author": "М. Каку",
+      "date": "19.05.2022",
+      "image": "154.webp",
+      "rating": 4
+    },
+    {
+      "title": "The History of Magic",
+      "author": "C. Gosden",
+      "date": "27.05.2022",
+      "image": "155.webp",
+      "rating": 2
+    },
+    {
+      "title": "Марш Радецкого",
+      "author": "Й. Рот",
+      "date": "31.05.2022",
+      "image": "156.webp",
+      "rating": 5
+    },
+    {
+      "title": "Не надо стесняться",
+      "author": "А. Горбачев",
+      "date": "19.06.2022",
+      "image": "157.webp",
+      "rating": 4
+    },
+    {
+      "title": "Библия: Что было на самом деле?",
+      "author": "Десницкий",
+      "date": "23.06.2022",
+      "image": "158.webp",
+      "rating": 3
+    },
+    {
+      "title": "Пост 2",
+      "author": "Глуховский",
+      "date": "09.07.2022",
+      "image": "159.webp",
+      "rating": 4
+    },
+    {
+      "title": "Время кометы",
+      "author": "Д. Шёнпфлуг",
+      "date": "18.07.2022",
+      "image": "160.webp",
+      "rating": 2
+    },
+    {
+      "title": "Коллапс. Случайное падение Берлинской стены",
+      "author": "М. Саротт",
+      "date": "14.08.2022",
+      "image": "161.webp",
+      "rating": 3
+    },
+    {
+      "title": "Доктор Фаустус",
+      "author": "Т. Манн",
+      "date": "21.08.2022",
+      "image": "162.webp",
+      "rating": 5
+    },
+    {
+      "title": "The adidas Archive",
+      "author": "C. Habermeier",
+      "date": "22.08.2022",
+      "image": "163.webp",
+      "rating": 5
+    },
+    {
+      "title": "Похмелье",
+      "author": "Бишоп-Столл",
+      "date": "25.08.2022",
+      "image": "164.webp",
+      "rating": 4
+    },
+    {
+      "title": "Путеводитель зоолога по Галактике",
+      "author": "А. Кершенбаум",
+      "date": "21.09.2022",
+      "image": "165.webp",
+      "rating": 4
+    },
+    {
+      "title": "Egypti",
+      "author": "M. Meri",
+      "date": "23.09.2022",
+      "image": "166.webp",
+      "rating": 5
+    },
+    {
+      "title": "Детство",
+      "author": "Н. Саррот",
+      "date": "29.09.2022",
+      "image": "166.webp",
+      "rating": 5
+    },
+    {
+      "title": "Tässä paikassa kauan sitten",
+      "author": "A. Nousiainen",
+      "date": "09.10.2022",
+      "image": "167.webp",
+      "rating": 4
+    },
+    {
+      "title": "Suuri illusioni",
+      "author": "M. Waltari",
+      "date": "13.10.2022",
+      "image": "168.webp",
+      "rating": 4
+    },
+    {
+      "title": "Золотые плоды",
+      "author": "Н. Саррот",
+      "date": "19.10.2022",
+      "image": "169.webp",
+      "rating": 3
+    },
+    {
+      "title": "Краткая история Европы",
+      "author": "С. Дженкинс",
+      "date": "24.10.2022",
+      "image": "170.webp",
+      "rating": 3
+    },
+    {
+      "title": "Французская революция",
+      "author": "Чудинов, Бовыкин",
+      "date": "13.11.2022",
+      "image": "171.webp",
+      "rating": 4
+    },
+    {
+      "title": "Проект 'Феникс'",
+      "author": "Джин Ким",
+      "date": "10.12.2022",
+      "image": "172.webp",
+      "rating": 5
+    },
+    {
+      "title": "Perussuomalaiset Halla-ahon ja Purran linjalla",
+      "author": "M. Jokisipilä",
+      "date": "13.12.2022",
+      "image": "173.webp",
+      "rating": 4
+    },
+    {
+      "title": "Sinuhe egyptiläinen",
+      "author": "M. Waltari",
+      "date": "23.12.2022",
+      "image": "174.webp",
+      "rating": 4
+    },
+    {
+      "title": "France: An Adventure History",
+      "author": "G. Robb",
+      "date": "24.12.2022",
+      "image": "175.webp",
+      "rating": 3
     }
   ]
 }
