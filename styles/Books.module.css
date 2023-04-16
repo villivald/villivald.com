@@ -62,16 +62,20 @@
   padding: 0.5rem;
 }
 
-.mainContainer > div > div > div[data-index="0"] > div {
+.year2022 {
   background-color: var(--color-brand-yellow);
 }
 
-.mainContainer > div > div > div[data-index="57"] > div {
+.year2021 {
   background-color: var(--color-brand-red);
 }
 
-.mainContainer > div > div > div[data-index="127"] > div {
+.year2020 {
   background-color: var(--color-brand-green50);
+}
+
+.year2019 {
+  background-color: var(--color-skin);
 }
 
 .mainContainer > div > div > div:has(+ div:hover),

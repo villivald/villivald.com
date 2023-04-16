@@ -1193,71 +1193,80 @@
       "title": "Детство",
       "author": "Н. Саррот",
       "date": "29.09.2022",
-      "image": "166.webp",
+      "image": "167.webp",
       "rating": 5
     },
     {
       "title": "Tässä paikassa kauan sitten",
       "author": "A. Nousiainen",
       "date": "09.10.2022",
-      "image": "167.webp",
+      "image": "168.webp",
       "rating": 4
     },
     {
       "title": "Suuri illusioni",
       "author": "M. Waltari",
       "date": "13.10.2022",
-      "image": "168.webp",
+      "image": "169.webp",
       "rating": 4
     },
     {
       "title": "Золотые плоды",
       "author": "Н. Саррот",
       "date": "19.10.2022",
-      "image": "169.webp",
+      "image": "170.webp",
       "rating": 3
     },
     {
       "title": "Краткая история Европы",
       "author": "С. Дженкинс",
       "date": "24.10.2022",
-      "image": "170.webp",
+      "image": "171.webp",
       "rating": 3
     },
     {
       "title": "Французская революция",
       "author": "Чудинов, Бовыкин",
       "date": "13.11.2022",
-      "image": "171.webp",
+      "image": "172.webp",
       "rating": 4
     },
     {
       "title": "Проект 'Феникс'",
       "author": "Джин Ким",
       "date": "10.12.2022",
-      "image": "172.webp",
+      "image": "173.webp",
       "rating": 5
     },
     {
       "title": "Perussuomalaiset Halla-ahon ja Purran linjalla",
       "author": "M. Jokisipilä",
       "date": "13.12.2022",
-      "image": "173.webp",
+      "image": "174.webp",
       "rating": 4
     },
     {
       "title": "Sinuhe egyptiläinen",
       "author": "M. Waltari",
       "date": "23.12.2022",
-      "image": "174.webp",
+      "image": "175.webp",
       "rating": 4
     },
     {
       "title": "France: An Adventure History",
       "author": "G. Robb",
       "date": "24.12.2022",
-      "image": "175.webp",
+      "image": "176.webp",
       "rating": 3
+    },
+    {
+      "title": "",
+      "author": "",
+      "date": "",
+      "image": "",
+      "rating": 0,
+      "year": 2022,
+      "total": 40
     }
   ]
 }

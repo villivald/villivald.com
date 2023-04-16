@@ -46,7 +46,7 @@ const Books = () => {
         data={sortedBooks}
         itemContent={(_index, book: Book) =>
           book.year ? (
-            <div className={styles.yearCard}>
+            <div className={`${styles.yearCard} ${styles[`year${book.year}`]}`}>
               <p>
                 <span>
                   <span>{book.year}</span>
