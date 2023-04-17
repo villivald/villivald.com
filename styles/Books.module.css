@@ -118,6 +118,14 @@
   }
 }
 
+@media (max-width: 900px) {
+  .mainContainer > div > div > div:hover,
+  .mainContainer > div > div > div:has(+ div:hover),
+  .mainContainer > div > div > div:hover + div {
+    scale: 1;
+  }
+}
+
 @media (max-width: 750px) {
   .mainContainer > div > div > div {
     width: 33%;

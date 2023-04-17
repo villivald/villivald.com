@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useMemo, useCallback } from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { VirtuosoGrid } from "react-virtuoso";
@@ -15,13 +15,17 @@ type Book = {
   rating: number;
   image: string;
   year?: number;
-  total?: number;
 };
 
 const Books = () => {
+  const router = useRouter();
+
   const sortedBooks = useMemo(() => [...data.books].reverse(), []);
 
-  const router = useRouter();
+  const yearBooks = useCallback((year: string) => {
+    const books = data.books.filter((book) => book.date.includes(year)).length;
+    return books;
+  }, []);
 
   return (
     <>
@@ -54,7 +58,7 @@ const Books = () => {
                 </span>
                 <span>
                   <FormattedMessage id="total" />
-                  {book.total}
+                  {yearBooks(book.year.toString())}
                 </span>
               </p>
             </div>

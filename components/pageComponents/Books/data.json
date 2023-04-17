@@ -83,8 +83,7 @@
       "date": "",
       "image": "",
       "rating": 0,
-      "year": 2019,
-      "total": 11
+      "year": 2019
     },
     {
       "title": "Попытка к бегству",
@@ -575,8 +574,7 @@
       "date": "",
       "image": "",
       "rating": 0,
-      "year": 2020,
-      "total": 69
+      "year": 2020
     },
     {
       "title": "Несовременная страна",
@@ -976,8 +974,7 @@
       "date": "",
       "image": "",
       "rating": 0,
-      "year": 2021,
-      "total": 56
+      "year": 2021
     },
     {
       "title": "1947. Год, в который все началось",
@@ -1265,8 +1262,99 @@
       "date": "",
       "image": "",
       "rating": 0,
-      "year": 2022,
-      "total": 40
+      "year": 2022
+    },
+    {
+      "title": "50 Art Movements You Should Know",
+      "author": "R. Ormiston",
+      "date": "01.01.2023",
+      "image": "177.webp",
+      "rating": 4
+    },
+    {
+      "title": "Недоверчивые умы",
+      "author": "Р. Бразертон",
+      "date": "05.01.2023",
+      "image": "178.webp",
+      "rating": 3
+    },
+    {
+      "title": "Как убить дракона?",
+      "author": "Ходорковский",
+      "date": "14.01.2023",
+      "image": "179.webp",
+      "rating": 2
+    },
+    {
+      "title": "Лотта в Веймаре",
+      "author": "Т. Манн",
+      "date": "30.01.2023",
+      "image": "180.webp",
+      "rating": 4
+    },
+    {
+      "title": "Code",
+      "author": "Petzold",
+      "date": "23.02.2023",
+      "image": "181.webp",
+      "rating": 3
+    },
+    {
+      "title": "The Designer's Dictionary of Type",
+      "author": "S. Abrams",
+      "date": "06.03.2023",
+      "image": "182.webp",
+      "rating": 5
+    },
+    {
+      "title": "Мобилизованная нация",
+      "author": "Н. Старгардт",
+      "date": "11.03.2023",
+      "image": "183.webp",
+      "rating": 4
+    },
+    {
+      "title": "New York",
+      "author": "A. Haapasalo",
+      "date": "18.03.2023",
+      "image": "184.webp",
+      "rating": 4
+    },
+    {
+      "title": "New York City",
+      "author": "DK Eyewitness",
+      "date": "02.04.2023",
+      "image": "185.webp",
+      "rating": 3
+    },
+    {
+      "title": "Это я — Эдичка",
+      "author": "Лимонов",
+      "date": "06.04.2023",
+      "image": "186.webp",
+      "rating": 5
+    },
+    {
+      "title": "Архипелаг ГУЛАГ",
+      "author": "Солженицын",
+      "date": "11.04.2023",
+      "image": "187.webp",
+      "rating": 4
+    },
+    {
+      "title": "Immu – Vanki numero",
+      "author": "M. Ilmen",
+      "date": "16.04.2023",
+      "image": "188.webp",
+      "rating": 1
+    },
+    {
+      "title": "",
+      "author": "",
+      "date": "",
+      "image": "",
+      "rating": 0,
+      "year": 2023
     }
   ]
 }
