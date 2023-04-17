@@ -62,12 +62,16 @@
   padding: 0.5rem;
 }
 
-.year2022 {
+.year2023 {
   background-color: var(--color-brand-yellow);
 }
 
-.year2021 {
+.year2022 {
   background-color: var(--color-brand-red);
+}
+
+.year2021 {
+  background-color: var(--color-brand-yellow-saturated);
 }
 
 .year2020 {
