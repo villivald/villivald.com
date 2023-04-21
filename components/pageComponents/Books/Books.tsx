@@ -39,8 +39,8 @@ const Books = () => {
         </button>
         <button
           className={styles.button}
-          onClick={() => router.push("/books/statistics")}
-          data-active={router.pathname === "/books/statistics"}
+          onClick={() => router.push("/statistics")}
+          data-active={router.pathname === "/statistics"}
         >
           Statistics
         </button>
