@@ -32,6 +32,7 @@
   width: 100%;
   height: 100%;
   display: grid;
+  /* stylelint-disable-next-line */
   transition: --a 3s var(--easing-normal);
   grid-template-rows: 8fr 1fr;
   container-type: inline-size;
@@ -60,14 +61,14 @@
   height: 55%;
 }
 
-.phone:hover {
-  transform: scale(1.1) rotate(2deg);
-  outline: 2px solid var(--color-white);
-  box-shadow: 0 0 4rem var(--color-white);
-}
-
 .phone,
 .phone:hover {
   transition: transform 0.5s var(--easing-normal),
     outline 1s var(--easing-normal), box-shadow 1.5s var(--easing-normal);
+}
+
+.phone:hover {
+  transform: scale(1.1) rotate(2deg);
+  outline: 2px solid var(--color-white);
+  box-shadow: 0 0 4rem var(--color-white);
 }

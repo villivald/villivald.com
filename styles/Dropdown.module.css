@@ -86,17 +86,17 @@
   font-family: var(--font-header);
 }
 
-.dropdown > button:hover::after,
 .dropdown > button::after {
+  background-image: url("/emojis/down.svg");
+}
+
+.dropdown > button::after,
+.dropdown > button:hover::after {
   content: "";
   background-position: center;
   background-repeat: no-repeat;
   width: 1.2rem;
   height: 1.2rem;
-}
-
-.dropdown > button::after {
-  background-image: url("/emojis/down.svg");
 }
 
 .dropdown > button[data-open="true"]::after {
@@ -112,8 +112,8 @@
     display: none;
   }
 
-  .dropdown > button:hover::after,
-  .dropdown > button::after {
+  .dropdown > button::after,
+  .dropdown > button:hover::after {
     background-image: url("/emojis/menu.svg");
   }
 }

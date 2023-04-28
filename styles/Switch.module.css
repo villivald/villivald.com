@@ -9,11 +9,6 @@
   display: flex;
 }
 
-.mobileLanguageSwitch > button:hover {
-  box-shadow: 3px 3px 1rem 0 var(--color-white);
-  transition: box-shadow 0.5s var(--easing-normal);
-}
-
 .mobileLanguageSwitch > button {
   border: none;
   width: 2rem;
@@ -25,6 +20,11 @@
   background-repeat: no-repeat;
   background-position: center;
   background-image: url("/emojis/eng.svg");
+}
+
+.mobileLanguageSwitch > button:hover {
+  box-shadow: 3px 3px 1rem 0 var(--color-white);
+  transition: box-shadow 0.5s var(--easing-normal);
 }
 
 .mobileLanguageSwitch > button[data-checked="true"] {
@@ -107,13 +107,6 @@
 }
 
 /* Thumb */
-.switch > span::after,
-.switch > input:checked + span::after {
-  background-size: 2.5rem;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
 .switch > span::after {
   content: "";
   position: absolute;
@@ -126,6 +119,13 @@
   box-shadow: 0 3px 1px -2px var(--color-black-20),
     0 2px 2px 0 var(--color-black-14), 0 1px 5px 0 var(--color-black-12);
   transition: background-color 0.2s, transform 0.2s;
+}
+
+.switch > span::after,
+.switch > input:checked + span::after {
+  background-size: 2.5rem;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 /* Checked */

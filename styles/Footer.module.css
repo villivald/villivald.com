@@ -11,6 +11,12 @@
   background-color: var(--color-brand-dark);
 }
 
+.footer > div:nth-of-type(even) {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 .footer > div:nth-of-type(odd) > div {
   width: 0.6rem;
   height: 5rem;
@@ -27,12 +33,6 @@
   transform: skew(20deg);
   transition: all 0.5s var(--easing-normal);
   cursor: cell;
-}
-
-.footer > div:nth-of-type(even) {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
 }
 
 .footer > div:nth-of-type(even) > a {
