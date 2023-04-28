@@ -27,12 +27,18 @@ const Projects = () => {
       <div></div>
       <div></div>
       <div>
-        <p>
-          <FormattedMessage id="work" />
-        </p>
-        <p>
-          <FormattedMessage id="petProjects" />
-        </p>
+        <span>
+          <h1>
+            <FormattedMessage id="work" />
+          </h1>
+          <p>Some projects</p>
+        </span>
+        <span>
+          <h1>
+            <FormattedMessage id="petProjects" />
+          </h1>
+          <p>Some projects</p>
+        </span>
       </div>
     </div>
   );
