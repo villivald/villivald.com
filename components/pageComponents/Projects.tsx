@@ -37,7 +37,11 @@ const Projects = () => {
           <h1>
             <FormattedMessage id="petProjects" />
           </h1>
-          <p>Some projects</p>
+          <span>
+            <p>Projects 1</p>
+            <p>Projects 2</p>
+            <p>Project 3</p>
+          </span>
         </span>
       </div>
     </div>
