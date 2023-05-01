@@ -238,7 +238,7 @@
 
   .mainContainer > div:nth-child(1) {
     width: 120%;
-    height: 38%;
+    height: 35%;
   }
 
   .mainContainer > div:nth-child(4) span span p:nth-child(2) {
@@ -247,6 +247,13 @@
 
   .mainContainer > div:nth-child(4) span span p:nth-child(3) {
     margin-left: 60%;
+  }
+}
+
+@media (max-width: 450px) {
+  .mainContainer > div:nth-child(1) {
+    margin: 11rem;
+    height: 32%;
   }
 }
 
