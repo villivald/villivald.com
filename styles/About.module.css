@@ -70,3 +70,83 @@
     gap: 5rem;
   }
 }
+
+.carousel {
+  margin: 0 auto;
+  overflow: hidden;
+  text-align: center;
+}
+
+.slides {
+  width: 100%;
+  display: flex;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.slides::-webkit-scrollbar {
+  display: none;
+}
+
+.slidesItem {
+  align-items: center;
+  border-radius: 10px;
+  display: flex;
+  flex-shrink: 0;
+  font-size: 100px;
+  height: 600px;
+  justify-content: center;
+  margin: 0 1rem;
+  position: relative;
+  scroll-snap-align: start;
+  transform: scale(1);
+  transform-origin: center center;
+  transition: transform 0.5s;
+  width: 100%;
+}
+
+.carousel__nav {
+  padding: 1.25rem 0.5rem;
+}
+
+.sliderNav {
+  align-items: center;
+  background-color: #ddd;
+  border-radius: 50%;
+  color: #000;
+  display: inline-flex;
+  height: 1.5rem;
+  justify-content: center;
+  padding: 0.5rem;
+  position: relative;
+  text-decoration: none;
+  width: 1.5rem;
+}
+
+.sliderNav:hover,
+.sliderNav:active {
+  background-color: #000;
+  color: #fff;
+}
+
+.slidesItem[data-slide="slide1"] {
+  background-color: #fdc;
+}
+
+.slidesItem[data-slide="slide2"] {
+  background-color: #bfd;
+}
+
+.slidesItem[data-slide="slide3"] {
+  background-color: #cdf;
+}
+
+.slidesItem[data-slide="slide4"] {
+  background-color: #dca;
+}
+
+.slidesItem[data-slide="slide5"] {
+  background-color: #ffc;
+}
