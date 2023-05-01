@@ -65,16 +65,23 @@
 
 .mainContainer > div:nth-child(4) span h1 {
   text-align: center;
+  padding: 2rem;
 }
 
 .mainContainer > div:nth-child(4) p {
   margin-left: 0;
 }
 
+.mainContainer > div:nth-child(4) > span > p {
+  padding: 2rem;
+}
+
 .mainContainer > div:nth-child(4) span span p {
+  display: grid;
+  place-items: center;
   width: 8rem;
   height: 8rem;
-  background-color: antiquewhite;
+  background-color: var(--color-brand-yellow);
 }
 
 .mainContainer > div:nth-child(4) span span p:nth-child(1) {
@@ -100,11 +107,11 @@
 }
 
 .mainContainer > div:nth-child(4) span:first-child {
-  background-color: var(--color-brand-yellow);
+  background-color: var(--color-brand-red30);
 }
 
 .mainContainer > div:nth-child(4) span:last-child {
-  background-color: var(--color-brand-violet30);
+  background-color: var(--color-brand-teal30);
 }
 
 @media (max-height: 1000px) {
