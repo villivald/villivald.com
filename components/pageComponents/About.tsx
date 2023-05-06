@@ -1,30 +1,28 @@
-import React, { useState, useEffect } from "react";
-import { useRouter } from "next/router";
+import React, { useState, useEffect, useMemo } from "react";
 
 import styles from "../../styles/About.module.css";
 
 const About = () => {
-  const { asPath } = useRouter();
   const [currentSlide, setCurrentSlide] = useState("2023");
 
-  const years = ["2023", "2022", "2021", "2020", "2019"];
+  const years = useMemo(() => {
+    return ["2023", "2022", "2021", "2020", "2019"];
+  }, []);
 
   useEffect(() => {
-    const slide1 = document.getElementById("2023");
-    const slide2 = document.getElementById("2022");
-    const slide3 = document.getElementById("2021");
-    const slide4 = document.getElementById("2020");
-    const slide5 = document.getElementById("2019");
+    const slideCarousel = document.getElementById("slides");
 
-    const slides = [slide1, slide2, slide3, slide4, slide5];
+    slideCarousel?.addEventListener("scroll", () => {
+      // Get the width of each slide and the current scroll position
+      const slideWidth = slideCarousel?.offsetWidth;
+      const scrollLeft = slideCarousel?.scrollLeft;
 
-    slides.forEach((slide) => {
-      // TODO: investigate is there better way to do this than "any"
-      slide?.addEventListener("click", (e: any) => {
-        setCurrentSlide(e.currentTarget?.id);
-      });
+      // Calculate which slide is currently in view
+      const currentSlideIndex = Math.round(scrollLeft / slideWidth);
+
+      setCurrentSlide(years[currentSlideIndex]);
     });
-  }, [asPath]);
+  }, [years]);
 
   const handleEyeMove = (e: React.PointerEvent<HTMLDivElement>) => {
     // get the x and y coordinates of the pointer
@@ -70,64 +68,31 @@ const About = () => {
       </div>
 
       <section className={styles.carousel} aria-label="carousel" tabIndex={0}>
-        <div className={styles.slides}>
-          <div
-            className={styles.slidesItem}
-            id="slide-1"
-            data-slide="slide1"
-            aria-label="slide 1 of 5"
-            tabIndex={0}
-          >
-            2023
-          </div>
-          <div
-            className={styles.slidesItem}
-            id="slide-2"
-            data-slide="slide2"
-            aria-label="slide 2 of 5"
-            tabIndex={0}
-          >
-            2022
-          </div>
-          <div
-            className={styles.slidesItem}
-            id="slide-3"
-            data-slide="slide3"
-            aria-label="slide 3 of 5"
-            tabIndex={0}
-          >
-            2021
-          </div>
-          <div
-            className={styles.slidesItem}
-            id="slide-4"
-            data-slide="slide4"
-            aria-label="slide 4 of 5"
-            tabIndex={0}
-          >
-            2020
-          </div>
-          <div
-            className={styles.slidesItem}
-            id="slide-5"
-            data-slide="slide5"
-            aria-label="slide 5 of 5"
-            tabIndex={0}
-          >
-            2019
-          </div>
+        <div className={styles.slides} id="slides">
+          {years.map((year, index) => (
+            <div
+              key={index}
+              className={styles.slidesItem}
+              id={`slide-${++index}`}
+              data-slide={`slide${index}`}
+              aria-label={`slide ${index} of 5`}
+              tabIndex={0}
+            >
+              {year}
+            </div>
+          ))}
         </div>
         <div className={styles.carousel__nav}>
-          {years.map((slideLink, index) => (
+          {years.map((year, index) => (
             <a
               key={index}
-              id={slideLink}
+              id={year}
               className={styles.sliderNav}
               href={`#slide-${++index}`}
-              aria-label={`Go to slide ${++index}`}
-              data-slide={currentSlide === slideLink ? "active" : ""}
+              aria-label={`Go to slide ${index}`}
+              data-slide={currentSlide === year ? "active" : ""}
             >
-              {slideLink}
+              {year}
             </a>
           ))}
         </div>
