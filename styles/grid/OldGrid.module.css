@@ -45,7 +45,7 @@
   height: 112.5%;
 }
 
-@media (max-width: 450px) {
+@media (width <= 450px) {
   .proto {
     height: 88%;
   }

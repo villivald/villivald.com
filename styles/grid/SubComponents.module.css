@@ -43,14 +43,14 @@
   gap: 0.5rem;
 }
 
-@media (min-width: 1900px) {
+@media (width >= 1900px) {
   .gridFooterLight,
   .gridFooterDark {
     width: 100%;
   }
 }
 
-@media (max-width: 730px) {
+@media (width <= 730px) {
   .gridFooterLight,
   .gridFooterDark {
     width: 45vw;

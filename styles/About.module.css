@@ -134,19 +134,19 @@
   background-color: #ffc;
 }
 
-@media (max-width: 700px) {
+@media (width <= 700px) {
   .eyes {
     gap: 15rem;
   }
 }
 
-@media (max-width: 600px) {
+@media (width <= 600px) {
   .eyes {
     gap: 10rem;
   }
 }
 
-@media (max-width: 500px) {
+@media (width <= 500px) {
   .mainContainer {
     min-height: 80vh;
   }

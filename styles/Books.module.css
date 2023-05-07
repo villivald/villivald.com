@@ -137,19 +137,19 @@
     inset 0 -1px 0 1px hsla(0deg 0% 0% / 30%), 0 8px 10px hsla(0deg 0% 0% / 15%);
 }
 
-@media (min-width: 1300px) {
+@media (width >= 1300px) {
   .mainContainer > div > div > div {
     width: 14.285%;
   }
 }
 
-@media (max-width: 1000px) {
+@media (width <= 1000px) {
   .mainContainer > div > div > div {
     width: 25%;
   }
 }
 
-@media (max-width: 900px) {
+@media (width <= 900px) {
   .mainContainer > div > div > div:hover,
   .mainContainer > div > div > div:has(+ div:hover),
   .mainContainer > div > div > div:hover + div {
@@ -157,19 +157,19 @@
   }
 }
 
-@media (max-width: 750px) {
+@media (width <= 750px) {
   .mainContainer > div > div > div {
     width: 33%;
   }
 }
 
-@media (max-width: 550px) {
+@media (width <= 550px) {
   .mainContainer > div > div > div {
     width: 50%;
   }
 }
 
-@media (max-width: 500px) {
+@media (width <= 500px) {
   .mainContainer {
     min-height: 80vh;
   }

@@ -107,7 +107,7 @@
   filter: invert(1);
 }
 
-@media screen and (max-width: 1000px) {
+@media (width <= 1000px) {
   .dropdownButton span {
     display: none;
   }
@@ -118,14 +118,14 @@
   }
 }
 
-@media screen and (max-width: 650px) {
+@media (width <= 650px) {
   .darkMenu,
   .lightMenu {
     margin-left: -1rem;
   }
 }
 
-@media screen and (max-width: 500px) {
+@media (width <= 500px) {
   .darkMenu,
   .lightMenu {
     margin-left: -2rem;

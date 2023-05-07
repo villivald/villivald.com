@@ -18,14 +18,14 @@
   background-color: var(--color-brand-green);
 }
 
-@media (max-width: 1000px) {
+@media (width <= 1000px) {
   .progressContainer > progress {
     width: 22rem;
     height: 0.6rem;
   }
 }
 
-@media (max-width: 600px) {
+@media (width <= 600px) {
   .progressContainer > progress {
     width: 18rem;
     height: 0.4rem;

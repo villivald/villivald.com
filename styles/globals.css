@@ -207,7 +207,7 @@ h5 {
   color: var(--color-brand-dark);
 }
 
-@media (max-width: 900px) {
+@media (width <= 900px) {
   :root {
     --font-brand: var(--font-header);
   }

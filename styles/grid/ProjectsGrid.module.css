@@ -106,14 +106,14 @@
   transition: all 5s var(--easing-normal);
 }
 
-@media (max-width: 900px) {
+@media (width <= 900px) {
   .letters > p {
     color: var(--color-brand-yellow-saturated);
     text-shadow: 3px 3px var(--color-brand-dark);
   }
 }
 
-@media (max-width: 500px) {
+@media (width <= 500px) {
   .letters > p {
     width: 0.5rem;
   }

@@ -113,13 +113,13 @@ li:has(span.textDark) p {
   transform: rotate(90deg);
 }
 
-@media (max-height: 800px) {
+@media (height <= 800px) {
   .mainContainer {
     padding-bottom: 2rem;
   }
 }
 
-@media (max-width: 1000px) {
+@media (width <= 1000px) {
   .mainContainer li,
   .toggle > details > summary {
     font-size: 0.8rem;
@@ -134,7 +134,7 @@ li:has(span.textDark) p {
   }
 }
 
-@media (max-width: 800px) {
+@media (width <= 800px) {
   .mainContainer {
     padding-bottom: 2rem;
   }
@@ -145,7 +145,7 @@ li:has(span.textDark) p {
   }
 }
 
-@media (max-width: 600px) {
+@media (width <= 600px) {
   .mainContainer li,
   .toggle > details > summary {
     font-size: 0.8rem;
@@ -160,7 +160,7 @@ li:has(span.textDark) p {
   }
 }
 
-@media (max-width: 500px) {
+@media (width <= 500px) {
   .mainContainer {
     min-height: 80vh;
     padding-bottom: 6rem;

@@ -79,7 +79,7 @@
   suffix: " ";
 }
 
-@media (max-width: 650px) {
+@media (width <= 650px) {
   .mainContainer > p {
     padding: 0 2rem;
   }
@@ -89,7 +89,7 @@
   }
 }
 
-@media (max-width: 550px) {
+@media (width <= 550px) {
   .mainContainer {
     grid-template-rows: 5fr 1fr 7fr;
   }
@@ -103,13 +103,13 @@
   }
 }
 
-@media (max-width: 525px) {
+@media (width <= 525px) {
   .mainContainer img {
     width: 87vw;
   }
 }
 
-@media (max-width: 500px) {
+@media (width <= 500px) {
   .mainContainer {
     padding-bottom: 4rem;
   }

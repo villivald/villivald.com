@@ -82,7 +82,7 @@
   right: 9%;
 }
 
-@media (max-width: 900px) {
+@media (width <= 900px) {
   .child[data-isopen="true"] {
     width: 80%;
     height: 90%;
@@ -95,14 +95,14 @@
   }
 }
 
-@media (max-width: 500px) {
+@media (width <= 500px) {
   .emoji {
     width: 4rem;
     height: 4rem;
   }
 }
 
-@media (max-width: 450px) {
+@media (width <= 450px) {
   .to,
   .ls {
     font-size: 2rem;

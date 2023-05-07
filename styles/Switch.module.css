@@ -138,7 +138,7 @@
   transform: translateX(1rem);
 }
 
-@media screen and (max-width: 75rem) {
+@media (width <= 75rem) {
   .languageSwitch > span:first-child > span,
   .languageSwitch > span:last-child > span {
     border-width: 1.25rem;
@@ -153,7 +153,7 @@
   }
 }
 
-@media screen and (max-width: 68.75rem) {
+@media (width <= 68.75rem) {
   .languageSwitch > span:first-child > span,
   .languageSwitch > span:last-child > span {
     border-width: 1.35rem;
@@ -168,40 +168,40 @@
   }
 }
 
-@media screen and (max-width: 62.5rem) {
+@media (width <= 62.5rem) {
   .languageSwitch {
     display: none;
   }
 }
 
-@media screen and (min-width: 62.5rem) {
+@media (width >= 62.5rem) {
   .mobileLanguageSwitch {
     display: none;
   }
 }
 
-@media screen and (max-height: 1000px) {
+@media (height <= 1000px) {
   .arrowLeft,
   .arrowRight {
     top: 3.5rem;
   }
 }
 
-@media screen and (max-height: 900px) {
+@media (height <= 900px) {
   .arrowLeft,
   .arrowRight {
     top: 3rem;
   }
 }
 
-@media screen and (max-height: 800px) {
+@media (height <= 800px) {
   .arrowLeft,
   .arrowRight {
     top: 2.5rem;
   }
 }
 
-@media screen and (max-height: 700px) {
+@media (height <= 700px) {
   .arrowLeft,
   .arrowRight {
     top: 2rem;

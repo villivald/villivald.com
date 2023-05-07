@@ -29,7 +29,7 @@
   transition: all 0.3s ease-in-out;
 }
 
-@media (max-width: 900px) {
+@media (width <= 900px) {
   .title {
     color: var(--color-brand-yellow-saturated);
     text-shadow: var(--font-shadow);
@@ -41,14 +41,14 @@
   }
 }
 
-@media (max-width: 700px) {
+@media (width <= 700px) {
   .title:hover {
     text-shadow: 0 -1rem 0 var(--color-brand-teal),
       0 1rem 0 var(--color-brand-red);
   }
 }
 
-@media screen and (max-width: 500px) {
+@media (width <= 500px) {
   .header {
     position: sticky;
     top: 0;
@@ -57,13 +57,13 @@
   }
 }
 
-@media screen and (max-height: 450px) {
+@media (height <= 450px) {
   .header {
     height: 25vh;
   }
 }
 
-@media screen and (max-height: 300px) {
+@media (height <= 300px) {
   .header {
     height: 30vh;
   }

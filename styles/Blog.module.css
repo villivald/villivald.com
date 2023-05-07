@@ -91,7 +91,7 @@
   transform: rotateY(180deg);
 }
 
-@media screen and (max-width: 800px) {
+@media (width <= 800px) {
   .blogCard,
   .front,
   .back {
@@ -99,7 +99,7 @@
   }
 }
 
-@media screen and (max-width: 700px) {
+@media (width <= 700px) {
   .blogList {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(5, 1fr);
@@ -118,7 +118,7 @@
   }
 }
 
-@media screen and (max-width: 500px) {
+@media (width <= 500px) {
   .blogList {
     margin-bottom: 7rem;
   }
