@@ -38,7 +38,7 @@ const Old = () => {
                 src={`/images/website${site.id}.webp`}
                 width={300}
                 height={300}
-                alt={intl.formatMessage({ id: `old.alt.${site.id}` })}
+                alt={intl.formatMessage({ id: `alt.old.${site.id}` })}
               />
               <p>
                 {site.description.map((desc) => (

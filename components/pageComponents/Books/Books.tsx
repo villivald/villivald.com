@@ -35,14 +35,14 @@ const Books = () => {
           onClick={() => router.push("/books")}
           data-active={router.pathname === "/books"}
         >
-          Gallery
+          <FormattedMessage id="gallery" />
         </button>
         <button
           className={styles.button}
           onClick={() => router.push("/statistics")}
           data-active={router.pathname === "/statistics"}
         >
-          Statistics
+          <FormattedMessage id="statistics" />
         </button>
       </div>
       <VirtuosoGrid
