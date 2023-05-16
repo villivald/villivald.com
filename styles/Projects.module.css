@@ -17,6 +17,10 @@
   container-type: inline-size;
 }
 
+.mainContainer > div:nth-child(1)[data-theme="dark"] {
+  background-color: var(--color-brand-dark);
+}
+
 .mainContainer > div > p {
   display: flex;
   align-items: center;
@@ -26,6 +30,14 @@
 
 .mainContainer > div > p > a {
   font-size: var(--fontSize-header3);
+}
+
+.mainContainer > div[data-theme="dark"] > p > a {
+  color: var(--color-white);
+}
+
+.mainContainer > div[data-theme="dark"] > p > img {
+  filter: invert(1);
 }
 
 .mainContainer > div:nth-child(2),
@@ -42,6 +54,11 @@
     33% 75%,
     8% 50%
   );
+}
+
+.mainContainer > div:nth-child(2)[data-theme="dark"],
+.mainContainer > div:nth-child(3)[data-theme="dark"] {
+  background-color: var(--color-brand-grey95);
 }
 
 .mainContainer > div:nth-child(2) {

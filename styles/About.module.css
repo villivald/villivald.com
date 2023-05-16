@@ -3,6 +3,10 @@
   background-color: var(--color-skin);
 }
 
+.mainContainer[data-theme="dark"] {
+  background-color: initial;
+}
+
 .eyes,
 .leftEye,
 .leftIris,

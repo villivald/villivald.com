@@ -1,8 +1,10 @@
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useEffect, useMemo, useContext } from "react";
 
+import { ThemeContext } from "../../context";
 import styles from "../../styles/About.module.css";
 
 const About = () => {
+  const theme = useContext(ThemeContext);
   const [currentSlide, setCurrentSlide] = useState("2023");
 
   const years = useMemo(() => {
@@ -52,7 +54,11 @@ const About = () => {
   };
 
   return (
-    <div className={styles.mainContainer} onPointerMove={handleEyeMove}>
+    <div
+      className={styles.mainContainer}
+      onPointerMove={handleEyeMove}
+      data-theme={theme}
+    >
       <div className={styles.eyes}>
         <div className={styles.leftEye}>
           <div className={styles.leftIris}>

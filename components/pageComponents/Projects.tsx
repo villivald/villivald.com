@@ -1,13 +1,17 @@
+import { useContext } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FormattedMessage } from "react-intl";
 
+import { ThemeContext } from "../../context";
 import styles from "../../styles/Projects.module.css";
 
 const Projects = () => {
+  const theme = useContext(ThemeContext);
+
   return (
     <div className={styles.mainContainer}>
-      <div>
+      <div data-theme={theme}>
         <p>
           <Image
             src="/emojis/github_light.svg"
@@ -24,8 +28,8 @@ const Projects = () => {
           height={104}
         />
       </div>
-      <div></div>
-      <div></div>
+      <div data-theme={theme}></div>
+      <div data-theme={theme}></div>
       <div>
         <span>
           <h1>
