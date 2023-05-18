@@ -1,6 +1,8 @@
 import { useRouter } from "next/router";
 import { FormattedMessage } from "react-intl";
 
+import YearsChart from "./YearsChart";
+
 import styles from "../../../styles/Books.module.css";
 
 const Statistics = () => {
@@ -24,6 +26,7 @@ const Statistics = () => {
           <FormattedMessage id="statistics" />
         </button>
       </div>
+      <YearsChart />
     </div>
   );
 };
