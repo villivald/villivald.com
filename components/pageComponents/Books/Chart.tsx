@@ -1,26 +1,38 @@
+import React from "react";
 import {
   Chart as ChartJS,
   CategoryScale,
   LinearScale,
-  PointElement,
-  LineElement,
+  BarElement,
   Title,
   Tooltip,
   Legend,
 } from "chart.js";
-import { Line } from "react-chartjs-2";
+import { Bar } from "react-chartjs-2";
 
 import data from "./data.json";
 
 ChartJS.register(
   CategoryScale,
   LinearScale,
-  PointElement,
-  LineElement,
+  BarElement,
   Title,
   Tooltip,
   Legend
 );
+
+export const options = {
+  responsive: true,
+  plugins: {
+    legend: {
+      position: "top" as const,
+    },
+    title: {
+      display: true,
+      text: "Chart.js Bar Chart",
+    },
+  },
+};
 
 const labels = [
   "January",
@@ -31,33 +43,11 @@ const labels = [
   "June",
   "July",
   "August",
-  "Septemper",
+  "September",
   "October",
   "November",
   "December",
 ];
-
-const options = {
-  responsive: true,
-  interaction: {
-    mode: "index" as const,
-    intersect: false,
-  },
-  stacked: false,
-  plugins: {
-    title: {
-      display: true,
-      text: "Books",
-    },
-  },
-  scales: {
-    y: {
-      type: "linear" as const,
-      display: true,
-      position: "left" as const,
-    },
-  },
-};
 
 const handleData = (year: string) => {
   return data.books
@@ -76,43 +66,33 @@ const books = {
     {
       label: "2023",
       data: handleData("2023"),
-      borderColor: "red",
-      backgroundColor: "pink",
-      yAxisID: "y",
+      backgroundColor: "rgba(255, 99, 132, 0.5)",
     },
     {
       label: "2022",
       data: handleData("2022"),
-      borderColor: "plum",
-      backgroundColor: "cobalt",
-      yAxisID: "y",
+      backgroundColor: "rgba(53, 162, 235, 0.5)",
     },
     {
       label: "2021",
       data: handleData("2021"),
-      borderColor: "blue",
-      backgroundColor: "lightblue",
-      yAxisID: "y",
+      backgroundColor: "rgba(255, 206, 86, 0.5)",
     },
     {
       label: "2020",
       data: handleData("2020"),
-      borderColor: "green",
-      backgroundColor: "lightgreen",
-      yAxisID: "y",
+      backgroundColor: "rgba(75, 192, 192, 0.5)",
     },
     {
       label: "2019",
       data: handleData("2019"),
-      borderColor: "yellow",
-      backgroundColor: "lightyellow",
-      yAxisID: "y",
+      backgroundColor: "rgba(153, 102, 255, 0.5)",
     },
   ],
 };
 
-const YearsChart = () => {
-  return <Line options={options} data={books} />;
+const Chart = () => {
+  return <Bar options={options} data={books} />;
 };
 
-export default YearsChart;
+export default Chart;
