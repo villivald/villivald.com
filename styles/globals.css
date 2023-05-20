@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Nabla&family=Amiko&family=Crete+Round&family=Istok+Web&display=swap");
-
 :root {
   /* Colors */
   --color-brand-yellow: hsl(51deg 74% 60%);
@@ -31,12 +29,6 @@
   --color-black-10: hsla(0deg 0% 0% / 10%);
   --color-black-8: hsla(0deg 0% 0% / 8%);
   --color-black-4: hsla(0deg 0% 0% / 4%);
-
-  /* Fonts */
-  --font-brand: "Nabla", serif;
-  --font-header: "Crete Round", serif;
-  --font-subheader: "Amiko", sans-serif;
-  --font-body: "Istok Web", sans-serif;
 
   /* Typescale */
   --fontSize-header1: 1.8rem;
