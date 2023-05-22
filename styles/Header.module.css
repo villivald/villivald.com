@@ -31,6 +31,7 @@
 
 @media (width <= 900px) {
   .title {
+    font-family: var(--font-header);
     color: var(--color-brand-yellow-saturated);
     text-shadow: var(--font-shadow);
   }

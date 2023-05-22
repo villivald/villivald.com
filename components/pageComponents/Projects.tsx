@@ -32,13 +32,13 @@ const Projects = () => {
       <div data-theme={theme}></div>
       <div>
         <span>
-          <h1>
+          <h1 data-theme={theme}>
             <FormattedMessage id="work" />
           </h1>
           <p>Some projects</p>
         </span>
         <span>
-          <h1>
+          <h1 data-theme={theme}>
             <FormattedMessage id="petProjects" />
           </h1>
           <span>

@@ -91,6 +91,12 @@
   }
 }
 
+@media (width <= 1100px) {
+  .mainContainer > div > div > ul > li:hover::after {
+    display: none;
+  }
+}
+
 @media (width <= 550px) {
   .mainContainer {
     grid-template-rows: 3fr 1fr 7fr;
