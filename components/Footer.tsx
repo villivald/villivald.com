@@ -1,12 +1,14 @@
+import { useContext } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useContext } from "react";
+import { useRouter } from "next/router";
 
 import { ThemeContext } from "../context";
 import styles from "../styles/Footer.module.css";
 
 const Footer = () => {
   const theme = useContext(ThemeContext);
+  const router = useRouter();
 
   const socialIcons = [
     { name: "gitlab", link: "https://version.helsinki.fi/villival" },
@@ -29,7 +31,11 @@ const Footer = () => {
   );
 
   return (
-    <footer className={styles.footer} data-theme={theme}>
+    <footer
+      className={styles.footer}
+      data-theme={theme}
+      data-hide={router.pathname === "/books"}
+    >
       <Divider />
       <div>
         {socialIcons.map((icon) => (

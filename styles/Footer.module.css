@@ -102,6 +102,10 @@
     height: 2rem;
     width: 0.3rem;
   }
+
+  .footer[data-hide="true"] {
+    display: none;
+  }
 }
 
 @media (height <= 350px) {

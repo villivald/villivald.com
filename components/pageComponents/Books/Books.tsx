@@ -2,11 +2,11 @@ import { useMemo, useCallback } from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { VirtuosoGrid } from "react-virtuoso";
+import { FormattedMessage } from "react-intl";
 
 import data from "./data.json";
 
 import styles from "../../../styles/Books.module.css";
-import { FormattedMessage } from "react-intl";
 
 type Book = {
   title: string;

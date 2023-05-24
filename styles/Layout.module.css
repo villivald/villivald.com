@@ -7,3 +7,9 @@
   background-color: var(--color-brand-dark80);
   background-image: none;
 }
+
+@media (width <= 500px) {
+  .main {
+    height: 100vh;
+  }
+}

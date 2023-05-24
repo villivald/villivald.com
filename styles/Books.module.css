@@ -102,13 +102,14 @@
 .button {
   border: none;
   cursor: pointer;
+  color: var(--color-brand-dark);
   font-size: var(--fontSize-header4);
   font-family: var(--font-header);
   padding: 0.5rem 1rem;
   width: 100px;
-  box-shadow: 0 0 1px 2px hsla(0deg 0% 0% / 70%),
-    inset 0 2px 0 hsla(0deg 0% 100% / 60%),
-    inset 0 -1px 0 1px hsla(0deg 0% 0% / 30%), 0 8px 10px hsla(0deg 0% 0% / 15%);
+  box-shadow: 0 0 1px 2px var(--color-black-75),
+    inset 0 2px 0 var(--color-brand-grey),
+    inset 0 -1px 0 1px var(--color-black-38), 0 8px 10px var(--color-black-14);
 }
 
 .button[data-active="true"] {
