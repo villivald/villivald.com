@@ -174,4 +174,9 @@ li:has(span.textDark) p {
   .mainContainer {
     min-height: 80vh;
   }
+
+  .mainContainer > div {
+    width: 100%;
+    padding: 1rem;
+  }
 }

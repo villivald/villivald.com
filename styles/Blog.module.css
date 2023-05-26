@@ -122,4 +122,8 @@
   .blogList {
     margin-bottom: 7rem;
   }
+
+  .mainContainer h1 {
+    text-align: center;
+  }
 }

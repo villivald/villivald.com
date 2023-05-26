@@ -9,7 +9,7 @@
 }
 
 @media (width <= 500px) {
-  .main {
+  .main[data-books="true"] {
     height: 100vh;
   }
 }
