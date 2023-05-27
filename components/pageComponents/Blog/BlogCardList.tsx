@@ -5,11 +5,18 @@ import { FormattedMessage } from "react-intl";
 import { ThemeContext } from "../../../context";
 import styles from "../../../styles/Blog.module.css";
 
-type Props = {
-  data: object[];
-};
+interface DataObject {
+  id: number;
+  canonical_url: string;
+  cover_image: string;
+  title: string;
+}
 
-const BlogCardList = ({ data }: Props) => {
+interface DataArray {
+  data: DataObject[];
+}
+
+const BlogCardList = ({ data }: DataArray) => {
   const [randomPostData, setRandomPostData] = useState([]);
   const [loadRandomPost, setLoadRandomPost] = useState(false);
 
@@ -38,12 +45,9 @@ const BlogCardList = ({ data }: Props) => {
   ];
 
   // get 6 random posts from the randomPost array
-  const randomPosts: Array<{
-    id: number;
-    canonical_url: string;
-    cover_image: string;
-    title: string;
-  }> = [...randomPostData].sort(() => 0.5 - Math.random()).slice(0, 6);
+  const randomPosts: DataObject[] = [...randomPostData]
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 6);
 
   return (
     <>
@@ -70,6 +74,9 @@ const BlogCardList = ({ data }: Props) => {
               key={post.id}
               className={styles.animatedCard}
               onMouseEnter={() => setLoadRandomPost(true)}
+              onTouchStart={() => setLoadRandomPost(true)}
+              onFocus={() => setLoadRandomPost(true)}
+              tabIndex={0}
             >
               <div className={styles.innerCard}>
                 <div className={styles.front}>?</div>

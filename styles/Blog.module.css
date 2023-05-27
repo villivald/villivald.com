@@ -62,7 +62,8 @@
   text-overflow: ellipsis;
 }
 
-.animatedCard:hover .innerCard {
+.animatedCard:hover .innerCard,
+.animatedCard:focus .innerCard {
   transform: rotateY(180deg);
 }
 
