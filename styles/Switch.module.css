@@ -1,8 +1,9 @@
 .languageSwitch {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0.8rem;
   place-items: center;
+  gap: 0.8rem;
+  position: relative;
 }
 
 .mobileLanguageSwitch {
@@ -34,7 +35,7 @@
 .arrowLeft,
 .arrowRight {
   position: absolute;
-  top: 4.5rem;
+  top: 1.5rem;
   transition: transform 0.5s ease-in-out;
   filter: invert(0);
 }
@@ -183,27 +184,13 @@
 @media (height <= 1000px) {
   .arrowLeft,
   .arrowRight {
-    top: 3.5rem;
-  }
-}
-
-@media (height <= 900px) {
-  .arrowLeft,
-  .arrowRight {
-    top: 3rem;
-  }
-}
-
-@media (height <= 800px) {
-  .arrowLeft,
-  .arrowRight {
-    top: 2.5rem;
+    top: 1rem;
   }
 }
 
 @media (height <= 700px) {
   .arrowLeft,
   .arrowRight {
-    top: 2rem;
+    display: none;
   }
 }
