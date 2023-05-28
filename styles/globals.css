@@ -1,3 +1,11 @@
+@font-face {
+  font-family: Nabla;
+  src: url("../public/nabla.ttf");
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+}
+
 :root {
   /* Colors */
   --color-brand-yellow: hsl(51deg 74% 60%);
@@ -29,6 +37,9 @@
   --color-black-10: hsla(0deg 0% 0% / 10%);
   --color-black-8: hsla(0deg 0% 0% / 8%);
   --color-black-4: hsla(0deg 0% 0% / 4%);
+
+  /* Self-hosted fonts */
+  --font-brand: "Nabla", serif;
 
   /* Typescale */
   --fontSize-header1: 1.8rem;

@@ -1,19 +1,13 @@
 import type { AppProps } from "next/app";
+import { Amiko, Crete_Round, Istok_Web } from "next/font/google";
 import { useState } from "react";
 import { IntlProvider } from "react-intl";
-import { Nabla, Amiko, Crete_Round, Istok_Web } from "next/font/google";
 
 import { ThemeContext } from "../context";
 import Layout from "../components/layout";
 import { translations } from "../intl";
 
 import "../styles/globals.css";
-
-const nabla = Nabla({
-  subsets: ["latin"],
-  variable: "--font-brand",
-  display: "swap",
-});
 
 const crete = Crete_Round({
   subsets: ["latin"],
@@ -53,9 +47,7 @@ export default function App({ Component, pageProps }: AppProps) {
   const changeLocale = () => setLocale(locale === en ? fi : en);
 
   return (
-    <div
-      className={`${nabla.variable} ${crete.variable} ${amiko.variable} ${istok.variable}`}
-    >
+    <div className={`${crete.variable} ${amiko.variable} ${istok.variable}`}>
       <ThemeContext.Provider value={theme}>
         <IntlProvider locale={locale} messages={translations[locale]}>
           <Layout changeTheme={changeTheme} changeLocale={changeLocale}>
