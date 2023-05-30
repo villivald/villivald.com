@@ -8,6 +8,29 @@
   background-image: none;
 }
 
+.breadcrumbs {
+  display: flex;
+  padding: 10px 16px;
+  list-style: none;
+  background-color: var(--color-brand-grey95);
+}
+
+.breadcrumbs li:not(:last-child)::after {
+  padding: 8px;
+  color: var(--color-brand-dark);
+  content: "/\00a0";
+}
+
+.breadcrumbs a {
+  color: var(--color-brand-teal);
+  text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+  color: var(--color-brand-dark);
+  text-decoration: underline;
+}
+
 @media (width <= 500px) {
   .main[data-books="true"] {
     height: 100vh;

@@ -38,6 +38,7 @@ const fi = {
   total: "Yhteensä: ",
   gallery: "Galleria",
   statistics: "Tilastot",
+  homePage: "Etusivu",
 
   // Alt texts
   "alt.old.1":

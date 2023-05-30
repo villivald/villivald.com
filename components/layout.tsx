@@ -1,5 +1,8 @@
 import { useContext } from "react";
 import { useRouter } from "next/router";
+import Link from "next/link";
+import { FormattedMessage } from "react-intl";
+
 import { ThemeContext } from "../context";
 
 import Header from "./headerComponents/Header";
@@ -17,9 +20,21 @@ export default function Layout({ children, changeTheme, changeLocale }: Props) {
   const theme = useContext(ThemeContext);
   const router = useRouter();
 
+  const pageTitle = <FormattedMessage id={router.pathname.slice(1)} />;
+
   return (
     <>
       <Header changeTheme={changeTheme} changeLocale={changeLocale} />
+      {router.pathname !== "/" && (
+        <ul className={styles.breadcrumbs}>
+          <li>
+            <Link href="/">
+              <FormattedMessage id="homePage" />
+            </Link>
+          </li>
+          <li>{pageTitle}</li>
+        </ul>
+      )}
       <main
         className={styles.main}
         data-theme={theme}

@@ -36,6 +36,7 @@ const en = {
   total: "Total: ",
   gallery: "Gallery",
   statistics: "Statistics",
+  homePage: "Home page",
 
   // Alt texts
   "alt.old.1": "Screenshot of the first version of my website from 2019",
