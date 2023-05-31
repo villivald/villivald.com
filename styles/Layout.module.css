@@ -12,13 +12,23 @@
   display: flex;
   padding: 10px 16px;
   list-style: none;
-  background-color: var(--color-brand-grey95);
+}
+
+.breadcrumbs li {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.breadcrumbs li:last-child {
+  font-weight: bold;
 }
 
 .breadcrumbs li:not(:last-child)::after {
-  padding: 8px;
+  padding: 0.5rem;
   color: var(--color-brand-dark);
-  content: "/\00a0";
+  content: ">";
+  font-weight: bold;
 }
 
 .breadcrumbs a {
