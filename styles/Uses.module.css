@@ -2,7 +2,7 @@
   min-height: 70vh;
   display: grid;
   place-items: center;
-  grid-template-rows: 5fr 1fr 8fr;
+  grid-template-rows: 2fr 1fr 5fr;
 }
 
 .mainContainer > figure {
@@ -13,11 +13,20 @@
   max-width: 38rem;
 }
 
+.mainContainer > div > div > ul > li > a {
+  text-decoration: none;
+}
+
 .mainContainer > p[data-theme="dark"],
 .mainContainer > p[data-theme="dark"] a,
 .mainContainer > div[data-theme="dark"] h1,
 .mainContainer > div[data-theme="dark"] a {
   color: var(--color-white);
+}
+
+.mainContainer > div > div > ul > li > a:hover {
+  text-decoration: underline wavy 0.1rem var(--color-brand-red);
+  text-underline-offset: 0.5rem;
 }
 
 .mainContainer > div {
@@ -30,7 +39,7 @@
 .mainContainer > div > div {
   display: grid;
   place-items: center;
-  grid-template-rows: 1fr 3fr;
+  grid-template-rows: 1fr 9fr;
   gap: 1rem;
 }
 

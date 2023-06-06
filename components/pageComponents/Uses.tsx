@@ -15,73 +15,73 @@ const hardware = [
     name: 'iMac 24" 2021',
     link: "https://www.apple.com/imac-24/",
     description: "My main computer",
-    image: "https://picsum.photos/200/300",
+    image: "imac",
   },
   {
     name: 'MacBook Pro 13" 2017',
     link: "https://support.apple.com/kb/SP754?locale=en_US",
     description: "My secondary computer",
-    image: "https://picsum.photos/200/300",
+    image: "macbook13",
   },
   {
     name: 'MacBook Pro 16" 2023',
     link: "https://support.apple.com/kb/SP890?locale=en_US",
     description: "My work computer",
-    image: "https://picsum.photos/200/300",
+    image: "macbook16",
   },
   {
     name: "iPhone 11",
     link: "https://www.apple.com/iphone-11/",
     description: "Phone",
-    image: "https://picsum.photos/200/300",
+    image: "iphone",
   },
   {
     name: 'iPad 10.2" 2019',
     link: "https://support.apple.com/kb/SP807?locale=en_US",
     description: "Tablet",
-    image: "https://picsum.photos/200/300",
+    image: "ipad",
   },
   {
     name: "Apple Watch Ultra",
     link: "https://www.apple.com/fi/apple-watch-ultra/",
     description: "Watch",
-    image: "https://picsum.photos/200/300",
+    image: "watch",
   },
   {
     name: "Marshall Major IV",
     link: "https://www.marshallheadphones.com/major-iv",
     description: "Headphones",
-    image: "https://picsum.photos/200/300",
+    image: "marshall",
   },
   {
     name: "Jaybird Vista 2",
     link: "https://www.jaybirdsport.com/fi-fi/vista2.985-000934.html",
     description: "Earbuds",
-    image: "https://picsum.photos/200/300",
+    image: "vista",
   },
   {
     name: "Keychron K2",
     link: "https://www.keychron.com/products/keychron-k2-wireless-mechanical-keyboard",
     description: "Keyboard",
-    image: "https://picsum.photos/200/300",
+    image: "key",
   },
   {
     name: "Logitech MX Master 3",
     link: "https://www.logitech.com/en-us/product/mx-master-3",
     description: "Mouse",
-    image: "https://picsum.photos/200/300",
+    image: "mouse",
   },
   {
     name: "Magic Trackpad",
     link: "https://www.apple.com/shop/product/MMMP3AM/A/magic-trackpad-black-multi-touch-surface?fnode=4c4cb374a09aed68c2096ce82deae6ae274700d365edaf8d4e92f2503a2f783f33aedba3931b147d2c774a0d460338253648be353c15eb13e158b3f1f5fdf318647ad4a32e303f4dd81b8ca4ecaec00c85228c8e65c3ba00f3f6edf21bf60981",
     description: "Trackpad",
-    image: "https://picsum.photos/200/300",
+    image: "trackpad",
   },
   {
     name: "Geekboards Macropad",
     link: "https://drop.com/buy/geekboards-rgb-hot-swappable-macropad-v2",
     description: "Macropad",
-    image: "https://picsum.photos/200/300",
+    image: "macropad",
   },
 ];
 
@@ -90,115 +90,115 @@ const software = [
     name: "Visual Studio Code",
     link: "https://code.visualstudio.com/",
     description: "My main code editor",
-    image: "https://picsum.photos/200/300",
+    image: "vscode",
   },
   {
     name: "Arc Browser",
     link: "https://arc.net/",
     description: "Main Browser",
-    image: "https://picsum.photos/200/300",
+    image: "arc",
   },
   {
     name: "Brave",
     link: "https://brave.com/",
     description: "Secondary Browser",
-    image: "https://picsum.photos/200/300",
+    image: "brave",
   },
   {
     name: "Figma",
     link: "https://www.figma.com/",
     description: "Design tool",
-    image: "https://picsum.photos/200/300",
+    image: "figma",
   },
   {
     name: "Notion",
     link: "https://www.notion.so/",
     description: "Note taking app",
-    image: "https://picsum.photos/200/300",
+    image: "notion",
   },
   {
     name: "Things",
     link: "https://culturedcode.com/things/",
     description: "Task manager",
-    image: "https://picsum.photos/200/300",
+    image: "things",
   },
   {
     name: "Obsidian",
     link: "https://obsidian.md/",
     description: "Note taking app",
-    image: "https://picsum.photos/200/300",
+    image: "obsidian",
   },
   {
     name: "Craft",
     link: "https://www.craft.do/",
     description: "Note taking app",
-    image: "https://picsum.photos/200/300",
+    image: "craft",
   },
   {
     name: "ProtonMail",
     link: "https://protonmail.com/",
     description: "Email client",
-    image: "https://picsum.photos/200/300",
+    image: "proton",
   },
   {
     name: "Spark",
     link: "https://sparkmailapp.com/",
     description: "Email client",
-    image: "https://picsum.photos/200/300",
+    image: "spark",
   },
   {
     name: "Telegram",
     link: "https://telegram.org/",
     description: "Messaging app",
-    image: "https://picsum.photos/200/300",
+    image: "telegram",
   },
   {
     name: "Endel",
     link: "https://endel.io/",
     description: "Music app",
-    image: "https://picsum.photos/200/300",
+    image: "endel",
   },
   {
     name: "YouTube Music",
     link: "https://music.youtube.com/",
     description: "Music app",
-    image: "https://picsum.photos/200/300",
+    image: "youtube",
   },
   {
     name: "Pocket Casts",
     link: "https://www.pocketcasts.com/",
     description: "Podcast app",
-    image: "https://picsum.photos/200/300",
+    image: "pocket",
   },
   {
     name: "Bookbeat",
     link: "https://www.bookbeat.com/",
     description: "Audiobook app",
-    image: "https://picsum.photos/200/300",
+    image: "bookbeat",
   },
   {
     name: "Strava",
     link: "https://www.strava.com/athletes/42251423",
     description: "Fitness app",
-    image: "https://picsum.photos/200/300",
+    image: "strava",
   },
   {
     name: "Ivory",
     link: "https://tapbots.com/ivory/",
     description: "Mastodon client",
-    image: "https://picsum.photos/200/300",
+    image: "ivory",
   },
   {
     name: "Grammarly",
     link: "https://www.grammarly.com/",
     description: "Writing assistant",
-    image: "https://picsum.photos/200/300",
+    image: "grammarly",
   },
   {
     name: "Bitwarden",
     link: "https://bitwarden.com/",
     description: "Password manager",
-    image: "https://picsum.photos/200/300",
+    image: "bitwarden",
   },
 ];
 
@@ -207,31 +207,31 @@ const other = [
     name: "Canyon Grail 7 eTap",
     link: "https://www.canyon.com/en-fi/gravel-bikes/performance/grail/al/grail-7-etap/3094.html",
     description: "Bicycle",
-    image: "https://picsum.photos/200/300",
+    image: "canyon",
   },
   {
     name: "Cafe du Cycliste Backpack",
     link: "https://www.cafeducycliste.com/en_roe/waterproof-backpack-blue.html",
     description: "Backpack",
-    image: "https://picsum.photos/200/300",
+    image: "cycliste",
   },
   {
     name: "Hydro Flask",
     link: "https://www.hydroflask.com/21-oz-standard-mouth",
     description: "Water bottle",
-    image: "https://picsum.photos/200/300",
+    image: "flask",
   },
   {
     name: "Productivity Daily Desk Pad",
     link: "https://www.intelligentchange.com/products/productivity-daily-desk-pad",
     description: "Daily planner",
-    image: "https://picsum.photos/200/300",
+    image: "deskpad",
   },
   {
     name: "Moleskine x Kaweco Fountain Pen",
     link: "https://www.moleskine.com/shop/writing-tools/kaweco/kaweco-fountain-pen/fountain-pen-black-8056598854909.html",
     description: "Fountain pen",
-    image: "https://picsum.photos/200/300",
+    image: "moleskine",
   },
 ];
 
@@ -244,7 +244,11 @@ const Uses = () => {
     return items.map((item) => (
       <li
         key={item.name}
-        style={{ "--url": `url("${item.image}")` } as CSSPropertiesWithVars}
+        style={
+          {
+            "--url": `url("/uses/${item.image}.webp")`,
+          } as CSSPropertiesWithVars
+        }
       >
         <Link href={item.link}>{item.name}</Link>
       </li>
