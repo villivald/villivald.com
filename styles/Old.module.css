@@ -56,7 +56,19 @@
   border-top-right-radius: 1rem;
   padding: 1rem 0;
   text-align: center;
+}
+
+.card > div > p:first-child a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
   font-family: var(--font-header);
+  text-decoration: none;
+}
+
+.card > div > p:first-child a:hover {
+  text-decoration: underline;
 }
 
 .card > div > img {

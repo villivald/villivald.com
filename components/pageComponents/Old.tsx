@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { useContext } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
@@ -8,16 +9,16 @@ import styles from "../../styles/Old.module.css";
 
 const sites = [
   {
-    id: "1",
-    description: ["html", "skeleton css"],
+    id: "3",
+    description: ["javascript", "css", "html", "react"],
   },
   {
     id: "2",
     description: ["css", "javascript", "bootstrap", "html"],
   },
   {
-    id: "3",
-    description: ["javascript", "css", "html", "react"],
+    id: "1",
+    description: ["html", "skeleton css"],
   },
 ];
 
@@ -32,7 +33,15 @@ const Old = () => {
           <div className={styles.card} key={site.id}>
             <div>
               <p>
-                <FormattedMessage id={`old.title.${site.id}`} />
+                <Link href={`/old/${site.id}`}>
+                  <FormattedMessage id={`old.title.${site.id}`} />
+                  <Image
+                    src="/emojis/link.svg"
+                    width={24}
+                    height={24}
+                    alt="external link"
+                  />
+                </Link>
               </p>
               <Image
                 src={`/images/website${site.id}.webp`}
