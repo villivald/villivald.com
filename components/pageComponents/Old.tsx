@@ -11,14 +11,17 @@ const sites = [
   {
     id: "3",
     description: ["javascript", "css", "html", "react"],
+    link: "https://www.villivald.com/",
   },
   {
     id: "2",
     description: ["css", "javascript", "bootstrap", "html"],
+    link: "https://villivald.github.io/proj/",
   },
   {
     id: "1",
     description: ["html", "skeleton css"],
+    link: "https://villivald.github.io/proj/Projects/Skeleton/index.html",
   },
 ];
 
@@ -33,7 +36,7 @@ const Old = () => {
           <div className={styles.card} key={site.id}>
             <div>
               <p>
-                <Link href={`/old/${site.id}`}>
+                <Link href={`${site.link}`}>
                   <FormattedMessage id={`old.title.${site.id}`} />
                   <Image
                     src="/emojis/link.svg"
