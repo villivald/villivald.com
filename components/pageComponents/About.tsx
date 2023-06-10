@@ -83,9 +83,7 @@ const About = () => {
               data-slide={`slide${index}`}
               aria-label={`slide ${index} of 5`}
               tabIndex={0}
-            >
-              {year}
-            </div>
+            ></div>
           ))}
         </div>
         <div className={styles.carousel__nav}>

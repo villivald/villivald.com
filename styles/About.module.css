@@ -135,7 +135,10 @@
 }
 
 .slidesItem[data-slide="slide5"] {
-  background-color: #ffc;
+  background-image: url("/about/2019.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 @media (width <= 700px) {
