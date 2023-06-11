@@ -49,7 +49,11 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <div className={`${crete.variable} ${amiko.variable} ${istok.variable}`}>
       <ThemeContext.Provider value={theme}>
-        <IntlProvider locale={locale} messages={translations[locale]}>
+        <IntlProvider
+          locale={locale}
+          messages={translations[locale]}
+          onError={(err) => console.log(err)}
+        >
           <Layout changeTheme={changeTheme} changeLocale={changeLocale}>
             <Component {...pageProps} />
           </Layout>

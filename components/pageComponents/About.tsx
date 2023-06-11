@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useMemo, useContext } from "react";
+import Image from "next/image";
 
 import { ThemeContext } from "../../context";
 import styles from "../../styles/About.module.css";
@@ -83,7 +84,17 @@ const About = () => {
               data-slide={`slide${index}`}
               aria-label={`slide ${index} of 5`}
               tabIndex={0}
-            ></div>
+            >
+              <div data-image={`${year}-8`} />
+              <div data-image={`${year}-7`} />
+              <div data-image={`${year}-6`} />
+              <div data-image={`${year}-5`} />
+              <div>{year}</div>
+              <div data-image={`${year}-4`} />
+              <div data-image={`${year}-3`} />
+              <div data-image={`${year}-2`} />
+              <div data-image={`${year}-1`} />
+            </div>
           ))}
         </div>
         <div className={styles.carousel__nav}>

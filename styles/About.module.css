@@ -73,18 +73,111 @@
 }
 
 .slidesItem {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  place-items: center;
+  border: 1rem solid var(--color-brand-teal);
+  outline: 0.5rem solid var(--color-brand-teal);
   width: 100%;
   flex-shrink: 0;
-  font-size: 100px;
-  height: 600px;
-  margin: 0 1rem;
+  font-size: calc(var(--fontSize-header1) * 3);
+  font-family: var(--font-header);
+  height: 40rem;
   scroll-snap-align: start;
   transform: scale(1);
   transform-origin: center center;
   transition: transform 0.5s;
+}
+
+.slidesItem div {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+.slidesItem div[data-image="2019-1"] {
+  background-image: url("/about/2019-1.webp");
+}
+
+.slidesItem div[data-image="2019-2"] {
+  background-image: url("/about/2019-2.webp");
+}
+
+.slidesItem div[data-image="2019-3"] {
+  background-image: url("/about/2019-3.webp");
+}
+
+.slidesItem div[data-image="2019-4"] {
+  background-image: url("/about/2019-4.webp");
+}
+
+.slidesItem div[data-image="2019-5"] {
+  background-image: url("/about/2019-5.webp");
+}
+
+.slidesItem div[data-image="2019-6"] {
+  background-image: url("/about/2019-6.webp");
+}
+
+.slidesItem div[data-image="2019-7"] {
+  background-image: url("/about/2019-7.webp");
+}
+
+.slidesItem div[data-image="2019-8"] {
+  background-image: url("/about/2019-8.webp");
+}
+
+.slidesItem div:nth-child(1) {
+  border-right: 0.5rem solid var(--color-brand-teal);
+  border-bottom: 0.5rem solid var(--color-brand-teal);
+}
+
+.slidesItem div:nth-child(2) {
+  border-left: 0.5rem solid var(--color-brand-teal);
+  border-bottom: 0.5rem solid var(--color-brand-teal);
+  border-right: 0.5rem solid var(--color-brand-teal);
+}
+
+.slidesItem div:nth-child(3) {
+  border-left: 0.5rem solid var(--color-brand-teal);
+  border-bottom: 0.5rem solid var(--color-brand-teal);
+}
+
+.slidesItem div:nth-child(4) {
+  border-right: 0.5rem solid var(--color-brand-teal);
+  border-top: 0.5rem solid var(--color-brand-teal);
+  border-bottom: 0.5rem solid var(--color-brand-teal);
+}
+
+.slidesItem div:nth-child(5) {
+  display: grid;
+  place-items: center;
+  border: 0.5rem solid var(--color-brand-teal);
+}
+
+.slidesItem div:nth-child(6) {
+  border-left: 0.5rem solid var(--color-brand-teal);
+  border-top: 0.5rem solid var(--color-brand-teal);
+  border-bottom: 0.5rem solid var(--color-brand-teal);
+}
+
+.slidesItem div:nth-child(7) {
+  border-right: 0.5rem solid var(--color-brand-teal);
+  border-top: 0.5rem solid var(--color-brand-teal);
+}
+
+.slidesItem div:nth-child(8) {
+  border-left: 0.5rem solid var(--color-brand-teal);
+  border-top: 0.5rem solid var(--color-brand-teal);
+  border-right: 0.5rem solid var(--color-brand-teal);
+}
+
+.slidesItem div:nth-child(9) {
+  border-top: 0.5rem solid var(--color-brand-teal);
+  border-left: 0.5rem solid var(--color-brand-teal);
 }
 
 .carousel__nav {
@@ -132,13 +225,6 @@
 
 .slidesItem[data-slide="slide4"] {
   background-color: #dca;
-}
-
-.slidesItem[data-slide="slide5"] {
-  background-image: url("/about/2019.webp");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 @media (width <= 700px) {
