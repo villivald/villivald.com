@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useMemo, useContext } from "react";
-import Image from "next/image";
 
 import { ThemeContext } from "../../context";
 import styles from "../../styles/About.module.css";
@@ -85,15 +84,47 @@ const About = () => {
               aria-label={`slide ${index} of 5`}
               tabIndex={0}
             >
-              <div data-image={`${year}-8`} />
-              <div data-image={`${year}-7`} />
-              <div data-image={`${year}-6`} />
-              <div data-image={`${year}-5`} />
+              <div
+                style={{
+                  backgroundImage: `url(/about/${year}-8.webp)`,
+                }}
+              />
+              <div
+                style={{
+                  backgroundImage: `url(/about/${year}-7.webp)`,
+                }}
+              />
+              <div
+                style={{
+                  backgroundImage: `url(/about/${year}-6.webp)`,
+                }}
+              />
+              <div
+                style={{
+                  backgroundImage: `url(/about/${year}-5.webp)`,
+                }}
+              />
               <div>{year}</div>
-              <div data-image={`${year}-4`} />
-              <div data-image={`${year}-3`} />
-              <div data-image={`${year}-2`} />
-              <div data-image={`${year}-1`} />
+              <div
+                style={{
+                  backgroundImage: `url(/about/${year}-4.webp)`,
+                }}
+              />
+              <div
+                style={{
+                  backgroundImage: `url(/about/${year}-3.webp)`,
+                }}
+              />
+              <div
+                style={{
+                  backgroundImage: `url(/about/${year}-2.webp)`,
+                }}
+              />
+              <div
+                style={{
+                  backgroundImage: `url(/about/${year}-1.webp)`,
+                }}
+              />
             </div>
           ))}
         </div>
