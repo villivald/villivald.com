@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useMemo, useContext } from "react";
+import Image from "next/image";
 
 import { ThemeContext } from "../../context";
 import styles from "../../styles/About.module.css";
@@ -84,47 +85,34 @@ const About = () => {
               aria-label={`slide ${index} of 5`}
               tabIndex={0}
             >
-              <div
-                style={{
-                  backgroundImage: `url(/about/${year}-8.webp)`,
-                }}
-              />
-              <div
-                style={{
-                  backgroundImage: `url(/about/${year}-7.webp)`,
-                }}
-              />
-              <div
-                style={{
-                  backgroundImage: `url(/about/${year}-6.webp)`,
-                }}
-              />
-              <div
-                style={{
-                  backgroundImage: `url(/about/${year}-5.webp)`,
-                }}
-              />
+              {["8", "7", "6", "5"].map((num, index) =>
+                year === "2023" ? (
+                  <div key={index} className={styles.question}>
+                    <Image
+                      alt="about"
+                      width={200}
+                      height={200}
+                      src={"/emojis/question.svg"}
+                    />
+                  </div>
+                ) : (
+                  <div
+                    key={index}
+                    style={{
+                      backgroundImage: `url(/about/${year}-${num}.webp)`,
+                    }}
+                  />
+                )
+              )}
               <div>{year}</div>
-              <div
-                style={{
-                  backgroundImage: `url(/about/${year}-4.webp)`,
-                }}
-              />
-              <div
-                style={{
-                  backgroundImage: `url(/about/${year}-3.webp)`,
-                }}
-              />
-              <div
-                style={{
-                  backgroundImage: `url(/about/${year}-2.webp)`,
-                }}
-              />
-              <div
-                style={{
-                  backgroundImage: `url(/about/${year}-1.webp)`,
-                }}
-              />
+              {["4", "3", "2", "1"].map((num, index) => (
+                <div
+                  key={index}
+                  style={{
+                    backgroundImage: `url(/about/${year}-${num}.webp)`,
+                  }}
+                />
+              ))}
             </div>
           ))}
         </div>

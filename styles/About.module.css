@@ -200,6 +200,12 @@
   background-color: #ffc;
 }
 
+.question {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media (width >= 1300px) {
   .slidesItem {
     height: 45rem;
