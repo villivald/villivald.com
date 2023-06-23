@@ -1,14 +1,17 @@
 import Head from "next/head";
+import { useIntl } from "react-intl";
 
 import styles from "../styles/Studies.module.css";
 
-import Studies from "../components/pageComponents/Studies/Studies.mdx";
+import StudiesComponent from "../components/pageComponents/Studies/Studies.mdx";
 
-export default function study() {
+export default function Study() {
+  const intl = useIntl();
+
   return (
     <>
       <Head>
-        <title>My Studies</title>
+        <title>{intl.formatMessage({ id: "study" })}</title>
         <meta
           name="description"
           content="my personal website made with next js"
@@ -17,7 +20,7 @@ export default function study() {
       </Head>
 
       <div className={styles.mainContainer}>
-        <Studies />
+        <StudiesComponent />
       </div>
     </>
   );

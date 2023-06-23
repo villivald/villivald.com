@@ -1,12 +1,14 @@
 import Head from "next/head";
+import { useIntl } from "react-intl";
 
-import Koripallopaikat from "../components/pageComponents/Koripallopaikat";
+import KoripallopaikatComponent from "../components/pageComponents/Koripallopaikat";
 
-export default function koripallopaikat() {
+export default function Koripallopaikat() {
+  const intl = useIntl();
   return (
     <>
       <Head>
-        <title>Koripallopaikat</title>
+        <title>{intl.formatMessage({ id: "koripallopaikat" })}</title>
         <meta
           name="description"
           content="my personal website made with next js"
@@ -14,7 +16,7 @@ export default function koripallopaikat() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Koripallopaikat />
+      <KoripallopaikatComponent />
     </>
   );
 }

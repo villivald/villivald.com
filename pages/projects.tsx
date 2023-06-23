@@ -1,12 +1,15 @@
 import Head from "next/head";
+import { useIntl } from "react-intl";
 
-import Projects from "../components/pageComponents/Projects";
+import ProjectsComponent from "../components/pageComponents/Projects";
 
-export default function projects() {
+export default function Projects() {
+  const intl = useIntl();
+
   return (
     <>
       <Head>
-        <title>My Projects</title>
+        <title>{intl.formatMessage({ id: "projects" })}</title>
         <meta
           name="description"
           content="my personal website made with next js"
@@ -14,7 +17,7 @@ export default function projects() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Projects />
+      <ProjectsComponent />
     </>
   );
 }

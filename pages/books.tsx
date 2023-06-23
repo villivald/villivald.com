@@ -1,12 +1,15 @@
 import Head from "next/head";
+import { useIntl } from "react-intl";
 
-import Books from "../components/pageComponents/Books/Books";
+import BooksComponent from "../components/pageComponents/Books/Books";
 
-export default function books() {
+export default function Books() {
+  const intl = useIntl();
+
   return (
     <>
       <Head>
-        <title>Books I Read</title>
+        <title>{intl.formatMessage({ id: "books" })}</title>
         <meta
           name="description"
           content="my personal website made with next js"
@@ -14,7 +17,7 @@ export default function books() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Books />
+      <BooksComponent />
     </>
   );
 }

@@ -1,12 +1,15 @@
 import Head from "next/head";
+import { useIntl } from "react-intl";
 
-import Contact from "../components/pageComponents/Contact";
+import ContactComponent from "../components/pageComponents/Contact";
 
-export default function contact() {
+export default function Contact() {
+  const intl = useIntl();
+
   return (
     <>
       <Head>
-        <title>Contact</title>
+        <title>{intl.formatMessage({ id: "contact" })}</title>
         <meta
           name="description"
           content="my personal website made with next js"
@@ -14,7 +17,7 @@ export default function contact() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Contact />
+      <ContactComponent />
     </>
   );
 }

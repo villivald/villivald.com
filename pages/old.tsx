@@ -1,12 +1,15 @@
 import Head from "next/head";
+import { useIntl } from "react-intl";
 
-import Old from "../components/pageComponents/Old";
+import OldComponent from "../components/pageComponents/Old";
 
-export default function old() {
+export default function Old() {
+  const intl = useIntl();
+
   return (
     <>
       <Head>
-        <title>Old versions of this website</title>
+        <title>{intl.formatMessage({ id: "old" })}</title>
         <meta
           name="description"
           content="my personal website made with next js"
@@ -14,7 +17,7 @@ export default function old() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Old />
+      <OldComponent />
     </>
   );
 }
