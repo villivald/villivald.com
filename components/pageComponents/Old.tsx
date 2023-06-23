@@ -25,7 +25,7 @@ const sites = [
   },
 ];
 
-const Old = () => {
+export default function Old() {
   const intl = useIntl();
   const theme = useContext(ThemeContext);
 
@@ -63,6 +63,4 @@ const Old = () => {
       </div>
     </div>
   );
-};
-
-export default Old;
+}

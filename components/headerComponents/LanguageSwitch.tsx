@@ -9,7 +9,7 @@ type Props = {
   changeLocale: () => void;
 };
 
-const LanguageSwitch = ({ changeLocale }: Props) => {
+export default function LanguageSwitch({ changeLocale }: Props) {
   const [checked, setChecked] = useState(false);
   const theme = useContext(ThemeContext);
   const intl = useIntl();
@@ -62,6 +62,4 @@ const LanguageSwitch = ({ changeLocale }: Props) => {
       </p>
     </>
   );
-};
-
-export default LanguageSwitch;
+}

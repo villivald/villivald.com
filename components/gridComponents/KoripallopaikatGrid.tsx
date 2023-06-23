@@ -3,7 +3,7 @@ import Image from "next/image";
 import CardFooter from "./subComponents/CardFooter";
 import styles from "../../styles/grid/KoripallopaikatGrid.module.css";
 
-const KoripallopaikatGrid = () => {
+export default function KoripallopaikatGrid() {
   return (
     <div className={styles.koripallopaikatContainer}>
       <Image
@@ -28,6 +28,4 @@ const KoripallopaikatGrid = () => {
       </div>
     </div>
   );
-};
-
-export default KoripallopaikatGrid;
+}

@@ -4,7 +4,7 @@ import CardFooter from "./subComponents/CardFooter";
 
 import styles from "../../styles/grid/BooksGrid.module.css";
 
-const BooksGrid = () => {
+export default function BooksGrid() {
   const intl = useIntl();
 
   return (
@@ -21,6 +21,4 @@ const BooksGrid = () => {
       <CardFooter emoji="books" text="books" />
     </div>
   );
-};
-
-export default BooksGrid;
+}

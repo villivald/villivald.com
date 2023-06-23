@@ -7,7 +7,7 @@ type Props = {
   theme: string;
 };
 
-const ThemeToggle = ({ changeTheme, theme }: Props) => {
+export default function ThemeToggle({ changeTheme, theme }: Props) {
   return (
     <button
       aria-label="changeThemeButton"
@@ -23,6 +23,4 @@ const ThemeToggle = ({ changeTheme, theme }: Props) => {
       />
     </button>
   );
-};
-
-export default ThemeToggle;
+}

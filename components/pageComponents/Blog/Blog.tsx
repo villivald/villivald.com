@@ -11,7 +11,7 @@ interface BlogPost {
   title: string;
 }
 
-const Blog = () => {
+export default function Blog() {
   const [data, setData] = useState<BlogPost[]>([]);
 
   async function fetchData() {
@@ -31,6 +31,4 @@ const Blog = () => {
       {data.length ? <BlogCardList data={data} /> : <Spinner />}
     </div>
   );
-};
-
-export default Blog;
+}

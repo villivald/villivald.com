@@ -4,7 +4,7 @@ import { useIntl } from "react-intl";
 
 import styles from "../../styles/Contact.module.css";
 
-const Contact = () => {
+export default function Contact() {
   const intl = useIntl();
 
   return (
@@ -41,6 +41,4 @@ const Contact = () => {
       </div>
     </div>
   );
-};
-
-export default Contact;
+}

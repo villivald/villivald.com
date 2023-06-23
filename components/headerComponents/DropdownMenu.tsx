@@ -6,7 +6,7 @@ import { FormattedMessage } from "react-intl";
 import { ThemeContext } from "../../context";
 import styles from "../../styles/Dropdown.module.css";
 
-const DropdownMenu = () => {
+export default function DropdownMenu() {
   const theme = useContext(ThemeContext);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -59,6 +59,4 @@ const DropdownMenu = () => {
       </ul>
     </div>
   );
-};
-
-export default DropdownMenu;
+}

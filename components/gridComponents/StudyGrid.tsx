@@ -1,10 +1,8 @@
-import { useState } from "react";
-
 import CardFooter from "./subComponents/CardFooter";
 
 import styles from "../../styles/grid/StudyGrid.module.css";
 
-const StudyGrid = () => {
+export default function StudyGrid() {
   return (
     <div className={styles.container}>
       <div className={styles.image}></div>
@@ -12,6 +10,4 @@ const StudyGrid = () => {
       <CardFooter emoji="study" text="study" />
     </div>
   );
-};
-
-export default StudyGrid;
+}

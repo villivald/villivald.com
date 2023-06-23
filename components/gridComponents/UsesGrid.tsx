@@ -6,7 +6,7 @@ import CardFooter from "./subComponents/CardFooter";
 
 import styles from "../../styles/grid/UsesGrid.module.css";
 
-const UsesGrid = () => {
+export default function UsesGrid() {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className={styles.container}>
@@ -33,6 +33,4 @@ const UsesGrid = () => {
       <CardFooter emoji="uses" text="uses" />
     </div>
   );
-};
-
-export default UsesGrid;
+}

@@ -4,7 +4,7 @@ import Image from "next/image";
 import { ThemeContext } from "../../context";
 import styles from "../../styles/About.module.css";
 
-const About = () => {
+export default function About() {
   const theme = useContext(ThemeContext);
   const [currentSlide, setCurrentSlide] = useState("2023");
 
@@ -133,6 +133,4 @@ const About = () => {
       </section>
     </div>
   );
-};
-
-export default About;
+}

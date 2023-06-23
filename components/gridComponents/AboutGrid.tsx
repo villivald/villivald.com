@@ -1,7 +1,7 @@
 import styles from "../../styles/grid/AboutGrid.module.css";
 import CardFooter from "./subComponents/CardFooter";
 
-const AboutGrid = () => {
+export default function AboutGrid() {
   return (
     <div className={styles.container}>
       <div className={styles.about} />
@@ -9,6 +9,4 @@ const AboutGrid = () => {
       <CardFooter emoji="about" text="about" />
     </div>
   );
-};
-
-export default AboutGrid;
+}

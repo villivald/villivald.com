@@ -17,7 +17,7 @@ type Book = {
   year?: number;
 };
 
-const Books = () => {
+export default function Books() {
   const router = useRouter();
 
   const sortedBooks = useMemo(() => [...data.books].reverse(), []);
@@ -85,6 +85,4 @@ const Books = () => {
       />
     </>
   );
-};
-
-export default Books;
+}

@@ -1,6 +1,6 @@
 import styles from "../styles/Spinner.module.css";
 
-const Spinner = () => {
+export default function Spinner() {
   return (
     <div className={styles.balls}>
       {[...Array(3)].map((_, i) => (
@@ -12,6 +12,4 @@ const Spinner = () => {
       ))}
     </div>
   );
-};
-
-export default Spinner;
+}

@@ -91,8 +91,6 @@ const books = {
   ],
 };
 
-const Chart = () => {
+export default function Chart() {
   return <Bar options={options} data={books} />;
-};
-
-export default Chart;
+}

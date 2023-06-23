@@ -12,7 +12,7 @@ import ProjectsGrid from "./gridComponents/ProjectsGrid";
 
 import styles from "../styles/Grid.module.css";
 
-const Grid = () => {
+export default function Grid() {
   return (
     <main className={styles.main}>
       <Link href="/study">
@@ -44,6 +44,4 @@ const Grid = () => {
       </Link>
     </main>
   );
-};
-
-export default Grid;
+}

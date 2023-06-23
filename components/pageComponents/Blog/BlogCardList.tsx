@@ -16,7 +16,7 @@ interface DataArray {
   data: DataObject[];
 }
 
-const BlogCardList = ({ data }: DataArray) => {
+export default function BlogCardList({ data }: DataArray) {
   const [randomPostData, setRandomPostData] = useState([]);
   const [loadRandomPost, setLoadRandomPost] = useState(false);
 
@@ -105,6 +105,4 @@ const BlogCardList = ({ data }: DataArray) => {
       </div>
     </>
   );
-};
-
-export default BlogCardList;
+}

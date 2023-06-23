@@ -1,7 +1,7 @@
 import CardFooter from "./subComponents/CardFooter";
 import styles from "../../styles/grid/OldGrid.module.css";
 
-const OldGrid = () => {
+export default function OldGrid() {
   return (
     <div className={styles.container}>
       <div>
@@ -11,6 +11,4 @@ const OldGrid = () => {
       <CardFooter emoji="old" text="old" />
     </div>
   );
-};
-
-export default OldGrid;
+}

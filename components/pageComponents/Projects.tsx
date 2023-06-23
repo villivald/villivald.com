@@ -6,7 +6,7 @@ import { FormattedMessage } from "react-intl";
 import { ThemeContext } from "../../context";
 import styles from "../../styles/Projects.module.css";
 
-const Projects = () => {
+export default function Projects() {
   const theme = useContext(ThemeContext);
 
   return (
@@ -50,6 +50,4 @@ const Projects = () => {
       </div>
     </div>
   );
-};
-
-export default Projects;
+}

@@ -235,7 +235,7 @@ const other = [
   },
 ];
 
-const Uses = () => {
+export default function Uses() {
   const theme = useContext(ThemeContext);
 
   const renderList = (
@@ -312,6 +312,4 @@ const Uses = () => {
       </div>
     </div>
   );
-};
-
-export default Uses;
+}

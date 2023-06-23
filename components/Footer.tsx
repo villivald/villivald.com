@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 import { ThemeContext } from "../context";
 import styles from "../styles/Footer.module.css";
 
-const Footer = () => {
+export default function Footer() {
   const theme = useContext(ThemeContext);
   const router = useRouter();
 
@@ -66,6 +66,4 @@ const Footer = () => {
       <Divider />
     </footer>
   );
-};
-
-export default Footer;
+}

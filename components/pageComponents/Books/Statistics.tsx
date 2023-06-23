@@ -4,7 +4,7 @@ import { FormattedMessage } from "react-intl";
 import Chart from "./Chart";
 import styles from "../../../styles/Books.module.css";
 
-const Statistics = () => {
+export default function Statistics() {
   const router = useRouter();
 
   return (
@@ -28,6 +28,4 @@ const Statistics = () => {
       <Chart />
     </div>
   );
-};
-
-export default Statistics;
+}

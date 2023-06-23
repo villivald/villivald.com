@@ -1,7 +1,7 @@
 import CardFooter from "./subComponents/CardFooter";
 import styles from "../../styles/grid/ProjectsGrid.module.css";
 
-const ProjectsGrid = () => {
+export default function ProjectsGrid() {
   return (
     <div className={styles.container}>
       <div className={styles.letters}>
@@ -17,6 +17,4 @@ const ProjectsGrid = () => {
       <CardFooter emoji="projects" text="projects" />
     </div>
   );
-};
-
-export default ProjectsGrid;
+}

@@ -10,7 +10,7 @@ type Props = {
   text: string;
 };
 
-const CardFooter = ({ emoji, text }: Props) => {
+export default function CardFooter({ emoji, text }: Props) {
   const theme = useContext(ThemeContext);
 
   return (
@@ -40,6 +40,4 @@ const CardFooter = ({ emoji, text }: Props) => {
       </p>
     </div>
   );
-};
-
-export default CardFooter;
+}

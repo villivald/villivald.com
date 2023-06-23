@@ -14,7 +14,7 @@ type Props = {
   changeLocale: () => void;
 };
 
-const Header = ({ changeTheme, changeLocale }: Props) => {
+export default function Header({ changeTheme, changeLocale }: Props) {
   const theme = useContext(ThemeContext);
 
   return (
@@ -27,6 +27,4 @@ const Header = ({ changeTheme, changeLocale }: Props) => {
       <DropdownMenu />
     </header>
   );
-};
-
-export default Header;
+}

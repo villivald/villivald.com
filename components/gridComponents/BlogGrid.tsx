@@ -7,7 +7,7 @@ import CardFooter from "./subComponents/CardFooter";
 import "atropos/css";
 import styles from "../../styles/grid/BlogGrid.module.css";
 
-const BlogGrid = () => {
+export default function BlogGrid() {
   const intl = useIntl();
 
   return (
@@ -24,6 +24,4 @@ const BlogGrid = () => {
       <CardFooter emoji="blog" text="blog" />
     </div>
   );
-};
-
-export default BlogGrid;
+}
