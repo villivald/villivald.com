@@ -46,13 +46,19 @@ export default function App({ Component, pageProps }: AppProps) {
   // Handles language change
   const changeLocale = () => setLocale(locale === en ? fi : en);
 
+  // Handles translation errors
+  const handleTranslationError = (error: Error) => {
+    // Prevent excessive logging)
+    return error;
+  };
+
   return (
     <div className={`${crete.variable} ${amiko.variable} ${istok.variable}`}>
       <ThemeContext.Provider value={theme}>
         <IntlProvider
           locale={locale}
           messages={translations[locale]}
-          onError={(err) => console.log(err)}
+          onError={handleTranslationError}
         >
           <Layout changeTheme={changeTheme} changeLocale={changeLocale}>
             <Component {...pageProps} />
