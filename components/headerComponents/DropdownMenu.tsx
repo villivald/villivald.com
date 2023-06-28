@@ -1,14 +1,15 @@
-import { useContext, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useContext, useState } from "react";
 import { FormattedMessage } from "react-intl";
 
 import { ThemeContext } from "../../context";
+
 import styles from "../../styles/Dropdown.module.css";
 
 export default function DropdownMenu() {
   const theme = useContext(ThemeContext);
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(true);
 
   const menuItems = [
     "about",
@@ -22,11 +23,17 @@ export default function DropdownMenu() {
     "old",
   ];
 
+  const handleBlur = (e: React.FocusEvent<HTMLDivElement>) => {
+    if (e.relatedTarget === null) {
+      setMenuOpen(false);
+    }
+  };
+
   return (
     <div
       className={styles.dropdown}
-      onMouseEnter={() => setMenuOpen(true)}
-      onMouseLeave={() => setMenuOpen(false)}
+      onClick={() => setMenuOpen(!menuOpen)}
+      onBlur={handleBlur}
     >
       <button
         className={styles.dropdownButton}
