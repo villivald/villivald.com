@@ -9,7 +9,7 @@ import styles from "../../styles/Dropdown.module.css";
 
 export default function DropdownMenu() {
   const theme = useContext(ThemeContext);
-  const [menuOpen, setMenuOpen] = useState(true);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const menuItems = [
     "about",
