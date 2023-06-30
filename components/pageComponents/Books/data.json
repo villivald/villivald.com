@@ -1356,6 +1356,76 @@
       "rating": 2
     },
     {
+      "title": "Боги и лишние",
+      "author": "О. Радзинский",
+      "date": "07.05.2023",
+      "image": "190.webp",
+      "rating": 4
+    },
+    {
+      "title": "The Road Book 2022",
+      "author": "N. Boulding",
+      "date": "23.05.2023",
+      "image": "191.webp",
+      "rating": 4
+    },
+    {
+      "title": "What if? 2",
+      "author": "R. Munroe",
+      "date": "25.05.2023",
+      "image": "192.webp",
+      "rating": 3
+    },
+    {
+      "title": "A11Y Unraveled",
+      "author": "D. Georgakas",
+      "date": "02.06.2023",
+      "image": "193.webp",
+      "rating": 3
+    },
+    {
+      "title": "Tuoksujen atlas",
+      "author": "A. Turunen",
+      "date": "07.06.2023",
+      "image": "194.webp",
+      "rating": 5
+    },
+    {
+      "title": "Лекарство для империи",
+      "author": "Акунин",
+      "date": "11.06.2023",
+      "image": "195.webp",
+      "rating": 4
+    },
+    {
+      "title": "Беседы о русской культуре",
+      "author": "Лотман",
+      "date": "13.06.2023",
+      "image": "196.webp",
+      "rating": 3
+    },
+    {
+      "title": "Аполлон Безобразов",
+      "author": "Поплавский",
+      "date": "20.06.2023",
+      "image": "197.webp",
+      "rating": 4
+    },
+    {
+      "title": "Friends, Lovers, and the Big Terrible Thing",
+      "author": "M. Perry",
+      "date": "26.06.2023",
+      "image": "198.webp",
+      "rating": 4
+    },
+    {
+      "title": "New York: maailman paras shithole city",
+      "author": "J. Frondelius",
+      "date": "26.06.2023",
+      "image": "199.webp",
+      "rating": 3
+    },
+    {
       "title": "",
       "author": "",
       "date": "",
