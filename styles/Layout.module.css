@@ -41,6 +41,12 @@
   text-decoration: underline;
 }
 
+.main[data-theme="dark"] .breadcrumbs a,
+.main[data-theme="dark"] .breadcrumbs li,
+.main[data-theme="dark"] .breadcrumbs li::after {
+  color: var(--color-white);
+}
+
 @media (width <= 500px) {
   .main[data-books="true"] {
     height: 100vh;
