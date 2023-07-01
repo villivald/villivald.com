@@ -111,26 +111,17 @@
 }
 
 /*
-  3. Allow percentage-based heights in the application
-*/
-html,
-body {
-  height: 100%;
-}
-
-/*
   Typographic tweaks!
-  4. Add accessible line-height
-  5. Improve text rendering
+  3. Add accessible line-height
+  4. Improve text rendering
 */
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  background-color: var(--color-brand-green);
 }
 
 /*
-  6. Improve media defaults
+  5. Improve media defaults
 */
 img,
 picture,
@@ -142,7 +133,7 @@ svg {
 }
 
 /*
-  7. Remove built-in form typography styles
+  6. Remove built-in form typography styles
 */
 input,
 button,
@@ -152,7 +143,7 @@ select {
 }
 
 /*
-  8. Avoid text overflows
+  7. Avoid text overflows
 */
 p,
 h1,
@@ -165,7 +156,7 @@ h6 {
 }
 
 /*
-  9. Create a root stacking context
+  8. Create a root stacking context
 */
 #root,
 #__next {
