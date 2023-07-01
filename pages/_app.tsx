@@ -1,5 +1,6 @@
 import type { AppProps } from "next/app";
 import { Amiko, Crete_Round, Istok_Web } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 import { useState } from "react";
 import { IntlProvider } from "react-intl";
 
@@ -65,6 +66,7 @@ export default function App({ Component, pageProps }: AppProps) {
           </Layout>
         </IntlProvider>
       </ThemeContext.Provider>
+      <Analytics />
     </div>
   );
 }
