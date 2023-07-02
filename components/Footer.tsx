@@ -14,7 +14,7 @@ export default function Footer() {
     { name: "gitlab", link: "https://version.helsinki.fi/villival" },
     { name: "github", link: "https://github.com/villivald" },
     { name: "linkedin", link: "https://www.linkedin.com/in/villivald/" },
-    { name: "mastodon", link: "https://mastodon.world/@villivald" },
+    { name: "mastodon", link: "https://notacult.social/@villivald" },
   ];
 
   const otherIcons = [

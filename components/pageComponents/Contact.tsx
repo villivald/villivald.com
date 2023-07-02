@@ -10,7 +10,7 @@ export default function Contact() {
   return (
     <div className={styles.mainContainer}>
       <div>
-        <Link href="https://mastodon.world/@villivald" target="_blank">
+        <Link href="https://notacult.social/@villivald" target="_blank">
           <Image
             src="/emojis/mastodon.svg"
             width={500}
