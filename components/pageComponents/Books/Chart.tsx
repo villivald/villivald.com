@@ -66,27 +66,27 @@ const books = {
     {
       label: "2023",
       data: handleData("2023"),
-      backgroundColor: "rgba(255, 99, 132, 0.5)",
+      backgroundColor: "#003f5c",
     },
     {
       label: "2022",
       data: handleData("2022"),
-      backgroundColor: "rgba(53, 162, 235, 0.5)",
+      backgroundColor: "#58508d",
     },
     {
       label: "2021",
       data: handleData("2021"),
-      backgroundColor: "rgba(255, 206, 86, 0.5)",
+      backgroundColor: "#bc5090",
     },
     {
       label: "2020",
       data: handleData("2020"),
-      backgroundColor: "rgba(75, 192, 192, 0.5)",
+      backgroundColor: "#ff6361",
     },
     {
       label: "2019",
       data: handleData("2019"),
-      backgroundColor: "rgba(153, 102, 255, 0.5)",
+      backgroundColor: "#ffa600",
     },
   ],
 };
