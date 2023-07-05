@@ -35,16 +35,20 @@ export default function Projects() {
           <h1 data-theme={theme}>
             <FormattedMessage id="work" />
           </h1>
-          <p>Some projects</p>
+          <span>
+            <p>Tunnisterekisteri - Julkinen palvelu</p>
+            <p>Tunnisterekisteri - Sisäinen työkalu</p>
+            <p>Kustantajaportaali - Tulossa vuonna 2024</p>
+          </span>
         </span>
         <span>
           <h1 data-theme={theme}>
             <FormattedMessage id="petProjects" />
           </h1>
           <span>
-            <p>Projects 1</p>
-            <p>Projects 2</p>
-            <p>Project 3</p>
+            <p>koripallopaikat.com</p>
+            <p>create-react-app.com</p>
+            <p>wishlist.villivald.com</p>
           </span>
         </span>
       </div>
