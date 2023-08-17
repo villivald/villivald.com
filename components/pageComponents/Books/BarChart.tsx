@@ -27,10 +27,6 @@ const options = {
     legend: {
       position: "top" as const,
     },
-    title: {
-      display: true,
-      text: "Chart.js Bar Chart",
-    },
   },
 };
 
@@ -91,6 +87,6 @@ const books = {
   ],
 };
 
-export default function Chart() {
+export default function BarChart() {
   return <Bar options={options} data={books} />;
 }

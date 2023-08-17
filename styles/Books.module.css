@@ -3,7 +3,7 @@
 }
 
 .mainContainer > div {
-  padding: 1rem 0;
+  padding: 1rem 0 2rem;
 }
 
 .mainContainer > div > div {
@@ -138,6 +138,10 @@
     inset 0 -1px 0 1px hsla(0deg 0% 0% / 30%), 0 8px 10px hsla(0deg 0% 0% / 15%);
 }
 
+.mainContainer canvas:last-child {
+  display: none !important;
+}
+
 @media (width >= 1300px) {
   .mainContainer > div > div > div {
     width: 14.285%;
@@ -155,6 +159,14 @@
   .mainContainer > div > div > div:has(+ div:hover),
   .mainContainer > div > div > div:hover + div {
     scale: 1;
+  }
+
+  .mainContainer canvas:first-of-type {
+    display: none !important;
+  }
+
+  .mainContainer canvas:last-of-type {
+    display: inline !important;
   }
 }
 

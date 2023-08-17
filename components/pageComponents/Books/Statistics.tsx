@@ -1,7 +1,9 @@
 import { useRouter } from "next/router";
 import { FormattedMessage } from "react-intl";
 
-import Chart from "./Chart";
+import BarChart from "./BarChart";
+import DoughnutChart from "./DoughnutChart";
+
 import styles from "../../../styles/Books.module.css";
 
 export default function Statistics() {
@@ -25,7 +27,8 @@ export default function Statistics() {
           <FormattedMessage id="statistics" />
         </button>
       </div>
-      <Chart />
+      <BarChart />
+      <DoughnutChart />
     </div>
   );
 }
