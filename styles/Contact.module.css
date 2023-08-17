@@ -35,24 +35,17 @@
     min-height: 10vh;
   }
 
-  .mainContainer a {
-    display: grid;
+  .mainContainer > div {
+    height: calc((100vh - 10vh - 10vh - 60px) / 3);
   }
 
   .mainContainer img {
     height: 24vh;
-    justify-self: center;
   }
 }
 
 @media (width <= 750px) {
   .mainContainer img {
     width: 25vw;
-  }
-}
-
-@media (width <= 500px) {
-  .mainContainer {
-    min-height: 80vh;
   }
 }
