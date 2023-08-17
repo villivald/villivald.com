@@ -15,7 +15,7 @@ const en = {
   russianStudies: "Russian Language and Literature",
   unihelGraduated: "Graduated as a Master of Arts (300 ECTS)",
   computerScience: "Computer Science",
-  labStudies: "Currently studying - 4th year (190/240 ECTS)",
+  labStudies: "On hold (190/240 ECTS)",
   coursesAndCertificates: "Courses & Certificates",
   courses: "Courses",
   certificates: "Certificates",
@@ -37,6 +37,10 @@ const en = {
   gallery: "Gallery",
   statistics: "Statistics",
   homePage: "Home page",
+  mastersThesis: "The Master's Thesis",
+  transcript: "Transcript of Records",
+  library: "(Helsinki University Library)",
+  link: "Link",
 
   // Alt texts
   "alt.old.1": "Screenshot of the first version of my website from 2019",

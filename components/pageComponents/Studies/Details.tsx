@@ -1,3 +1,5 @@
+import { FormattedMessage } from "react-intl";
+
 import styles from "../../../styles/Studies.module.css";
 
 type DetailsProps = {
@@ -5,18 +7,28 @@ type DetailsProps = {
   text: string;
   link: string;
   theme: string;
+  description: string;
 };
 
-export const Details = ({ title, text, link, theme }: DetailsProps) => {
+export const Details = ({
+  title,
+  text,
+  link,
+  theme,
+  description,
+}: DetailsProps) => {
   return (
     <div className={styles.toggle}>
       <details>
         <summary data-theme={theme}>{title}</summary>
         <div>
           <p data-theme={theme}>{text}</p>
-          <a data-theme={theme} href={link}>
-            Link
-          </a>
+          <p>
+            <a data-theme={theme} href={link}>
+              <FormattedMessage id="link" />
+            </a>{" "}
+            <span data-theme={theme}>{description}</span>
+          </p>
         </div>
       </details>
     </div>

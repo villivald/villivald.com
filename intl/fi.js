@@ -15,7 +15,7 @@ const fi = {
   russianStudies: "Venäjän kieli ja kirjallisuus",
   unihelGraduated: "Valmistunut Filosofian maisteriksi (300 OP)",
   computerScience: "Tietojenkäsittelytiede",
-  labStudies: "Opiskelen neljättä vuotta - (190/240 OP)",
+  labStudies: "Tauolla (190/240 OP)",
   coursesAndCertificates: "Kurssit ja sertifikaatit",
   courses: "Kurssit",
   certificates: "Sertifikaatit",
@@ -39,6 +39,10 @@ const fi = {
   gallery: "Galleria",
   statistics: "Tilastot",
   homePage: "Etusivu",
+  mastersThesis: "Pro gradu -tutkielma",
+  transcript: "Opintosuoritusote",
+  library: "(Helsingin yliopiston kirjasto)",
+  link: "Linkki",
 
   // Alt texts
   "alt.old.1":

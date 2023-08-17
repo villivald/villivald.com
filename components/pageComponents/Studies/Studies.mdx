@@ -34,10 +34,11 @@ import { Details } from "./Details";
   </span>
 
 <Details
-  title="The Master's Thesis"
-  text="Name"
-  link="Link"
+  title={<FormattedMessage id="mastersThesis" />}
+  text="The perception of Gaito Gazdanov in the press (1926-1939)"
+  link="https://helka.helsinki.fi/permalink/358UOH_INST/q5v72t/alma9929028163506253"
   theme={useContext(ThemeContext)}
+  description={<FormattedMessage id="library" />}
 />
 
 <HelsinkiProgress />
@@ -64,10 +65,10 @@ import { Details } from "./Details";
   </span>
 
 <Details
-  title="Description"
-  text="Name"
-  link="Link"
+  title={<FormattedMessage id="transcript" />}
+  link="./transcript.pdf"
   theme={useContext(ThemeContext)}
+  description="(PDF, 0.25 MB)"
 />
 
 <LabProgress />
@@ -89,7 +90,7 @@ import { Details } from "./Details";
       useContext(ThemeContext) === "dark" ? styles.textDark : styles.textLight
     }
   >
-    [Frontend Masters](https://github.com/villivald/frontendmasters)
+    [Frontend Masters](https://frontendmasters.com/u/villivald/)
   </span>
 - <span
     className={

@@ -91,7 +91,9 @@ li:has(span.textDark) p {
 }
 
 .toggle > details > div > p[data-theme="dark"],
-.toggle > details > div > a[data-theme="dark"] {
+.toggle > details > div > a[data-theme="dark"],
+.toggle > details > div > p > span[data-theme="dark"],
+.toggle > details > div > p > a[data-theme="dark"] {
   color: var(--color-white);
 }
 
@@ -148,7 +150,7 @@ li:has(span.textDark) p {
   }
 }
 
-@media (width <= 800px) {
+@media (width <= 900px) {
   .mainContainer > div {
     grid-template-columns: 1fr;
     place-items: stretch;
