@@ -180,12 +180,7 @@
     height: 20vh;
   }
 
-  .cardWrapper {
-    margin-bottom: 6rem;
-  }
-
   .mainContainer {
     min-height: 80vh;
-    padding-bottom: 4rem;
   }
 }

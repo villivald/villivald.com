@@ -127,12 +127,6 @@ li:has(span.textDark) p {
   .mainContainer {
     padding: 2rem;
   }
-
-  @media (width <= 500px) {
-    .mainContainer {
-      padding-bottom: 6rem;
-    }
-  }
 }
 
 @media (width <= 1000px) {
