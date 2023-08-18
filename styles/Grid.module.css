@@ -39,9 +39,3 @@
     width: 45vw;
   }
 }
-
-@media (width <= 500px) {
-  .main {
-    padding-bottom: 12vh;
-  }
-}
