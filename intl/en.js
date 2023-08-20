@@ -5,6 +5,7 @@ const en = {
   blogPosts: "The latest blog posts",
   contact: "Contact",
   koripallopaikat: "Basketball",
+  basketballCourts: "Basketball courts",
   projects: "Projects",
   study: "Study",
   timeline: "Timeline",
@@ -41,6 +42,9 @@ const en = {
   transcript: "Transcript of Records",
   library: "(Helsinki University Library)",
   link: "Link",
+  "identifierServices.public": "Identifier services - Public services",
+  "identifierServices.admin": "Identifier services - Internal services",
+  publisherPortal: "Publisher Portal - Comming in 2024",
 
   // Alt texts
   "alt.old.1": "Screenshot of the first version of my website from 2019",

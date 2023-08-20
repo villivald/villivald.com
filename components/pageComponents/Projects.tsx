@@ -36,9 +36,24 @@ export default function Projects() {
             <FormattedMessage id="work" />
           </h1>
           <span>
-            <p>Tunnisterekisteri - Julkinen palvelu</p>
-            <p>Tunnisterekisteri - Sisäinen työkalu</p>
-            <p>Kustantajaportaali - Tulossa vuonna 2024</p>
+            <p>
+              <p data-image="public"></p>
+              <a href="https://tunnisteportaali.kansalliskirjasto.fi/">
+                <FormattedMessage id="identifierServices.public" />
+              </a>
+            </p>
+            <p>
+              <p data-image="admin"></p>
+              <span>
+                <FormattedMessage id="identifierServices.admin" />
+              </span>
+            </p>
+            <p>
+              <p data-image="publisher"></p>
+              <span>
+                <FormattedMessage id="publisherPortal" />
+              </span>
+            </p>
           </span>
         </span>
         <span>
@@ -46,9 +61,22 @@ export default function Projects() {
             <FormattedMessage id="petProjects" />
           </h1>
           <span>
-            <p>koripallopaikat.com</p>
-            <p>create-react-app.com</p>
-            <p>wishlist.villivald.com</p>
+            <p>
+              <p data-image="koripallo"></p>
+              <a href="https://koripallopaikat.com/">
+                <FormattedMessage id="basketballCourts" />
+              </a>
+            </p>
+            <p>
+              <p data-image="cra"></p>
+              <a href="https://create-react-app.com/">
+                Create-React-App <FormattedMessage id="blog" />
+              </a>
+            </p>
+            <p>
+              <p data-image="wishlist"></p>
+              <a href="https://wishlist.villivald.com">Wishlist App</a>
+            </p>
           </span>
         </span>
       </div>

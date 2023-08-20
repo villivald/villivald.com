@@ -5,6 +5,7 @@ const fi = {
   blogPosts: "Viimeisimmät blogikirjoitukset",
   contact: "Ota yhteyttä",
   koripallopaikat: "Koripallo",
+  basketballCourts: "Koripallopaikat",
   projects: "Projektit",
   study: "Opiskelu",
   timeline: "Aikajana",
@@ -43,6 +44,9 @@ const fi = {
   transcript: "Opintosuoritusote",
   library: "(Helsingin yliopiston kirjasto)",
   link: "Linkki",
+  "identifierServices.public": "Tunnisteportaali - Julkiset palvelut",
+  "identifierServices.admin": "Tunnisteportaali - Sisäinen työkalu",
+  publisherPortal: "Kustantajaportaali - tulossa vuonna 2024",
 
   // Alt texts
   "alt.old.1":

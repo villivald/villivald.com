@@ -97,26 +97,55 @@
   padding: 2rem;
 }
 
-.mainContainer > div:nth-child(4) span span p {
+.mainContainer > div:nth-child(4) span span p > p {
   display: grid;
-  place-items: center;
-  width: 8rem;
-  height: 8rem;
+  justify-content: center;
+  width: 9rem;
+  height: 9rem;
   background-color: var(--color-brand-yellow);
+  padding: 0.5rem;
+  background-size: cover;
 }
 
-.mainContainer > div:nth-child(4) span span p:nth-child(1) {
+.mainContainer > div:nth-child(4) span span p > * {
+  display: flex;
+  max-width: 9rem;
+}
+
+.mainContainer > div:nth-child(4) span span p[data-image="public"],
+.mainContainer > div:nth-child(4) span span p[data-image="admin"] {
+  background-image: url("/images/kk.webp");
+}
+
+.mainContainer > div:nth-child(4) span span p[data-image="publisher"] {
+  background-image: url("/images/thinking.svg");
+}
+
+.mainContainer > div:nth-child(4) span span p[data-image="cra"] {
+  background-image: url("/images/cra.webp");
+}
+
+.mainContainer > div:nth-child(4) span span p[data-image="koripallo"] {
+  background-image: url("/images/koripallopaikat.svg");
+  background-color: var(--color-brand-green);
+}
+
+.mainContainer > div:nth-child(4) span span p[data-image="wishlist"] {
+  background-image: url("/images/wishlist.webp");
+}
+
+.mainContainer > div:nth-child(4) span span > p:nth-child(1) {
   margin-left: 10%;
   margin-top: 10%;
 }
 
-.mainContainer > div:nth-child(4) span span p:nth-child(2) {
+.mainContainer > div:nth-child(4) span span > p:nth-child(2) {
   margin-left: 40%;
   margin-top: 10%;
   margin-bottom: 10%;
 }
 
-.mainContainer > div:nth-child(4) span span p:nth-child(3) {
+.mainContainer > div:nth-child(4) span span > p:nth-child(3) {
   margin-left: 70%;
   margin-bottom: 10%;
 }
@@ -131,7 +160,7 @@
   background-color: var(--color-brand-red30);
 }
 
-.mainContainer > div:nth-child(4) span:last-child {
+.mainContainer > div:nth-child(4) > span:last-child {
   background-color: var(--color-brand-teal30);
 }
 
@@ -197,12 +226,6 @@
   @media (width <= 700px) {
     .mainContainer > div:nth-child(1) {
       margin: 0 !important;
-    }
-  }
-
-  @media (width <= 500px) {
-    .mainContainer > div:nth-child(4) span:last-child {
-      padding-bottom: 4rem;
     }
   }
 }
