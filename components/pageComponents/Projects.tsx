@@ -36,24 +36,33 @@ export default function Projects() {
             <FormattedMessage id="work" />
           </h1>
           <span>
-            <p>
+            <section>
               <p data-image="public"></p>
-              <a href="https://tunnisteportaali.kansalliskirjasto.fi/">
+              <a
+                data-theme={theme}
+                href="https://tunnisteportaali.kansalliskirjasto.fi/"
+              >
                 <FormattedMessage id="identifierServices.public" />
+                <Image
+                  src="/emojis/link.svg"
+                  width={24}
+                  height={24}
+                  alt="external link"
+                />
               </a>
-            </p>
-            <p>
+            </section>
+            <section>
               <p data-image="admin"></p>
-              <span>
+              <span data-theme={theme}>
                 <FormattedMessage id="identifierServices.admin" />
               </span>
-            </p>
-            <p>
+            </section>
+            <section>
               <p data-image="publisher"></p>
-              <span>
+              <span data-theme={theme}>
                 <FormattedMessage id="publisherPortal" />
               </span>
-            </p>
+            </section>
           </span>
         </span>
         <span>
@@ -61,22 +70,42 @@ export default function Projects() {
             <FormattedMessage id="petProjects" />
           </h1>
           <span>
-            <p>
+            <section>
               <p data-image="koripallo"></p>
-              <a href="https://koripallopaikat.com/">
+              <a data-theme={theme} href="https://koripallopaikat.com/">
                 <FormattedMessage id="basketballCourts" />
+                <Image
+                  src="/emojis/link.svg"
+                  width={24}
+                  height={24}
+                  alt="external link"
+                />
               </a>
-            </p>
-            <p>
+            </section>
+            <section>
               <p data-image="cra"></p>
-              <a href="https://create-react-app.com/">
+              <a data-theme={theme} href="https://create-react-app.com/">
                 Create-React-App <FormattedMessage id="blog" />
+                <Image
+                  src="/emojis/link.svg"
+                  width={24}
+                  height={24}
+                  alt="external link"
+                />
               </a>
-            </p>
-            <p>
+            </section>
+            <section>
               <p data-image="wishlist"></p>
-              <a href="https://wishlist.villivald.com">Wishlist App</a>
-            </p>
+              <a data-theme={theme} href="https://wishlist.villivald.com">
+                Wishlist App
+                <Image
+                  src="/emojis/link.svg"
+                  width={24}
+                  height={24}
+                  alt="external link"
+                />
+              </a>
+            </section>
           </span>
         </span>
       </div>
