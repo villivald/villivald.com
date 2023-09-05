@@ -45,9 +45,27 @@
   height: 112.5%;
 }
 
+.container > div:last-child {
+  display: none;
+}
+
 @media (width <= 450px) {
+  .container > div:nth-of-type(2) {
+    display: none;
+  }
+
+  .container > div:last-of-type {
+    display: flex;
+  }
+
   .proto {
-    height: 88%;
+    height: 87.5%;
+  }
+}
+
+@media (width <= 400px) {
+  .proto {
+    height: 86%;
   }
 }
 

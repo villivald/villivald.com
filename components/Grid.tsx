@@ -1,7 +1,6 @@
 import Link from "next/link";
 
 import BooksGrid from "./gridComponents/BooksGrid";
-import KoripallopaikatGrid from "./gridComponents/KoripallopaikatGrid";
 import BlogGrid from "./gridComponents/BlogGrid";
 import OldGrid from "./gridComponents/OldGrid";
 import ContactGrid from "./gridComponents/ContactGrid";
@@ -17,9 +16,6 @@ export default function Grid() {
     <main className={styles.main}>
       <Link href="/study">
         <StudyGrid />
-      </Link>
-      <Link href="/koripallopaikat">
-        <KoripallopaikatGrid />
       </Link>
       <Link href="/blog">
         <BlogGrid />

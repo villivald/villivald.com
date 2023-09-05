@@ -18,6 +18,7 @@ export default function ContactGrid() {
         height={200}
       />
       <CardFooter emoji="contact" text="contact" />
+      <CardFooter emoji="contact" text="contactMobile" />
     </div>
   );
 }

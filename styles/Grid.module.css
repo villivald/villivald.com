@@ -1,16 +1,16 @@
 .main {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   place-items: center;
   gap: 1rem;
   grid-row-gap: 3rem;
   min-height: 70vh;
   padding: 2rem 0;
+  container: inline-size;
 }
 
 .main > a {
-  width: 25vw;
-  max-width: 30rem;
+  width: 22cqw;
   aspect-ratio: 1/1;
   text-decoration: none;
 }
@@ -30,12 +30,22 @@
     radial-gradient(at 0% 0%, hsl(343deg 100% 76%) 0, transparent 50%);
 }
 
-@media (width <= 730px) {
+@media (width <= 1400px) {
+  .main {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .main > a {
+    width: 29cqw;
+  }
+}
+
+@media (width <= 900px) {
   .main {
     grid-template-columns: repeat(2, 1fr);
   }
 
   .main > a {
-    width: 45vw;
+    width: 44cqw;
   }
 }

@@ -9,6 +9,7 @@ export default function OldGrid() {
         <div className={styles.done} />
       </div>
       <CardFooter emoji="old" text="old" />
+      <CardFooter emoji="old" text="oldMobile" />
     </div>
   );
 }

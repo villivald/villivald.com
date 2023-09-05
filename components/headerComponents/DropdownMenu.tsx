@@ -15,7 +15,6 @@ export default function DropdownMenu() {
     "about",
     "blog",
     "contact",
-    "koripallopaikat",
     "books",
     "projects",
     "study",

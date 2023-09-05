@@ -50,6 +50,10 @@
   display: none;
 }
 
+.container > div:last-child {
+  display: none;
+}
+
 .phone {
   position: absolute;
   border-radius: 50%;
@@ -71,4 +75,14 @@
   transform: scale(1.1) rotate(2deg);
   outline: 2px solid var(--color-white);
   box-shadow: 0 0 4rem var(--color-white);
+}
+
+@media (width <= 450px) {
+  .container > div:nth-of-type(2) {
+    display: none;
+  }
+
+  .container > div:last-of-type {
+    display: flex;
+  }
 }
