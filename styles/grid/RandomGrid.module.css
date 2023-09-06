@@ -1,0 +1,14 @@
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  background-image: url("/emojis/game.svg");
+  transition: 0.5s var(--easing-normal);
+}
+
+.container:hover {
+  scale: 1.1;
+  rotate: -5deg;
+  transition: 0.5s var(--easing-normal);
+}

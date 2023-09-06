@@ -30,6 +30,12 @@
     radial-gradient(at 0% 0%, hsl(343deg 100% 76%) 0, transparent 50%);
 }
 
+@media (width > 1400px) {
+  .main > a:last-of-type {
+    display: none;
+  }
+}
+
 @media (width <= 1400px) {
   .main {
     grid-template-columns: repeat(3, 1fr);
@@ -47,5 +53,9 @@
 
   .main > a {
     width: 44cqw;
+  }
+
+  .main > a:last-of-type {
+    display: none;
   }
 }
