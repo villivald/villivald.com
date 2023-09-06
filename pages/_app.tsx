@@ -1,7 +1,7 @@
 import type { AppProps } from "next/app";
 import { Amiko, Crete_Round, Istok_Web } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { IntlProvider } from "react-intl";
 
 import { ThemeContext } from "../context";
@@ -34,6 +34,17 @@ const istok = Istok_Web({
 export default function App({ Component, pageProps }: AppProps) {
   // Theme state
   const [theme, setTheme] = useState("light");
+
+  // Check for user's preferred theme from OS or browser
+  useEffect(() => {
+    const userPrefersDark =
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+    if (userPrefersDark) {
+      setTheme("dark");
+    }
+  }, []);
 
   // Translations state
   const en: keyof typeof translations = "en";
