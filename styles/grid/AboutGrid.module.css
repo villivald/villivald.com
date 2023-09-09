@@ -29,3 +29,9 @@
 .container:hover .cat {
   opacity: 1;
 }
+
+@media (prefers-reduced-motion) {
+  .container:hover .cat {
+    opacity: 0;
+  }
+}

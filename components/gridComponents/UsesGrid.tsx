@@ -8,14 +8,20 @@ import styles from "../../styles/grid/UsesGrid.module.css";
 
 export default function UsesGrid() {
   const [isOpen, setIsOpen] = useState(false);
+
+  // Check if prefers reduced motion is enabled
+  const prefersReducedMotion =
+    typeof window !== "undefined" &&
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
   return (
     <div className={styles.container}>
       {!isOpen && <p className={styles.to}>TO</p>}
       <div
         data-isopen={isOpen}
         className={styles.parent}
-        onMouseEnter={() => setIsOpen(true)}
-        onMouseLeave={() => setIsOpen(false)}
+        onMouseEnter={() => !prefersReducedMotion && setIsOpen(true)}
+        onMouseLeave={() => !prefersReducedMotion && setIsOpen(false)}
       >
         <div data-isopen={isOpen} className={styles.child}>
           <Atropos>

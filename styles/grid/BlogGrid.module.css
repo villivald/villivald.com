@@ -20,3 +20,13 @@
 .container:hover .atropos {
   height: 110%;
 }
+
+@media (prefers-reduced-motion) {
+  .atropos {
+    transition: none;
+  }
+
+  .container:hover .atropos {
+    height: 100%;
+  }
+}

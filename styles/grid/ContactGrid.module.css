@@ -86,3 +86,15 @@
     display: flex;
   }
 }
+
+@media (prefers-reduced-motion) {
+  .container:hover {
+    --a: 30deg;
+  }
+
+  .phone:hover {
+    transform: none;
+    outline: none;
+    box-shadow: none;
+  }
+}

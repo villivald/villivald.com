@@ -45,3 +45,16 @@
   transform: rotate(0deg) scale(1);
   transition: all 2s var(--easing-normal);
 }
+
+@media (prefers-reduced-motion) {
+  .container:hover .image {
+    opacity: 1;
+    border-radius: 0%;
+    transform: none;
+    transition: none;
+  }
+
+  .container:hover .image_alt {
+    opacity: 0;
+  }
+}

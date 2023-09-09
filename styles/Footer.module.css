@@ -107,3 +107,13 @@
     height: 30vh;
   }
 }
+
+@media (prefers-reduced-motion) {
+  .footer > div:nth-of-type(odd) > div:hover {
+    transform: skew(-20deg);
+  }
+
+  .footer > div:nth-of-type(even) > a:hover {
+    transform: none;
+  }
+}

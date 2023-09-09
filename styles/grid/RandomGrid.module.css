@@ -12,3 +12,10 @@
   rotate: -5deg;
   transition: 0.5s var(--easing-normal);
 }
+
+@media (prefers-reduced-motion) {
+  .container:hover {
+    scale: none;
+    rotate: none;
+  }
+}

@@ -87,3 +87,10 @@
 .container:hover .box div:nth-child(6) {
   transition-delay: 3s;
 }
+
+@media (prefers-reduced-motion) {
+  .container:hover .box {
+    opacity: 0;
+    transition: none;
+  }
+}

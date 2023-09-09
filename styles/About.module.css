@@ -249,3 +249,10 @@
     gap: 5rem;
   }
 }
+
+@media (prefers-reduced-motion) {
+  .leftIris,
+  .rightIris {
+    transform: none;
+  }
+}

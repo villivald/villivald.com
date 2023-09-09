@@ -78,3 +78,13 @@
     transform: scale(1.2) rotate(3deg);
   }
 }
+
+@media (prefers-reduced-motion) {
+  .container:hover {
+    animation: none;
+  }
+
+  .container:hover .proto {
+    opacity: 1;
+  }
+}

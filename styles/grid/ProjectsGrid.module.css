@@ -118,3 +118,41 @@
     width: 0.5rem;
   }
 }
+
+@media (prefers-reduced-motion) {
+  .container:hover .p {
+    transform: rotate(90deg) translateX(0) translateY(-5rem);
+  }
+
+  .container:hover .r {
+    transform: rotate(80deg) translateX(1rem) translateY(-13rem);
+  }
+
+  .container:hover .o {
+    transform: rotate(70deg) translateX(9rem) translateY(-15rem);
+  }
+
+  .container:hover .j {
+    transform: rotate(60deg) translateX(4rem);
+  }
+
+  .container:hover .e {
+    transform: rotate(40deg) translateX(10rem) translateY(-4rem);
+  }
+
+  .container:hover .c {
+    transform: rotate(20deg) translateX(17rem);
+  }
+
+  .container:hover .t {
+    transform: rotate(140deg) translateX(3rem) translateY(-1rem);
+  }
+
+  .container:hover .s {
+    transform: rotate(80deg) translateX(7rem) translateY(-10rem);
+  }
+
+  .container:hover .letters {
+    transform: rotate(-52deg) translateX(-6rem) translateY(-2rem);
+  }
+}
