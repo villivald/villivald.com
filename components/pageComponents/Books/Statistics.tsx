@@ -10,7 +10,7 @@ export default function Statistics() {
   const router = useRouter();
 
   return (
-    <div className={styles.mainContainer}>
+    <div className={styles.mainContainer} data-page="statistics">
       <div className={styles.buttonContainer}>
         <button
           className={styles.button}

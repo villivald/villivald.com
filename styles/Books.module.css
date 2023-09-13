@@ -1,9 +1,13 @@
 .mainContainer {
-  min-height: 70vh;
+  min-height: 76vh;
+}
+
+.mainContainer[data-page="statistics"] {
+  padding: 0 4rem 2rem;
 }
 
 .mainContainer > div {
-  padding: 1rem 0 2rem;
+  padding: 2rem;
 }
 
 .mainContainer > div > div {
@@ -96,7 +100,10 @@
   display: flex;
   justify-content: center;
   gap: 0.7rem;
-  padding: 1rem 0;
+}
+
+.mainContainer[data-page="statistics"] .buttonContainer {
+  padding: 1rem 0 2rem;
 }
 
 .button {
@@ -148,6 +155,12 @@
   }
 }
 
+@media (width <= 1400px) {
+  .mainContainer > div {
+    padding: 2rem 0.5rem;
+  }
+}
+
 @media (width <= 1000px) {
   .mainContainer > div > div > div {
     width: 25%;
@@ -176,14 +189,24 @@
   }
 }
 
+@media (width <=600px) {
+  .mainContainer {
+    min-height: 65vh;
+  }
+
+  .mainContainer > div {
+    padding: 2rem 0.25rem;
+  }
+}
+
 @media (width <= 550px) {
   .mainContainer > div > div > div {
     width: 50%;
   }
 }
 
-@media (width <= 500px) {
+@media (width <=600px) {
   .mainContainer {
-    min-height: 80vh;
+    min-height: 75vh;
   }
 }
