@@ -46,7 +46,7 @@ const en = {
   link: "Link",
   "identifierServices.public": "Identifier services - Public services",
   "identifierServices.admin": "Identifier services - Internal services",
-  publisherPortal: "Publisher Portal - Comming in 2024",
+  publisherPortal: "Publisher Portal - Coming in 2024",
 
   // Alt texts
   "alt.old.1": "Screenshot of the first version of my website from 2019",

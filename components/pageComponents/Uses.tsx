@@ -48,16 +48,16 @@ const hardware = [
     image: "watch",
   },
   {
-    name: "Marshall Major IV",
-    link: "https://www.marshallheadphones.com/major-iv",
-    description: "Headphones",
-    image: "marshall",
+    name: "AirPods Pro",
+    link: "https://www.apple.com/airpods-pro/",
+    description: "Earbuds",
+    image: "airpods",
   },
   {
-    name: "Jaybird Vista 2",
-    link: "https://www.jaybirdsport.com/fi-fi/vista2.985-000934.html",
-    description: "Earbuds",
-    image: "vista",
+    name: "Oura Ring",
+    link: "https://ouraring.com/",
+    description: "Ring",
+    image: "oura",
   },
   {
     name: "Keychron K2",
@@ -97,12 +97,6 @@ const software = [
     link: "https://arc.net/",
     description: "Main Browser",
     image: "arc",
-  },
-  {
-    name: "Brave",
-    link: "https://brave.com/",
-    description: "Secondary Browser",
-    image: "brave",
   },
   {
     name: "Figma",
@@ -159,10 +153,10 @@ const software = [
     image: "endel",
   },
   {
-    name: "YouTube Music",
-    link: "https://music.youtube.com/",
+    name: "Apple Music",
+    link: "https://www.apple.com/apple-music/",
     description: "Music app",
-    image: "youtube",
+    image: "apple",
   },
   {
     name: "Pocket Casts",
@@ -220,6 +214,12 @@ const other = [
     link: "https://www.hydroflask.com/21-oz-standard-mouth",
     description: "Water bottle",
     image: "flask",
+  },
+  {
+    name: "Owala FreeSip",
+    link: "https://owalalife.com/products/freesip?variant=43048895316127",
+    description: "Water bottle",
+    image: "owala",
   },
   {
     name: "Productivity Daily Desk Pad",

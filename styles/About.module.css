@@ -1,6 +1,5 @@
 .mainContainer {
   min-height: 70vh;
-  background-color: var(--color-skin);
 }
 
 .mainContainer[data-theme="dark"] {
@@ -165,7 +164,7 @@
   color: var(--color-black);
   height: 1.5rem;
   width: 2.5rem;
-  padding: 1rem;
+  padding: 1rem 2rem;
   text-decoration: none;
 }
 
@@ -181,23 +180,31 @@
 }
 
 .slidesItem[data-slide="slide1"] {
-  background-color: #fdc;
+  background-color: var(--color-brand-yellow);
 }
 
 .slidesItem[data-slide="slide2"] {
-  background-color: #bfd;
+  background-color: var(--color-brand-green);
 }
 
 .slidesItem[data-slide="slide3"] {
-  background-color: #cdf;
+  background-color: color-mix(
+    in oklch,
+    var(--color-brand-teal) 100%,
+    var(--color-white) 100%
+  );
 }
 
 .slidesItem[data-slide="slide4"] {
-  background-color: #dca;
+  background-color: var(--color-skin);
 }
 
 .slidesItem[data-slide="slide5"] {
-  background-color: #ffc;
+  background-color: color-mix(
+    in oklch,
+    var(--color-brand-violet30) 100%,
+    var(--color-white) 50%
+  );
 }
 
 .question {
