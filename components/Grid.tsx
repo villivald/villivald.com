@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useState } from "react";
 
 import BooksGrid from "./gridComponents/BooksGrid";
 import BlogGrid from "./gridComponents/BlogGrid";
@@ -13,6 +14,8 @@ import RandomGrid from "./gridComponents/RandomGrid";
 import styles from "../styles/Grid.module.css";
 
 export default function Grid() {
+  const [randomLink, setRandomLink] = useState("");
+
   const getRandomLink = () => {
     const links = [
       "/study",
@@ -26,7 +29,7 @@ export default function Grid() {
     ];
     const randomLink = links[Math.floor(Math.random() * links.length)];
 
-    return randomLink;
+    setRandomLink(randomLink);
   };
 
   return (
@@ -55,7 +58,7 @@ export default function Grid() {
       <Link href="/old">
         <OldGrid />
       </Link>
-      <Link href={getRandomLink()}>
+      <Link href={randomLink} onMouseOver={() => getRandomLink()}>
         <RandomGrid />
       </Link>
     </main>
