@@ -1,4 +1,4 @@
-import React from "react";
+import { useContext } from "react";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -11,6 +11,8 @@ import {
 import { Bar } from "react-chartjs-2";
 
 import data from "./data.json";
+
+import { ThemeContext } from "../../../context";
 
 ChartJS.register(
   CategoryScale,
@@ -88,5 +90,13 @@ const books = {
 };
 
 export default function BarChart() {
+  const theme = useContext(ThemeContext);
+
+  if (theme === "dark") {
+    ChartJS.defaults.color = "#fff";
+  } else {
+    ChartJS.defaults.color = "#1c1d2b";
+  }
+
   return <Bar options={options} data={books} />;
 }
