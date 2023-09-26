@@ -10,6 +10,22 @@
   padding: 2rem;
 }
 
+.mainContainer > h2 {
+  text-align: center;
+}
+
+.mainContainer > h2:first-of-type {
+  margin-bottom: 1rem;
+}
+
+.mainContainer > h2:last-of-type {
+  margin-top: 2rem;
+}
+
+.mainContainer[data-theme="dark"] > h2 {
+  color: var(--color-white);
+}
+
 .mainContainer > div > div {
   display: flex;
   flex-wrap: wrap;
@@ -22,6 +38,22 @@
   box-sizing: border-box;
   padding: 0.5rem;
   transition: all 0.25s ease;
+}
+
+.mainContainer div:has(.languageChart) {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.languageChart {
+  max-width: 20vw;
+  max-height: 20vw;
+  justify-content: center;
+}
+
+.mainContainer[data-theme="dark"] .languageChart > h2 {
+  color: var(--color-white);
 }
 
 .yearCard {
@@ -145,7 +177,7 @@
     inset 0 -1px 0 1px hsla(0deg 0% 0% / 30%), 0 8px 10px hsla(0deg 0% 0% / 15%);
 }
 
-.mainContainer canvas:last-child {
+.mainContainer > canvas:last-of-type {
   display: none !important;
 }
 
@@ -158,6 +190,20 @@
 @media (width <= 1400px) {
   .mainContainer > div {
     padding: 2rem 0.5rem;
+  }
+}
+
+@media (width <= 1250px) {
+  .mainContainer div:has(.languageChart) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    gap: 3rem;
+  }
+
+  .languageChart {
+    max-width: 30vw;
+    max-height: 30vw;
   }
 }
 
@@ -186,6 +232,16 @@
 @media (width <= 750px) {
   .mainContainer > div > div > div {
     width: 33%;
+  }
+
+  .mainContainer div:has(.languageChart) {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  .languageChart {
+    max-width: 60vw;
+    max-height: 60vw;
   }
 }
 
