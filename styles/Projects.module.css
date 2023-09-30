@@ -15,6 +15,15 @@
   margin-top: 1rem;
   grid-area: 1 / 1 / 2 / 3;
   container-type: inline-size;
+  box-shadow: 0 0 0.1rem 2rem var(--color-brand-dark);
+  filter: drop-shadow(0 0 2rem var(--color-brand-red30));
+  pointer-events: none;
+  transition: filter 0.5s var(--easing-normal);
+}
+
+.mainContainer > div > p > a {
+  pointer-events: auto;
+  font-size: var(--fontSize-header3);
 }
 
 .mainContainer > div:nth-child(1)[data-theme="dark"] {
@@ -28,10 +37,6 @@
   padding-bottom: 0.5rem;
 }
 
-.mainContainer > div > p > a {
-  font-size: var(--fontSize-header3);
-}
-
 .mainContainer > div[data-theme="dark"] > p > a {
   color: var(--color-white);
 }
@@ -42,7 +47,7 @@
 
 .mainContainer > div:nth-child(2),
 .mainContainer > div:nth-child(3) {
-  background-color: var(--color-black);
+  background-color: var(--color-brand-dark);
   width: 200px;
   height: 100px;
   clip-path: polygon(
@@ -89,6 +94,11 @@
   padding: 2rem;
 }
 
+.mainContainer > div:nth-child(1):hover {
+  filter: drop-shadow(0 0 2rem var(--color-brand-grey30));
+  transition: filter 0.5s var(--easing-normal);
+}
+
 .mainContainer > div > span > h1[data-theme="dark"],
 .mainContainer > div:nth-child(4) span span section > *[data-theme="dark"] {
   color: var(--color-brand-grey95);
@@ -115,6 +125,7 @@
   background-color: var(--color-brand-yellow-saturated);
   padding: 0.5rem;
   background-size: cover;
+  border-radius: 0.5rem;
 }
 
 .mainContainer > div:nth-child(4) span span section > * {
@@ -181,8 +192,8 @@
 .mainContainer > div:nth-child(4) span:first-child {
   background-color: color-mix(
     in oklch,
-    var(--color-brand-yellow) 100%,
-    transparent 30%
+    var(--color-brand-red) 15%,
+    var(--color-white) 5%
   );
 }
 
