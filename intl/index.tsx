@@ -1,5 +1,5 @@
-import enTranslations from "./en.js";
-import fiTranslations from "./fi.js";
+import enTranslations from "./en";
+import fiTranslations from "./fi";
 
 export const translations = {
   fi: fiTranslations,
