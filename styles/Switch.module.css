@@ -59,6 +59,10 @@
   justify-content: center;
 }
 
+.switch > span:first-of-type {
+  display: none;
+}
+
 .languageSwitch > span:first-child > span,
 .languageSwitch > span:last-child > span {
   width: 4rem;

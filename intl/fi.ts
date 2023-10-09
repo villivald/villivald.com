@@ -62,8 +62,7 @@ const fi = {
     "Kuvakaappaus toisesta versiosta verkkosivustosta lopuvuodesta 2019",
   "alt.old.3":
     "Kuvakaappaus kolmannesta versiosta joka oli livenä vuodesta 2020 vuoteen 2023",
-  "alt.mobileLanguageSwitcher":
-    "Kielenvaihto kuvake - klikkaa vaihtaaksesi kieltä",
+  "alt.languageSwitcher": "Kielenvaihto kuvake - klikkaa vaihtaaksesi kieltä",
   "alt.en": "USA lipun kuvake - klikkaa vaihtaaksesi kieltä englanniksi",
   "alt.fi": "Suomen lipun kuvake - klikkaa vaihtaaksesi kieltä suomeksi",
   "alt.languageArrow": "Nuolikuvake joka osoittaa valittua kieltä",

@@ -59,7 +59,7 @@ const en = {
     "Screenshot of the second iteration of my website from late 2019",
   "alt.old.3":
     "Screenshot of the third iteration of my website which was live from 2020 to 2023",
-  "alt.mobileLanguageSwitcher":
+  "alt.languageSwitcher":
     "Language switcher icon - click to change the language of the website",
   "alt.en": "USA flag icon - click to change the language to English",
   "alt.fi": "Finland flag icon - click to change the language to Finnish",

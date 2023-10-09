@@ -23,7 +23,7 @@ export default function LanguageSwitch({ changeLocale }: Props) {
     <>
       <p className={styles.mobileLanguageSwitch}>
         <button
-          aria-label={intl.formatMessage({ id: "alt.mobileLanguageSwitcher" })}
+          aria-label={intl.formatMessage({ id: "alt.languageSwitcher" })}
           onClick={handleChange}
           data-checked={checked}
         ></button>
@@ -46,8 +46,22 @@ export default function LanguageSwitch({ changeLocale }: Props) {
           width={100}
           height={100}
         />
-        <label className={styles.switch}>
-          <input type="checkbox" checked={checked} onChange={handleChange} />
+        <label className={styles.switch} htmlFor="switch">
+          <span>
+            {intl.formatMessage({
+              id: "alt.languageSwitcher",
+            })}
+          </span>
+          <input
+            id="switch"
+            type="checkbox"
+            role="switch"
+            checked={checked}
+            onChange={handleChange}
+            aria-label={intl.formatMessage({
+              id: "alt.languageSwitcher",
+            })}
+          />
           <span data-theme={theme}></span>
         </label>
         <span>
