@@ -11,17 +11,49 @@ export default function Footer() {
   const router = useRouter();
 
   const socialIcons = [
-    { name: "gitlab", link: "https://version.helsinki.fi/villival" },
-    { name: "github", link: "https://github.com/villivald" },
-    { name: "linkedin", link: "https://www.linkedin.com/in/villivald/" },
-    { name: "mastodon", link: "https://notacult.social/@villivald" },
+    {
+      name: "gitlab",
+      link: "https://version.helsinki.fi/villival",
+      altText: "GitLab - logo",
+    },
+    {
+      name: "github",
+      link: "https://github.com/villivald",
+      altText: "GitHub - logo",
+    },
+    {
+      name: "linkedin",
+      link: "https://linkedin.com/in/villivald/",
+      altText: "LinkedIn - logo",
+    },
+    {
+      name: "mastodon",
+      link: "https://notacult.social/@villivald",
+      altText: "Mastodon - logo",
+    },
   ];
 
   const otherIcons = [
-    { name: "koripallopaikat", link: "https://www.koripallopaikat.com" },
-    { name: "email", link: "mailto:maxim@villivald.com" },
-    { name: "blog", link: "https://www.create-react-app.com/" },
-    { name: "hackernoon", link: "https://hackernoon.com/u/villivald" },
+    {
+      name: "koripallopaikat",
+      link: "https://koripallopaikat.com",
+      altText: "Basketball courts project",
+    },
+    {
+      name: "email",
+      link: "mailto:maxim@villivald.com",
+      altText: "Send email",
+    },
+    {
+      name: "blog",
+      link: "https://create-react-app.com/",
+      altText: "My personal blog",
+    },
+    {
+      name: "hackernoon",
+      link: "https://hackernoon.com/u/villivald",
+      altText: "HackerNoon - logo",
+    },
   ];
 
   const Divider = () => (
@@ -42,7 +74,7 @@ export default function Footer() {
           <Link href={icon.link} key={icon.name}>
             <Image
               src={`/emojis/${icon.name}.svg`}
-              alt="logo"
+              alt={icon.altText}
               width={64}
               height={64}
             />
@@ -55,7 +87,7 @@ export default function Footer() {
           <Link href={icon.link} key={icon.name}>
             <Image
               src={`/emojis/${icon.name}.svg`}
-              alt="logo"
+              alt={icon.altText}
               width={64}
               height={icon.name === "hackernoon" ? 48 : 64}
               data-theme={icon.name === "hackernoon" && theme === "dark"}
