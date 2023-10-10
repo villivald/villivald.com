@@ -15,7 +15,7 @@ export default function Projects() {
         <p>
           <Image
             src="/emojis/github_light.svg"
-            alt="logo"
+            alt="Github logo"
             width={30}
             height={30}
           />
@@ -47,7 +47,7 @@ export default function Projects() {
                   src="/emojis/link.svg"
                   width={24}
                   height={24}
-                  alt="external link"
+                  alt="Logo of the National Library of Finland - external link"
                 />
               </a>
             </section>
@@ -78,7 +78,7 @@ export default function Projects() {
                   src="/emojis/link.svg"
                   width={24}
                   height={24}
-                  alt="external link"
+                  alt="Logo of koripallopaikat.com project - external link"
                 />
               </a>
             </section>
@@ -90,7 +90,7 @@ export default function Projects() {
                   src="/emojis/link.svg"
                   width={24}
                   height={24}
-                  alt="external link"
+                  alt="Logo of create-react-app.com blog - external link"
                 />
               </a>
             </section>
@@ -102,7 +102,7 @@ export default function Projects() {
                   src="/emojis/link.svg"
                   width={24}
                   height={24}
-                  alt="external link"
+                  alt="Logo of my wishlist app project - external link"
                 />
               </a>
             </section>
