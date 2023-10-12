@@ -60,6 +60,12 @@
   color: var(--color-white);
 }
 
+h2 > .emojiContainerLight,
+h2 > .emojiContainerDark {
+  font-family: var(--font-subheader);
+  font-size: var(--fontSize-header3);
+}
+
 .emojiContainerDark > img[data-theme="dark"] {
   filter: invert(1);
 }

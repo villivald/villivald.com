@@ -1,5 +1,3 @@
-import { FormattedMessage } from "react-intl";
-
 import styles from "../../../styles/Studies.module.css";
 
 type DetailsProps = {
@@ -25,9 +23,8 @@ export const Details = ({
           <p data-theme={theme}>{text}</p>
           <p>
             <a data-theme={theme} href={link}>
-              <FormattedMessage id="link" />
-            </a>{" "}
-            <span data-theme={theme}>{description}</span>
+              {description}
+            </a>
           </p>
         </div>
       </details>

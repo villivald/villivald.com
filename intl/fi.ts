@@ -44,7 +44,7 @@ const fi = {
   homePage: "Etusivu",
   mastersThesis: "Pro gradu -tutkielma",
   transcript: "Opintosuoritusote",
-  library: "(Helsingin yliopiston kirjasto)",
+  library: "Helsingin yliopiston kirjasto",
   link: "Linkki",
   "identifierServices.public": "Tunnisteportaali - Julkiset palvelut",
   "identifierServices.admin": "Tunnisteportaali - Sisäinen työkalu",

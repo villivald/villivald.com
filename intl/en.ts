@@ -42,7 +42,7 @@ const en = {
   homePage: "Home page",
   mastersThesis: "The Master's Thesis",
   transcript: "Transcript of Records",
-  library: "(Helsinki University Library)",
+  library: "Helsinki University Library",
   link: "Link",
   "identifierServices.public": "Identifier services - Public services",
   "identifierServices.admin": "Identifier services - Internal services",
