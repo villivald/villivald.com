@@ -260,7 +260,7 @@ export default function Uses() {
       <figure>
         <Image
           src="/images/uses.webp"
-          alt="Image of my workspace"
+          alt="Workplace - laptop, external monitor, lamp, pens, notebook, etc."
           width={500}
           height={300}
           useMap="#workmap"
