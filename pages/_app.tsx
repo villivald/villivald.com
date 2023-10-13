@@ -64,6 +64,11 @@ export default function App({ Component, pageProps }: AppProps) {
     return error;
   };
 
+  // Sets the document language (hack, need to think of a better way)
+  useEffect(() => {
+    document.documentElement.lang = locale;
+  }, [locale]);
+
   return (
     <div className={`${crete.variable} ${amiko.variable} ${istok.variable}`}>
       <ThemeContext.Provider value={theme}>
