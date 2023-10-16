@@ -35,7 +35,7 @@ export default function Grid() {
   };
 
   return (
-    <main className={styles.main}>
+    <section className={styles.main}>
       <Link href="/study">
         <StudyGrid />
       </Link>
@@ -67,6 +67,6 @@ export default function Grid() {
       >
         <RandomGrid />
       </Link>
-    </main>
+    </section>
   );
 }
