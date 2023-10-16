@@ -11,6 +11,9 @@
   <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/villivald/villivald.com">
   <img alt="Website" src="https://img.shields.io/website?url=https%3A%2F%2Fvillivald.com%2F">
   <img alt="GitHub" src="https://img.shields.io/github/license/villivald/villivald.com">
+  <img alt="Next.js" src="https://img.shields.io/github/package-json/dependency-version/villivald/villivald.com/next">
+  <img alt="Next.js" src="https://img.shields.io/github/package-json/dependency-version/villivald/villivald.com/typescript">
+  <img alt="Next.js" src="https://img.shields.io/github/package-json/dependency-version/villivald/villivald.com/react">
 </p>
 
 ## Built With
