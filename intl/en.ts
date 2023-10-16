@@ -52,6 +52,7 @@ const en = {
   russian: "Russian",
   "charts.title.years": "Year statistics",
   "charts.title.languages": "Language statistics",
+  randomLink: "Random link",
 
   // Alt texts
   "alt.old.1": "Screenshot of the first version of my website from 2019",

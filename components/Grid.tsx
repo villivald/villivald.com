@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { useState } from "react";
+import { useIntl } from "react-intl";
 
 import BooksGrid from "./gridComponents/BooksGrid";
 import BlogGrid from "./gridComponents/BlogGrid";
@@ -15,6 +16,7 @@ import styles from "../styles/Grid.module.css";
 
 export default function Grid() {
   const [randomLink, setRandomLink] = useState("");
+  const intl = useIntl();
 
   const getRandomLink = () => {
     const links = [
@@ -58,7 +60,11 @@ export default function Grid() {
       <Link href="/old">
         <OldGrid />
       </Link>
-      <Link href={randomLink} onMouseOver={() => getRandomLink()}>
+      <Link
+        href={randomLink}
+        onMouseOver={() => getRandomLink()}
+        aria-label={intl.formatMessage({ id: "randomLink" })}
+      >
         <RandomGrid />
       </Link>
     </main>

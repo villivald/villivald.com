@@ -54,6 +54,7 @@ const fi = {
   russian: "venäjä",
   "charts.title.years": "Vuositilasto",
   "charts.title.languages": "Kielitilasto",
+  randomLink: "Satunnainen linkki",
 
   // Alt texts
   "alt.old.1":
