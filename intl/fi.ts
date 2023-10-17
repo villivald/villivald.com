@@ -54,7 +54,6 @@ const fi = {
   russian: "venäjä",
   "charts.title.years": "Vuositilasto",
   "charts.title.languages": "Kielitilasto",
-  randomLink: "Satunnainen linkki",
 
   // Alt texts
   "alt.old.1":
@@ -69,6 +68,20 @@ const fi = {
   "alt.languageArrow": "Nuolikuvake joka osoittaa valittua kieltä",
   "alt.blogLogo": "Blogini logo, jonka nimi on 'Create React App'",
   "alt.contact": "Kuva toimistossa istuvasta miehestä joka soittaa puhelimella",
+
+  // Aria labels
+  "aria.study": "Sivu jossa on tietoa opiskelustani",
+  "aria.blog": "Sivu jossa on linkkejä blogikirjoituksiini",
+  "aria.uses": "Sivu jossa on lista työkaluista ja sovelluksista joita käytän",
+  "aria.books":
+    "Sivu jossa on lista kirjoista joita olen lukenut viime aikoina",
+  "aria.projects": "Sivu jossa on lista sekä työ- että harrasteprojekteistani",
+  "aria.about": "Sivu jossa on minun kuvia ja tietoa minusta",
+  "aria.contact":
+    "Sivu jossa on linkkejä minun mastodoniin, sähköpostiin ja LinkedIniin",
+  "aria.old":
+    "Sivu jossa on linkkejä vanhoihin versioihin minun verkkosivustosta",
+  "aria.randomLink": "Linkki sattumanvaraiseen sivuun minun verkkosivustollani",
 };
 
 export default fi;

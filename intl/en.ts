@@ -52,7 +52,6 @@ const en = {
   russian: "Russian",
   "charts.title.years": "Year statistics",
   "charts.title.languages": "Language statistics",
-  randomLink: "Random link",
 
   // Alt texts
   "alt.old.1": "Screenshot of the first version of my website from 2019",
@@ -69,6 +68,17 @@ const en = {
   "alt.blogLogo": "The logo of my blog, named 'Create React App'",
   "alt.contact":
     "Picture of a man sitting in an office calling someone on his phone",
+
+  // Aria labels
+  "aria.study": "Page with information about my studies",
+  "aria.blog": "Page with links to my blog posts",
+  "aria.uses": "Page with the list of tools and software that I use",
+  "aria.books": "Page with the list of books that I have read lately",
+  "aria.projects": "Page with the list of both my pet and work projects",
+  "aria.about": "Page with some images and information about me",
+  "aria.contact": "Page with links to my mastodon, email and LinkedIn",
+  "aria.old": "Page with links to the old versions of my website",
+  "aria.randomLink": "Link to a random page on my website",
 };
 
 export default en;

@@ -15,7 +15,7 @@ export default function UsesGrid() {
     window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} aria-hidden="true">
       {!isOpen && <p className={styles.to}>TO</p>}
       <div
         data-isopen={isOpen}

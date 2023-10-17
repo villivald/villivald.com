@@ -3,7 +3,7 @@ import styles from "../../styles/grid/OldGrid.module.css";
 
 export default function OldGrid() {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} aria-hidden="true">
       <div>
         <div className={styles.proto} />
         <div className={styles.done} />

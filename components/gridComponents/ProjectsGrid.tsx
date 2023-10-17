@@ -3,7 +3,7 @@ import styles from "../../styles/grid/ProjectsGrid.module.css";
 
 export default function ProjectsGrid() {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} aria-hidden="true">
       <div className={styles.letters}>
         <p className={styles.p}>P</p>
         <p className={styles.r}>R</p>

@@ -5,7 +5,7 @@ import styles from "../../styles/grid/KoripallopaikatGrid.module.css";
 
 export default function KoripallopaikatGrid() {
   return (
-    <div className={styles.koripallopaikatContainer}>
+    <div className={styles.koripallopaikatContainer} aria-hidden="true">
       <Image
         src="/images/caruso.webp"
         width={400}

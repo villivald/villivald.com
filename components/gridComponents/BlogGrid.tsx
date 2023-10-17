@@ -16,7 +16,7 @@ export default function BlogGrid() {
     window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} aria-hidden="true">
       <Atropos
         className={styles.atropos}
         rotate={prefersReducedMotion ? false : true}

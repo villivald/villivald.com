@@ -18,52 +18,38 @@ export default function Grid() {
   const [randomLink, setRandomLink] = useState("");
   const intl = useIntl();
 
+  const links = [
+    { href: "/study", component: <StudyGrid /> },
+    { href: "/blog", component: <BlogGrid /> },
+    { href: "/uses", component: <UsesGrid /> },
+    { href: "/books", component: <BooksGrid /> },
+    { href: "/projects", component: <ProjectsGrid /> },
+    { href: "/about", component: <AboutGrid /> },
+    { href: "/contact", component: <ContactGrid /> },
+    { href: "/old", component: <OldGrid /> },
+  ];
+
   const getRandomLink = () => {
-    const links = [
-      "/study",
-      "/blog",
-      "/uses",
-      "/books",
-      "/projects",
-      "/about",
-      "/contact",
-      "/old",
-    ];
     const randomLink = links[Math.floor(Math.random() * links.length)];
 
-    setRandomLink(randomLink);
+    setRandomLink(randomLink.href);
   };
 
   return (
     <section className={styles.main}>
-      <Link href="/study">
-        <StudyGrid />
-      </Link>
-      <Link href="/blog">
-        <BlogGrid />
-      </Link>
-      <Link href="/uses">
-        <UsesGrid />
-      </Link>
-      <Link href="/books">
-        <BooksGrid />
-      </Link>
-      <Link href="/projects">
-        <ProjectsGrid />
-      </Link>
-      <Link href="/about">
-        <AboutGrid />
-      </Link>
-      <Link href="/contact">
-        <ContactGrid />
-      </Link>
-      <Link href="/old">
-        <OldGrid />
-      </Link>
+      {links.map((link) => (
+        <Link
+          key={link.href}
+          href={link.href}
+          aria-label={intl.formatMessage({ id: `aria.${link.href.slice(1)}` })}
+        >
+          {link.component}
+        </Link>
+      ))}
       <Link
         href={randomLink}
         onMouseOver={() => getRandomLink()}
-        aria-label={intl.formatMessage({ id: "randomLink" })}
+        aria-label={intl.formatMessage({ id: "aria.randomLink" })}
       >
         <RandomGrid />
       </Link>

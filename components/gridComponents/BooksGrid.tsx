@@ -8,7 +8,7 @@ export default function BooksGrid() {
   const intl = useIntl();
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} aria-hidden="true">
       <div className={styles.box}>
         {Array(6)
           .fill(0)

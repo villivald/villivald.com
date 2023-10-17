@@ -8,7 +8,7 @@ export default function ContactGrid() {
   const intl = useIntl();
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} aria-hidden="true">
       <div></div>
       <Image
         src="/images/phone.webp"
