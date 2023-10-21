@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useContext, useState } from "react";
-import { FormattedMessage } from "react-intl";
+import { FormattedMessage, useIntl } from "react-intl";
 
 import { ThemeContext } from "../../context";
 
@@ -10,6 +10,7 @@ import styles from "../../styles/Dropdown.module.css";
 export default function DropdownMenu() {
   const theme = useContext(ThemeContext);
   const [menuOpen, setMenuOpen] = useState(false);
+  const intl = useIntl();
 
   const menuItems = [
     "about",
@@ -39,6 +40,7 @@ export default function DropdownMenu() {
         aria-haspopup="true"
         data-theme={theme}
         data-open={menuOpen}
+        aria-label={intl.formatMessage({ id: "menu" })}
       >
         <span>
           <FormattedMessage id="menu" />
