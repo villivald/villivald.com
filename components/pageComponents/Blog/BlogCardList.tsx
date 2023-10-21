@@ -62,11 +62,11 @@ export default function BlogCardList({ data }: DataArray) {
                 <Image
                   priority
                   src={post.cover_image}
-                  alt={post.title}
+                  alt="" // set alt to empty string to avoid screen readers spell the image related text twice
                   height={200}
                   width={400}
                 />
-                <h4>{post.title}</h4>
+                <h2>{post.title}</h2>
               </a>
             </div>
           ) : (
@@ -91,11 +91,11 @@ export default function BlogCardList({ data }: DataArray) {
                         randomPosts[post.id - 1]?.cover_image ||
                         "https://via.placeholder.com/400x200"
                       }
-                      alt={randomPosts[post.id - 1]?.title || "placeholder"}
+                      alt="" // set alt to empty string to avoid screen readers spell the image related text twice
                       height={200}
                       width={400}
                     />
-                    <h4>{randomPosts[post.id - 1]?.title}</h4>
+                    <h2>{randomPosts[post.id - 1]?.title}</h2>
                   </a>
                 </div>
               </div>

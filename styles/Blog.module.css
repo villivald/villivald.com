@@ -20,6 +20,11 @@
   padding: 1rem;
 }
 
+.blogList h2 {
+  font-family: var(--font-subheader);
+  font-size: var(--fontSize-header4);
+}
+
 .blogCard {
   background-color: var(--color-white);
   padding: 1rem;
