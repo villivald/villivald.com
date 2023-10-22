@@ -15,6 +15,7 @@ type Book = {
   rating: number;
   image: string;
   year?: number;
+  language?: string;
 };
 
 export default function Books() {
@@ -48,10 +49,10 @@ export default function Books() {
       <VirtuosoGrid
         className={styles.mainContainer}
         data={sortedBooks}
-        itemContent={(_index, book: Book) =>
+        itemContent={(index, book: Book) =>
           book.year ? (
             <div className={`${styles.yearCard} ${styles[`year${book.year}`]}`}>
-              <p>
+              <h2>
                 <span>
                   <span>{book.year}</span>
                   <span>→</span>
@@ -60,26 +61,28 @@ export default function Books() {
                   <FormattedMessage id="total" />
                   {yearBooks(book.year.toString())}
                 </span>
-              </p>
+              </h2>
             </div>
           ) : (
-            <>
+            <figure>
               <Image
                 src={`/covers/${book.image}`}
-                alt={book.title}
+                alt=""
                 width={200}
                 height={300}
+                tabIndex={0}
+                aria-describedby={`book-cover-${index}`}
               />
-              <p>
+              <p id={`book-cover-${index}`} lang={book.language}>
                 <span>
                   {book.title} - {book.author}
                 </span>
                 <span>
-                  {book.date} <span>📅</span>
+                  {book.date} <span aria-hidden="true">📅</span>
                 </span>
                 <span>{"⭐️".repeat(book.rating)}</span>
               </p>
-            </>
+            </figure>
           )
         }
       />
