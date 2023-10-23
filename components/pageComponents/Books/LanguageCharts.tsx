@@ -25,6 +25,9 @@ export default function LanguageCharts() {
           <div key={year} className={styles.languageChart}>
             <h2>{year}</h2>
             <Doughnut
+              aria-label={`${intl.formatMessage({
+                id: "aria.statistics.language",
+              })} ${year}`}
               data={{
                 labels: [
                   intl.formatMessage({ id: "english" }),

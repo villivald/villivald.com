@@ -79,6 +79,8 @@ const en = {
   "aria.contact": "Page with links to my mastodon, email and LinkedIn",
   "aria.old": "Page with links to the old versions of my website",
   "aria.randomLink": "Link to a random page on my website",
+  "aria.statistics.language": "Language statistics for boks read in",
+  "aria.statistics.books": "Statistics for books read in last 5 years",
 };
 
 export default en;

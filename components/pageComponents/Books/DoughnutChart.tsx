@@ -1,5 +1,6 @@
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import { Doughnut } from "react-chartjs-2";
+import { useIntl } from "react-intl";
 
 import data from "./data.json";
 
@@ -29,5 +30,12 @@ export const chartData = {
 };
 
 export default function DoughnutChart() {
-  return <Doughnut data={chartData} />;
+  const intl = useIntl();
+
+  return (
+    <Doughnut
+      data={chartData}
+      aria-label={intl.formatMessage({ id: "aria.statistics.books" })}
+    />
+  );
 }

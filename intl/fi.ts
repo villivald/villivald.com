@@ -82,6 +82,10 @@ const fi = {
   "aria.old":
     "Sivu jossa on linkkejä vanhoihin versioihin minun verkkosivustosta",
   "aria.randomLink": "Linkki sattumanvaraiseen sivuun minun verkkosivustollani",
+  "aria.statistics.language":
+    "Kieli tilasto kirjoista joita olen lukenut vuonna",
+  "aria.statistics.books":
+    "Tilasto kirjoista joita olen lukenut viimeisen 5 vuoden aikana",
 };
 
 export default fi;

@@ -9,6 +9,7 @@ import {
   Legend,
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
+import { useIntl } from "react-intl";
 
 import data from "./data.json";
 
@@ -91,6 +92,7 @@ const books = {
 
 export default function BarChart() {
   const theme = useContext(ThemeContext);
+  const intl = useIntl();
 
   if (theme === "dark") {
     ChartJS.defaults.color = "#fff";
@@ -98,5 +100,11 @@ export default function BarChart() {
     ChartJS.defaults.color = "#1c1d2b";
   }
 
-  return <Bar options={options} data={books} />;
+  return (
+    <Bar
+      options={options}
+      data={books}
+      aria-label={intl.formatMessage({ id: "aria.statistics.books" })}
+    />
+  );
 }
