@@ -58,8 +58,7 @@
   position: absolute;
   border-radius: 50%;
   display: flex;
-  justify-self: center;
-  align-self: center;
+  place-self: center;
   margin-bottom: 5%;
   width: 55%;
   height: 55%;
