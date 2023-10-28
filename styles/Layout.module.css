@@ -41,6 +41,45 @@
   text-decoration: underline;
 }
 
+.skipLinks {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.skipLinks:focus-within {
+  position: static;
+  height: auto;
+  width: auto;
+  overflow: visible;
+  clip: auto;
+  background-color: var(--color-brand-grey);
+  background-image: var(--gradient-light);
+  padding: 2rem;
+  display: flex;
+  gap: 2rem;
+}
+
+.skipLinks:focus-within a {
+  background-color: var(--color-brand-teal);
+  color: var(--color-white);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  text-underline-offset: 0.25rem;
+}
+
+.skipLinks:focus-within a:focus {
+  background-color: color-mix(
+    in oklch,
+    var(--color-brand-teal) 100%,
+    var(--color-brand-dark) 100%
+  );
+  outline: 0.25rem solid var(--color-brand-teal);
+  outline-offset: 0.125rem;
+}
+
 .main[data-theme="dark"] .breadcrumbs a,
 .main[data-theme="dark"] .breadcrumbs li,
 .main[data-theme="dark"] .breadcrumbs li::after {

@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/image";
-import { FormattedMessage } from "react-intl";
+import { FormattedMessage, useIntl } from "react-intl";
 
 import { ThemeContext } from "../context";
 
@@ -20,13 +20,27 @@ type Props = {
 export default function Layout({ children, changeTheme, changeLocale }: Props) {
   const theme = useContext(ThemeContext);
   const router = useRouter();
+  const intl = useIntl();
 
   const pageTitle = <FormattedMessage id={router.pathname.slice(1)} />;
 
   return (
     <>
+      <section
+        tabIndex={0}
+        className={styles.skipLinks}
+        aria-label={intl.formatMessage({ id: "aria.skiplinks" })}
+      >
+        <a href="#mainContent">
+          <FormattedMessage id="skiplink.mainContent" />
+        </a>
+        <a href="#contactsLinks">
+          <FormattedMessage id="skiplink.contactsLinks" />
+        </a>
+      </section>
       <Header changeTheme={changeTheme} changeLocale={changeLocale} />
       <main
+        id="mainContent"
         className={styles.main}
         data-theme={theme}
         data-books={router.pathname === "/books"}

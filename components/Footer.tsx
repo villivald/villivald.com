@@ -64,6 +64,7 @@ export default function Footer() {
 
   return (
     <footer
+      id="contactsLinks"
       className={styles.footer}
       data-theme={theme}
       data-hide={router.pathname === "/books"}

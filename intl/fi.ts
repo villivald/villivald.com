@@ -54,6 +54,8 @@ const fi = {
   russian: "venäjä",
   "charts.title.years": "Vuositilasto",
   "charts.title.languages": "Kielitilasto",
+  "skiplink.mainContent": "Hyppää pääsisältöön",
+  "skiplink.contactsLinks": "Hyppää linkki-osioon",
 
   // Alt texts
   "alt.old.1":
@@ -86,6 +88,7 @@ const fi = {
     "Kieli tilasto kirjoista joita olen lukenut vuonna",
   "aria.statistics.books":
     "Tilasto kirjoista joita olen lukenut viimeisen 5 vuoden aikana",
+  "aria.skiplinks": "Hyppää sisältöön linkit",
 };
 
 export default fi;
