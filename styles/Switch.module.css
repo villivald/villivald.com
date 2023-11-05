@@ -88,6 +88,15 @@
   margin-left: -0.5rem;
 }
 
+.switch:focus-within {
+  outline: 0.25rem solid var(--color-brand-dark);
+  outline-offset: 0.5rem;
+}
+
+.switch[data-theme="dark"]:focus-within {
+  outline-color: var(--color-white);
+}
+
 /* Input */
 .switch > input {
   appearance: none;

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { useIntl } from "react-intl";
 
 import BooksGrid from "./gridComponents/BooksGrid";
@@ -12,10 +12,12 @@ import UsesGrid from "./gridComponents/UsesGrid";
 import ProjectsGrid from "./gridComponents/ProjectsGrid";
 import RandomGrid from "./gridComponents/RandomGrid";
 
+import { ThemeContext } from "../context";
 import styles from "../styles/Grid.module.css";
 
 export default function Grid() {
   const [randomLink, setRandomLink] = useState("");
+  const theme = useContext(ThemeContext);
   const intl = useIntl();
 
   const links = [
@@ -36,7 +38,7 @@ export default function Grid() {
   };
 
   return (
-    <section className={styles.main}>
+    <section className={styles.main} data-theme={theme}>
       {links.map((link) => (
         <Link
           key={link.href}

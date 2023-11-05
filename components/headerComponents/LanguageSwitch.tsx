@@ -46,7 +46,7 @@ export default function LanguageSwitch({ changeLocale }: Props) {
           width={100}
           height={100}
         />
-        <label className={styles.switch} htmlFor="switch">
+        <label className={styles.switch} htmlFor="switch" data-theme={theme}>
           <span>
             {intl.formatMessage({
               id: "alt.languageSwitcher",

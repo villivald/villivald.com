@@ -22,3 +22,12 @@
 .button:active {
   background-color: var(--color-black-8);
 }
+
+.button:focus-visible {
+  outline: 0.25rem solid var(--color-brand-dark);
+  outline-offset: 0.5rem;
+}
+
+.button[data-theme="dark"]:focus-visible {
+  outline-color: var(--color-white);
+}

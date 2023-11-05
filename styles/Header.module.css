@@ -15,7 +15,12 @@
 }
 
 .header > a:focus-visible {
-  outline: 2px solid var(--color-white);
+  outline: 0.25rem solid var(--color-brand-dark);
+  outline-offset: 0.5rem;
+}
+
+.header[data-theme="dark"] > a:focus-visible {
+  outline-color: var(--color-white);
 }
 
 .title {

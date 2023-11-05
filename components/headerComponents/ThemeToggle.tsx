@@ -13,6 +13,7 @@ export default function ThemeToggle({ changeTheme, theme }: Props) {
       aria-label="changeThemeButton"
       onClick={changeTheme}
       className={styles.button}
+      data-theme={theme}
     >
       <Image
         data-theme={theme}

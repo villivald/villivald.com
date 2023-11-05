@@ -30,6 +30,15 @@
     radial-gradient(at 0% 0%, hsl(343deg 100% 76%) 0, transparent 50%);
 }
 
+.main > a:focus-visible {
+  outline: 0.25rem solid var(--color-brand-dark);
+  outline-offset: 0.5rem;
+}
+
+.main[data-theme="dark"] > a:focus-visible {
+  outline-color: var(--color-white);
+}
+
 @media (width > 1400px) {
   .main > a:last-of-type {
     display: none;

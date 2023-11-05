@@ -40,6 +40,15 @@
   transition: all 0.5s var(--easing-normal);
 }
 
+.footer > div > a:focus-visible {
+  outline: 0.25rem solid var(--color-brand-dark);
+  outline-offset: 0.5rem;
+}
+
+.footer[data-theme="dark"] > div > a:focus-visible {
+  outline-color: var(--color-white);
+}
+
 .footer > div:nth-of-type(even) > a:hover {
   transform: scale(1.1);
   transition: all 0.5s var(--easing-normal);
