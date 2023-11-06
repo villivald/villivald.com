@@ -57,7 +57,7 @@ export default function BlogCardList({ data }: DataArray) {
       <div className={styles.blogList}>
         {Object.values(formattedData).map((post: any) =>
           post.title ? (
-            <div key={post.id} className={styles.blogCard}>
+            <div key={post.id} className={styles.blogCard} data-theme={theme}>
               <a href={post.canonical_url}>
                 <Image
                   priority
@@ -73,6 +73,7 @@ export default function BlogCardList({ data }: DataArray) {
             <div
               key={post.id}
               className={styles.animatedCard}
+              data-theme={theme}
               onMouseEnter={() => setLoadRandomPost(true)}
               onTouchStart={() => setLoadRandomPost(true)}
               onFocus={() => setLoadRandomPost(true)}

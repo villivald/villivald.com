@@ -70,6 +70,11 @@
   text-underline-offset: 0.25rem;
 }
 
+.breadcrumbs li a:focus-visible {
+  outline: 0.25rem solid var(--color-brand-dark);
+  outline-offset: 0.25rem;
+}
+
 .skipLinks:focus-within a:focus {
   background-color: color-mix(
     in oklch,
@@ -84,4 +89,8 @@
 .main[data-theme="dark"] .breadcrumbs li,
 .main[data-theme="dark"] .breadcrumbs li::after {
   color: var(--color-white);
+}
+
+.main[data-theme="dark"] .breadcrumbs li a:focus-visible {
+  outline-color: var(--color-white);
 }

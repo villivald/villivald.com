@@ -68,6 +68,15 @@
   scroll-behavior: smooth;
 }
 
+div > section:focus-visible .slides {
+  outline: 0.25rem solid var(--color-brand-dark);
+  outline-offset: 0.5rem;
+}
+
+div[data-theme="dark"] > section:focus-visible .slides {
+  outline-color: var(--color-white);
+}
+
 .slides::-webkit-scrollbar {
   display: none;
 }
