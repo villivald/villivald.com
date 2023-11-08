@@ -37,8 +37,17 @@
   padding-bottom: 0.5rem;
 }
 
+.mainContainer > div a:focus-visible {
+  outline: 0.25rem solid var(--color-brand-dark);
+  outline-offset: 0.0625rem;
+}
+
 .mainContainer > div[data-theme="dark"] > p > a {
   color: var(--color-white);
+}
+
+.mainContainer > div[data-theme="dark"] a:focus-visible {
+  outline-color: var(--color-white);
 }
 
 .mainContainer > div[data-theme="dark"] > p > img {

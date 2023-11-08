@@ -92,6 +92,17 @@ li:has(span.textDark) p {
   list-style: none;
 }
 
+main .mainContainer summary:focus-visible,
+main .mainContainer a:focus-visible {
+  outline: 0.25rem solid var(--color-brand-dark);
+  outline-offset: 0.0625rem;
+}
+
+main[data-theme="dark"] .mainContainer summary:focus-visible,
+main[data-theme="dark"] .mainContainer a:focus-visible {
+  outline-color: var(--color-white);
+}
+
 .toggle > details > summary[data-theme="dark"] {
   color: var(--color-white);
 }

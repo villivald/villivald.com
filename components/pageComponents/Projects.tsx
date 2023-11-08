@@ -30,7 +30,7 @@ export default function Projects() {
       </div>
       <div data-theme={theme}></div>
       <div data-theme={theme}></div>
-      <div>
+      <div data-theme={theme}>
         <span>
           <h1 data-theme={theme}>
             <FormattedMessage id="work" />

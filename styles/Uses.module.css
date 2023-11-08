@@ -24,9 +24,20 @@
   color: var(--color-white);
 }
 
+.mainContainer > p > a:focus-visible,
+.mainContainer > div a:focus-visible {
+  outline: 0.25rem solid var(--color-brand-dark);
+  outline-offset: 0.125rem;
+}
+
 .mainContainer > div > div > ul > li > a:hover {
   text-decoration: underline wavy 0.1rem var(--color-brand-red);
   text-underline-offset: 0.5rem;
+}
+
+.mainContainer > p[data-theme="dark"] > a:focus-visible,
+.mainContainer > div[data-theme="dark"] a:focus-visible {
+  outline-color: var(--color-white);
 }
 
 .mainContainer > div {
@@ -49,7 +60,8 @@
   row-gap: 0.5rem;
 }
 
-.mainContainer > div > div > ul > li:hover::after {
+.mainContainer > div > div > ul > li:hover::after,
+.mainContainer > div > div > ul a:focus-visible::after {
   content: "";
   position: absolute;
   width: 200px;

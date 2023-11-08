@@ -158,6 +158,15 @@
     inset 0 -1px 0 1px var(--color-black-38), 0 8px 10px var(--color-black-14);
 }
 
+main .button:focus-visible {
+  outline: 0.25rem solid var(--color-brand-dark);
+  outline-offset: 0.25rem;
+}
+
+main[data-theme="dark"] .button:focus-visible {
+  outline-color: var(--color-white);
+}
+
 .button[data-active="true"] {
   background-color: var(--color-brand-yellow);
 }
