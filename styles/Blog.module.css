@@ -31,6 +31,7 @@
   border-radius: 0.5rem;
   box-shadow: 0 0 10px var(--shadow-1);
   height: 95%;
+  min-height: 16rem;
 }
 
 .blogCard a {
@@ -50,6 +51,7 @@
 
 .animatedCard {
   perspective: 1000px;
+  min-height: 17rem;
 }
 
 .innerCard {
