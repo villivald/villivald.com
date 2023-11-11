@@ -160,6 +160,7 @@
 
 .mainContainer > div:nth-child(4) span span p[data-image="cra"] {
   background-image: url("/images/cra.webp");
+  background-position: center;
 }
 
 .mainContainer > div:nth-child(4) span span p[data-image="koripallo"] {
@@ -214,10 +215,60 @@
   );
 }
 
+@media (width >= 1100px) {
+  .mainContainer > div:nth-child(4) > span > span {
+    gap: 2rem;
+  }
+
+  .mainContainer > div:nth-child(4) span span section > * {
+    max-width: 10rem;
+  }
+
+  .mainContainer > div:nth-child(4) span span section > p {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .mainContainer > div:nth-child(4) span span > section:nth-child(1) {
+    margin-left: 5%;
+  }
+
+  .mainContainer > div:nth-child(4) span span > section:nth-child(2) {
+    margin-left: 37.5%;
+  }
+
+  .mainContainer > div:nth-child(4) span span > section:nth-child(3) {
+    margin-left: 67.5%;
+  }
+}
+
+@media (width >= 1250px) {
+  .mainContainer > div:nth-child(4) span span section > * {
+    max-width: 11rem;
+  }
+
+  .mainContainer > div:nth-child(4) span span section > p {
+    width: 11rem;
+    height: 11rem;
+  }
+}
+
 @media (width >= 1500px) {
   .mainContainer > div:nth-child(1) {
     width: 60rem;
     height: 14rem;
+  }
+
+  .mainContainer > div:nth-child(4) span span > section:nth-child(1) {
+    margin-left: 10%;
+  }
+
+  .mainContainer > div:nth-child(4) span span > section:nth-child(2) {
+    margin-left: 40%;
+  }
+
+  .mainContainer > div:nth-child(4) span span > section:nth-child(3) {
+    margin-left: 70%;
   }
 }
 
