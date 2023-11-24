@@ -28,7 +28,7 @@ export default function UsesGrid() {
             <Image
               className={styles.emoji}
               width={100}
-              height={100}
+              height={isOpen ? 100 : 40}
               src="/emojis/toolbox.svg"
               alt="toolbox emoji"
             />
