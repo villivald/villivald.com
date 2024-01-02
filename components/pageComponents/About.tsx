@@ -86,7 +86,7 @@ export default function About() {
               tabIndex={0}
             >
               {["8", "7", "6", "5"].map((num, index) =>
-                year === "2023" && (num === "8" || num === "7") ? (
+                year === "2024" && (num === "8" || num === "7") ? (
                   <div key={index} className={styles.question}>
                     <Image
                       alt="about"
