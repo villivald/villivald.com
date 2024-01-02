@@ -86,7 +86,7 @@
 
 @counter-style hardware-emoji {
   system: cyclic;
-  symbols: 🖥️ 💻 💻 📱 🍏 ⌚️ 🎧 💍 ⌨️ 🖱️ 🐭 🐁;
+  symbols: 🖥️ 💻 📱 ⌚️ 🎧 💍 ⌨️ 🖱️ 🐭 🐁;
   suffix: " ";
 }
 
@@ -98,7 +98,7 @@
 
 @counter-style other-emoji {
   system: cyclic;
-  symbols: 🚴‍♂️ 🎒 🍼 🍼 📝 🖋️;
+  symbols: 🚴‍♂️ 🤖 🎒 🍼 💧 📝 🖋️;
   suffix: " ";
 }
 

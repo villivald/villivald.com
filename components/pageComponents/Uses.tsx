@@ -3,8 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { FormattedMessage } from "react-intl";
 
-import styles from "../../styles/Uses.module.css";
 import { ThemeContext } from "../../context";
+
+import styles from "../../styles/Uses.module.css";
 
 interface CSSPropertiesWithVars extends CSSProperties {
   "--url"?: string;
@@ -24,22 +25,10 @@ const hardware = [
     image: "macbook13",
   },
   {
-    name: 'MacBook Pro 16" 2023',
-    link: "https://support.apple.com/kb/SP890?locale=en_US",
-    description: "My work computer",
-    image: "macbook16",
-  },
-  {
-    name: "iPhone 11",
-    link: "https://www.apple.com/iphone-11/",
+    name: "iPhone 15",
+    link: "https://www.apple.com/iphone-15/",
     description: "Phone",
     image: "iphone",
-  },
-  {
-    name: 'iPad 10.2" 2019',
-    link: "https://support.apple.com/kb/SP807?locale=en_US",
-    description: "Tablet",
-    image: "ipad",
   },
   {
     name: "Apple Watch Ultra",
@@ -129,10 +118,10 @@ const software = [
     image: "craft",
   },
   {
-    name: "ProtonMail",
-    link: "https://protonmail.com/",
+    name: "Skiff Mail",
+    link: "https://skiff.com/",
     description: "Email client",
-    image: "proton",
+    image: "skiff",
   },
   {
     name: "Spark",
@@ -153,10 +142,10 @@ const software = [
     image: "endel",
   },
   {
-    name: "Apple Music",
-    link: "https://www.apple.com/apple-music/",
+    name: "Youtube Music",
+    link: "https://music.youtube.com/",
     description: "Music app",
-    image: "apple",
+    image: "youtube",
   },
   {
     name: "Pocket Casts",
@@ -202,6 +191,12 @@ const other = [
     link: "https://www.canyon.com/en-fi/gravel-bikes/performance/grail/al/grail-7-etap/3094.html",
     description: "Bicycle",
     image: "canyon",
+  },
+  {
+    name: "Zwift Hub One",
+    link: "https://eu.zwift.com/collections/all/products/zwift-hub-one?variant=44687355281659",
+    description: "Smart trainer",
+    image: "zwift",
   },
   {
     name: "Cafe du Cycliste Backpack",
