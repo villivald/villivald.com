@@ -105,6 +105,10 @@
   padding: 0.5rem;
 }
 
+.year2024 {
+  background-color: var(--color-brand-green);
+}
+
 .year2023 {
   background-color: var(--color-brand-yellow);
 }

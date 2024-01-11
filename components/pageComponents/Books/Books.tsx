@@ -49,7 +49,7 @@ export default function Books() {
       <VirtuosoGrid
         className={styles.mainContainer}
         data={sortedBooks}
-        itemContent={(index, book: Book) =>
+        itemContent={(index: number, book: Book) =>
           book.year ? (
             <div className={`${styles.yearCard} ${styles[`year${book.year}`]}`}>
               <h2>
