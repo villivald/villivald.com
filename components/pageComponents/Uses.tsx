@@ -100,10 +100,10 @@ const software = [
     image: "notion",
   },
   {
-    name: "Things",
-    link: "https://culturedcode.com/things/",
+    name: "Todoist",
+    link: "https://todoist.com/",
     description: "Task manager",
-    image: "things",
+    image: "todoist",
   },
   {
     name: "Obsidian",
