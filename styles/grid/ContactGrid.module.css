@@ -29,13 +29,13 @@
     #c97400,
     #bb7c00
   );
+  position: relative;
   width: 100%;
   height: 100%;
   display: grid;
   /* stylelint-disable-next-line */
   transition: --a 3s var(--easing-normal);
   grid-template-rows: 8fr 1fr;
-  container-type: inline-size;
 }
 
 .container h1 {
