@@ -97,6 +97,7 @@
   flex-direction: column;
   position: absolute;
   bottom: 2%;
+  max-width: 92.5%;
   width: calc(100% - (100% - 200px));
   height: 30%;
   font-size: var(--fontSize-helperText);
