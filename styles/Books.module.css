@@ -7,11 +7,12 @@
 }
 
 .mainContainer > div {
-  padding: 2rem;
+  padding: 1rem 2rem 2rem;
 }
 
 .mainContainer > h2 {
   text-align: center;
+  margin-block-start: 1.5rem;
 }
 
 .mainContainer > h2:first-of-type {

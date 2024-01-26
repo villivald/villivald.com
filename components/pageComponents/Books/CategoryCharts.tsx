@@ -8,13 +8,13 @@ import styles from "../../../styles/Books.module.css";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-const booksInLanguagePerYear = (year: string, language: string) => {
+const booksInCategoryPerYear = (year: string, category: string) => {
   return data.books.filter(
-    (book) => book.date.includes(year) && book.language === language
+    (book) => book.date.includes(year) && book.category === category
   ).length;
 };
 
-export default function LanguageCharts() {
+export default function CategoryCharts() {
   const years = ["2024", "2023", "2022", "2021"];
   const intl = useIntl();
 
@@ -26,26 +26,23 @@ export default function LanguageCharts() {
             <h2>{year}</h2>
             <Doughnut
               aria-label={`${intl.formatMessage({
-                id: "aria.statistics.language",
+                id: "aria.statistics.category",
               })} ${year}`}
               data={{
                 labels: [
-                  intl.formatMessage({ id: "english" }),
-                  intl.formatMessage({ id: "finnish" }),
-                  intl.formatMessage({ id: "russian" }),
+                  intl.formatMessage({ id: "fiction" }),
+                  intl.formatMessage({ id: "non-fiction" }),
                 ],
                 datasets: [
                   {
                     label: "Books per year",
                     data: [
-                      booksInLanguagePerYear(year, "en"),
-                      booksInLanguagePerYear(year, "fi"),
-                      booksInLanguagePerYear(year, "ru"),
+                      booksInCategoryPerYear(year, "fiction"),
+                      booksInCategoryPerYear(year, "non-fiction"),
                     ],
                     backgroundColor: [
                       "hsl(10deg 94% 60%)",
                       "hsl(187deg 52% 22%)",
-                      "hsl(24deg 71.4% 76.7%)",
                     ],
                     borderWidth: 1,
                   },

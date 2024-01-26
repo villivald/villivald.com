@@ -11,19 +11,34 @@ const booksPerYear = (year: string) => {
 };
 
 export const chartData = {
-  labels: ["2023", "2022", "2021", "2020", "2019"],
+  labels: ["2024", "2023", "2022", "2021", "2020", "2019"],
   datasets: [
     {
       label: "Books per year",
       data: [
+        booksPerYear("2024"),
         booksPerYear("2023"),
         booksPerYear("2022"),
         booksPerYear("2021"),
         booksPerYear("2020"),
         booksPerYear("2019"),
       ],
-      backgroundColor: ["#003f5c", "#58508d", "#bc5090", "#ff6361", "#ffa600"],
-      borderColor: ["#003f5c", "#58508d", "#bc5090", "#ff6361", "#ffa600"],
+      backgroundColor: [
+        "#050909",
+        "#003f5c",
+        "#58508d",
+        "#bc5090",
+        "#ff6361",
+        "#ffa600",
+      ],
+      borderColor: [
+        "#050909",
+        "#003f5c",
+        "#58508d",
+        "#bc5090",
+        "#ff6361",
+        "#ffa600",
+      ],
       borderWidth: 1,
     },
   ],

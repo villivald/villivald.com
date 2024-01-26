@@ -52,8 +52,11 @@ const fi = {
   english: "englanti",
   finnish: "suomi",
   russian: "venäjä",
+  fiction: "Kaunokirjallisuus",
+  "non-fiction": "Tietokirjallisuus",
   "charts.title.years": "Vuositilasto",
-  "charts.title.languages": "Kielitilasto",
+  "charts.title.languages": "Kieli",
+  "charts.title.category": "Kategoria",
   "skiplink.mainContent": "Hyppää pääsisältöön",
   "skiplink.contactsLinks": "Hyppää linkki-osioon",
 
@@ -86,6 +89,8 @@ const fi = {
   "aria.randomLink": "Linkki sattumanvaraiseen sivuun minun verkkosivustollani",
   "aria.statistics.language":
     "Kieli tilasto kirjoista joita olen lukenut vuonna",
+  "aria.statistics.category":
+    "Kategoria tilasto kirjoista joita olen lukenut vuonna",
   "aria.statistics.books":
     "Tilasto kirjoista joita olen lukenut viimeisen 5 vuoden aikana",
   "aria.skiplinks": "Hyppää sisältöön linkit",

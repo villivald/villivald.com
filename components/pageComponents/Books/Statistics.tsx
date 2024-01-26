@@ -5,6 +5,7 @@ import { FormattedMessage } from "react-intl";
 import BarChart from "./BarChart";
 import DoughnutChart from "./DoughnutChart";
 import LanguageCharts from "./LanguageCharts";
+import CategoryCharts from "./CategoryCharts";
 
 import { ThemeContext } from "../../../context";
 import styles from "../../../styles/Books.module.css";
@@ -35,15 +36,22 @@ export default function Statistics() {
           <FormattedMessage id="statistics" />
         </button>
       </div>
+
       <h2>
         <FormattedMessage id="charts.title.years" />
       </h2>
       <BarChart />
       <DoughnutChart />
+
       <h2>
         <FormattedMessage id="charts.title.languages" />
       </h2>
       <LanguageCharts />
+
+      <h2>
+        <FormattedMessage id="charts.title.category" />
+      </h2>
+      <CategoryCharts />
     </div>
   );
 }

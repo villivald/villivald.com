@@ -63,6 +63,11 @@ const books = {
   labels,
   datasets: [
     {
+      label: "2024",
+      data: handleData("2024"),
+      backgroundColor: "#050909",
+    },
+    {
       label: "2023",
       data: handleData("2023"),
       backgroundColor: "#003f5c",

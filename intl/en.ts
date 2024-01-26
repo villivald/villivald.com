@@ -50,8 +50,11 @@ const en = {
   english: "English",
   finnish: "Finnish",
   russian: "Russian",
+  fiction: "Fiction",
+  "non-fiction": "Non-fiction",
   "charts.title.years": "Year statistics",
-  "charts.title.languages": "Language statistics",
+  "charts.title.languages": "Language",
+  "charts.title.category": "Category",
   "skiplink.mainContent": "Skip to main content",
   "skiplink.contactsLinks": "Skip to social media and contact links",
 
@@ -82,6 +85,7 @@ const en = {
   "aria.old": "Page with links to the old versions of my website",
   "aria.randomLink": "Link to a random page on my website",
   "aria.statistics.language": "Language statistics for boks read in",
+  "aria.statistics.category": "Category statistics for books read in",
   "aria.statistics.books": "Statistics for books read in last 5 years",
   "aria.skiplinks": "Skip links",
 };
