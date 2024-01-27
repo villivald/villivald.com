@@ -8,15 +8,34 @@ import styles from "../../../styles/Books.module.css";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-const booksInLanguagePerYear = (year: string, language: string) => {
-  return data.books.filter(
-    (book) => book.date.includes(year) && book.language === language
-  ).length;
-};
+export default function CategoryCharts({ type }: { type: string }) {
+  const formatData = (year: string, param: string) => {
+    return data.books.filter(
+      // @ts-ignore: Should check in the future
+      (book) => book.date.includes(year) && book[type] === param
+    ).length;
+  };
 
-export default function LanguageCharts() {
   const years = ["2024", "2023", "2022", "2021"];
   const intl = useIntl();
+
+  const labels =
+    type === "language"
+      ? [
+          intl.formatMessage({ id: "english" }),
+          intl.formatMessage({ id: "finnish" }),
+          intl.formatMessage({ id: "russian" }),
+        ]
+      : [
+          intl.formatMessage({ id: "fiction" }),
+          intl.formatMessage({ id: "non-fiction" }),
+        ];
+
+  const formattedData = (year: string) => {
+    return type === "language"
+      ? [formatData(year, "en"), formatData(year, "fi"), formatData(year, "ru")]
+      : [formatData(year, "fiction"), formatData(year, "non-fiction")];
+  };
 
   return (
     <div>
@@ -26,22 +45,14 @@ export default function LanguageCharts() {
             <h2>{year}</h2>
             <Doughnut
               aria-label={`${intl.formatMessage({
-                id: "aria.statistics.language",
+                id: `aria.statistics.${type}`,
               })} ${year}`}
               data={{
-                labels: [
-                  intl.formatMessage({ id: "english" }),
-                  intl.formatMessage({ id: "finnish" }),
-                  intl.formatMessage({ id: "russian" }),
-                ],
+                labels: labels,
                 datasets: [
                   {
                     label: "Books per year",
-                    data: [
-                      booksInLanguagePerYear(year, "en"),
-                      booksInLanguagePerYear(year, "fi"),
-                      booksInLanguagePerYear(year, "ru"),
-                    ],
+                    data: formattedData(year),
                     backgroundColor: [
                       "hsl(10deg 94% 60%)",
                       "hsl(187deg 52% 22%)",

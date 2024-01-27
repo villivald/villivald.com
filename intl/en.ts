@@ -53,7 +53,7 @@ const en = {
   fiction: "Fiction",
   "non-fiction": "Non-fiction",
   "charts.title.years": "Year statistics",
-  "charts.title.languages": "Language",
+  "charts.title.language": "Language",
   "charts.title.category": "Category",
   "skiplink.mainContent": "Skip to main content",
   "skiplink.contactsLinks": "Skip to social media and contact links",

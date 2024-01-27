@@ -55,7 +55,7 @@ const fi = {
   fiction: "Kaunokirjallisuus",
   "non-fiction": "Tietokirjallisuus",
   "charts.title.years": "Vuositilasto",
-  "charts.title.languages": "Kieli",
+  "charts.title.language": "Kieli",
   "charts.title.category": "Kategoria",
   "skiplink.mainContent": "Hyppää pääsisältöön",
   "skiplink.contactsLinks": "Hyppää linkki-osioon",
