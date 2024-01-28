@@ -13,7 +13,11 @@ export default function Contact() {
   return (
     <div className={styles.mainContainer} data-theme={theme}>
       <div>
-        <Link href="https://notacult.social/@villivald" target="_blank">
+        <Link
+          href="https://notacult.social/@villivald"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Image
             src="/emojis/mastodon.svg"
             width={500}
@@ -23,7 +27,11 @@ export default function Contact() {
         </Link>
       </div>
       <div>
-        <Link href="mailto:maxim@villivald.com" target="_blank">
+        <Link
+          href="mailto:maxim@villivald.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Image
             src="/emojis/email.svg"
             width={500}
@@ -33,7 +41,11 @@ export default function Contact() {
         </Link>
       </div>
       <div>
-        <Link href="https://www.linkedin.com/in/villivald/" target="_blank">
+        <Link
+          href="https://www.linkedin.com/in/villivald/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Image
             src="/emojis/linkedin.svg"
             width={500}
