@@ -48,8 +48,8 @@
 }
 
 .languageChart {
-  max-width: 20vw;
-  max-height: 20vw;
+  width: 20vw;
+  height: 20vw;
   justify-content: center;
 }
 
@@ -224,8 +224,8 @@ main[data-theme="dark"] .button:focus-visible {
   }
 
   .languageChart {
-    max-width: 30vw;
-    max-height: 30vw;
+    width: 28vw;
+    height: 30vw;
   }
 }
 
@@ -262,8 +262,8 @@ main[data-theme="dark"] .button:focus-visible {
   }
 
   .languageChart {
-    max-width: 60vw;
-    max-height: 60vw;
+    width: 60vw;
+    height: 62vw;
   }
 }
 

@@ -16,7 +16,7 @@ export default function CategoryCharts({ type }: { type: string }) {
     ).length;
   };
 
-  const years = ["2024", "2023", "2022", "2021"];
+  const years = ["2024", "2023", "2022", "2021", "2020"];
   const intl = useIntl();
 
   const labels =
