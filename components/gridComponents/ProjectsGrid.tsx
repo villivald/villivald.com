@@ -1,20 +1,22 @@
 import CardFooter from "./subComponents/CardFooter";
+
 import styles from "../../styles/grid/ProjectsGrid.module.css";
 
 export default function ProjectsGrid() {
+  const projects = "projects";
+
   return (
     <div className={styles.container} aria-hidden="true">
       <div className={styles.letters}>
-        <p className={styles.p}>P</p>
-        <p className={styles.r}>R</p>
-        <p className={styles.o}>O</p>
-        <p className={styles.j}>J</p>
-        <p className={styles.e}>E</p>
-        <p className={styles.c}>C</p>
-        <p className={styles.t}>T</p>
-        <p className={styles.s}>S</p>
+        {projects.split("").map((letter, index) => {
+          return (
+            <p key={index} className={styles[letter]}>
+              {letter.toUpperCase()}
+            </p>
+          );
+        })}
       </div>
-      <CardFooter emoji="projects" text="projects" />
+      <CardFooter emoji={projects} text={projects} />
     </div>
   );
 }

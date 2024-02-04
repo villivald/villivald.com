@@ -1,4 +1,5 @@
 import CardFooter from "./subComponents/CardFooter";
+
 import styles from "../../styles/grid/OldGrid.module.css";
 
 export default function OldGrid() {

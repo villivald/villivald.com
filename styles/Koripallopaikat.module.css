@@ -1,9 +1,0 @@
-.mainContainer {
-  min-height: 70vh;
-}
-
-@media (width <= 500px) {
-  .mainContainer {
-    min-height: 80vh;
-  }
-}

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FormattedMessage } from "react-intl";
+import { FormattedMessage, useIntl } from "react-intl";
 import { useContext } from "react";
 
 import { ThemeContext } from "../../../context";
@@ -12,6 +12,8 @@ type Props = {
 
 export default function CardFooter({ emoji, text }: Props) {
   const theme = useContext(ThemeContext);
+
+  const intl = useIntl();
 
   return (
     <div
@@ -33,7 +35,7 @@ export default function CardFooter({ emoji, text }: Props) {
         <Image
           src="/emojis/arrow.svg"
           data-theme={theme}
-          alt="emoji icon - arrow"
+          alt={intl.formatMessage({ id: "alt.arrow" })}
           width={24}
           height={24}
         />

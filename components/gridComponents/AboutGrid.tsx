@@ -1,5 +1,6 @@
-import styles from "../../styles/grid/AboutGrid.module.css";
 import CardFooter from "./subComponents/CardFooter";
+
+import styles from "../../styles/grid/AboutGrid.module.css";
 
 export default function AboutGrid() {
   return (

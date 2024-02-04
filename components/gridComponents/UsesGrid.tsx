@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Atropos from "atropos/react";
+import { useIntl } from "react-intl";
 
 import CardFooter from "./subComponents/CardFooter";
 
@@ -8,6 +9,8 @@ import styles from "../../styles/grid/UsesGrid.module.css";
 
 export default function UsesGrid() {
   const [isOpen, setIsOpen] = useState(false);
+
+  const intl = useIntl();
 
   // Check if prefers reduced motion is enabled
   const prefersReducedMotion =
@@ -30,7 +33,7 @@ export default function UsesGrid() {
               width={100}
               height={isOpen ? 100 : 40}
               src="/emojis/toolbox.svg"
-              alt="toolbox emoji"
+              alt={intl.formatMessage({ id: "alt.toolbox" })}
             />
           </Atropos>
         </div>

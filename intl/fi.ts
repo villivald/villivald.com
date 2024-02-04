@@ -73,6 +73,8 @@ const fi = {
   "alt.languageArrow": "Nuolikuvake joka osoittaa valittua kieltä",
   "alt.blogLogo": "Blogini logo, jonka nimi on 'Create React App'",
   "alt.contact": "Kuva toimistossa istuvasta miehestä joka soittaa puhelimella",
+  "alt.arrow": "Nuolikuvake",
+  "alt.toolbox": "Työkalupakki kuvake",
 
   // Aria labels
   "aria.study": "Sivu jossa on tietoa opiskelustani",

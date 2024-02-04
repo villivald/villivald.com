@@ -73,6 +73,8 @@ const en = {
   "alt.blogLogo": "The logo of my blog, named 'Create React App'",
   "alt.contact":
     "Picture of a man sitting in an office calling someone on his phone",
+  "alt.arrow": "Arrow icon",
+  "alt.toolbox": "Toolbox icon",
 
   // Aria labels
   "aria.study": "Page with information about my studies",
