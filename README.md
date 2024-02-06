@@ -51,7 +51,7 @@
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/villivald/proj_react_2020/issues).
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/villivald/villivald.com/issues).
 
 ## Show your support
 
