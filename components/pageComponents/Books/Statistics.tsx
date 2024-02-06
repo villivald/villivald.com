@@ -1,5 +1,5 @@
-import { Fragment, useContext } from "react";
 import { useRouter } from "next/router";
+import { Fragment, useContext } from "react";
 import { FormattedMessage } from "react-intl";
 
 import BarChart from "./BarChart";

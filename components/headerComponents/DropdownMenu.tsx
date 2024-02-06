@@ -4,7 +4,6 @@ import { useContext, useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
 import { ThemeContext } from "../../context";
-
 import styles from "../../styles/Dropdown.module.css";
 
 export default function DropdownMenu() {

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useIntl } from "react-intl";
 
 import styles from "../../styles/ThemeToggle.module.css";
 
@@ -8,6 +9,8 @@ type Props = {
 };
 
 export default function ThemeToggle({ changeTheme, theme }: Props) {
+  const intl = useIntl();
+
   return (
     <button
       aria-label="changeThemeButton"
@@ -18,7 +21,7 @@ export default function ThemeToggle({ changeTheme, theme }: Props) {
       <Image
         data-theme={theme}
         src={`/emojis/${theme === "dark" ? "dark" : "light"}.svg`}
-        alt="emoji icon - light/dark theme switcher"
+        alt={intl.formatMessage({ id: "alt.theme" })}
         width={48}
         height={48}
       />

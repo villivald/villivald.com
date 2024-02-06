@@ -4,7 +4,6 @@ import { useContext } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
 import { ThemeContext } from "../../context";
-
 import styles from "../../styles/Old.module.css";
 
 const sites = [
@@ -42,7 +41,7 @@ export default function Old() {
                     src="/emojis/link.svg"
                     width={24}
                     height={24}
-                    alt="external link"
+                    alt={intl.formatMessage({ id: "alt.externalLink" })}
                   />
                 </Link>
               </p>

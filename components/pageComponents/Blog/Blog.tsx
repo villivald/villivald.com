@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 
 import BlogCardList from "./BlogCardList";
 import Spinner from "../../Spinner";
+
 import styles from "../../../styles/Blog.module.css";
 
 interface BlogPost {

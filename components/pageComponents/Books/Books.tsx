@@ -1,8 +1,8 @@
-import { useMemo, useCallback } from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { VirtuosoGrid } from "react-virtuoso";
+import { useMemo, useCallback } from "react";
 import { FormattedMessage } from "react-intl";
+import { VirtuosoGrid } from "react-virtuoso";
 
 import data from "./data.json";
 

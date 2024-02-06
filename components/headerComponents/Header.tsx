@@ -1,12 +1,11 @@
 import Link from "next/link";
 import { useContext } from "react";
 
-import { ThemeContext } from "../../context";
-
 import DropdownMenu from "./DropdownMenu";
 import ThemeToggle from "./ThemeToggle";
 import LanguageSwitch from "./LanguageSwitch";
 
+import { ThemeContext } from "../../context";
 import styles from "../../styles/Header.module.css";
 
 type Props = {

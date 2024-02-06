@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useMemo, useContext } from "react";
 import Image from "next/image";
+import React, { useState, useEffect, useMemo, useContext } from "react";
 
 import { ThemeContext } from "../../context";
 import styles from "../../styles/About.module.css";

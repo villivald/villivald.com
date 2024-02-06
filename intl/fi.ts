@@ -75,6 +75,10 @@ const fi = {
   "alt.contact": "Kuva toimistossa istuvasta miehestä joka soittaa puhelimella",
   "alt.arrow": "Nuolikuvake",
   "alt.toolbox": "Työkalupakki kuvake",
+  "alt.theme": "Tumman ja vaalean teeman vaihtaja - taskulamppu kuvake",
+  "alt.externalLink": "Ulkoisen linkin kuvake",
+  "alt.githubLogo": "GitHub logo kuvake",
+  "alt.githubChart": "Kuvaaja joka näyttää minun GitHub kontribuutiot",
 
   // Aria labels
   "aria.study": "Sivu jossa on tietoa opiskelustani",

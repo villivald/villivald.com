@@ -75,6 +75,10 @@ const en = {
     "Picture of a man sitting in an office calling someone on his phone",
   "alt.arrow": "Arrow icon",
   "alt.toolbox": "Toolbox icon",
+  "alt.theme": "Light and dark theme switcher - flashlight icon",
+  "alt.externalLink": "External link icon",
+  "alt.githubLogo": "GitHub logo icon",
+  "alt.githubChart": "Chart showing my GitHub contributions",
 
   // Aria labels
   "aria.study": "Page with information about my studies",

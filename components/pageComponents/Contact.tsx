@@ -1,6 +1,6 @@
-import { useContext } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useContext } from "react";
 import { useIntl } from "react-intl";
 
 import { ThemeContext } from "../../context";

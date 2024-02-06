@@ -1,10 +1,9 @@
-import { CSSProperties, useContext } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { CSSProperties, useContext } from "react";
 import { FormattedMessage } from "react-intl";
 
 import { ThemeContext } from "../../context";
-
 import styles from "../../styles/Uses.module.css";
 
 interface CSSPropertiesWithVars extends CSSProperties {

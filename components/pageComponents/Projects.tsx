@@ -1,13 +1,14 @@
-import { useContext } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { FormattedMessage } from "react-intl";
+import { useContext } from "react";
+import { FormattedMessage, useIntl } from "react-intl";
 
 import { ThemeContext } from "../../context";
 import styles from "../../styles/Projects.module.css";
 
 export default function Projects() {
   const theme = useContext(ThemeContext);
+  const intl = useIntl();
 
   return (
     <div className={styles.mainContainer}>
@@ -15,17 +16,17 @@ export default function Projects() {
         <p>
           <Image
             src="/emojis/github_light.svg"
-            alt="Github logo"
             width={30}
             height={30}
+            alt={intl.formatMessage({ id: "alt.githubLogo" })}
           />
           <Link href="https://github.com/villivald">villivald</Link>
         </p>
         <Image
           src="http://ghchart.rshah.org/30a14e/villivald"
-          alt="villivald's Github chart"
           width={663}
           height={104}
+          alt={intl.formatMessage({ id: "alt.githubChart" })}
         />
       </div>
       <div data-theme={theme}></div>
@@ -47,7 +48,7 @@ export default function Projects() {
                   src="/emojis/link.svg"
                   width={24}
                   height={24}
-                  alt="Logo of the National Library of Finland - external link"
+                  alt={intl.formatMessage({ id: "alt.externalLink" })}
                 />
               </a>
             </section>
@@ -78,7 +79,7 @@ export default function Projects() {
                   src="/emojis/link.svg"
                   width={24}
                   height={24}
-                  alt="Logo of koripallopaikat.com project - external link"
+                  alt={intl.formatMessage({ id: "alt.externalLink" })}
                 />
               </a>
             </section>
@@ -90,7 +91,7 @@ export default function Projects() {
                   src="/emojis/link.svg"
                   width={24}
                   height={24}
-                  alt="Logo of create-react-app.com blog - external link"
+                  alt={intl.formatMessage({ id: "alt.externalLink" })}
                 />
               </a>
             </section>
@@ -102,7 +103,7 @@ export default function Projects() {
                   src="/emojis/link.svg"
                   width={24}
                   height={24}
-                  alt="Logo of my wishlist app project - external link"
+                  alt={intl.formatMessage({ id: "alt.externalLink" })}
                 />
               </a>
             </section>
