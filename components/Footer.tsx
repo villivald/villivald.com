@@ -1,7 +1,7 @@
-import { useContext } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { useContext } from "react";
 
 import { ThemeContext } from "../context";
 import styles from "../styles/Footer.module.css";

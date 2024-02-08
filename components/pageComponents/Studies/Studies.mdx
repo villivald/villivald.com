@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useContext } from "react";
-import { FormattedMessage } from "react-intl";
+import { FormattedMessage, useIntl } from "react-intl";
 
 import { Details } from "./Details";
 import { LabProgress, HelsinkiProgress } from "./LinearProgress";
@@ -12,11 +12,11 @@ import styles from "../../../styles/Studies.module.css";
 
 <div>
 
-# <div className={useContext(ThemeContext) === "dark" ? styles.emojiContainerDark : styles.emojiContainerLight}><FormattedMessage id="study" /> <Image src='/emojis/study.svg' alt='emoji icon - student' width={36} height={36}/></div>
+# <div className={useContext(ThemeContext) === "dark" ? styles.emojiContainerDark : styles.emojiContainerLight}><FormattedMessage id="study" /> <Image src='/emojis/study.svg' alt={useIntl().formatMessage({ id: "alt.student" })} width={36} height={36}/></div>
 
 <div>
 
-## <div className={useContext(ThemeContext) === "dark" ? styles.emojiContainerDark : styles.emojiContainerLight}><Image src='/emojis/book.svg' alt='emoji icon - book' width={24} height={24}/> <FormattedMessage id="unihelsinki" /> (2011-2015)</div>
+## <div className={useContext(ThemeContext) === "dark" ? styles.emojiContainerDark : styles.emojiContainerLight}><Image src='/emojis/book.svg' alt={useIntl().formatMessage({ id: "alt.book" })} width={24} height={24}/> <FormattedMessage id="unihelsinki" /> (2011-2015)</div>
 
 - <span
     className={
@@ -47,7 +47,7 @@ import styles from "../../../styles/Studies.module.css";
 
 <div>
 
-## <div className={useContext(ThemeContext) === "dark" ? styles.emojiContainerDark : styles.emojiContainerLight}><Image data-theme={useContext(ThemeContext)} src='/emojis/floppy.svg' alt='emoji icon - floppy disk' width={24} height={24}/> <FormattedMessage id="lab" /> (2019 →)</div>
+## <div className={useContext(ThemeContext) === "dark" ? styles.emojiContainerDark : styles.emojiContainerLight}><Image data-theme={useContext(ThemeContext)} src='/emojis/floppy.svg' alt={useIntl().formatMessage({ id: "alt.floppy" })} width={24} height={24}/> <FormattedMessage id="lab" /> (2019 →)</div>
 
 - <span
     className={
@@ -79,11 +79,11 @@ import styles from "../../../styles/Studies.module.css";
 
 <div>
 
-# <div className={useContext(ThemeContext) === "dark" ? styles.emojiContainerDark : styles.emojiContainerLight}><FormattedMessage id="coursesAndCertificates" /> <Image src='/emojis/writing.svg' alt='emoji icon - writing hand' width={36} height={36}/></div>
+# <div className={useContext(ThemeContext) === "dark" ? styles.emojiContainerDark : styles.emojiContainerLight}><FormattedMessage id="coursesAndCertificates" /> <Image src='/emojis/writing.svg' alt={useIntl().formatMessage({ id: "alt.penAndPaper" })} width={36} height={36}/></div>
 
 <div>
 
-## <div className={useContext(ThemeContext) === "dark" ? styles.emojiContainerDark : styles.emojiContainerLight}><Image data-theme={useContext(ThemeContext)} src='/emojis/comet.svg' alt='emoji icon - comet' width={24} height={24}/> <FormattedMessage id="courses" /></div>
+## <div className={useContext(ThemeContext) === "dark" ? styles.emojiContainerDark : styles.emojiContainerLight}><Image data-theme={useContext(ThemeContext)} src='/emojis/comet.svg' alt={useIntl().formatMessage({ id: "alt.comet" })} width={24} height={24}/> <FormattedMessage id="courses" /></div>
 
 - <span
     className={
@@ -112,7 +112,7 @@ import styles from "../../../styles/Studies.module.css";
 
 <div>
 
-## <div className={useContext(ThemeContext) === "dark" ? styles.emojiContainerDark : styles.emojiContainerLight}><Image src='/emojis/fire.svg' alt='emoji icon - fire' width={24} height={24}/> <FormattedMessage id="certificates" /></div>
+## <div className={useContext(ThemeContext) === "dark" ? styles.emojiContainerDark : styles.emojiContainerLight}><Image src='/emojis/fire.svg' alt={useIntl().formatMessage({ id: "alt.fire" })} width={24} height={24}/> <FormattedMessage id="certificates" /></div>
 
 - <span
     className={

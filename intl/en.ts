@@ -79,6 +79,12 @@ const en = {
   "alt.externalLink": "External link icon",
   "alt.githubLogo": "GitHub logo icon",
   "alt.githubChart": "Chart showing my GitHub contributions",
+  "alt.student": "Student emoji icon",
+  "alt.book": "Book emoji icon",
+  "alt.floppy": "Floppy disk emoji icon",
+  "alt.penAndPaper": "Pen and paper emoji icon",
+  "alt.comet": "Comet emoji icon",
+  "alt.fire": "Fire emoji icon",
 
   // Aria labels
   "aria.study": "Page with information about my studies",

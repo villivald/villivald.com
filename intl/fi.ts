@@ -79,6 +79,12 @@ const fi = {
   "alt.externalLink": "Ulkoisen linkin kuvake",
   "alt.githubLogo": "GitHub logo kuvake",
   "alt.githubChart": "Kuvaaja joka näyttää minun GitHub kontribuutiot",
+  "alt.student": "Opiskelija emoji kuvake",
+  "alt.book": "Kirja emoji kuvake",
+  "alt.floppy": "Levyke emoji kuvake",
+  "alt.penAndPaper": "Kynä ja paperi emoji kuvake",
+  "alt.comet": "Komeetta emoji kuvake",
+  "alt.fire": "Tuli emoji kuvake",
 
   // Aria labels
   "aria.study": "Sivu jossa on tietoa opiskelustani",
