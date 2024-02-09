@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useContext } from "react";
+import { useIntl } from "react-intl";
 
 import { ThemeContext } from "../context";
 import styles from "../styles/Footer.module.css";
@@ -9,27 +10,28 @@ import styles from "../styles/Footer.module.css";
 export default function Footer() {
   const theme = useContext(ThemeContext);
   const router = useRouter();
+  const intl = useIntl();
 
   const socialIcons = [
     {
       name: "gitlab",
       link: "https://version.helsinki.fi/villival",
-      altText: "GitLab - logo",
+      altText: "gitlabLogo",
     },
     {
       name: "github",
       link: "https://github.com/villivald",
-      altText: "GitHub - logo",
+      altText: "githubLogo",
     },
     {
       name: "linkedin",
       link: "https://linkedin.com/in/villivald/",
-      altText: "LinkedIn - logo",
+      altText: "linkedinLogo",
     },
     {
       name: "mastodon",
       link: "https://notacult.social/@villivald",
-      altText: "Mastodon - logo",
+      altText: "mastodonLogo",
     },
   ];
 
@@ -37,22 +39,22 @@ export default function Footer() {
     {
       name: "koripallopaikat",
       link: "https://koripallopaikat.com",
-      altText: "Basketball courts project",
+      altText: "koripallopaikat",
     },
     {
       name: "email",
       link: "mailto:maxim@villivald.com",
-      altText: "Send email",
+      altText: "email",
     },
     {
       name: "blog",
       link: "https://create-react-app.com/",
-      altText: "My personal blog",
+      altText: "blogPen",
     },
     {
       name: "hackernoon",
       link: "https://hackernoon.com/u/villivald",
-      altText: "HackerNoon - logo",
+      altText: "hackernoonLogo",
     },
   ];
 
@@ -75,7 +77,7 @@ export default function Footer() {
           <Link href={icon.link} key={icon.name}>
             <Image
               src={`/emojis/${icon.name}.svg`}
-              alt={icon.altText}
+              alt={intl.formatMessage({ id: `alt.${icon.altText}` })}
               width={64}
               height={64}
             />
@@ -88,7 +90,7 @@ export default function Footer() {
           <Link href={icon.link} key={icon.name}>
             <Image
               src={`/emojis/${icon.name}.svg`}
-              alt={icon.altText}
+              alt={intl.formatMessage({ id: `alt.${icon.altText}` })}
               width={64}
               height={icon.name === "hackernoon" ? 48 : 64}
               data-theme={icon.name === "hackernoon" && theme === "dark"}

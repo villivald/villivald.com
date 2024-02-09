@@ -78,13 +78,24 @@ const en = {
   "alt.theme": "Light and dark theme switcher - flashlight icon",
   "alt.externalLink": "External link icon",
   "alt.githubLogo": "GitHub logo icon",
+  "alt.gitlabLogo": "GitLab logo icon",
+  "alt.linkedinLogo": "LinkedIn logo icon",
+  "alt.mastodonLogo": "Mastodon logo icon",
+  "alt.hackernoonLogo": "HackerNoon logo icon",
+  "alt.koripallopaikat":
+    "Basketball emoji icon - link to my basketball related website",
   "alt.githubChart": "Chart showing my GitHub contributions",
+  "alt.blogPen": "Pen emoji icon - link to my blog",
+  "alt.email": "Postbox emoji icon - link for sending me an email",
   "alt.student": "Student emoji icon",
   "alt.book": "Book emoji icon",
   "alt.floppy": "Floppy disk emoji icon",
   "alt.penAndPaper": "Pen and paper emoji icon",
   "alt.comet": "Comet emoji icon",
   "alt.fire": "Fire emoji icon",
+  "alt.home": "Home emoji icon - link to the home page",
+  "alt.questionMark":
+    "Question mark emoji icon - placeholder for future content",
 
   // Aria labels
   "aria.study": "Page with information about my studies",

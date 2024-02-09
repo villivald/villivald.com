@@ -1,14 +1,13 @@
-import { useContext } from "react";
-import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from "next/router";
+import { useContext } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
-
-import { ThemeContext } from "../context";
 
 import Header from "./headerComponents/Header";
 import Footer from "./Footer";
 
+import { ThemeContext } from "../context";
 import styles from "../styles/Layout.module.css";
 
 type Props = {
@@ -50,7 +49,7 @@ export default function Layout({ children, changeTheme, changeLocale }: Props) {
             <li>
               <Image
                 src="/emojis/home.svg"
-                alt="home emoji"
+                alt={intl.formatMessage({ id: "alt.home" })}
                 width={24}
                 height={24}
               />

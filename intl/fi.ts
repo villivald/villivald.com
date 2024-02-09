@@ -78,13 +78,24 @@ const fi = {
   "alt.theme": "Tumman ja vaalean teeman vaihtaja - taskulamppu kuvake",
   "alt.externalLink": "Ulkoisen linkin kuvake",
   "alt.githubLogo": "GitHub logo kuvake",
+  "alt.gitlabLogo": "GitLab logo kuvake",
+  "alt.linkedinLogo": "LinkedIn logo kuvake",
+  "alt.mastodonLogo": "Mastodon logo kuvake",
+  "alt.hackernoonLogo": "HackerNoon logo kuvake",
+  "alt.koripallopaikat":
+    "Basketball emoji kuvake - linkki minun koripalloon liittyvään verkkosivustoon",
   "alt.githubChart": "Kuvaaja joka näyttää minun GitHub kontribuutiot",
+  "alt.blogPen": "Kynä emoji kuvake - linkki minun blogiin",
+  "alt.email": "Postilaatikko emoji kuvake - linkki minun sähköpostiin",
   "alt.student": "Opiskelija emoji kuvake",
   "alt.book": "Kirja emoji kuvake",
   "alt.floppy": "Levyke emoji kuvake",
   "alt.penAndPaper": "Kynä ja paperi emoji kuvake",
   "alt.comet": "Komeetta emoji kuvake",
   "alt.fire": "Tuli emoji kuvake",
+  "alt.home": "Koti emoji kuvake - linkki etusivulle",
+  "alt.questionMark":
+    "Kysymysmerkki emoji kuvake - paikkamerkki tuleville kuville",
 
   // Aria labels
   "aria.study": "Sivu jossa on tietoa opiskelustani",

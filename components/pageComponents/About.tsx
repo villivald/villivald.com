@@ -1,11 +1,13 @@
 import Image from "next/image";
-import React, { useState, useEffect, useMemo, useContext } from "react";
+import { useState, useEffect, useMemo, useContext } from "react";
+import { useIntl } from "react-intl";
 
 import { ThemeContext } from "../../context";
 import styles from "../../styles/About.module.css";
 
 export default function About() {
   const theme = useContext(ThemeContext);
+  const intl = useIntl();
   const [currentSlide, setCurrentSlide] = useState("2023");
 
   const years = useMemo(() => {
@@ -89,7 +91,7 @@ export default function About() {
                 year === "2024" && (num === "8" || num === "7") ? (
                   <div key={index} className={styles.question}>
                     <Image
-                      alt="about"
+                      alt={intl.formatMessage({ id: "alt.questionMark" })}
                       width={200}
                       height={200}
                       src={"/emojis/question.svg"}
