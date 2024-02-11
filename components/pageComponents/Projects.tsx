@@ -39,6 +39,13 @@ export default function Projects() {
           <span>
             <section>
               <p data-image="public"></p>
+              <Image
+                src="/preview/preview_ids.webp"
+                width={400}
+                height={330}
+                alt={intl.formatMessage({ id: "alt.previewIds" })}
+                className={styles.hide}
+              />
               <a
                 data-theme={theme}
                 href="https://tunnisteportaali.kansalliskirjasto.fi/"
@@ -54,6 +61,13 @@ export default function Projects() {
             </section>
             <section>
               <p data-image="admin"></p>
+              <Image
+                src="/preview/preview_idsa.webp"
+                width={350}
+                height={225}
+                alt={intl.formatMessage({ id: "alt.previewIdsa" })}
+                className={styles.hide}
+              />
               <span data-theme={theme}>
                 <FormattedMessage id="identifierServices.admin" />
               </span>
@@ -73,6 +87,13 @@ export default function Projects() {
           <span>
             <section>
               <p data-image="koripallo"></p>
+              <Image
+                src="/preview/preview_koripallopaikat.webp"
+                width={400}
+                height={330}
+                alt={intl.formatMessage({ id: "alt.previewBasketball" })}
+                className={styles.hide}
+              />
               <a data-theme={theme} href="https://koripallopaikat.com/">
                 <FormattedMessage id="basketballCourts" />
                 <Image
@@ -85,6 +106,13 @@ export default function Projects() {
             </section>
             <section>
               <p data-image="cra"></p>
+              <Image
+                src="/preview/preview_cra.webp"
+                width={400}
+                height={320}
+                alt={intl.formatMessage({ id: "alt.previewCra" })}
+                className={styles.hide}
+              />
               <a data-theme={theme} href="https://create-react-app.com/">
                 Create-React-App <FormattedMessage id="blog" />
                 <Image
@@ -97,6 +125,13 @@ export default function Projects() {
             </section>
             <section>
               <p data-image="wishlist"></p>
+              <Image
+                src="/preview/preview_wishlist.webp"
+                width={400}
+                height={310}
+                alt={intl.formatMessage({ id: "alt.previewWishlist" })}
+                className={styles.hide}
+              />
               <a data-theme={theme} href="https://wishlist.villivald.com">
                 Wishlist App
                 <Image

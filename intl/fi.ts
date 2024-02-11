@@ -96,6 +96,11 @@ const fi = {
   "alt.home": "Koti emoji kuvake - linkki etusivulle",
   "alt.questionMark":
     "Kysymysmerkki emoji kuvake - paikkamerkki tuleville kuville",
+  "alt.previewIds": "Esikatselu kuva tunnisteportaalin julkisista palveluista",
+  "alt.previewIdsa": "Esikatselu kuva tunnisteportaalin sisäisistä palveluista",
+  "alt.previewCra": "Esikatselu kuva minun henkilökohtaisesta blogista",
+  "alt.previewBasketball": "Esikatselu kuva minun koripallosivustosta",
+  "alt.previewWishlist": "Esikatselu kuva minun wishlist sivustosta",
 
   // Aria labels
   "aria.study": "Sivu jossa on tietoa opiskelustani",

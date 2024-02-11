@@ -54,6 +54,37 @@
   filter: invert(1);
 }
 
+.mainContainer .hide.hide {
+  display: none;
+}
+
+.mainContainer span section > p:hover + .hide {
+  display: block;
+  position: absolute;
+  top: 4rem;
+  left: 10rem;
+  max-width: 25rem;
+  box-shadow: 0 0 0.5rem 0.25rem var(--color-brand-grey50);
+  z-index: 1;
+}
+
+.mainContainer span section:not(:first-of-type) > p:hover + .hide {
+  left: -25rem;
+}
+
+.mainContainer span section > p[data-image="publisher"]:hover {
+  cursor: not-allowed;
+}
+
+.mainContainer
+  span
+  section:not(:first-of-type)
+  > p[data-image="admin"]:hover
+  + .hide {
+  left: -6rem;
+  top: 14rem;
+}
+
 .mainContainer > div:nth-child(2),
 .mainContainer > div:nth-child(3) {
   background-color: var(--color-brand-dark);
@@ -122,6 +153,7 @@
 }
 
 .mainContainer > div:nth-child(4) > span > span > section {
+  position: relative;
   display: grid;
   gap: 0.25rem;
 }
@@ -283,6 +315,18 @@
   .mainContainer > div:nth-child(1) {
     width: 70rem;
     height: 16rem;
+  }
+}
+
+@media (width <= 1250px) {
+  .mainContainer span section:last-of-type > p:hover + .hide {
+    top: -5rem;
+  }
+}
+
+@media (width <= 1200px) {
+  .mainContainer span section > p:hover + .hide {
+    display: none;
   }
 }
 

@@ -96,6 +96,11 @@ const en = {
   "alt.home": "Home emoji icon - link to the home page",
   "alt.questionMark":
     "Question mark emoji icon - placeholder for future content",
+  "alt.previewIds": "Preview image of the identifier services public website",
+  "alt.previewIdsa": "Preview image of the identifier services admin website",
+  "alt.previewCra": "Preview image of my personal blog",
+  "alt.previewBasketball": "Preview image of my basketball courts website",
+  "alt.previewWishlist": "Preview image of my wishlist website",
 
   // Aria labels
   "aria.study": "Page with information about my studies",
