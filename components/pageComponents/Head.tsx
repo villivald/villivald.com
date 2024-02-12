@@ -7,7 +7,7 @@ export default function HeadComponent({ title }: { title: string }) {
   return (
     <Head>
       <title>
-        Villivald.com | {intl.formatMessage({ id: `title.${title}` })}
+        {`Villivald.com | ${intl.formatMessage({ id: `title.${title}` })}`}
       </title>
       <meta
         name="description"
