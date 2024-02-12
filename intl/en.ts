@@ -58,6 +58,30 @@ const en = {
   "skiplink.mainContent": "Skip to main content",
   "skiplink.contactsLinks": "Skip to social media and contact links",
 
+  // Page titles
+  "title.home": "Home page",
+  "title.about": "About me",
+  "title.blog": "Blog",
+  "title.books": "Books",
+  "title.statistics": "Books statistics",
+  "title.contact": "Contact me",
+  "title.projects": "My latest projects",
+  "title.study": "My studies",
+  "title.old": "Old versions of my website",
+  "title.uses": "The tools I use",
+
+  // Meta descriptions
+  "description.home": "Welcome to my website",
+  "description.about": "Information about me",
+  "description.blog": "The latest blog posts",
+  "description.books": "The books I have read lately",
+  "description.statistics": "Statistics for the books I have read",
+  "description.contact": "Contact me - Mastodon, email and LinkedIn",
+  "description.projects": "My latest projects - both pet and work",
+  "description.study": "Information about my studies",
+  "description.old": "Old versions of my website",
+  "description.uses": "The tools and software that I use",
+
   // Alt texts
   "alt.old.1": "Screenshot of the first version of my website from 2019",
   "alt.old.2":

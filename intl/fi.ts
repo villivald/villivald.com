@@ -60,6 +60,31 @@ const fi = {
   "skiplink.mainContent": "Hyppää pääsisältöön",
   "skiplink.contactsLinks": "Hyppää linkki-osioon",
 
+  // Page titles
+  "title.home": "Etusivu",
+  "title.about": "Minusta",
+  "title.blog": "Blogi",
+  "title.books": "Kirjat",
+  "title.statistics": "Kirjatilastot",
+  "title.contact": "Ota yhteyttä",
+  "title.projects": "Viimeisimmät projektit",
+  "title.study": "Opiskeluni",
+  "title.old": "Sivuston vanhat versiot",
+  "title.uses": "Työkalut",
+
+  // Meta descriptions
+  "description.home": "Tervetuloa verkkosivustolleni",
+  "description.about": "Tietoa minusta",
+  "description.blog": "Viimeisimmät blogikirjoitukset",
+  "description.books": "Kirjat joita olen lukenut viime aikoina",
+  "description.statistics": "Tilastot kirjoista joita olen lukenut",
+  "description.contact": "Ota yhteyttä - Mastodon, sähköposti ja LinkedIn",
+  "description.projects":
+    "Viimeisimmät projektit - sekä työ- että harrasteprojektit",
+  "description.study": "Tietoa opiskelustani",
+  "description.old": "Vanhat versiot minun verkkosivustosta",
+  "description.uses": "Työkalut ja sovellukset joita käytän",
+
   // Alt texts
   "alt.old.1":
     "Kuvakaappaus ensimmäisestä versiosta verkkosivustosta alkuvuodesta 2019",

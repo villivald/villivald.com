@@ -1,24 +1,12 @@
-import Head from "next/head";
-import { useIntl } from "react-intl";
+import HeadComponent from "../components/pageComponents/Head";
+import StudiesComponent from "../components/pageComponents/Studies/Studies.mdx";
 
 import styles from "../styles/Studies.module.css";
 
-import StudiesComponent from "../components/pageComponents/Studies/Studies.mdx";
-
 export default function Study() {
-  const intl = useIntl();
-
   return (
     <>
-      <Head>
-        <title>{intl.formatMessage({ id: "study" })}</title>
-        <meta
-          name="description"
-          content="my personal website made with next js"
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
+      <HeadComponent title="study" />
       <div className={styles.mainContainer}>
         <StudiesComponent />
       </div>

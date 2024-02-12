@@ -4,8 +4,9 @@ import { Analytics } from "@vercel/analytics/react";
 import { useState, useEffect } from "react";
 import { IntlProvider } from "react-intl";
 
-import { ThemeContext } from "../context";
 import Layout from "../components/layout";
+
+import { ThemeContext } from "../context";
 import { translations } from "../intl";
 
 import "../styles/globals.css";
