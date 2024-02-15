@@ -20,7 +20,9 @@ export default function Projects() {
             height={30}
             alt={intl.formatMessage({ id: "alt.githubLogo" })}
           />
-          <Link href="https://github.com/villivald">villivald</Link>
+          <Link href="https://github.com/villivald" hrefLang="en">
+            villivald
+          </Link>
         </p>
         <Image
           src="http://ghchart.rshah.org/30a14e/villivald"
@@ -49,6 +51,7 @@ export default function Projects() {
               <a
                 data-theme={theme}
                 href="https://tunnisteportaali.kansalliskirjasto.fi/"
+                hrefLang="x-default"
               >
                 <FormattedMessage id="identifierServices.public" />
                 <Image
@@ -94,7 +97,11 @@ export default function Projects() {
                 alt={intl.formatMessage({ id: "alt.previewBasketball" })}
                 className={styles.hide}
               />
-              <a data-theme={theme} href="https://koripallopaikat.com/">
+              <a
+                data-theme={theme}
+                href="https://koripallopaikat.com/"
+                hrefLang="en"
+              >
                 <FormattedMessage id="basketballCourts" />
                 <Image
                   src="/emojis/link.svg"
@@ -113,7 +120,11 @@ export default function Projects() {
                 alt={intl.formatMessage({ id: "alt.previewCra" })}
                 className={styles.hide}
               />
-              <a data-theme={theme} href="https://create-react-app.com/">
+              <a
+                data-theme={theme}
+                href="https://create-react-app.com/"
+                hrefLang="en"
+              >
                 Create-React-App <FormattedMessage id="blog" />
                 <Image
                   src="/emojis/link.svg"
@@ -132,7 +143,11 @@ export default function Projects() {
                 alt={intl.formatMessage({ id: "alt.previewWishlist" })}
                 className={styles.hide}
               />
-              <a data-theme={theme} href="https://wishlist.villivald.com">
+              <a
+                data-theme={theme}
+                href="https://wishlist.villivald.com"
+                hrefLang="en"
+              >
                 Wishlist App
                 <Image
                   src="/emojis/link.svg"

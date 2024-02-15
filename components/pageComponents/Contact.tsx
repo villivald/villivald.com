@@ -17,6 +17,7 @@ export default function Contact() {
           href="https://notacult.social/@villivald"
           target="_blank"
           rel="noopener noreferrer"
+          hrefLang="en"
         >
           <Image
             src="/emojis/mastodon.svg"
@@ -45,6 +46,7 @@ export default function Contact() {
           href="https://www.linkedin.com/in/villivald/"
           target="_blank"
           rel="noopener noreferrer"
+          hrefLang="en"
         >
           <Image
             src="/emojis/linkedin.svg"

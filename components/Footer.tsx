@@ -74,7 +74,7 @@ export default function Footer() {
       <Divider />
       <div>
         {socialIcons.map((icon) => (
-          <Link href={icon.link} key={icon.name}>
+          <Link href={icon.link} key={icon.name} hrefLang="en">
             <Image
               src={`/emojis/${icon.name}.svg`}
               alt={intl.formatMessage({ id: `alt.${icon.altText}` })}
@@ -87,7 +87,7 @@ export default function Footer() {
       <Divider />
       <div>
         {otherIcons.map((icon) => (
-          <Link href={icon.link} key={icon.name}>
+          <Link href={icon.link} key={icon.name} hrefLang="en">
             <Image
               src={`/emojis/${icon.name}.svg`}
               alt={intl.formatMessage({ id: `alt.${icon.altText}` })}

@@ -243,6 +243,7 @@ export default function Uses() {
             "--url": `url("/uses/${item.image}.webp")`,
           } as CSSPropertiesWithVars
         }
+        translate="no"
       >
         <Link href={item.link}>{item.name}</Link>
       </li>

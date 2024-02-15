@@ -58,7 +58,7 @@ export default function BlogCardList({ data }: DataArray) {
         {Object.values(formattedData).map((post: any) =>
           post.title ? (
             <div key={post.id} className={styles.blogCard} data-theme={theme}>
-              <a href={post.canonical_url}>
+              <a href={post.canonical_url} hrefLang="en">
                 <Image
                   priority
                   src={post.cover_image}
@@ -85,7 +85,10 @@ export default function BlogCardList({ data }: DataArray) {
                   key={randomPosts[post.id - 1]?.id}
                   className={[styles.blogCard, styles.back].join(" ")}
                 >
-                  <a href={randomPosts[post.id - 1]?.canonical_url}>
+                  <a
+                    href={randomPosts[post.id - 1]?.canonical_url}
+                    hrefLang="en"
+                  >
                     <Image
                       priority
                       src={
