@@ -117,10 +117,10 @@ const software = [
     image: "craft",
   },
   {
-    name: "Skiff Mail",
-    link: "https://skiff.com/",
+    name: "Fastmail",
+    link: "https://fastmail.com/",
     description: "Email client",
-    image: "skiff",
+    image: "fastmail",
   },
   {
     name: "Spark",
