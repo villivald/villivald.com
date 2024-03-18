@@ -2147,6 +2147,51 @@
       "category": "non-fiction"
     },
     {
+      "title": "Другая Россия",
+      "author": "О. Будницкий",
+      "date": "03.03.2024",
+      "image": "235.webp",
+      "rating": 4,
+      "language": "ru",
+      "category": "non-fiction"
+    },
+    {
+      "title": "Страна имен",
+      "author": "С. Никитин",
+      "date": "07.03.2024",
+      "image": "236.webp",
+      "rating": 3,
+      "language": "ru",
+      "category": "non-fiction"
+    },
+    {
+      "title": "Sota vai rauha",
+      "author": "M. Šiškin",
+      "date": "14.03.2024",
+      "image": "237.webp",
+      "rating": 4,
+      "language": "fi",
+      "category": "non-fiction"
+    },
+    {
+      "title": "After the Romanovs",
+      "author": "H. Rappaport",
+      "date": "14.03.2024",
+      "image": "238.webp",
+      "rating": 4,
+      "language": "en",
+      "category": "non-fiction"
+    },
+    {
+      "title": "Jäniksen vuosi",
+      "author": "A. Paasilinna",
+      "date": "17.03.2024",
+      "image": "239.webp",
+      "rating": 4,
+      "language": "fi",
+      "category": "fiction"
+    },
+    {
       "title": "",
       "author": "",
       "date": "",
