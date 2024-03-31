@@ -8,7 +8,8 @@ const en = {
   koripallopaikat: "Basketball",
   basketballCourts: "Basketball courts",
   projects: "Projects",
-  study: "Study",
+  study: "Work and studies",
+  studies: "Studies",
   timeline: "Timeline",
   old: "Old websites",
   oldMobile: "Old",
@@ -66,7 +67,7 @@ const en = {
   "title.statistics": "Books statistics",
   "title.contact": "Contact me",
   "title.projects": "My latest projects",
-  "title.study": "My studies",
+  "title.study": "Work and studies",
   "title.old": "Old versions of my website",
   "title.uses": "The tools I use",
 
@@ -78,7 +79,7 @@ const en = {
   "description.statistics": "Statistics for the books I have read",
   "description.contact": "Contact me - Mastodon, email and LinkedIn",
   "description.projects": "My latest projects - both pet and work",
-  "description.study": "Information about my studies",
+  "description.study": "Information about my studies and work",
   "description.old": "Old versions of my website",
   "description.uses": "The tools and software that I use",
 
@@ -127,7 +128,7 @@ const en = {
   "alt.previewWishlist": "Preview image of my wishlist website",
 
   // Aria labels
-  "aria.study": "Page with information about my studies",
+  "aria.study": "Page with information about my work and studies",
   "aria.blog": "Page with links to my blog posts",
   "aria.uses": "Page with the list of tools and software that I use",
   "aria.books": "Page with the list of books that I have read lately",

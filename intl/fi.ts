@@ -8,7 +8,8 @@ const fi = {
   koripallopaikat: "Koripallo",
   basketballCourts: "Koripallopaikat",
   projects: "Projektit",
-  study: "Opiskelu",
+  study: "Työ ja opiskelu",
+  studies: "Opinnot",
   timeline: "Aikajana",
   old: "Vanhat sivut",
   oldMobile: "Vanhat",
@@ -68,7 +69,7 @@ const fi = {
   "title.statistics": "Kirjatilastot",
   "title.contact": "Ota yhteyttä",
   "title.projects": "Viimeisimmät projektit",
-  "title.study": "Opiskeluni",
+  "title.study": "Työ ja opiskelu",
   "title.old": "Sivuston vanhat versiot",
   "title.uses": "Työkalut",
 
@@ -81,7 +82,7 @@ const fi = {
   "description.contact": "Ota yhteyttä - Mastodon, sähköposti ja LinkedIn",
   "description.projects":
     "Viimeisimmät projektit - sekä työ- että harrasteprojektit",
-  "description.study": "Tietoa opiskelustani",
+  "description.study": "Tietoa työstäni ja opiskelustani",
   "description.old": "Vanhat versiot minun verkkosivustosta",
   "description.uses": "Työkalut ja sovellukset joita käytän",
 
@@ -128,7 +129,7 @@ const fi = {
   "alt.previewWishlist": "Esikatselu kuva minun wishlist sivustosta",
 
   // Aria labels
-  "aria.study": "Sivu jossa on tietoa opiskelustani",
+  "aria.study": "Sivu jossa on tietoa minun työstä ja opiskelusta",
   "aria.blog": "Sivu jossa on linkkejä blogikirjoituksiini",
   "aria.uses": "Sivu jossa on lista työkaluista ja sovelluksista joita käytän",
   "aria.books":

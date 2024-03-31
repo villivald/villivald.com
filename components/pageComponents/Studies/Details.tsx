@@ -2,7 +2,7 @@ import styles from "../../../styles/Studies.module.css";
 
 type DetailsProps = {
   title: string;
-  text: string;
+  text?: string;
   link: string;
   theme: string;
   description: string;
