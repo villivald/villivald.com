@@ -60,6 +60,7 @@ const fi = {
   "charts.title.category": "Kategoria",
   "skiplink.mainContent": "Hyppää pääsisältöön",
   "skiplink.contactsLinks": "Hyppää linkki-osioon",
+  nationalLibrary: "Kansalliskirjasto",
 
   // Page titles
   "title.home": "Etusivu",

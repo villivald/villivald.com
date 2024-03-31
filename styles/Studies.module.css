@@ -6,6 +6,14 @@
   gap: 2rem;
 }
 
+.mainContainer[data-theme="dark"] * {
+  color: var(--color-white);
+}
+
+.mainContainer[data-theme="dark"] img:is([alt^="Comet"], [alt^="Floppy"]) {
+  filter: invert(1);
+}
+
 .mainContainer h1 {
   margin-bottom: 1rem;
   text-decoration: underline 8px var(--color-brand-red);
@@ -42,33 +50,14 @@
   margin-bottom: 2rem;
 }
 
-.mainContainer > div > div:nth-child(2) {
-  align-self: flex-start;
+.mainContainer > div > div:first-of-type {
+  justify-self: flex-start;
 }
 
-.emojiContainerLight,
-.emojiContainerDark {
+.emojiContainer {
   display: flex;
   align-items: center;
   gap: 0.2rem;
-}
-
-.emojiContainerDark {
-  color: var(--color-white);
-}
-
-.emojiContainerDark > img[data-theme="dark"] {
-  filter: invert(1);
-}
-
-.textDark {
-  color: var(--color-white);
-}
-
-li:has(span.textDark),
-li:has(span.textDark) a,
-li:has(span.textDark) p {
-  color: var(--color-white);
 }
 
 .toggle > details > summary {
@@ -92,17 +81,6 @@ main .mainContainer a:focus-visible {
 main[data-theme="dark"] .mainContainer summary:focus-visible,
 main[data-theme="dark"] .mainContainer a:focus-visible {
   outline-color: var(--color-white);
-}
-
-.toggle > details > summary[data-theme="dark"] {
-  color: var(--color-white);
-}
-
-.toggle > details > div > p[data-theme="dark"],
-.toggle > details > div > a[data-theme="dark"],
-.toggle > details > div > p > span[data-theme="dark"],
-.toggle > details > div > p > a[data-theme="dark"] {
-  color: var(--color-white);
 }
 
 .toggle > details summary::before {
@@ -129,6 +107,35 @@ main[data-theme="dark"] .mainContainer a:focus-visible {
 
 .toggle > details[open] summary::before {
   transform: rotate(90deg);
+}
+
+.workContainer {
+  grid-template-rows: 0.5fr 2fr 2fr;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.workContainer > div {
+  justify-self: flex-start;
+}
+
+.workContainer > .emojiContainer {
+  grid-area: 1 / 1 / 2 / 3;
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.workContainer > div > .emojiContainer {
+  margin-bottom: 0;
+}
+
+.workContainer > div:has(.emojiContainer):nth-of-type(2) {
+  grid-area: 2 / 1 / 3 / 2;
+  display: block;
+}
+
+.workContainer > div:has(.emojiContainer):last-of-type {
+  grid-area: 3 / 1 / 4 / 2;
+  display: block;
 }
 
 @media (height <= 1100px) {

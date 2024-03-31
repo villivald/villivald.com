@@ -5,8 +5,8 @@ import { FormattedMessage } from "react-intl";
 import { Details } from "./Details";
 
 type Props = {
-  styles: { [key: string]: string };
   theme: string;
+  styles: { [key: string]: string };
   intl: { formatMessage: (id: { id: string }) => string };
 };
 
@@ -14,13 +14,7 @@ export default function Uni({ styles, theme, intl }: Props) {
   return (
     <div>
       <div>
-        <div
-          className={
-            theme === "dark"
-              ? styles.emojiContainerDark
-              : styles.emojiContainerLight
-          }
-        >
+        <div className={styles.emojiContainer}>
           <h1>
             <FormattedMessage id="studies" />
           </h1>
@@ -33,13 +27,7 @@ export default function Uni({ styles, theme, intl }: Props) {
         </div>
 
         <div>
-          <div
-            className={
-              theme === "dark"
-                ? styles.emojiContainerDark
-                : styles.emojiContainerLight
-            }
-          >
+          <div className={styles.emojiContainer}>
             <Image
               src="/emojis/book.svg"
               alt={intl.formatMessage({ id: "alt.book" })}
@@ -52,15 +40,11 @@ export default function Uni({ styles, theme, intl }: Props) {
           </div>
 
           <ul>
-            <li
-              className={theme === "dark" ? styles.textDark : styles.textLight}
-            >
+            <li>
               <FormattedMessage id="russianStudies" />
             </li>
 
-            <li
-              className={theme === "dark" ? styles.textDark : styles.textLight}
-            >
+            <li>
               <FormattedMessage id="unihelGraduated" />
             </li>
           </ul>
@@ -75,13 +59,7 @@ export default function Uni({ styles, theme, intl }: Props) {
         </div>
 
         <div>
-          <div
-            className={
-              theme === "dark"
-                ? styles.emojiContainerDark
-                : styles.emojiContainerLight
-            }
-          >
+          <div className={styles.emojiContainer}>
             <Image
               data-theme={theme}
               src="/emojis/floppy.svg"
@@ -95,15 +73,11 @@ export default function Uni({ styles, theme, intl }: Props) {
           </div>
 
           <ul>
-            <li
-              className={theme === "dark" ? styles.textDark : styles.textLight}
-            >
+            <li>
               <FormattedMessage id="computerScience" />
             </li>
 
-            <li
-              className={theme === "dark" ? styles.textDark : styles.textLight}
-            >
+            <li>
               <FormattedMessage id="labStudies" />
             </li>
           </ul>
@@ -118,13 +92,7 @@ export default function Uni({ styles, theme, intl }: Props) {
       </div>
 
       <div>
-        <div
-          className={
-            theme === "dark"
-              ? styles.emojiContainerDark
-              : styles.emojiContainerLight
-          }
-        >
+        <div className={styles.emojiContainer}>
           <h1>
             <FormattedMessage id="coursesAndCertificates" />
           </h1>
@@ -137,13 +105,7 @@ export default function Uni({ styles, theme, intl }: Props) {
         </div>
 
         <div>
-          <div
-            className={
-              theme === "dark"
-                ? styles.emojiContainerDark
-                : styles.emojiContainerLight
-            }
-          >
+          <div className={styles.emojiContainer}>
             <Image
               data-theme={theme}
               src="/emojis/comet.svg"
@@ -157,25 +119,19 @@ export default function Uni({ styles, theme, intl }: Props) {
           </div>
 
           <ul>
-            <li
-              className={theme === "dark" ? styles.textDark : styles.textLight}
-            >
+            <li>
               <Link href="https://frontendmasters.com/u/villivald/">
                 Frontend Masters
               </Link>
             </li>
 
-            <li
-              className={theme === "dark" ? styles.textDark : styles.textLight}
-            >
+            <li>
               <Link href="https://www.coursera.org/account/accomplishments/certificate/XXH88UHKWCNW">
                 Coursera
               </Link>
             </li>
 
-            <li
-              className={theme === "dark" ? styles.textDark : styles.textLight}
-            >
+            <li>
               <Link href="https://www.linkedin.com/in/villivald/">
                 <FormattedMessage id="other" />
               </Link>
@@ -184,13 +140,7 @@ export default function Uni({ styles, theme, intl }: Props) {
         </div>
 
         <div>
-          <div
-            className={
-              theme === "dark"
-                ? styles.emojiContainerDark
-                : styles.emojiContainerLight
-            }
-          >
+          <div className={styles.emojiContainer}>
             <Image
               src="/emojis/fire.svg"
               alt={intl.formatMessage({ id: "alt.fire" })}
@@ -203,25 +153,19 @@ export default function Uni({ styles, theme, intl }: Props) {
           </div>
 
           <ul>
-            <li
-              className={theme === "dark" ? styles.textDark : styles.textLight}
-            >
+            <li>
               <Link href="https://www.udemy.com/certificate/UC-5abfefff-c2bc-491a-8d81-8610171f981c/">
                 TypeScript
               </Link>
             </li>
 
-            <li
-              className={theme === "dark" ? styles.textDark : styles.textLight}
-            >
+            <li>
               <Link href="https://www.freecodecamp.org/villivald">
                 freeCodeCamp
               </Link>
             </li>
 
-            <li
-              className={theme === "dark" ? styles.textDark : styles.textLight}
-            >
+            <li>
               <Link href="https://www.linkedin.com/in/villivald/">
                 <FormattedMessage id="other" />
               </Link>

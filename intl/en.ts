@@ -58,6 +58,7 @@ const en = {
   "charts.title.category": "Category",
   "skiplink.mainContent": "Skip to main content",
   "skiplink.contactsLinks": "Skip to social media and contact links",
+  nationalLibrary: "National Library of Finland",
 
   // Page titles
   "title.home": "Home page",

@@ -16,7 +16,7 @@ export default function Study() {
   return (
     <>
       <HeadComponent title="study" />
-      <div className={styles.mainContainer}>
+      <div className={styles.mainContainer} data-theme={theme}>
         <Work styles={styles} theme={theme} intl={intl} />
         <Uni styles={styles} theme={theme} intl={intl} />
       </div>
