@@ -59,6 +59,8 @@ const en = {
   "skiplink.mainContent": "Skip to main content",
   "skiplink.contactsLinks": "Skip to social media and contact links",
   nationalLibrary: "National Library of Finland",
+  frontendDeveloper: "Frontend Developer",
+  softwareDeveloper: "Software Developer",
 
   // Page titles
   "title.home": "Home page",
@@ -127,6 +129,10 @@ const en = {
   "alt.previewCra": "Preview image of my personal blog",
   "alt.previewBasketball": "Preview image of my basketball courts website",
   "alt.previewWishlist": "Preview image of my wishlist website",
+  "alt.briefcase": "Briefcase emoji icon",
+  "alt.qualitydesk": "QualityDesk logo",
+  "alt.library": "National Library logo",
+  "alt.construction": "Under construction emoji icon",
 
   // Aria labels
   "aria.study": "Page with information about my work and studies",

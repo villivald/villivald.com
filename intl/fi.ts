@@ -61,6 +61,8 @@ const fi = {
   "skiplink.mainContent": "Hyppää pääsisältöön",
   "skiplink.contactsLinks": "Hyppää linkki-osioon",
   nationalLibrary: "Kansalliskirjasto",
+  frontendDeveloper: "Frontend-kehittäjä",
+  softwareDeveloper: "Ohjelmistokehittäjä",
 
   // Page titles
   "title.home": "Etusivu",
@@ -128,6 +130,10 @@ const fi = {
   "alt.previewCra": "Esikatselu kuva minun henkilökohtaisesta blogista",
   "alt.previewBasketball": "Esikatselu kuva minun koripallosivustosta",
   "alt.previewWishlist": "Esikatselu kuva minun wishlist sivustosta",
+  "alt.briefcase": "Salkku emoji kuvake",
+  "alt.qualitydesk": "QualityDesk logo",
+  "alt.library": "Kansalliskirjaston logo",
+  "alt.construction": "Työmaa emoji kuvake",
 
   // Aria labels
   "aria.study": "Sivu jossa on tietoa minun työstä ja opiskelusta",
