@@ -41,3 +41,27 @@
   align-items: center;
   gap: 0.5rem;
 }
+
+@media (width < 500px) {
+  .gridFooterLight,
+  .gridFooterDark {
+    padding: 0 0.5rem;
+  }
+
+  .gridFooterLight p,
+  .gridFooterDark p {
+    font-size: var(--fontSize-helperText);
+  }
+}
+
+@media (width < 400px) {
+  .gridFooterLight p,
+  .gridFooterDark p {
+    font-size: var(--fontSize-copyrightText);
+  }
+
+  .gridFooterLight > p:last-child,
+  .gridFooterDark > p:last-child {
+    display: none;
+  }
+}
