@@ -17,7 +17,7 @@ export default function DropdownMenu() {
     "contact",
     "books",
     "projects",
-    "study",
+    "workandstudy",
     "uses",
     "old",
   ];

@@ -7,7 +7,7 @@ import BlogGrid from "./gridComponents/BlogGrid";
 import OldGrid from "./gridComponents/OldGrid";
 import ContactGrid from "./gridComponents/ContactGrid";
 import AboutGrid from "./gridComponents/AboutGrid";
-import StudyGrid from "./gridComponents/StudyGrid";
+import WorkAndStudyGrid from "./gridComponents/WorkAndStudyGrid";
 import UsesGrid from "./gridComponents/UsesGrid";
 import ProjectsGrid from "./gridComponents/ProjectsGrid";
 import RandomGrid from "./gridComponents/RandomGrid";
@@ -21,7 +21,7 @@ export default function Grid() {
   const intl = useIntl();
 
   const links = [
-    { href: "/study", component: <StudyGrid /> },
+    { href: "/workandstudy", component: <WorkAndStudyGrid /> },
     { href: "/blog", component: <BlogGrid /> },
     { href: "/uses", component: <UsesGrid /> },
     { href: "/books", component: <BooksGrid /> },

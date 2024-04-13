@@ -1,4 +1,4 @@
-import styles from "../../../styles/Studies.module.css";
+import styles from "../../../styles/WorkAndStudy.module.css";
 
 type DetailsProps = {
   title: string;

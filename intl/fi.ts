@@ -8,7 +8,7 @@ const fi = {
   koripallopaikat: "Koripallo",
   basketballCourts: "Koripallopaikat",
   projects: "Projektit",
-  study: "Työ ja opiskelu",
+  workandstudy: "Työ ja opiskelu",
   studies: "Opinnot",
   timeline: "Aikajana",
   old: "Vanhat sivut",
@@ -73,7 +73,7 @@ const fi = {
   "title.statistics": "Kirjatilastot",
   "title.contact": "Ota yhteyttä",
   "title.projects": "Viimeisimmät projektit",
-  "title.study": "Työ ja opiskelu",
+  "title.workandstudy": "Työ ja opiskelu",
   "title.old": "Sivuston vanhat versiot",
   "title.uses": "Työkalut",
 
@@ -86,7 +86,7 @@ const fi = {
   "description.contact": "Ota yhteyttä - Mastodon, sähköposti ja LinkedIn",
   "description.projects":
     "Viimeisimmät projektit - sekä työ- että harrasteprojektit",
-  "description.study": "Tietoa työstäni ja opiskelustani",
+  "description.workandstudy": "Tietoa työstäni ja opiskelustani",
   "description.old": "Vanhat versiot minun verkkosivustosta",
   "description.uses": "Työkalut ja sovellukset joita käytän",
 
@@ -117,7 +117,7 @@ const fi = {
   "alt.githubChart": "Kuvaaja joka näyttää minun GitHub kontribuutiot",
   "alt.blogPen": "Kynä emoji kuvake - linkki minun blogiin",
   "alt.email": "Postilaatikko emoji kuvake - linkki minun sähköpostiin",
-  "alt.student": "Opiskelija emoji kuvake",
+  "alt.workandstudy": "Opiskelija emoji kuvake",
   "alt.book": "Kirja emoji kuvake",
   "alt.floppy": "Levyke emoji kuvake",
   "alt.penAndPaper": "Kynä ja paperi emoji kuvake",
@@ -138,7 +138,7 @@ const fi = {
   "alt.calendar": "Kalenteri emoji kuvake",
 
   // Aria labels
-  "aria.study": "Sivu jossa on tietoa minun työstä ja opiskelusta",
+  "aria.workandstudy": "Sivu jossa on tietoa minun työstä ja opiskelusta",
   "aria.blog": "Sivu jossa on linkkejä blogikirjoituksiini",
   "aria.uses": "Sivu jossa on lista työkaluista ja sovelluksista joita käytän",
   "aria.books":

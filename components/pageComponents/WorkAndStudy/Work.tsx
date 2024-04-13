@@ -13,7 +13,7 @@ export default function Work({ styles, theme, intl }: Props) {
     <div className={styles.workContainer}>
       <div className={styles.emojiContainer}>
         <h1>
-          <FormattedMessage id="Work" />
+          <FormattedMessage id="work" />
         </h1>
         <Image
           src="/emojis/work.svg"

@@ -19,8 +19,8 @@ export default function Uni({ styles, theme, intl }: Props) {
             <FormattedMessage id="studies" />
           </h1>
           <Image
-            src="/emojis/study.svg"
-            alt={intl.formatMessage({ id: "alt.student" })}
+            src="/emojis/workandstudy.svg"
+            alt={intl.formatMessage({ id: "alt.workandstudy" })}
             width={36}
             height={36}
           />

@@ -8,7 +8,7 @@ const en = {
   koripallopaikat: "Basketball",
   basketballCourts: "Basketball courts",
   projects: "Projects",
-  study: "Work and studies",
+  workandstudy: "Work and studies",
   studies: "Studies",
   timeline: "Timeline",
   old: "Old websites",
@@ -71,7 +71,7 @@ const en = {
   "title.statistics": "Books statistics",
   "title.contact": "Contact me",
   "title.projects": "My latest projects",
-  "title.study": "Work and studies",
+  "title.workandstudy": "Work and studies",
   "title.old": "Old versions of my website",
   "title.uses": "The tools I use",
 
@@ -83,7 +83,7 @@ const en = {
   "description.statistics": "Statistics for the books I have read",
   "description.contact": "Contact me - Mastodon, email and LinkedIn",
   "description.projects": "My latest projects - both pet and work",
-  "description.study": "Information about my studies and work",
+  "description.workandstudy": "Information about my studies and work",
   "description.old": "Old versions of my website",
   "description.uses": "The tools and software that I use",
 
@@ -116,7 +116,7 @@ const en = {
   "alt.githubChart": "Chart showing my GitHub contributions",
   "alt.blogPen": "Pen emoji icon - link to my blog",
   "alt.email": "Postbox emoji icon - link for sending me an email",
-  "alt.student": "Student emoji icon",
+  "alt.workandstudy": "Student emoji icon",
   "alt.book": "Book emoji icon",
   "alt.floppy": "Floppy disk emoji icon",
   "alt.penAndPaper": "Pen and paper emoji icon",
@@ -137,7 +137,7 @@ const en = {
   "alt.calendar": "Calendar emoji icon",
 
   // Aria labels
-  "aria.study": "Page with information about my work and studies",
+  "aria.workandstudy": "Page with information about my work and studies",
   "aria.blog": "Page with links to my blog posts",
   "aria.uses": "Page with the list of tools and software that I use",
   "aria.books": "Page with the list of books that I have read lately",
