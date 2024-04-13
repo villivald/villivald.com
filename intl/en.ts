@@ -61,6 +61,7 @@ const en = {
   nationalLibrary: "National Library of Finland",
   frontendDeveloper: "Frontend Developer",
   softwareDeveloper: "Software Developer",
+  lastUpdated: "Last updated: ",
 
   // Page titles
   "title.home": "Home page",
@@ -133,6 +134,7 @@ const en = {
   "alt.qualitydesk": "QualityDesk logo",
   "alt.library": "National Library logo",
   "alt.construction": "Under construction emoji icon",
+  "alt.calendar": "Calendar emoji icon",
 
   // Aria labels
   "aria.study": "Page with information about my work and studies",

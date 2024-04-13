@@ -63,6 +63,7 @@ const fi = {
   nationalLibrary: "Kansalliskirjasto",
   frontendDeveloper: "Frontend-kehittäjä",
   softwareDeveloper: "Ohjelmistokehittäjä",
+  lastUpdated: "Viimeksi päivitetty: ",
 
   // Page titles
   "title.home": "Etusivu",
@@ -134,6 +135,7 @@ const fi = {
   "alt.qualitydesk": "QualityDesk logo",
   "alt.library": "Kansalliskirjaston logo",
   "alt.construction": "Työmaa emoji kuvake",
+  "alt.calendar": "Kalenteri emoji kuvake",
 
   // Aria labels
   "aria.study": "Sivu jossa on tietoa minun työstä ja opiskelusta",

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { CSSProperties, useContext } from "react";
-import { FormattedMessage } from "react-intl";
+import { FormattedMessage, useIntl } from "react-intl";
 
 import { ThemeContext } from "../../context";
 import styles from "../../styles/Uses.module.css";
@@ -198,6 +198,12 @@ const other = [
     image: "zwift",
   },
   {
+    name: "Herman Miller Mirra 2",
+    link: "https://www.hermanmiller.com/en_lac/products/seating/office-chairs/mirra-2-chairs/",
+    description: "Chair",
+    image: "mirra",
+  },
+  {
     name: "Cafe du Cycliste Backpack",
     link: "https://www.cafeducycliste.com/en_roe/waterproof-backpack-blue.html",
     description: "Backpack",
@@ -231,6 +237,7 @@ const other = [
 
 export default function Uses() {
   const theme = useContext(ThemeContext);
+  const intl = useIntl();
 
   const renderList = (
     items: { name: string; link: string; description: string; image: string }[]
@@ -284,6 +291,16 @@ export default function Uses() {
       <p data-theme={theme}>
         <FormattedMessage id="usesText" />
         <Link href="https://uses.tech/">uses.tech</Link>.
+      </p>
+      <p>
+        <Image
+          src="/emojis/calendar.svg"
+          alt={intl.formatMessage({ id: "alt.calendar" })}
+          width={32}
+          height={32}
+        />
+        <FormattedMessage id="lastUpdated" />
+        <time dateTime="2024-04-13">13.04.2024</time>
       </p>
       <div data-theme={theme}>
         <div>

@@ -2,7 +2,7 @@
   min-height: 70vh;
   display: grid;
   place-items: center;
-  grid-template-rows: 2fr 1fr 5fr;
+  grid-template-rows: 2fr 1fr 0.125fr 4.75fr;
 }
 
 .mainContainer > figure {
@@ -11,6 +11,14 @@
 
 .mainContainer > p {
   max-width: 38rem;
+}
+
+.mainContainer > p:last-of-type {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+  font-family: var(--font-subheader);
+  color: var(--color-brand-dark80);
 }
 
 .mainContainer > div > div > ul > li > a {
@@ -98,7 +106,7 @@
 
 @counter-style other-emoji {
   system: cyclic;
-  symbols: 🚴‍♂️ 🤖 🎒 🍼 💧 📝 🖋️;
+  symbols: 🚴‍♂️ 🤖 🪑 🎒 🍼 💧 📝 🖋️;
   suffix: " ";
 }
 
