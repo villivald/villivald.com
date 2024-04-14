@@ -14,11 +14,6 @@ export default function Footer() {
 
   const socialIcons = [
     {
-      name: "gitlab",
-      link: "https://version.helsinki.fi/villival",
-      altText: "gitlabLogo",
-    },
-    {
       name: "github",
       link: "https://github.com/villivald",
       altText: "githubLogo",
@@ -50,11 +45,6 @@ export default function Footer() {
       name: "blog",
       link: "https://create-react-app.com/",
       altText: "blogPen",
-    },
-    {
-      name: "hackernoon",
-      link: "https://hackernoon.com/u/villivald",
-      altText: "hackernoonLogo",
     },
   ];
 
@@ -92,8 +82,7 @@ export default function Footer() {
               src={`/emojis/${icon.name}.svg`}
               alt={intl.formatMessage({ id: `alt.${icon.altText}` })}
               width={64}
-              height={icon.name === "hackernoon" ? 48 : 64}
-              data-theme={icon.name === "hackernoon" && theme === "dark"}
+              height={64}
             />
           </Link>
         ))}

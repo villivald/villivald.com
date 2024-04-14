@@ -107,10 +107,8 @@ const en = {
   "alt.theme": "Light and dark theme switcher - flashlight icon",
   "alt.externalLink": "External link icon",
   "alt.githubLogo": "GitHub logo icon",
-  "alt.gitlabLogo": "GitLab logo icon",
   "alt.linkedinLogo": "LinkedIn logo icon",
   "alt.mastodonLogo": "Mastodon logo icon",
-  "alt.hackernoonLogo": "HackerNoon logo icon",
   "alt.koripallopaikat":
     "Basketball emoji icon - link to my basketball related website",
   "alt.githubChart": "Chart showing my GitHub contributions",
