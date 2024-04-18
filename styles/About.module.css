@@ -224,7 +224,7 @@ div[data-theme="dark"] > section:focus-visible .slides {
 
 @media (width >= 1300px) {
   .slidesItem {
-    height: 45rem;
+    height: 46rem;
   }
 }
 

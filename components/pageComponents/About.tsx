@@ -8,10 +8,10 @@ import styles from "../../styles/About.module.css";
 export default function About() {
   const theme = useContext(ThemeContext);
   const intl = useIntl();
-  const [currentSlide, setCurrentSlide] = useState("2023");
+  const [currentSlide, setCurrentSlide] = useState("2024");
 
   const years = useMemo(() => {
-    return ["2023", "2022", "2021", "2020", "2019"];
+    return ["2024", "2023", "2022", "2021", "2020", "2019"];
   }, []);
 
   useEffect(() => {
@@ -88,7 +88,8 @@ export default function About() {
               tabIndex={0}
             >
               {["8", "7", "6", "5"].map((num, index) =>
-                year === "2024" && (num === "8" || num === "7") ? (
+                year === "2024" &&
+                (num === "8" || num === "7" || num === "6" || num === "5") ? (
                   <div key={index} className={styles.question}>
                     <Image
                       alt={intl.formatMessage({ id: "alt.questionMark" })}
@@ -107,14 +108,25 @@ export default function About() {
                 )
               )}
               <div>{year}</div>
-              {["4", "3", "2", "1"].map((num, index) => (
-                <div
-                  key={index}
-                  style={{
-                    backgroundImage: `url(/about/${year}-${num}.webp)`,
-                  }}
-                />
-              ))}
+              {["4", "3", "2", "1"].map((num, index) =>
+                year === "2024" && num === "4" ? (
+                  <div key={index} className={styles.question}>
+                    <Image
+                      alt={intl.formatMessage({ id: "alt.questionMark" })}
+                      width={200}
+                      height={200}
+                      src={"/emojis/question.svg"}
+                    />
+                  </div>
+                ) : (
+                  <div
+                    key={index}
+                    style={{
+                      backgroundImage: `url(/about/${year}-${num}.webp)`,
+                    }}
+                  />
+                )
+              )}
             </div>
           ))}
         </div>
