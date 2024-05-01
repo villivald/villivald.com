@@ -49,7 +49,6 @@ const fi = {
   link: "Linkki",
   "identifierServices.public": "Tunnisteportaali - Julkiset palvelut",
   "identifierServices.admin": "Tunnisteportaali - Sisäinen työkalu",
-  publisherPortal: "Kustantajaportaali - tulossa vuonna 2024",
   english: "englanti",
   finnish: "suomi",
   russian: "venäjä",

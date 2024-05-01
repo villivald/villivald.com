@@ -46,6 +46,11 @@
   color: var(--color-white);
 }
 
+.mainContainer > div:nth-child(4) span span section > a {
+  display: flex;
+  justify-content: center;
+}
+
 .mainContainer > div[data-theme="dark"] a:focus-visible {
   outline-color: var(--color-white);
 }
@@ -70,19 +75,6 @@
 
 .mainContainer span section:not(:first-of-type) > p:hover + .hide {
   left: -25rem;
-}
-
-.mainContainer span section > p[data-image="publisher"]:hover {
-  cursor: not-allowed;
-}
-
-.mainContainer
-  span
-  section:not(:first-of-type)
-  > p[data-image="admin"]:hover
-  + .hide {
-  left: -6rem;
-  top: 14rem;
 }
 
 .mainContainer > div:nth-child(2),
@@ -121,7 +113,6 @@
   height: 100%;
   grid-area: 3 / 1 / 4 / 3;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   place-items: center;
 }
 
@@ -181,15 +172,6 @@
   text-decoration: underline;
 }
 
-.mainContainer > div:nth-child(4) span span p[data-image="public"],
-.mainContainer > div:nth-child(4) span span p[data-image="admin"] {
-  background-image: url("/images/kk.webp");
-}
-
-.mainContainer > div:nth-child(4) span span p[data-image="publisher"] {
-  background-image: url("/images/thinking.svg");
-}
-
 .mainContainer > div:nth-child(4) span span p[data-image="cra"] {
   background-image: url("/images/cra.webp");
   background-position: center;
@@ -231,14 +213,6 @@
   height: 100%;
 }
 
-.mainContainer > div:nth-child(4) span:first-child {
-  background-color: color-mix(
-    in oklch,
-    var(--color-brand-red) 15%,
-    var(--color-white) 5%
-  );
-}
-
 .mainContainer > div:nth-child(4) > span:last-child {
   background-color: color-mix(
     in oklch,
@@ -260,18 +234,6 @@
     width: 10rem;
     height: 10rem;
   }
-
-  .mainContainer > div:nth-child(4) span span > section:nth-child(1) {
-    margin-left: 5%;
-  }
-
-  .mainContainer > div:nth-child(4) span span > section:nth-child(2) {
-    margin-left: 37.5%;
-  }
-
-  .mainContainer > div:nth-child(4) span span > section:nth-child(3) {
-    margin-left: 67.5%;
-  }
 }
 
 @media (width >= 1250px) {
@@ -289,18 +251,6 @@
   .mainContainer > div:nth-child(1) {
     width: 60rem;
     height: 14rem;
-  }
-
-  .mainContainer > div:nth-child(4) span span > section:nth-child(1) {
-    margin-left: 10%;
-  }
-
-  .mainContainer > div:nth-child(4) span span > section:nth-child(2) {
-    margin-left: 40%;
-  }
-
-  .mainContainer > div:nth-child(4) span span > section:nth-child(3) {
-    margin-left: 70%;
   }
 }
 
@@ -343,14 +293,6 @@
   .mainContainer > div:nth-child(4) {
     grid-area: 2 / 1 / 3 / 3;
   }
-
-  .mainContainer > div:nth-child(4) span span section:nth-child(2) {
-    margin-left: 35%;
-  }
-
-  .mainContainer > div:nth-child(4) span span section:nth-child(3) {
-    margin-left: 60%;
-  }
 }
 
 @media (width <= 850px) {
@@ -372,12 +314,13 @@
 @media (width <= 750px) {
   .mainContainer {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 2.25fr;
+    grid-template-rows: 1fr 1.05fr;
   }
 
   .mainContainer > div:nth-child(1) {
     transform: rotate(60deg);
     max-width: 100vw;
+    box-shadow: 0 0 0.1rem 1.5rem var(--color-brand-dark);
   }
 
   .mainContainer > div:nth-child(4) {
@@ -386,9 +329,15 @@
   }
 }
 
+@media (width <= 650px) {
+  .mainContainer > div:nth-child(4) span span > section:nth-child(1) {
+    margin-left: 5%;
+  }
+}
+
 @media (width <= 600px) {
   .mainContainer {
-    grid-template-rows: 1fr 2.5fr;
+    grid-template-rows: 1fr 1.25fr;
   }
 
   .mainContainer > div > img {
@@ -396,9 +345,23 @@
   }
 }
 
+@media (width <= 550px) {
+  .mainContainer > div:nth-child(4) span span {
+    justify-items: center;
+  }
+
+  .mainContainer
+    > div:nth-child(4)
+    span
+    span
+    > section:is(:nth-child(1), :nth-child(2), :nth-child(3)) {
+    margin-left: 0;
+  }
+}
+
 @media (width <= 500px) {
   .mainContainer {
-    grid-template-rows: 1fr 3fr;
+    grid-template-rows: 1fr 1.5fr;
   }
 
   .mainContainer > div:nth-child(1) {
@@ -413,6 +376,7 @@
 @media (width <= 450px) {
   .mainContainer > div:nth-child(1) {
     height: 9rem;
+    box-shadow: 0 0 0.1rem 1rem var(--color-brand-dark);
   }
 
   .mainContainer > div > img {

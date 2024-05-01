@@ -47,7 +47,6 @@ const en = {
   link: "Link",
   "identifierServices.public": "Identifier services - Public services",
   "identifierServices.admin": "Identifier services - Internal services",
-  publisherPortal: "Publisher Portal - Coming in 2024",
   english: "English",
   finnish: "Finnish",
   russian: "Russian",

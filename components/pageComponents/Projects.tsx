@@ -36,55 +36,6 @@ export default function Projects() {
       <div data-theme={theme}>
         <span>
           <h1 data-theme={theme}>
-            <FormattedMessage id="work" />
-          </h1>
-          <span>
-            <section>
-              <p data-image="public"></p>
-              <Image
-                src="/preview/preview_ids.webp"
-                width={400}
-                height={330}
-                alt={intl.formatMessage({ id: "alt.previewIds" })}
-                className={styles.hide}
-              />
-              <a
-                data-theme={theme}
-                href="https://tunnisteportaali.kansalliskirjasto.fi/"
-                hrefLang="x-default"
-              >
-                <FormattedMessage id="identifierServices.public" />
-                <Image
-                  src="/emojis/link.svg"
-                  width={24}
-                  height={24}
-                  alt={intl.formatMessage({ id: "alt.externalLink" })}
-                />
-              </a>
-            </section>
-            <section>
-              <p data-image="admin"></p>
-              <Image
-                src="/preview/preview_idsa.webp"
-                width={350}
-                height={225}
-                alt={intl.formatMessage({ id: "alt.previewIdsa" })}
-                className={styles.hide}
-              />
-              <span data-theme={theme}>
-                <FormattedMessage id="identifierServices.admin" />
-              </span>
-            </section>
-            <section>
-              <p data-image="publisher"></p>
-              <span data-theme={theme}>
-                <FormattedMessage id="publisherPortal" />
-              </span>
-            </section>
-          </span>
-        </span>
-        <span>
-          <h1 data-theme={theme}>
             <FormattedMessage id="petProjects" />
           </h1>
           <span>
@@ -125,7 +76,7 @@ export default function Projects() {
                 href="https://create-react-app.com/"
                 hrefLang="en"
               >
-                Create-React-App <FormattedMessage id="blog" />
+                Crapp <FormattedMessage id="blog" />
                 <Image
                   src="/emojis/link.svg"
                   width={24}
