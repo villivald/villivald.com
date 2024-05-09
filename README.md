@@ -36,10 +36,6 @@
   <img src="./public/readme_pics/tablet.webp" alt="Tablet version of a website, dark version, english language version, main page.">
 </p>
 
-<p align="center">
-  <img src="./public/readme_pics/mobile.webp" alt="Mobile version of a website, light version, finnish language version, main page.">
-</p>
-
 ## Author
 
 👤 **[villivald](https://github.com/villivald)**
