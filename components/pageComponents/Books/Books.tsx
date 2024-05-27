@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { useMemo, useCallback } from "react";
-import { FormattedMessage } from "react-intl";
+import { FormattedMessage, useIntl } from "react-intl";
 import { VirtuosoGrid } from "react-virtuoso";
 
 import data from "./data.json";
@@ -20,6 +20,7 @@ type Book = {
 
 export default function Books() {
   const router = useRouter();
+  const intl = useIntl();
 
   const sortedBooks = useMemo(() => [...data.books].reverse(), []);
 
@@ -46,6 +47,16 @@ export default function Books() {
           <FormattedMessage id="statistics" />
         </button>
       </div>
+      <p>
+        <Image
+          src="/emojis/calendar.svg"
+          alt={intl.formatMessage({ id: "alt.calendar" })}
+          width={32}
+          height={32}
+        />
+        <FormattedMessage id="lastUpdated" />
+        <time dateTime="2024-05-27">27.05.2024</time>
+      </p>
       <VirtuosoGrid
         className={styles.mainContainer}
         data={sortedBooks}

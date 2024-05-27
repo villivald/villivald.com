@@ -85,26 +85,8 @@
   color: var(--color-brand-grey30);
 }
 
-.mainContainer > div > div > div > figure > p {
-  display: none;
-}
-
 .mainContainer > div > div > div:hover {
   scale: 1.15;
-}
-
-.mainContainer > div > div > div:hover > figure > p {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  bottom: 2%;
-  max-width: 92.5%;
-  width: calc(100% - (100% - 200px));
-  height: 30%;
-  font-size: var(--fontSize-helperText);
-  background-color: var(--color-black-75);
-  color: var(--color-white);
-  padding: 0.5rem;
 }
 
 .year2024 {
@@ -145,6 +127,34 @@
   display: flex;
   justify-content: center;
   gap: 0.7rem;
+}
+
+.buttonContainer ~ p {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+  justify-content: center;
+  margin-block-start: 2rem;
+  font-family: var(--font-subheader);
+  color: var(--color-brand-dark80);
+}
+
+.mainContainer > div > div > div > figure > p {
+  display: none;
+}
+
+.mainContainer > div > div > div:hover > figure > p {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 2%;
+  max-width: 92.5%;
+  width: calc(100% - (100% - 200px));
+  height: 30%;
+  font-size: var(--fontSize-helperText);
+  background-color: var(--color-black-75);
+  color: var(--color-white);
+  padding: 0.5rem;
 }
 
 .mainContainer[data-page="statistics"] .buttonContainer {

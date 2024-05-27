@@ -18,9 +18,9 @@ const hardware = [
     image: "imac",
   },
   {
-    name: 'MacBook Pro 13" 2017',
-    link: "https://support.apple.com/kb/SP754?locale=en_US",
-    description: "My secondary computer",
+    name: 'MacBook Air 13" 2024',
+    link: "https://www.apple.com/macbook-air/",
+    description: "My work computer",
     image: "macbook13",
   },
   {
@@ -228,6 +228,12 @@ const other = [
     image: "deskpad",
   },
   {
+    name: "Leuchtturm1917 Bullet Journal",
+    link: "https://www.leuchtturm1917.com/bullet-journal-edition-2.html",
+    description: "Bullet journal",
+    image: "bullet",
+  },
+  {
     name: "Moleskine x Kaweco Fountain Pen",
     link: "https://www.moleskine.com/shop/writing-tools/kaweco/kaweco-fountain-pen/fountain-pen-black-8056598854909.html",
     description: "Fountain pen",
@@ -300,7 +306,7 @@ export default function Uses() {
           height={32}
         />
         <FormattedMessage id="lastUpdated" />
-        <time dateTime="2024-04-13">13.04.2024</time>
+        <time dateTime="2024-05-27">27.05.2024</time>
       </p>
       <div data-theme={theme}>
         <div>
