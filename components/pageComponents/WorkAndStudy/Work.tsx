@@ -26,7 +26,7 @@ export default function Work({ styles, theme, intl }: Props) {
       <div>
         <div className={styles.emojiContainer}>
           <Image
-            src="/images/qualitydesk.avif"
+            src="/images/qualitydesk.png"
             alt={intl.formatMessage({ id: "alt.qualitydesk" })}
             width={24}
             height={24}

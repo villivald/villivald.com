@@ -236,8 +236,14 @@ const other = [
   {
     name: "Moleskine x Kaweco Fountain Pen",
     link: "https://www.moleskine.com/shop/writing-tools/kaweco/kaweco-fountain-pen/fountain-pen-black-8056598854909.html",
-    description: "Fountain pen",
+    description: "Molsekine fountain pen",
     image: "moleskine",
+  },
+  {
+    name: "Lamy Safari Fountain Pen",
+    link: "https://www.lamy.com/en/lamy-safari/#sku-1210491",
+    description: "Lamy fountain pen",
+    image: "lamy",
   },
 ];
 
@@ -306,7 +312,7 @@ export default function Uses() {
           height={32}
         />
         <FormattedMessage id="lastUpdated" />
-        <time dateTime="2024-05-27">27.05.2024</time>
+        <time dateTime="2024-06-21">21.06.2024</time>
       </p>
       <div data-theme={theme}>
         <div>
