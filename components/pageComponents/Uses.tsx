@@ -253,7 +253,7 @@ export default function Uses() {
         key={item.name}
         style={
           {
-            "--url": `url("/uses/${item.image}.webp")`,
+            "--url": `url("/uses/${item.image}.avif")`,
           } as CSSPropertiesWithVars
         }
         translate="no"
@@ -267,7 +267,7 @@ export default function Uses() {
     <div className={styles.mainContainer}>
       <figure>
         <Image
-          src="/images/uses.webp"
+          src="/images/uses.avif"
           alt="Workplace - laptop, external monitor, lamp, pens, notebook, etc."
           width={500}
           height={300}

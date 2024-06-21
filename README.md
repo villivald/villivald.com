@@ -29,11 +29,11 @@
 ## Screenshots
 
 <p align="center">
-  <img src="./public/readme_pics/desktop.webp" alt="Desktop version of a website, light version, english language version, main page.">
+  <img src="./public/readme_pics/desktop.avif" alt="Desktop version of a website, light version, english language version, main page.">
 </p>
 
 <p align="center">
-  <img src="./public/readme_pics/tablet.webp" alt="Tablet version of a website, dark version, english language version, main page.">
+  <img src="./public/readme_pics/tablet.avif" alt="Tablet version of a website, dark version, english language version, main page.">
 </p>
 
 ## Author

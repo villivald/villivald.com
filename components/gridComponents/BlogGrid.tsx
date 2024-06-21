@@ -24,7 +24,7 @@ export default function BlogGrid() {
         shadow={prefersReducedMotion ? false : true}
       >
         <Image
-          src="/images/cra.webp"
+          src="/images/cra.avif"
           fill
           sizes="(max-width: 600px) 100vw, 600px"
           alt={intl.formatMessage({ id: "alt.blogLogo" })}

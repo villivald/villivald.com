@@ -46,7 +46,7 @@ export default function Old() {
                 </Link>
               </p>
               <Image
-                src={`/images/website${site.id}.webp`}
+                src={`/images/website${site.id}.avif`}
                 width={300}
                 height={300}
                 alt={intl.formatMessage({ id: `alt.old.${site.id}` })}

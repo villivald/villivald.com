@@ -16,14 +16,14 @@
 .cat {
   height: 100%;
   z-index: 1;
-  background-image: url("/images/cat.webp");
+  background-image: url("/images/cat.avif");
   position: absolute;
   opacity: 0;
   transition: 2s ease;
 }
 
 .about {
-  background-image: url("/images/about.webp");
+  background-image: url("/images/about.avif");
 }
 
 .container:hover .cat {

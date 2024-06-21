@@ -102,7 +102,7 @@ export default function About() {
                   <div
                     key={index}
                     style={{
-                      backgroundImage: `url(/about/${year}-${num}.webp)`,
+                      backgroundImage: `url(/about/${year}-${num}.avif)`,
                     }}
                   />
                 )
@@ -122,7 +122,7 @@ export default function About() {
                   <div
                     key={index}
                     style={{
-                      backgroundImage: `url(/about/${year}-${num}.webp)`,
+                      backgroundImage: `url(/about/${year}-${num}.avif)`,
                     }}
                   />
                 )

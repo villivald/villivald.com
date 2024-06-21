@@ -6,7 +6,7 @@
   position: relative;
   background-size: cover;
   background-repeat: round;
-  background-image: url("/images/library.webp");
+  background-image: url("/images/library.avif");
 }
 
 .box {
@@ -21,7 +21,7 @@
   opacity: 1;
   background-size: cover;
   background-repeat: round;
-  background-image: url("/images/books.webp");
+  background-image: url("/images/books.avif");
 }
 
 .box div {

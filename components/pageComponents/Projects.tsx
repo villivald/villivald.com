@@ -42,7 +42,7 @@ export default function Projects() {
             <section>
               <p data-image="koripallo"></p>
               <Image
-                src="/preview/preview_koripallopaikat.webp"
+                src="/preview/preview_koripallopaikat.avif"
                 width={400}
                 height={330}
                 alt={intl.formatMessage({ id: "alt.previewBasketball" })}
@@ -65,7 +65,7 @@ export default function Projects() {
             <section>
               <p data-image="cra"></p>
               <Image
-                src="/preview/preview_cra.webp"
+                src="/preview/preview_cra.avif"
                 width={400}
                 height={320}
                 alt={intl.formatMessage({ id: "alt.previewCra" })}
@@ -88,7 +88,7 @@ export default function Projects() {
             <section>
               <p data-image="wishlist"></p>
               <Image
-                src="/preview/preview_wishlist.webp"
+                src="/preview/preview_wishlist.avif"
                 width={400}
                 height={310}
                 alt={intl.formatMessage({ id: "alt.previewWishlist" })}

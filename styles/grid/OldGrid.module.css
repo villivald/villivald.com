@@ -22,11 +22,11 @@
 }
 
 .done {
-  background-image: url("/images/old_website_done.webp");
+  background-image: url("/images/old_website_done.avif");
 }
 
 .proto {
-  background-image: url("/images/old_website_proto.webp");
+  background-image: url("/images/old_website_proto.avif");
   position: absolute;
   opacity: 1;
   transition: 2s ease;

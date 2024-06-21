@@ -12,7 +12,7 @@ export default function ContactGrid() {
     <div className={styles.container} aria-hidden="true">
       <div></div>
       <Image
-        src="/images/phone.webp"
+        src="/images/phone.avif"
         className={styles.phone}
         alt={intl.formatMessage({ id: "alt.contact" })}
         width={200}

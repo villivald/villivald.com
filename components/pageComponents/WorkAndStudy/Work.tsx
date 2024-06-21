@@ -26,7 +26,7 @@ export default function Work({ styles, theme, intl }: Props) {
       <div>
         <div className={styles.emojiContainer}>
           <Image
-            src="/images/qualitydesk.png"
+            src="/images/qualitydesk.avif"
             alt={intl.formatMessage({ id: "alt.qualitydesk" })}
             width={24}
             height={24}
@@ -47,7 +47,7 @@ export default function Work({ styles, theme, intl }: Props) {
         <div className={styles.emojiContainer}>
           <Image
             data-theme={theme}
-            src="/images/kk.webp"
+            src="/images/kk.avif"
             alt={intl.formatMessage({ id: "alt.library" })}
             width={24}
             height={24}
@@ -84,7 +84,7 @@ export default function Work({ styles, theme, intl }: Props) {
           <div className={styles.projectsContainer}>
             <section>
               <Image
-                src="/preview/preview_ids.webp"
+                src="/preview/preview_ids.avif"
                 width={210}
                 height={175}
                 alt={intl.formatMessage({ id: "alt.previewIds" })}
@@ -98,7 +98,7 @@ export default function Work({ styles, theme, intl }: Props) {
             </section>
             <section>
               <Image
-                src="/preview/preview_idsa.webp"
+                src="/preview/preview_idsa.avif"
                 width={275}
                 height={175}
                 alt={intl.formatMessage({ id: "alt.previewIdsa" })}
