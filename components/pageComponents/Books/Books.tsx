@@ -55,7 +55,7 @@ export default function Books() {
           height={32}
         />
         <FormattedMessage id="lastUpdated" />
-        <time dateTime="2024-05-27">27.05.2024</time>
+        <time dateTime="2024-06-22">22.06.2024</time>
       </p>
       <VirtuosoGrid
         className={styles.mainContainer}
