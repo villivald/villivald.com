@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { useMemo, useCallback } from "react";
+import { useMemo, useCallback, useRef } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
-import { VirtuosoGrid } from "react-virtuoso";
+import { useVirtualizer } from "@tanstack/react-virtual";
 
 import data from "./data.json";
 
@@ -12,22 +12,32 @@ type Book = {
   title: string;
   author: string;
   date: string;
-  rating: number;
   image: string;
+  rating: number;
   year?: number;
   language?: string;
+  category?: string;
 };
 
 export default function Books() {
+  const parentRef = useRef(null);
   const router = useRouter();
   const intl = useIntl();
 
-  const sortedBooks = useMemo(() => [...data.books].reverse(), []);
+  const sortedBooks: Book[] = useMemo(() => [...data.books].reverse(), []);
 
   const yearBooks = useCallback((year: string) => {
     const books = data.books.filter((book) => book.date.includes(year)).length;
     return books;
   }, []);
+
+  const virtualizer = useVirtualizer({
+    count: sortedBooks.length,
+    getScrollElement: () => parentRef.current,
+    estimateSize: () => 35,
+  });
+
+  const virtualItems = virtualizer.getVirtualItems();
 
   return (
     <>
@@ -47,6 +57,7 @@ export default function Books() {
           <FormattedMessage id="statistics" />
         </button>
       </div>
+
       <p>
         <Image
           src="/emojis/calendar.svg"
@@ -57,34 +68,44 @@ export default function Books() {
         <FormattedMessage id="lastUpdated" />
         <time dateTime="2024-06-22">22.06.2024</time>
       </p>
-      <VirtuosoGrid
-        className={styles.mainContainer}
-        data={sortedBooks}
-        itemContent={(index: number, book: Book) =>
-          book.year ? (
-            <div className={`${styles.yearCard} ${styles[`year${book.year}`]}`}>
-              <h2>
-                <span>
-                  <span>{book.year}</span>
-                  <span>→</span>
-                </span>
-                <span>
-                  <FormattedMessage id="total" />
-                  {yearBooks(book.year.toString())}
-                </span>
-              </h2>
-            </div>
-          ) : (
-            <figure>
+
+      <div className={styles.booksContainer} ref={parentRef}>
+        {virtualItems.map((virtualItem) => {
+          const book: Book = sortedBooks[virtualItem.index];
+
+          // Year cards
+          if (book.year) {
+            return (
+              <div
+                key={virtualItem.index}
+                className={`${styles.yearCard} ${styles[`year${book.year}`]}`}
+              >
+                <h2>
+                  <span>
+                    <span>{book.year}</span>
+                    <span>→</span>
+                  </span>
+                  <span>
+                    <FormattedMessage id="total" />
+                    {yearBooks(book.year.toString())}
+                  </span>
+                </h2>
+              </div>
+            );
+          }
+
+          // Book cards
+          return (
+            <figure key={virtualItem.index}>
               <Image
                 src={`/covers/${book.image}`}
                 alt=""
                 width={200}
                 height={300}
                 tabIndex={0}
-                aria-describedby={`book-cover-${index}`}
+                aria-describedby={`book-cover-${virtualItem.index}`}
               />
-              <p id={`book-cover-${index}`} lang={book.language}>
+              <p id={`book-cover-${virtualItem.index}`} lang={book.language}>
                 <span>
                   {book.title} - {book.author}
                 </span>
@@ -94,9 +115,9 @@ export default function Books() {
                 <span>{"⭐️".repeat(book.rating)}</span>
               </p>
             </figure>
-          )
-        }
-      />
+          );
+        })}
+      </div>
     </>
   );
 }

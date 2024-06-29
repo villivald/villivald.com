@@ -23,7 +23,7 @@
 - [OpenMoji](https://openmoji.org/)
 - [Atropos.js](https://atroposjs.com/)
 - [Chart.js](https://www.chartjs.org/)
-- [React Virtuoso](https://virtuoso.dev/)
+- [TanStack Virtual](https://tanstack.com/virtual/latest)
 - [FormatJS](https://formatjs.io/)
 
 ## Screenshots

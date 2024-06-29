@@ -1,13 +1,11 @@
-.mainContainer {
+/* stylelint-disable no-descending-specificity */
+.mainContainer,
+.booksContainer {
   min-height: 76vh;
 }
 
-.mainContainer[data-page="statistics"] {
+.mainContainer {
   padding: 0 4rem 2rem;
-}
-
-.mainContainer > div {
-  padding: 1rem 2rem 2rem;
 }
 
 .mainContainer > h2 {
@@ -32,19 +30,55 @@
   flex-wrap: wrap;
 }
 
-.mainContainer > div > div > div {
-  display: flex;
-  justify-content: center;
-  width: 20%;
-  box-sizing: border-box;
-  padding: 0.5rem;
-  transition: all 0.25s ease;
-}
-
 .mainContainer div:has(.languageChart) {
   display: flex;
   justify-content: space-between;
   margin-bottom: 1rem;
+}
+
+.booksContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 13.25rem), 1fr));
+  padding-inline: 1.5rem;
+}
+
+.booksContainer > * {
+  display: grid;
+  transition: all 0.25s ease;
+  margin-block-end: 2rem;
+}
+
+.booksContainer > figure:hover {
+  scale: 1.25;
+}
+
+.booksContainer > div,
+.booksContainer > figure > img {
+  justify-self: center;
+}
+
+.booksContainer > figure > p {
+  display: none;
+  justify-self: center;
+}
+
+.booksContainer > figure:has(+ div:hover),
+.booksContainer > figure:hover + div {
+  scale: 1.01;
+  transition: all 0.9s ease;
+}
+
+.booksContainer > figure:hover > p {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0;
+  width: calc(100% - (100% - 200px));
+  height: 30%;
+  font-size: var(--fontSize-helperText);
+  background-color: var(--color-black-75);
+  color: var(--color-white);
+  padding: 0.5rem;
 }
 
 .languageChart {
@@ -64,7 +98,6 @@
   height: 300px;
 }
 
-/* stylelint-disable-next-line no-descending-specificity */
 .yearCard > h2 {
   display: flex;
   flex-direction: column;
@@ -83,10 +116,6 @@
 .yearCard > h2 > span:last-child {
   font-family: var(--font-body);
   color: var(--color-brand-grey30);
-}
-
-.mainContainer > div > div > div:hover {
-  scale: 1.15;
 }
 
 .year2024 {
@@ -113,16 +142,6 @@
   background-color: var(--color-skin);
 }
 
-.mainContainer > div > div > div:has(+ div:hover),
-.mainContainer > div > div > div:hover + div {
-  scale: 1.01;
-  transition: all 0.9s ease;
-}
-
-.mainContainer > div > div > div:has(.yearCard):hover {
-  scale: none;
-}
-
 .buttonContainer {
   display: flex;
   justify-content: center;
@@ -134,27 +153,9 @@
   gap: 0.25rem;
   align-items: center;
   justify-content: center;
-  margin-block-start: 2rem;
+  margin-block: 2rem;
   font-family: var(--font-subheader);
   color: var(--color-brand-dark80);
-}
-
-.mainContainer > div > div > div > figure > p {
-  display: none;
-}
-
-.mainContainer > div > div > div:hover > figure > p {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  bottom: 2%;
-  max-width: 92.5%;
-  width: calc(100% - (100% - 200px));
-  height: 30%;
-  font-size: var(--fontSize-helperText);
-  background-color: var(--color-black-75);
-  color: var(--color-white);
-  padding: 0.5rem;
 }
 
 .mainContainer[data-page="statistics"] .buttonContainer {
@@ -213,12 +214,6 @@ main[data-theme="dark"] .button:focus-visible {
   display: none !important;
 }
 
-@media (width >= 1300px) {
-  .mainContainer > div > div > div {
-    width: 14.285%;
-  }
-}
-
 @media (width <= 1400px) {
   .mainContainer > div {
     padding: 2rem 0.5rem;
@@ -239,16 +234,14 @@ main[data-theme="dark"] .button:focus-visible {
   }
 }
 
-@media (width <= 1000px) {
-  .mainContainer > div > div > div {
-    width: 25%;
-  }
-}
-
 @media (width <= 900px) {
-  .mainContainer > div > div > div:hover,
-  .mainContainer > div > div > div:has(+ div:hover),
-  .mainContainer > div > div > div:hover + div {
+  .booksContainer {
+    padding-inline: 0;
+  }
+
+  .booksContainer > figure:hover,
+  .booksContainer > figure:has(+ div:hover),
+  .booksContainer > figure:hover + div {
     scale: 1;
   }
 
@@ -262,10 +255,6 @@ main[data-theme="dark"] .button:focus-visible {
 }
 
 @media (width <= 750px) {
-  .mainContainer > div > div > div {
-    width: 33%;
-  }
-
   .mainContainer div:has(.languageChart) {
     grid-template-columns: 1fr;
     gap: 4rem;
@@ -278,23 +267,7 @@ main[data-theme="dark"] .button:focus-visible {
 }
 
 @media (width <=600px) {
-  .mainContainer {
-    min-height: 65vh;
-  }
-
   .mainContainer > div {
     padding: 2rem 0.25rem;
-  }
-}
-
-@media (width <= 550px) {
-  .mainContainer > div > div > div {
-    width: 50%;
-  }
-}
-
-@media (width <=600px) {
-  .mainContainer {
-    min-height: 75vh;
   }
 }
