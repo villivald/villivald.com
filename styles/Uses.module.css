@@ -177,13 +177,13 @@
 }
 
 @media (width <= 525px) {
-  .mainContainer img {
+  .mainContainer figure > img {
     width: 87vw;
   }
 }
 
 @media (width <= 500px) {
-  .mainContainer img {
+  .mainContainer figure > img {
     height: 27vh;
   }
 
