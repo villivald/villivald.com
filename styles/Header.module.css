@@ -47,6 +47,21 @@
   }
 }
 
+/* Safari https://caniuse.com/colr-v1 */
+@supports (hanging-punctuation: first) and (font: -apple-system-body) and
+  (-webkit-appearance: none) {
+  .title {
+    font-family: var(--font-header);
+    color: var(--color-brand-yellow-saturated);
+    text-shadow: var(--font-shadow);
+  }
+
+  .title:hover {
+    text-shadow: 0 -1.25rem 0 var(--color-brand-teal),
+      0 1.25rem 0 var(--color-brand-red);
+  }
+}
+
 @media (width <= 700px) {
   .title:hover {
     text-shadow: 0 -1rem 0 var(--color-brand-teal),

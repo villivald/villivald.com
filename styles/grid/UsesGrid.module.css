@@ -72,6 +72,17 @@
   font-size: clamp(2.5rem, 5vw, 8rem);
 }
 
+/* Safari https://caniuse.com/colr-v1 */
+@supports (hanging-punctuation: first) and (font: -apple-system-body) and
+  (-webkit-appearance: none) {
+  .to,
+  .ls {
+    font-family: var(--font-header);
+    color: var(--color-brand-yellow-saturated);
+    text-shadow: var(--font-shadow);
+  }
+}
+
 .to {
   bottom: 12%;
   left: 4%;
