@@ -42,7 +42,11 @@ export default function CategoryCharts({ type }: { type: string }) {
       {years.map((year) => {
         return (
           <div key={year} className={styles.languageChart}>
-            <h2>{year}</h2>
+            <h2>
+              {year} <span>(</span>
+              {data.books.filter((book) => book.date.includes(year)).length}
+              <span>)</span>
+            </h2>
             <Doughnut
               aria-label={`${intl.formatMessage({
                 id: `aria.statistics.${type}`,

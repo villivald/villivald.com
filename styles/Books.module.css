@@ -91,6 +91,10 @@
   color: var(--color-white);
 }
 
+.languageChart > h2 > span {
+  color: var(--color-brand-green);
+}
+
 .yearCard {
   display: grid;
   place-items: center;
