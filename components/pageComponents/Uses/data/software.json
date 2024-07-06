@@ -1,0 +1,118 @@
+{
+  "software": [
+    {
+      "name": "Visual Studio Code",
+      "link": "https://code.visualstudio.com/",
+      "description": "My main code editor",
+      "image": "vscode"
+    },
+    {
+      "name": "Arc Browser",
+      "link": "https://arc.net/",
+      "description": "Main Browser",
+      "image": "arc"
+    },
+    {
+      "name": "Figma",
+      "link": "https://www.figma.com/",
+      "description": "Design tool",
+      "image": "figma"
+    },
+    {
+      "name": "Notion",
+      "link": "https://www.notion.so/",
+      "description": "Note taking app",
+      "image": "notion"
+    },
+    {
+      "name": "Amie",
+      "link": "https://www.amie.so/",
+      "description": "Task manager",
+      "image": "amie"
+    },
+    {
+      "name": "Obsidian",
+      "link": "https://obsidian.md/",
+      "description": "Note taking app",
+      "image": "obsidian"
+    },
+    {
+      "name": "Craft",
+      "link": "https://www.craft.do/",
+      "description": "Note taking app",
+      "image": "craft"
+    },
+    {
+      "name": "Fastmail",
+      "link": "https://fastmail.com/",
+      "description": "Email client",
+      "image": "fastmail"
+    },
+    {
+      "name": "Spark",
+      "link": "https://sparkmailapp.com/",
+      "description": "Email client",
+      "image": "spark"
+    },
+    {
+      "name": "Telegram",
+      "link": "https://telegram.org/",
+      "description": "Messaging app",
+      "image": "telegram"
+    },
+    {
+      "name": "Endel",
+      "link": "https://endel.io/",
+      "description": "Music app",
+      "image": "endel"
+    },
+    {
+      "name": "Youtube Music",
+      "link": "https://music.youtube.com/",
+      "description": "Music app",
+      "image": "youtube"
+    },
+    {
+      "name": "Pocket Casts",
+      "link": "https://www.pocketcasts.com/",
+      "description": "Podcast app",
+      "image": "pocket"
+    },
+    {
+      "name": "Bookbeat",
+      "link": "https://www.bookbeat.com/",
+      "description": "Audiobook app",
+      "image": "bookbeat"
+    },
+    {
+      "name": "Strava",
+      "link": "https://www.strava.com/athletes/42251423",
+      "description": "Fitness app",
+      "image": "strava"
+    },
+    {
+      "name": "Ivory",
+      "link": "https://tapbots.com/ivory/",
+      "description": "Mastodon client",
+      "image": "ivory"
+    },
+    {
+      "name": "Grammarly",
+      "link": "https://www.grammarly.com/",
+      "description": "Writing assistant",
+      "image": "grammarly"
+    },
+    {
+      "name": "Bitwarden",
+      "link": "https://bitwarden.com/",
+      "description": "Password manager",
+      "image": "bitwarden"
+    },
+    {
+      "name": "Raindrop",
+      "link": "https://raindrop.io/",
+      "description": "Bookmark manager",
+      "image": "raindrop"
+    }
+  ]
+}

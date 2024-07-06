@@ -1,0 +1,64 @@
+{
+  "hardware": [
+    {
+      "name": "iMac 24\" 2021",
+      "link": "https://www.apple.com/imac-24/",
+      "description": "My main computer",
+      "image": "imac"
+    },
+    {
+      "name": "MacBook Air 13\" 2024",
+      "link": "https://www.apple.com/macbook-air/",
+      "description": "My work computer",
+      "image": "macbook13"
+    },
+    {
+      "name": "iPhone 15",
+      "link": "https://www.apple.com/iphone-15/",
+      "description": "Phone",
+      "image": "iphone"
+    },
+    {
+      "name": "Apple Watch Ultra",
+      "link": "https://www.apple.com/fi/apple-watch-ultra/",
+      "description": "Watch",
+      "image": "watch"
+    },
+    {
+      "name": "AirPods Pro",
+      "link": "https://www.apple.com/airpods-pro/",
+      "description": "Earbuds",
+      "image": "airpods"
+    },
+    {
+      "name": "Oura Ring",
+      "link": "https://ouraring.com/",
+      "description": "Ring",
+      "image": "oura"
+    },
+    {
+      "name": "Keychron K2",
+      "link": "https://www.keychron.com/products/keychron-k2-wireless-mechanical-keyboard",
+      "description": "Keyboard",
+      "image": "key"
+    },
+    {
+      "name": "Logitech MX Master 3",
+      "link": "https://www.logitech.com/en-us/product/mx-master-3",
+      "description": "Mouse",
+      "image": "mouse"
+    },
+    {
+      "name": "Magic Trackpad",
+      "link": "https://www.apple.com/shop/product/MMMP3AM/A/magic-trackpad-black-multi-touch-surface?fnode=4c4cb374a09aed68c2096ce82deae6ae274700d365edaf8d4e92f2503a2f783f33aedba3931b147d2c774a0d460338253648be353c15eb13e158b3f1f5fdf318647ad4a32e303f4dd81b8ca4ecaec00c85228c8e65c3ba00f3f6edf21bf60981",
+      "description": "Trackpad",
+      "image": "trackpad"
+    },
+    {
+      "name": "Geekboards Macropad",
+      "link": "https://drop.com/buy/geekboards-rgb-hot-swappable-macropad-v2",
+      "description": "Macropad",
+      "image": "macropad"
+    }
+  ]
+}
