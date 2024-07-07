@@ -61,6 +61,7 @@ const en = {
   frontendDeveloper: "Frontend Developer",
   softwareDeveloper: "Software Developer",
   lastUpdated: "Last updated: ",
+  now: "Now",
 
   // Page titles
   "title.home": "Home page",
@@ -73,6 +74,7 @@ const en = {
   "title.workandstudy": "Work and studies",
   "title.old": "Old versions of my website",
   "title.uses": "The tools I use",
+  "title.now": "Now",
 
   // Meta descriptions
   "description.home": "Welcome to my website",

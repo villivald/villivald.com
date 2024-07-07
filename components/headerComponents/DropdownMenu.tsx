@@ -20,6 +20,7 @@ export default function DropdownMenu() {
     "workandstudy",
     "uses",
     "old",
+    "now",
   ];
 
   const handleBlur = (e: React.FocusEvent<HTMLDivElement>) => {

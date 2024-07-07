@@ -63,6 +63,7 @@ const fi = {
   frontendDeveloper: "Frontend-kehittäjä",
   softwareDeveloper: "Ohjelmistokehittäjä",
   lastUpdated: "Viimeksi päivitetty: ",
+  now: "Now",
 
   // Page titles
   "title.home": "Etusivu",
@@ -75,6 +76,7 @@ const fi = {
   "title.workandstudy": "Työ ja opiskelu",
   "title.old": "Sivuston vanhat versiot",
   "title.uses": "Työkalut",
+  "title.now": "Now",
 
   // Meta descriptions
   "description.home": "Tervetuloa verkkosivustolleni",
