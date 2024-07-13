@@ -80,7 +80,7 @@ export default function Uses() {
         <FormattedMessage id="usesText" />
         <Link href="https://uses.tech/">uses.tech</Link>.
       </p>
-      <p>
+      <p data-theme={theme}>
         <Image
           src="/emojis/calendar.svg"
           alt={intl.formatMessage({ id: "alt.calendar" })}

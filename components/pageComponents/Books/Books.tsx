@@ -1,11 +1,12 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { useMemo, useCallback, useRef } from "react";
+import { useMemo, useCallback, useRef, useContext } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 import { useVirtualizer } from "@tanstack/react-virtual";
 
 import data from "./data.json";
 
+import { ThemeContext } from "../../../context";
 import styles from "../../../styles/Books.module.css";
 
 type Book = {
@@ -20,6 +21,7 @@ type Book = {
 };
 
 export default function Books() {
+  const theme = useContext(ThemeContext);
   const parentRef = useRef(null);
   const router = useRouter();
   const intl = useIntl();
@@ -58,7 +60,7 @@ export default function Books() {
         </button>
       </div>
 
-      <p>
+      <p className={styles.time} data-theme={theme}>
         <Image
           src="/emojis/calendar.svg"
           alt={intl.formatMessage({ id: "alt.calendar" })}

@@ -36,6 +36,10 @@
   margin-bottom: 1rem;
 }
 
+.time[data-theme="dark"] {
+  color: var(--color-white);
+}
+
 .booksContainer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 13.25rem), 1fr));
