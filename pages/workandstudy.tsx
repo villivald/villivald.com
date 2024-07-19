@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import { useIntl } from "react-intl";
 
-import HeadComponent from "../components/pageComponents/Head";
 import Work from "../components/pageComponents/WorkAndStudy/Work";
 import Uni from "../components/pageComponents/WorkAndStudy/Uni";
 
@@ -14,12 +13,9 @@ export default function WorkAndStudy() {
   const intl = useIntl();
 
   return (
-    <>
-      <HeadComponent title="workandstudy" />
-      <div className={styles.mainContainer} data-theme={theme}>
-        <Work styles={styles} theme={theme} intl={intl} />
-        <Uni styles={styles} theme={theme} intl={intl} />
-      </div>
-    </>
+    <div className={styles.mainContainer} data-theme={theme}>
+      <Work styles={styles} theme={theme} intl={intl} />
+      <Uni styles={styles} theme={theme} intl={intl} />
+    </div>
   );
 }

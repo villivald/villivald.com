@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import { useContext } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
+import HeadComponent from "./pageComponents/Head";
 import Header from "./headerComponents/Header";
 import Footer from "./Footer";
 
@@ -21,7 +22,9 @@ export default function Layout({ children, changeTheme, changeLocale }: Props) {
   const router = useRouter();
   const intl = useIntl();
 
-  const pageTitle = <FormattedMessage id={router.pathname.slice(1)} />;
+  const routeName = router.pathname.slice(1) || "home";
+
+  const pageTitle = <FormattedMessage id={routeName} />;
 
   return (
     <>
@@ -59,8 +62,8 @@ export default function Layout({ children, changeTheme, changeLocale }: Props) {
             </li>
             <li>
               <Image
-                src={`/emojis/${router.pathname.slice(1)}.svg`}
-                alt={`${router.pathname.slice(1)} emoji`}
+                src={`/emojis/${routeName}.svg`}
+                alt={`${routeName} emoji`}
                 width={24}
                 height={24}
               />
@@ -68,6 +71,7 @@ export default function Layout({ children, changeTheme, changeLocale }: Props) {
             </li>
           </ul>
         )}
+        <HeadComponent title={routeName} />
         {children}
       </main>
       <Footer />
