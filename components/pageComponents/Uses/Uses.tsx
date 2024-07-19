@@ -14,23 +14,25 @@ interface CSSPropertiesWithVars extends CSSProperties {
   "--url"?: string;
 }
 
+type UsesDataCollection = {
+  name: string;
+  link: string;
+  description: string;
+  image: string;
+};
+
 export default function Uses() {
   const theme = useContext(ThemeContext);
   const intl = useIntl();
 
-  const dataToRender: {
-    [key: string]: {
-      name: string;
-      link: string;
-      description: string;
-      image: string;
-    }[];
-  }[] = [{ hardware }, { software }, { other }];
+  const dataToRender: { [key: string]: UsesDataCollection[] }[] = [
+    { hardware },
+    { software },
+    { other },
+  ];
 
-  const renderList = (
-    items: { name: string; link: string; description: string; image: string }[]
-  ) => {
-    return items.map((item) => (
+  const renderList = (items: UsesDataCollection[]) => {
+    return items.map((item: UsesDataCollection) => (
       <li
         key={item.name}
         style={
