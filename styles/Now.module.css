@@ -1,3 +1,53 @@
 .mainContainer {
   min-height: 70vh;
+  display: grid;
+  justify-items: center;
+}
+
+.mainContainer section:last-child {
+  display: grid;
+  gap: 2rem;
+  margin-block: 3rem;
+}
+
+.mainContainer section > p {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+  font-family: var(--font-header);
+}
+
+.mainContainer section > p:last-of-type {
+  margin-top: 1rem;
+  color: var(--color-brand-dark80);
+  font-family: var(--font-subheader);
+}
+
+.mainContainer section > img {
+  margin: 0.25rem 0 0.75rem;
+  box-shadow: 0.5rem 0.5rem 0 0.25rem var(--color-brand-green50);
+  transition: all 0.5s var(--easing-normal);
+}
+
+.mainContainer section > img:hover {
+  transform: translate(-0.25rem, -0.25rem);
+  box-shadow: 1rem 1rem 0 0.25rem var(--color-brand-green50);
+}
+
+.mainContainer h3 {
+  font-family: var(--font-header);
+  margin-bottom: 0.5rem;
+}
+
+.mainContainer article {
+  font-family: var(--font-body);
+}
+
+.mainContainer ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.mainContainer :is(p, li) {
+  margin: 0.5rem 0;
 }
