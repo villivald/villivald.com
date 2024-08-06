@@ -62,6 +62,13 @@ const en = {
   softwareDeveloper: "Software Developer",
   lastUpdated: "Last updated: ",
   now: "Now",
+  inspiredBy: "Inspired by ",
+  latestRandomPhoto: "Latest random photo",
+  doing: "Doing",
+  bookSuggestions: "Last book suggestions",
+  watching: "Currently watching",
+  sideProjects: "Side projects",
+  interestingThings: "Interesting things",
 
   // Page titles
   "title.home": "Home page",

@@ -24,14 +24,26 @@
 }
 
 .mainContainer section > img {
-  margin: 0.25rem 0 0.75rem;
-  box-shadow: 0.5rem 0.5rem 0 0.25rem var(--color-brand-green50);
+  margin: 0.25rem 0 2rem;
+  box-shadow: 0.5rem 0.5rem 0 0.25rem var(--color-brand-green50),
+    1rem 1rem 0 0.5rem var(--color-brand-teal30);
   transition: all 0.5s var(--easing-normal);
 }
 
 .mainContainer section > img:hover {
   transform: translate(-0.25rem, -0.25rem);
-  box-shadow: 1rem 1rem 0 0.25rem var(--color-brand-green50);
+  box-shadow: 1rem 1rem 0 0.25rem var(--color-brand-green50),
+    2rem 2rem 0 0.5rem var(--color-brand-teal30);
+}
+
+.mainContainer[data-theme="dark"] section > img {
+  box-shadow: 0.5rem 0.5rem 0 0.25rem var(--color-brand-green50),
+    1rem 1rem 0 0.5rem var(--color-brand-grey30);
+}
+
+.mainContainer[data-theme="dark"] section > img:hover {
+  box-shadow: 1rem 1rem 0 0.25rem var(--color-brand-green50),
+    2rem 2rem 0 0.5rem var(--color-brand-grey30);
 }
 
 .mainContainer h3 {
@@ -50,4 +62,10 @@
 
 .mainContainer :is(p, li) {
   margin: 0.5rem 0;
+  max-width: 60ch;
+  text-wrap: pretty;
+}
+
+.mainContainer[data-theme="dark"] :is(p, li, a, h3, p:last-of-type) {
+  color: var(--color-white);
 }

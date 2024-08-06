@@ -64,6 +64,13 @@ const fi = {
   softwareDeveloper: "Ohjelmistokehittäjä",
   lastUpdated: "Viimeksi päivitetty: ",
   now: "Now",
+  inspiredBy: "Saanut inspiraatiota sivustosta ",
+  latestRandomPhoto: "Viimeisin sattumanvarainen kuva",
+  doing: "Tekemässä",
+  bookSuggestions: "Viimeisimmät kirjasuositukset",
+  watching: "Katsomassa",
+  sideProjects: "Harrasteprojektit",
+  interestingThings: "Mielenkiintoisia asioita",
 
   // Page titles
   "title.home": "Etusivu",
