@@ -69,3 +69,17 @@
 .mainContainer[data-theme="dark"] :is(p, li, a, h3, p:last-of-type) {
   color: var(--color-white);
 }
+
+@media (width < 550px) {
+  .mainContainer section:last-child {
+    padding-inline: 0.75rem;
+  }
+}
+
+@media (width < 500px) {
+  .mainContainer section > img,
+  .mainContainer section > img:hover {
+    box-shadow: none;
+    transform: none;
+  }
+}

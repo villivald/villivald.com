@@ -41,7 +41,7 @@ export default function Now() {
             height={32}
           />
           <FormattedMessage id="lastUpdated" />
-          <time dateTime="2024-08-06">06.08.2024</time>
+          <time dateTime="2024-08-25">25.08.2024</time>
         </p>
       </section>
       <section>
@@ -49,7 +49,7 @@ export default function Now() {
           <h3>
             <FormattedMessage id="doing" />
           </h3>
-          <p>
+          <p lang="en">
             Trying to{" "}
             <Link
               href="https://www.strava.com/athletes/42251423"
@@ -59,16 +59,16 @@ export default function Now() {
             >
               cycle
             </Link>{" "}
-            at least 150km per week.
+            at least 150km per week. Sometimes it works.
           </p>
-          <p>Planning a move to a new place.</p>
+          <p lang="en">Planning a move to a new place.</p>
         </article>
         <article>
           <h3>
             <FormattedMessage id="bookSuggestions" />
           </h3>
           <ul>
-            <li>
+            <li lang="en">
               <Link
                 href="https://prestelpublishing.penguinrandomhouse.de/book/Leonardo-Frida-and-the-Others/Camille-Jouneaux/Prestel-com/e621930.rhd"
                 target="_blank"
@@ -79,7 +79,7 @@ export default function Now() {
               </Link>{" "}
               by Camille Jouneaux
             </li>
-            <li>
+            <li lang="en">
               <Link
                 href="https://en.wikipedia.org/wiki/The_Design_of_Everyday_Things"
                 target="_blank"
@@ -90,7 +90,7 @@ export default function Now() {
               </Link>{" "}
               by Donald Norman
             </li>
-            <li>
+            <li lang="en">
               <Link
                 href="https://www.nez-editions.us/products/the-big-book-of-perfume?variant=32638976491574"
                 target="_blank"
@@ -107,16 +107,15 @@ export default function Now() {
           <h3>
             <FormattedMessage id="watching" />
           </h3>
-          <p>
-            Mostly YouTube, Tour de France, and other races coming up this
-            summer.
+          <p lang="en">
+            Mostly YouTube, Tour de France, and other races coming up this year.
           </p>
         </article>
         <article>
           <h3>
             <FormattedMessage id="work" />
           </h3>
-          <p>
+          <p lang="en">
             Started a new job a couple of months ago. Going pretty ok so far.
           </p>
         </article>
@@ -124,7 +123,7 @@ export default function Now() {
           <h3>
             <FormattedMessage id="sideProjects" />
           </h3>
-          <p>
+          <p lang="en">
             My{" "}
             <Link
               href="https://github.com/villivald/cyclist.fi"
@@ -137,7 +136,7 @@ export default function Now() {
             remains in somewhat limbo at the moment. New ideas come and go, but
             nothing concrete yet.
           </p>
-          <p>
+          <p lang="en">
             Probably, after completing this page, I will start working on a new
             one - the personal collection of nice-looking websites.
           </p>
@@ -146,7 +145,7 @@ export default function Now() {
           <h3>
             <FormattedMessage id="interestingThings" />
           </h3>
-          <p>
+          <p lang="en">
             The fact that the{" "}
             <Link
               href="https://www.letourfemmes.fr/en"
