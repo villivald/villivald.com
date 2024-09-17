@@ -6,9 +6,9 @@ import { FormattedMessage, useIntl } from "react-intl";
 import { ThemeContext } from "../../../context";
 import styles from "../../../styles/Uses.module.css";
 
-import { hardware } from "./data/hardware.json";
-import { software } from "./data/software.json";
-import { other } from "./data/other.json";
+import hardware from "./data/hardware.json";
+import software from "./data/software.json";
+import other from "./data/other.json";
 
 interface CSSPropertiesWithVars extends CSSProperties {
   "--url"?: string;
@@ -26,9 +26,9 @@ export default function Uses() {
   const intl = useIntl();
 
   const dataToRender: { [key: string]: UsesDataCollection[] }[] = [
-    { hardware },
-    { software },
-    { other },
+    hardware,
+    software,
+    other,
   ];
 
   const renderList = (items: UsesDataCollection[]) => {
