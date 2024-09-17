@@ -68,7 +68,7 @@ export default function Books() {
           height={32}
         />
         <FormattedMessage id="lastUpdated" />
-        <time dateTime="2024-07-27">27.07.2024</time>
+        <time dateTime="2024-09-17">17.09.2024</time>
       </p>
 
       <div className={styles.booksContainer} ref={parentRef}>

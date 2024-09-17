@@ -2318,6 +2318,42 @@
       "category": "non-fiction"
     },
     {
+      "title": "Tomorrow, and Tomorrow, and Tomorrow",
+      "author": "G. Zevin",
+      "date": "09.08.2024",
+      "image": "254.avif",
+      "rating": 4,
+      "language": "en",
+      "category": "fiction"
+    },
+    {
+      "title": "Страдающее Средневековье",
+      "author": "Харман, Майзульс, Зотов",
+      "date": "28.08.2024",
+      "image": "255.avif",
+      "rating": 3,
+      "language": "ru",
+      "category": "non-fiction"
+    },
+    {
+      "title": "Työn historia",
+      "author": "J. Suzman",
+      "date": "15.09.2024",
+      "image": "256.avif",
+      "rating": 3,
+      "language": "fi",
+      "category": "non-fiction"
+    },
+    {
+      "title": "Наш бизнес — смерть",
+      "author": "Барабанов, Коротков",
+      "date": "17.09.2024",
+      "image": "257.avif",
+      "rating": 4,
+      "language": "ru",
+      "category": "non-fiction"
+    },
+    {
       "title": "",
       "author": "",
       "date": "",
