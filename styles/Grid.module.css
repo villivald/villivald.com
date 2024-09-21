@@ -1,6 +1,6 @@
 .main {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   place-items: center;
   gap: 1rem;
   grid-row-gap: 3rem;
@@ -10,7 +10,7 @@
 }
 
 .main > a {
-  width: 22cqw;
+  width: 17.5cqw;
   aspect-ratio: 1/1;
   text-decoration: none;
 }
@@ -39,12 +39,6 @@
   outline-color: var(--color-white);
 }
 
-@media (width > 1400px) {
-  .main > a:last-of-type {
-    display: none;
-  }
-}
-
 @media (width <= 1400px) {
   .main {
     grid-template-columns: repeat(3, 1fr);
@@ -52,6 +46,10 @@
 
   .main > a {
     width: 29cqw;
+  }
+
+  .main > a:last-of-type {
+    display: none;
   }
 }
 
@@ -65,6 +63,6 @@
   }
 
   .main > a:last-of-type {
-    display: none;
+    display: initial;
   }
 }

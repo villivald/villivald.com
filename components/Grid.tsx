@@ -11,7 +11,7 @@ import WorkAndStudyGrid from "./gridComponents/WorkAndStudyGrid";
 import UsesGrid from "./gridComponents/UsesGrid";
 import ProjectsGrid from "./gridComponents/ProjectsGrid";
 import RandomGrid from "./gridComponents/RandomGrid";
-// import NowGrid from "./gridComponents/NowGrid";
+import NowGrid from "./gridComponents/NowGrid";
 
 import { ThemeContext } from "../context";
 import styles from "../styles/Grid.module.css";
@@ -22,6 +22,7 @@ export default function Grid() {
   const intl = useIntl();
 
   const links = [
+    { href: "/now", component: <NowGrid /> },
     { href: "/workandstudy", component: <WorkAndStudyGrid /> },
     { href: "/blog", component: <BlogGrid /> },
     { href: "/uses", component: <UsesGrid /> },
@@ -30,7 +31,6 @@ export default function Grid() {
     { href: "/about", component: <AboutGrid /> },
     { href: "/contact", component: <ContactGrid /> },
     { href: "/old", component: <OldGrid /> },
-    // { href: "/now", component: <NowGrid />}
   ];
 
   const getRandomLink = () => {

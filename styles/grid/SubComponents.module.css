@@ -13,7 +13,7 @@
 
 .gridFooterLight p img,
 .gridFooterDark p img {
-  filter: invert(0);
+  filter: invert(0.5);
 }
 
 .gridFooterLight p:first-child img[data-theme="true"],
