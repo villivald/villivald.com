@@ -1,6 +1,6 @@
 {
   "name": "villivald.com",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "private": true,
   "scripts": {
     "dev": "next dev -p 3500",
@@ -9,24 +9,24 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@tanstack/react-virtual": "^3.7.0",
-    "@types/node": "20.14.6",
-    "@types/react": "18.3.3",
+    "@tanstack/react-virtual": "^3.10.8",
+    "@types/node": "22.5.5",
+    "@types/react": "18.3.8",
     "@types/react-dom": "18.3.0",
     "@vercel/analytics": "^1.3.1",
     "atropos": "^2.0.2",
-    "chart.js": "^4.4.3",
-    "next": "14.2.4",
+    "chart.js": "^4.4.4",
+    "next": "14.2.13",
     "react": "18.3.1",
     "react-chartjs-2": "^5.2.0",
     "react-dom": "18.3.1",
     "react-intl": "^6.6.8",
-    "typescript": "5.4.5"
+    "typescript": "5.6.2"
   },
   "devDependencies": {
-    "eslint": "8.57.0",
-    "eslint-config-next": "14.2.4",
-    "stylelint": "^16.6.1",
-    "stylelint-config-standard": "^36.0.0"
+    "eslint": "8.57.1",
+    "eslint-config-next": "14.2.13",
+    "stylelint": "^16.9.0",
+    "stylelint-config-standard": "^36.0.1"
   }
 }
