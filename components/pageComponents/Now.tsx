@@ -41,7 +41,7 @@ export default function Now() {
             height={32}
           />
           <FormattedMessage id="lastUpdated" />
-          <time dateTime="2024-08-25">25.08.2024</time>
+          <time dateTime="2024-09-21">21.09.2024</time>
         </p>
       </section>
       <section>
@@ -59,9 +59,12 @@ export default function Now() {
             >
               cycle
             </Link>{" "}
-            at least 150km per week. Sometimes it works.
+            at least 150km per week. Sometimes it works. Started going to the
+            gym again after about a year-long break.
           </p>
-          <p lang="en">Planning a move to a new place.</p>
+          <p lang="en">
+            The move to a new apartment is finally over. More news soon.
+          </p>
         </article>
         <article>
           <h3>

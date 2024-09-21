@@ -1,6 +1,6 @@
 {
   "name": "villivald.com",
-  "version": "1.4.1",
+  "version": "1.5.0",
   "private": true,
   "scripts": {
     "dev": "next dev -p 3500",
