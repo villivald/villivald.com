@@ -20,7 +20,7 @@ export default function Now() {
           src="/images/now.avif"
           alt="Random photo"
           width={375}
-          height={280}
+          height={500}
         />
         <p>
           <FormattedMessage id="inspiredBy" />
@@ -41,7 +41,7 @@ export default function Now() {
             height={32}
           />
           <FormattedMessage id="lastUpdated" />
-          <time dateTime="2024-09-21">21.09.2024</time>
+          <time dateTime="2024-10-18">18.10.2024</time>
         </p>
       </section>
       <section>
@@ -95,14 +95,14 @@ export default function Now() {
             </li>
             <li lang="en">
               <Link
-                href="https://www.nez-editions.us/products/the-big-book-of-perfume?variant=32638976491574"
+                href="https://en.wikipedia.org/wiki/Andrei_Lankov"
                 target="_blank"
                 rel="noopener noreferrer"
                 hrefLang="en"
               >
-                The Big Book of Perfume
+                Books on North & South Korea
               </Link>{" "}
-              by Jeanne Doré
+              by Andrei Lankov
             </li>
           </ul>
         </article>
@@ -111,7 +111,7 @@ export default function Now() {
             <FormattedMessage id="watching" />
           </h3>
           <p lang="en">
-            Mostly YouTube, Tour de France, and other races coming up this year.
+            Mostly YouTube, The Lord of the Rings series, Starting 5 on Netflix.
           </p>
         </article>
         <article>
