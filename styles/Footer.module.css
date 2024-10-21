@@ -6,7 +6,6 @@
   justify-content: space-around;
   align-items: center;
   background-color: var(--color-brand-green);
-  z-index: -1;
 }
 
 .footer[data-theme="dark"] {
