@@ -9,4 +9,10 @@
   background-size: cover;
   background-repeat: round;
   background-image: url("/images/nowGrid.avif");
+  transition: background-image 0.4s;
+}
+
+.now[data-eye="closed"] {
+  background-image: url("/images/nowGridEyeClosed.avif");
+  transition: background-image 0.4s;
 }
