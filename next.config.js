@@ -1,7 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-  swcMinify: true,
   images: {
     remotePatterns: [
       {
@@ -19,6 +17,10 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "media.dev.to",
+      },
+      {
+        protocol: "https",
+        hostname: "media2.dev.to",
       },
     ],
     dangerouslyAllowSVG: true,
