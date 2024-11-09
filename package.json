@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.46.1",
     "@tanstack/react-virtual": "^3.10.8",
     "@types/node": "22.8.6",
     "@types/react": "npm:types-react@19.0.0-rc.1",
