@@ -41,7 +41,7 @@ export default function Now() {
             height={32}
           />
           <FormattedMessage id="lastUpdated" />
-          <time dateTime="2024-10-18">18.10.2024</time>
+          <time dateTime="2024-11-10">10.11.2024</time>
         </p>
       </section>
       <section>
@@ -59,11 +59,12 @@ export default function Now() {
             >
               cycle
             </Link>{" "}
-            at least 150km per week. Sometimes it works. Started going to the
-            gym again after about a year-long break.
+            at least 150 km per week. Sometimes it works. This week I will try
+            to cycle each day as an experiment and see how it goes.
           </p>
           <p lang="en">
-            The move to a new apartment is finally over. More news soon.
+            I have finally set up an office room at home and am working on
+            making it more ergonomic and functional.
           </p>
         </article>
         <article>
@@ -111,7 +112,8 @@ export default function Now() {
             <FormattedMessage id="watching" />
           </h3>
           <p lang="en">
-            Mostly YouTube, The Lord of the Rings series, Starting 5 on Netflix.
+            Mostly YouTube, NBA - now that the season started a couple of
+            days/weeks ago, The Penguin, Loki, Agatha All Along.
           </p>
         </article>
         <article>
@@ -119,7 +121,8 @@ export default function Now() {
             <FormattedMessage id="work" />
           </h3>
           <p lang="en">
-            Started a new job a couple of months ago. Going pretty ok so far.
+            Going pretty ok so far at the new job. Looking forward to a better
+            work-life balance.
           </p>
         </article>
         <article>
@@ -140,8 +143,8 @@ export default function Now() {
             nothing concrete yet.
           </p>
           <p lang="en">
-            Probably, after completing this page, I will start working on a new
-            one - the personal collection of nice-looking websites.
+            Working on some sort of Strava integration, so it is coming along,
+            though not sure what it will look like yet.
           </p>
         </article>
         <article>
@@ -149,17 +152,15 @@ export default function Now() {
             <FormattedMessage id="interestingThings" />
           </h3>
           <p lang="en">
-            The fact that the{" "}
             <Link
-              href="https://www.letourfemmes.fr/en"
+              href="https://www.nba.com/cavaliers/"
               target="_blank"
               rel="noopener noreferrer"
               hrefLang="en"
             >
-              Tour de France Femmes
+              Cleveland
             </Link>{" "}
-            does not have an app, that is available for the male version, let
-            alone the Netflix series 🤷‍♂️.
+            has gone 11-0 so far, and that is something new.
           </p>
         </article>
       </section>
