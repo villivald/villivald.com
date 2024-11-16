@@ -134,7 +134,7 @@ export default async function handler(req, res) {
         newActivities.map((activity) => ({
           id: activity.id,
           activity_date: formatDate(activity.start_date),
-          distance: activity.distance,
+          distance: activity.distance / 1000,
           elapsed_time: activity.elapsed_time,
           moving_time: activity.moving_time,
           average_speed: activity.average_speed,
