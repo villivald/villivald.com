@@ -34,7 +34,7 @@ export default function Cycling() {
     return (
       <div>
         <p>Total distance: {getTotalDistanceOfPeriod(params)} km</p>
-        // TODO: Fix the average speed calculation
+        {/* TODO: Fix the average speed calculation*/}
         <p>Average speed: {getAverageSpeedOfPeriod(params)} km/h</p>
         <p>Total elevation gain: {getTotalElevationGainOfPeriod(params)}m</p>
       </div>
