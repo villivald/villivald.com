@@ -21,10 +21,12 @@
 - [Next.js](https://nextjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [OpenMoji](https://openmoji.org/)
+- [Supabase](https://supabase.com/)
 - [Atropos.js](https://atroposjs.com/)
 - [Chart.js](https://www.chartjs.org/)
-- [TanStack Virtual](https://tanstack.com/virtual/latest)
+- [TanStack Virtual](https://tanstack.com/virtual/latest) 
 - [FormatJS](https://formatjs.io/)
+- [Date-fns](https://date-fns.org/)
 
 ## Screenshots
 
