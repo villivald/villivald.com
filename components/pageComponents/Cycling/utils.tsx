@@ -29,9 +29,12 @@ export const months: { [key: number]: string } = {
   11: "December",
 };
 
+export const weekDays = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+
+export const today = new Date();
+
 // Get the dates of the current week - Monday to Sunday (e.g. 2024-11-12)
 export const getDatesOfCurrentWeek = () => {
-  const today = new Date();
   const startOfCurrentWeek = startOfWeek(today, { weekStartsOn: 1 });
   const endOfCurrentWeek = endOfWeek(today, { weekStartsOn: 1 });
 
@@ -55,12 +58,16 @@ export const getDatesOfCurrentMonth = () => {
   const monthDates = [];
   let currentDate = startOfCurrentMonth;
 
+  // Add placeholders for days before the start of the month
+  const startDay = startOfCurrentMonth.getDay();
+  const placeholders = Array.from({ length: (startDay + 6) % 7 }, () => null);
+
   while (currentDate <= endOfCurrentMonth) {
     monthDates.push(format(currentDate, "yyyy-MM-dd"));
     currentDate = addDays(currentDate, 1);
   }
 
-  return monthDates;
+  return [...placeholders, ...monthDates];
 };
 
 // Activities from the current week - Monday to Sunday
@@ -96,7 +103,7 @@ export const getDistanceOfCurrentDay = (
   activities: Activity[]
 ) => {
   return (
-    parseInt(
+    parseFloat(
       activities.filter((activity) =>
         isSameDay(activity.activity_date, date)
       )[0]?.distance || "0"

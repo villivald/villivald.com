@@ -1,0 +1,73 @@
+/* stylelint-disable no-descending-specificity */
+.mainContainer {
+  min-height: 70vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  padding-inline: 1.25rem;
+  padding-block: 1rem 2.5rem;
+
+  section > div {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    .weekContainer > p,
+    .monthContainer > p {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      width: 5rem;
+      height: 5rem;
+      padding: 0.25rem;
+      background-color: var(--color-brand-red);
+
+      &[data-empty="true"] {
+        background-color: var(--color-brand-grey);
+      }
+
+      &[data-today="true"] {
+        background-color: gray;
+      }
+
+      &[data-blank="true"] {
+        background-color: transparent;
+      }
+
+      > span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: var(--color-white);
+      }
+    }
+  }
+
+  section > h2 {
+    margin-block-end: 1rem;
+  }
+}
+
+.totalContainer {
+  display: inline-block;
+  padding: 0.25rem;
+  background-color: gray;
+}
+
+.weekContainer {
+  display: inline-flex;
+  gap: 0.0875rem;
+}
+
+.daysContainer,
+.monthContainer {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.0875rem;
+}
+
+.mainContainer[data-theme="dark"] h2,
+.mainContainer[data-theme="dark"] p {
+  color: var(--color-white);
+}
