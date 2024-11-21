@@ -6,47 +6,52 @@
   gap: 2.5rem;
   padding-inline: 1.25rem;
   padding-block: 1rem 2.5rem;
+}
 
-  section > div {
-    display: inline-flex;
-    flex-direction: column;
-    gap: 0.5rem;
+.mainContainer section > div {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
 
-    .weekContainer > p,
-    .monthContainer > p {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-      width: 5rem;
-      height: 5rem;
-      padding: 0.25rem;
-      background-color: var(--color-brand-red);
+.mainContainer section > h2 {
+  margin-block-end: 1rem;
+}
 
-      &[data-empty="true"] {
-        background-color: var(--color-brand-grey);
-      }
+.weekContainer > p,
+.monthContainer > p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 5rem;
+  height: 5rem;
+  padding: 0.25rem;
+  background-color: var(--color-brand-red);
+}
 
-      &[data-today="true"] {
-        background-color: gray;
-      }
+.weekContainer > p[data-empty="true"],
+.monthContainer > p[data-empty="true"] {
+  background-color: var(--color-brand-grey);
+}
 
-      &[data-blank="true"] {
-        background-color: transparent;
-      }
+.weekContainer > p[data-today="true"],
+.monthContainer > p[data-today="true"] {
+  background-color: gray;
+}
 
-      > span {
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-color: var(--color-white);
-      }
-    }
-  }
+.weekContainer > p[data-blank="true"],
+.monthContainer > p[data-blank="true"] {
+  background-color: transparent;
+}
 
-  section > h2 {
-    margin-block-end: 1rem;
-  }
+.weekContainer > p > span,
+.monthContainer > p > span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-inline: 0.1rem;
+  background-color: var(--color-white);
 }
 
 .totalContainer {
