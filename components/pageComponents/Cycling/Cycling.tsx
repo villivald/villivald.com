@@ -1,5 +1,5 @@
 import { useEffect, useState, useContext } from "react";
-import { format, isSameDay } from "date-fns";
+import { format, isSameDay, isSameMonth } from "date-fns";
 import {
   today,
   months,
@@ -80,8 +80,7 @@ export default function Cycling() {
                   data-empty={distance === "0.00"}
                 >
                   <span>{format(date, "E")}</span>
-                  {distance}
-                  km
+                  {distance} km
                 </p>
               );
             })}
@@ -128,13 +127,25 @@ export default function Cycling() {
         <h2>Current Year</h2>
         <div>
           <div className={styles.yearContainer}>
-            {Object.keys(months).map((key, index) => (
-              <p key={index}>
-                {months[parseInt(key, 10)]}
-                {getMonthlyDistances(currentYearActivities(activities))[index]}
-                km
-              </p>
-            ))}
+            {Object.keys(months).map((key, index) => {
+              const distance = getMonthlyDistances(
+                currentYearActivities(activities)
+              )[index];
+
+              return (
+                <p
+                  key={index}
+                  data-thismonth={isSameMonth(
+                    today,
+                    new Date(today.getFullYear(), parseInt(key, 10))
+                  )}
+                  data-empty={distance === "0.00"}
+                >
+                  <span>{months[parseInt(key, 10)].slice(0, 3)}</span>
+                  {distance} km
+                </p>
+              );
+            })}
           </div>
           <TotalComponent params={currentYearActivities(activities)} />
         </div>
@@ -144,11 +155,16 @@ export default function Cycling() {
         <h2>All Time</h2>
         <div>
           <div className={styles.allTimeContainer}>
-            {yearsOfActivities(activities).map((year, index) => (
-              <p key={index}>
-                {year} - {getYearlyDistance(year, activities)}km
-              </p>
-            ))}
+            {yearsOfActivities(activities).map((year, index) => {
+              const distance = getYearlyDistance(year, activities);
+
+              return (
+                <p key={index} data-thisyear={year === today.getFullYear()}>
+                  <span>{year}</span>
+                  {distance} km
+                </p>
+              );
+            })}
           </div>
           <TotalComponent params={activities} />
         </div>

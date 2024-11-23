@@ -3,8 +3,8 @@
   min-height: 70vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2.5rem;
-  padding-inline: 1.25rem;
+  justify-self: center;
+  gap: 5rem;
   padding-block: 1rem 2.5rem;
 }
 
@@ -19,34 +19,46 @@
 }
 
 .weekContainer > p,
-.monthContainer > p {
+.monthContainer > p,
+.yearContainer > p,
+.allTimeContainer > p {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  width: 5rem;
-  height: 5rem;
+  width: 6rem;
+  height: 6rem;
   padding: 0.25rem;
   background-color: var(--color-brand-red);
 }
 
+.yearContainer > p,
+.allTimeContainer > p {
+  width: 7rem;
+  height: 7rem;
+}
+
 .weekContainer > p[data-empty="true"],
-.monthContainer > p[data-empty="true"] {
+.monthContainer > p[data-empty="true"],
+.yearContainer > p[data-empty="true"] {
   background-color: var(--color-brand-grey);
 }
 
 .weekContainer > p[data-today="true"],
-.monthContainer > p[data-today="true"] {
+.monthContainer > p[data-today="true"],
+.yearContainer > p[data-thismonth="true"],
+.allTimeContainer > p[data-thisyear="true"] {
   background-color: gray;
 }
 
-.weekContainer > p[data-blank="true"],
 .monthContainer > p[data-blank="true"] {
   background-color: transparent;
 }
 
 .weekContainer > p > span,
-.monthContainer > p > span {
+.monthContainer > p > span,
+.yearContainer > p > span,
+.allTimeContainer > p > span {
   position: absolute;
   top: 0;
   left: 0;
@@ -69,6 +81,17 @@
 .monthContainer {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
+  gap: 0.0875rem;
+}
+
+.yearContainer {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.0875rem;
+}
+
+.allTimeContainer {
+  display: flex;
   gap: 0.0875rem;
 }
 
