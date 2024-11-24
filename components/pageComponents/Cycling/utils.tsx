@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import {
   isThisWeek,
   isThisMonth,
@@ -31,12 +32,24 @@ export const months: { [key: number]: string } = {
 
 export const weekDays = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
-export const today = new Date();
+export const useDynamicToday = () => {
+  const [today, setToday] = useState(new Date());
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setToday(new Date());
+    }, 1000 * 60);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return today;
+};
 
 // Get the dates of the current week - Monday to Sunday (e.g. 2024-11-12)
-export const getDatesOfCurrentWeek = () => {
-  const startOfCurrentWeek = startOfWeek(today, { weekStartsOn: 1 });
-  const endOfCurrentWeek = endOfWeek(today, { weekStartsOn: 1 });
+export const getDatesOfCurrentWeek = (baseDate: Date) => {
+  const startOfCurrentWeek = startOfWeek(baseDate, { weekStartsOn: 1 });
+  const endOfCurrentWeek = endOfWeek(baseDate, { weekStartsOn: 1 });
 
   const weekDates = [];
   let currentDate = startOfCurrentWeek;
@@ -50,10 +63,9 @@ export const getDatesOfCurrentWeek = () => {
 };
 
 // Get the dates of the current month - 1st to last day of the month (e.g. 2024-11-01)
-export const getDatesOfCurrentMonth = () => {
-  const today = new Date();
-  const startOfCurrentMonth = startOfMonth(today);
-  const endOfCurrentMonth = endOfMonth(today);
+export const getDatesOfCurrentMonth = (baseDate: Date) => {
+  const startOfCurrentMonth = startOfMonth(baseDate);
+  const endOfCurrentMonth = endOfMonth(baseDate);
 
   const monthDates = [];
   let currentDate = startOfCurrentMonth;

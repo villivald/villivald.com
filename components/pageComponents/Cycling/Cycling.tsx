@@ -1,7 +1,7 @@
 import { useEffect, useState, useContext } from "react";
 import { format, isSameDay, isSameMonth } from "date-fns";
 import {
-  today,
+  useDynamicToday,
   months,
   weekDays,
   getDatesOfCurrentWeek,
@@ -24,6 +24,7 @@ import styles from "../../../styles/Cycling.module.css";
 
 export default function Cycling() {
   const theme = useContext(ThemeContext);
+  const today = useDynamicToday();
 
   const [activities, setActivities] = useState<Activity[]>([]);
 
@@ -48,8 +49,8 @@ export default function Cycling() {
     );
   };
 
-  console.log(getDatesOfCurrentWeek());
-  console.log(getDatesOfCurrentMonth());
+  console.log(getDatesOfCurrentWeek(today));
+  console.log(getDatesOfCurrentMonth(today));
   console.log(currentWeekActivities(activities));
   console.log(currentMonthActivities(activities));
   console.log(currentYearActivities(activities));
@@ -63,12 +64,12 @@ export default function Cycling() {
         <h2>Current Week</h2>
         <div>
           <div className={styles.daysContainer}>
-            {getDatesOfCurrentWeek().map((date, index) => (
+            {getDatesOfCurrentWeek(today).map((date, index) => (
               <p key={index}>{format(date, "d")}</p>
             ))}
           </div>
           <div className={styles.weekContainer}>
-            {getDatesOfCurrentWeek().map((date, index) => {
+            {getDatesOfCurrentWeek(today).map((date, index) => {
               const distance = getDistanceOfCurrentDay(
                 date,
                 currentWeekActivities(activities)
@@ -98,7 +99,7 @@ export default function Cycling() {
             ))}
           </div>
           <div className={styles.monthContainer}>
-            {getDatesOfCurrentMonth().map((date, index) => {
+            {getDatesOfCurrentMonth(today).map((date, index) => {
               if (!date) {
                 return <p key={index} data-blank={true}></p>;
               }
