@@ -132,10 +132,28 @@ export const getTotalDistanceOfPeriod = (activities: Activity[]) => {
   ).toFixed(2);
 };
 
-// TODO: Fix the average speed calculation
 export const getAverageSpeedOfPeriod = (activities: Activity[]) => {
   const totalDistance = parseFloat(getTotalDistanceOfPeriod(activities));
   const totalTime = activities.reduce(
+    (total, activity) => total + activity.moving_time,
+    0
+  );
+
+  const averageSpeed = totalDistance / (totalTime / 3600);
+
+  return averageSpeed.toFixed(2);
+};
+
+// Activities from a specific year
+export const activitiesOfYear = (year: number, activities: Activity[]) =>
+  activities.filter((activity) => {
+    return getYear(activity.activity_date) === year;
+  });
+
+// Average speed of activities from a specific year
+export const averageSpeedOfYear = (year: number, activities: Activity[]) => {
+  const totalDistance = parseFloat(getYearlyDistance(year, activities));
+  const totalTime = activitiesOfYear(year, activities).reduce(
     (total, activity) => total + activity.moving_time,
     0
   );

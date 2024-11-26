@@ -16,6 +16,8 @@ import {
   getAverageSpeedOfPeriod,
   getTotalElevationGainOfPeriod,
   getDistanceOfCurrentDay,
+  averageSpeedOfYear,
+  activitiesOfYear,
 } from "./utils";
 import { Activity } from "./types";
 
@@ -42,21 +44,20 @@ export default function Cycling() {
     return (
       <div className={styles.totalContainer}>
         <p>Total distance: {getTotalDistanceOfPeriod(params)} km</p>
-        {/* TODO: Fix the average speed calculation*/}
         <p>Average speed: {getAverageSpeedOfPeriod(params)} km/h</p>
         <p>Total elevation gain: {getTotalElevationGainOfPeriod(params)}m</p>
       </div>
     );
   };
 
-  console.log(getDatesOfCurrentWeek(today));
-  console.log(getDatesOfCurrentMonth(today));
-  console.log(currentWeekActivities(activities));
-  console.log(currentMonthActivities(activities));
-  console.log(currentYearActivities(activities));
-  console.log(yearsOfActivities(activities));
-  console.log(getMonthlyDistances(currentYearActivities(activities)));
-  console.log(getYearlyDistance(2019, activities));
+  // console.log(getDatesOfCurrentWeek(today));
+  // console.log(getDatesOfCurrentMonth(today));
+  // console.log(currentWeekActivities(activities));
+  // console.log(currentMonthActivities(activities));
+  // console.log(currentYearActivities(activities));
+  // console.log(yearsOfActivities(activities));
+  // console.log(getMonthlyDistances(currentYearActivities(activities)));
+  // console.log(getYearlyDistance(2019, activities));
 
   return (
     <div className={styles.mainContainer} data-theme={theme}>
@@ -160,7 +161,17 @@ export default function Cycling() {
               const distance = getYearlyDistance(year, activities);
 
               return (
-                <p key={index} data-thisyear={year === today.getFullYear()}>
+                <p
+                  key={index}
+                  data-thisyear={year === today.getFullYear()}
+                  className={styles.yearItem}
+                  data-content={`Avg speed: ${averageSpeedOfYear(
+                    year,
+                    activities
+                  )}km/h Elevation gain: ${getTotalElevationGainOfPeriod(
+                    activitiesOfYear(year, activities)
+                  )}m`}
+                >
                   <span>{year}</span>
                   {distance} km
                 </p>

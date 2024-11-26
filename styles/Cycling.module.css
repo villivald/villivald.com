@@ -38,6 +38,18 @@
   height: 7rem;
 }
 
+.allTimeContainer > p:hover::before {
+  content: attr(data-content);
+  position: absolute;
+  top: 6rem;
+  width: auto;
+  height: auto;
+  z-index: 1;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  padding: 0.25rem;
+}
+
 .weekContainer > p[data-empty="true"],
 .monthContainer > p[data-empty="true"],
 .yearContainer > p[data-empty="true"] {
