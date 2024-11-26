@@ -134,14 +134,13 @@ export const getTotalDistanceOfPeriod = (activities: Activity[]) => {
 
 // TODO: Fix the average speed calculation
 export const getAverageSpeedOfPeriod = (activities: Activity[]) => {
-  const validSpeeds = activities
-    .map((activity) => parseFloat(activity.average_speed))
-    .filter((speed) => !isNaN(speed));
+  const totalDistance = parseFloat(getTotalDistanceOfPeriod(activities));
+  const totalTime = activities.reduce(
+    (total, activity) => total + activity.moving_time,
+    0
+  );
 
-  const totalSpeed = validSpeeds.reduce((total, speed) => total + speed, 0);
-  const averageSpeed = validSpeeds.length
-    ? (totalSpeed / validSpeeds.length) * 3.6
-    : 0;
+  const averageSpeed = totalDistance / (totalTime / 3600);
 
   return averageSpeed.toFixed(2);
 };
