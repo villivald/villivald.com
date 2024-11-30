@@ -38,6 +38,7 @@ export default function DropdownMenu() {
       <button
         className={styles.dropdownButton}
         aria-haspopup="true"
+        aria-expanded={menuOpen}
         data-theme={theme}
         data-open={menuOpen}
         aria-label={intl.formatMessage({ id: "menu" })}
@@ -47,11 +48,13 @@ export default function DropdownMenu() {
         </span>
       </button>
       <ul
+        role="menu"
+        aria-hidden={!menuOpen}
         className={theme === "dark" ? styles.darkMenu : styles.lightMenu}
         data-open={menuOpen}
       >
         {menuItems.map((item) => (
-          <li key={item}>
+          <li key={item} role="menuitem">
             <Link href={`/${item}`}>
               <Image
                 src={`/emojis/${item}.svg`}
