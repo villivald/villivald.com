@@ -46,7 +46,8 @@
     2rem 2rem 0 0.5rem var(--color-brand-grey30);
 }
 
-.mainContainer h3 {
+.mainContainer h2 {
+  font-size: var(--fontSize-header3);
   font-family: var(--font-header);
   margin-bottom: 0.5rem;
 }
@@ -66,7 +67,7 @@
   text-wrap: pretty;
 }
 
-.mainContainer[data-theme="dark"] :is(p, li, a, h3, p:last-of-type) {
+.mainContainer[data-theme="dark"] :is(p, li, a, h2, p:last-of-type) {
   color: var(--color-white);
 }
 

@@ -46,9 +46,9 @@ export default function Now() {
       </section>
       <section>
         <article>
-          <h3>
+          <h2>
             <FormattedMessage id="doing" />
-          </h3>
+          </h2>
           <p lang="en">
             Trying to{" "}
             <Link
@@ -68,9 +68,9 @@ export default function Now() {
           </p>
         </article>
         <article>
-          <h3>
+          <h2>
             <FormattedMessage id="bookSuggestions" />
-          </h3>
+          </h2>
           <ul>
             <li lang="en">
               <Link
@@ -108,27 +108,27 @@ export default function Now() {
           </ul>
         </article>
         <article>
-          <h3>
+          <h2>
             <FormattedMessage id="watching" />
-          </h3>
+          </h2>
           <p lang="en">
             Mostly YouTube, NBA - now that the season started a couple of
             days/weeks ago, The Penguin, Loki, Agatha All Along.
           </p>
         </article>
         <article>
-          <h3>
+          <h2>
             <FormattedMessage id="work" />
-          </h3>
+          </h2>
           <p lang="en">
             Going pretty ok so far at the new job. Looking forward to a better
             work-life balance.
           </p>
         </article>
         <article>
-          <h3>
+          <h2>
             <FormattedMessage id="sideProjects" />
-          </h3>
+          </h2>
           <p lang="en">
             My{" "}
             <Link
@@ -148,9 +148,9 @@ export default function Now() {
           </p>
         </article>
         <article>
-          <h3>
+          <h2>
             <FormattedMessage id="interestingThings" />
-          </h3>
+          </h2>
           <p lang="en">
             <Link
               href="https://www.nba.com/cavaliers/"

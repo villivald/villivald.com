@@ -52,7 +52,8 @@
   margin-block-end: 2rem;
 }
 
-.booksContainer > figure:hover {
+.booksContainer > figure:hover,
+.booksContainer > figure:focus-within {
   scale: 1.25;
 }
 
@@ -67,12 +68,15 @@
 }
 
 .booksContainer > figure:has(+ div:hover),
-.booksContainer > figure:hover + div {
+.booksContainer > figure:has(+ div:focus-within),
+.booksContainer > figure:hover + div,
+.booksContainer > figure:focus-within + div {
   scale: 1.01;
   transition: all 0.9s ease;
 }
 
-.booksContainer > figure:hover > p {
+.booksContainer > figure:hover > p,
+.booksContainer > figure:focus-within > p {
   display: flex;
   flex-direction: column;
   position: absolute;
