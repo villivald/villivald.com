@@ -15,9 +15,10 @@ import {
   getTotalDistanceOfPeriod,
   getAverageSpeedOfPeriod,
   getTotalElevationGainOfPeriod,
-  getDistanceOfCurrentDay,
-  averageSpeedOfYear,
+  getDistanceOfDay,
   activitiesOfYear,
+  activitiesOfMonth,
+  activitiesOfDay,
 } from "./utils";
 import { Activity } from "./types";
 
@@ -45,7 +46,7 @@ export default function Cycling() {
       <div className={styles.totalContainer}>
         <p>Total distance: {getTotalDistanceOfPeriod(params)} km</p>
         <p>Average speed: {getAverageSpeedOfPeriod(params)} km/h</p>
-        <p>Total elevation gain: {getTotalElevationGainOfPeriod(params)}m</p>
+        <p>Total elevation gain: {getTotalElevationGainOfPeriod(params)} m</p>
       </div>
     );
   };
@@ -71,7 +72,7 @@ export default function Cycling() {
           </div>
           <div className={styles.weekContainer}>
             {getDatesOfCurrentWeek(today).map((date, index) => {
-              const distance = getDistanceOfCurrentDay(
+              const distance = getDistanceOfDay(
                 date,
                 currentWeekActivities(activities)
               );
@@ -80,6 +81,11 @@ export default function Cycling() {
                   key={index}
                   data-today={isSameDay(date, today)}
                   data-empty={distance === "0.00"}
+                  data-content={`💨${getAverageSpeedOfPeriod(
+                    activitiesOfDay(date, activities)
+                  )}km/h\n⛰️${getTotalElevationGainOfPeriod(
+                    activitiesOfDay(date, activities)
+                  )}m`}
                 >
                   <span>{format(date, "E")}</span>
                   {distance} km
@@ -105,7 +111,7 @@ export default function Cycling() {
                 return <p key={index} data-blank={true}></p>;
               }
 
-              const distance = getDistanceOfCurrentDay(
+              const distance = getDistanceOfDay(
                 date,
                 currentMonthActivities(activities)
               );
@@ -114,6 +120,11 @@ export default function Cycling() {
                   key={index}
                   data-today={isSameDay(date, today)}
                   data-empty={distance === "0.00"}
+                  data-content={`💨${getAverageSpeedOfPeriod(
+                    activitiesOfDay(date, activities)
+                  )}km/h\n⛰️${getTotalElevationGainOfPeriod(
+                    activitiesOfDay(date, activities)
+                  )}m`}
                 >
                   <span>{format(date, "dd")}</span>
                   {distance} km
@@ -129,7 +140,7 @@ export default function Cycling() {
         <h2>Current Year</h2>
         <div>
           <div className={styles.yearContainer}>
-            {Object.keys(months).map((key, index) => {
+            {Object.keys(months).map((_key, index) => {
               const distance = getMonthlyDistances(
                 currentYearActivities(activities)
               )[index];
@@ -139,11 +150,16 @@ export default function Cycling() {
                   key={index}
                   data-thismonth={isSameMonth(
                     today,
-                    new Date(today.getFullYear(), parseInt(key, 10))
+                    new Date(today.getFullYear(), index)
                   )}
                   data-empty={distance === "0.00"}
+                  data-content={`💨${getAverageSpeedOfPeriod(
+                    activitiesOfMonth(index, today.getFullYear(), activities)
+                  )}km/h\n⛰️${getTotalElevationGainOfPeriod(
+                    activitiesOfMonth(index, today.getFullYear(), activities)
+                  )}m`}
                 >
-                  <span>{months[parseInt(key, 10)].slice(0, 3)}</span>
+                  <span>{months[index].slice(0, 3)}</span>
                   {distance} km
                 </p>
               );
@@ -165,10 +181,9 @@ export default function Cycling() {
                   key={index}
                   data-thisyear={year === today.getFullYear()}
                   className={styles.yearItem}
-                  data-content={`Avg speed: ${averageSpeedOfYear(
-                    year,
-                    activities
-                  )}km/h Elevation gain: ${getTotalElevationGainOfPeriod(
+                  data-content={`💨${getAverageSpeedOfPeriod(
+                    activitiesOfYear(year, activities)
+                  )}km/h\n⛰️${getTotalElevationGainOfPeriod(
                     activitiesOfYear(year, activities)
                   )}m`}
                 >

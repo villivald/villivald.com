@@ -110,10 +110,7 @@ export const yearsOfActivities = (activities: Activity[]) =>
     return years.sort();
   }, []);
 
-export const getDistanceOfCurrentDay = (
-  date: string,
-  activities: Activity[]
-) => {
+export const getDistanceOfDay = (date: string, activities: Activity[]) => {
   return (
     parseFloat(
       activities.filter((activity) =>
@@ -139,7 +136,7 @@ export const getAverageSpeedOfPeriod = (activities: Activity[]) => {
     0
   );
 
-  const averageSpeed = totalDistance / (totalTime / 3600);
+  const averageSpeed = totalDistance / (totalTime / 3600) || 0;
 
   return averageSpeed.toFixed(2);
 };
@@ -150,18 +147,24 @@ export const activitiesOfYear = (year: number, activities: Activity[]) =>
     return getYear(activity.activity_date) === year;
   });
 
-// Average speed of activities from a specific year
-export const averageSpeedOfYear = (year: number, activities: Activity[]) => {
-  const totalDistance = parseFloat(getYearlyDistance(year, activities));
-  const totalTime = activitiesOfYear(year, activities).reduce(
-    (total, activity) => total + activity.moving_time,
-    0
-  );
+// Activities from a specific month
+export const activitiesOfMonth = (
+  month: number,
+  year: number,
+  activities: Activity[]
+) =>
+  activities.filter((activity) => {
+    return (
+      getYear(activity.activity_date) === year &&
+      getMonth(activity.activity_date) === month
+    );
+  });
 
-  const averageSpeed = totalDistance / (totalTime / 3600);
-
-  return averageSpeed.toFixed(2);
-};
+// Activities from a specific day
+export const activitiesOfDay = (date: string, activities: Activity[]) =>
+  activities.filter((activity) => {
+    return isSameDay(activity.activity_date, date);
+  });
 
 export const getTotalElevationGainOfPeriod = (activities: Activity[]) => {
   return (
@@ -169,7 +172,7 @@ export const getTotalElevationGainOfPeriod = (activities: Activity[]) => {
       const elevationGain = parseFloat(activity.total_elevation_gain);
       return total + (isNaN(elevationGain) ? 0 : elevationGain);
     }, 0) || 0
-  ).toFixed(2);
+  ).toFixed(0);
 };
 
 export const getMonthlyDistances = (activities: Activity[]) => {
