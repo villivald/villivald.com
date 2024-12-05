@@ -1,201 +1,31 @@
-import { useEffect, useState, useContext } from "react";
-import { format, isSameDay, isSameMonth } from "date-fns";
-import {
-  useDynamicToday,
-  months,
-  weekDays,
-  getDatesOfCurrentWeek,
-  getDatesOfCurrentMonth,
-  currentWeekActivities,
-  currentMonthActivities,
-  currentYearActivities,
-  yearsOfActivities,
-  getMonthlyDistances,
-  getYearlyDistance,
-  getTotalDistanceOfPeriod,
-  getAverageSpeedOfPeriod,
-  getTotalElevationGainOfPeriod,
-  getDistanceOfDay,
-  activitiesOfYear,
-  activitiesOfMonth,
-  activitiesOfDay,
-} from "./utils";
+import { useContext } from "react";
+import useSWR, { Fetcher } from "swr";
+
+import { useDynamicToday } from "./utils";
 import { Activity } from "./types";
+import { containers } from "./Containers";
 
 import { ThemeContext } from "../../../context";
 import styles from "../../../styles/Cycling.module.css";
+
+const fetcher: Fetcher<Activity[]> = (...args: Parameters<typeof fetch>) =>
+  fetch(...args).then((res) => res.json());
 
 export default function Cycling() {
   const theme = useContext(ThemeContext);
   const today = useDynamicToday();
 
-  const [activities, setActivities] = useState<Activity[]>([]);
+  const { data, error } = useSWR<Activity[]>("/api/strava/activities", fetcher);
 
-  useEffect(() => {
-    const fetchActivities = async () => {
-      const response = await fetch("/api/strava/activities");
-      const data = await response.json();
-      setActivities(data);
-    };
-
-    fetchActivities();
-  }, []);
-
-  const TotalComponent = ({ params }: { params: Activity[] }) => {
-    return (
-      <div className={styles.totalContainer}>
-        <p>Total distance: {getTotalDistanceOfPeriod(params)} km</p>
-        <p>Average speed: {getAverageSpeedOfPeriod(params)} km/h</p>
-        <p>Total elevation gain: {getTotalElevationGainOfPeriod(params)} m</p>
-      </div>
-    );
-  };
-
-  // console.log(getDatesOfCurrentWeek(today));
-  // console.log(getDatesOfCurrentMonth(today));
-  // console.log(currentWeekActivities(activities));
-  // console.log(currentMonthActivities(activities));
-  // console.log(currentYearActivities(activities));
-  // console.log(yearsOfActivities(activities));
-  // console.log(getMonthlyDistances(currentYearActivities(activities)));
-  // console.log(getYearlyDistance(2019, activities));
+  // TODO: Add error and loading state handling
+  if (error) return <div>Failed to load</div>;
+  if (!data) return <div>Loading...</div>;
 
   return (
     <div className={styles.mainContainer} data-theme={theme}>
-      <section>
-        <h2>Current Week</h2>
-        <div>
-          <div className={styles.daysContainer}>
-            {getDatesOfCurrentWeek(today).map((date, index) => (
-              <p key={index}>{format(date, "d")}</p>
-            ))}
-          </div>
-          <div className={styles.weekContainer}>
-            {getDatesOfCurrentWeek(today).map((date, index) => {
-              const distance = getDistanceOfDay(
-                date,
-                currentWeekActivities(activities)
-              );
-              return (
-                <p
-                  key={index}
-                  data-today={isSameDay(date, today)}
-                  data-empty={distance === "0.00"}
-                  data-content={`💨${getAverageSpeedOfPeriod(
-                    activitiesOfDay(date, activities)
-                  )}km/h\n⛰️${getTotalElevationGainOfPeriod(
-                    activitiesOfDay(date, activities)
-                  )}m`}
-                >
-                  <span>{format(date, "E")}</span>
-                  {distance} km
-                </p>
-              );
-            })}
-          </div>
-          <TotalComponent params={currentWeekActivities(activities)} />
-        </div>
-      </section>
-
-      <section>
-        <h2>Current Month</h2>
-        <div>
-          <div className={styles.daysContainer}>
-            {weekDays.map((day, index) => (
-              <p key={index}>{day}</p>
-            ))}
-          </div>
-          <div className={styles.monthContainer}>
-            {getDatesOfCurrentMonth(today).map((date, index) => {
-              if (!date) {
-                return <p key={index} data-blank={true}></p>;
-              }
-
-              const distance = getDistanceOfDay(
-                date,
-                currentMonthActivities(activities)
-              );
-              return (
-                <p
-                  key={index}
-                  data-today={isSameDay(date, today)}
-                  data-empty={distance === "0.00"}
-                  data-content={`💨${getAverageSpeedOfPeriod(
-                    activitiesOfDay(date, activities)
-                  )}km/h\n⛰️${getTotalElevationGainOfPeriod(
-                    activitiesOfDay(date, activities)
-                  )}m`}
-                >
-                  <span>{format(date, "dd")}</span>
-                  {distance} km
-                </p>
-              );
-            })}
-          </div>
-          <TotalComponent params={currentMonthActivities(activities)} />
-        </div>
-      </section>
-
-      <section>
-        <h2>Current Year</h2>
-        <div>
-          <div className={styles.yearContainer}>
-            {Object.keys(months).map((_key, index) => {
-              const distance = getMonthlyDistances(
-                currentYearActivities(activities)
-              )[index];
-
-              return (
-                <p
-                  key={index}
-                  data-thismonth={isSameMonth(
-                    today,
-                    new Date(today.getFullYear(), index)
-                  )}
-                  data-empty={distance === "0.00"}
-                  data-content={`💨${getAverageSpeedOfPeriod(
-                    activitiesOfMonth(index, today.getFullYear(), activities)
-                  )}km/h\n⛰️${getTotalElevationGainOfPeriod(
-                    activitiesOfMonth(index, today.getFullYear(), activities)
-                  )}m`}
-                >
-                  <span>{months[index].slice(0, 3)}</span>
-                  {distance} km
-                </p>
-              );
-            })}
-          </div>
-          <TotalComponent params={currentYearActivities(activities)} />
-        </div>
-      </section>
-
-      <section>
-        <h2>All Time</h2>
-        <div>
-          <div className={styles.allTimeContainer}>
-            {yearsOfActivities(activities).map((year, index) => {
-              const distance = getYearlyDistance(year, activities);
-
-              return (
-                <p
-                  key={index}
-                  data-thisyear={year === today.getFullYear()}
-                  className={styles.yearItem}
-                  data-content={`💨${getAverageSpeedOfPeriod(
-                    activitiesOfYear(year, activities)
-                  )}km/h\n⛰️${getTotalElevationGainOfPeriod(
-                    activitiesOfYear(year, activities)
-                  )}m`}
-                >
-                  <span>{year}</span>
-                  {distance} km
-                </p>
-              );
-            })}
-          </div>
-          <TotalComponent params={activities} />
-        </div>
-      </section>
+      {containers.map((Container, index) => (
+        <Container key={index} today={today} activities={data} />
+      ))}
     </div>
   );
 }

@@ -5,3 +5,8 @@ export type Activity = {
   total_elevation_gain: string;
   moving_time: number;
 };
+
+export type ContainerProps = {
+  today: Date;
+  activities: Activity[];
+};
