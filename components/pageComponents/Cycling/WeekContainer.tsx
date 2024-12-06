@@ -1,3 +1,4 @@
+import { CSSProperties } from "react";
 import { format, isSameDay } from "date-fns";
 
 import TotalComponent from "./TotalComponent";
@@ -38,6 +39,9 @@ export default function WeekContainer({ today, activities }: ContainerProps) {
                 )}km/h\n⛰️${getTotalElevationGainOfPeriod(
                   activitiesOfDay(date, activities)
                 )}m`}
+                style={
+                  { "--distance": parseFloat(distance) / 120 } as CSSProperties
+                }
               >
                 <span>{format(date, "E")}</span>
                 {distance} km

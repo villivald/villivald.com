@@ -28,7 +28,9 @@
   width: 6rem;
   height: 6rem;
   padding: 0.25rem;
-  background-color: var(--color-brand-red);
+  background-color: oklch(
+    from var(--color-brand-teal) calc(l - var(--distance) + 0.6) c h
+  );
 }
 
 .yearContainer > p,
@@ -65,13 +67,6 @@
   background-color: var(--color-brand-grey);
 }
 
-.weekContainer > p[data-today="true"],
-.monthContainer > p[data-today="true"],
-.yearContainer > p[data-thismonth="true"],
-.allTimeContainer > p[data-thisyear="true"] {
-  background-color: gray;
-}
-
 .monthContainer > p[data-blank="true"] {
   background-color: transparent;
 }
@@ -84,13 +79,27 @@
   top: 0;
   left: 0;
   padding-inline: 0.1rem;
-  background-color: var(--color-white);
+  color: currentcolor;
+  font-family: var(--font-header);
+}
+
+.weekContainer > p[data-today="true"] > span,
+.monthContainer > p[data-today="true"] > span,
+.yearContainer > p[data-thismonth="true"] > span,
+.allTimeContainer > p[data-thisyear="true"] > span {
+  background-color: var(--color-brand-yellow-saturated);
+}
+
+.mainContainer[data-theme="dark"] .weekContainer > p > span,
+.mainContainer[data-theme="dark"] .monthContainer > p > span,
+.mainContainer[data-theme="dark"] .yearContainer > p > span,
+.mainContainer[data-theme="dark"] .allTimeContainer > p > span {
+  color: var(--color-black);
 }
 
 .totalContainer {
   display: inline-block;
   padding: 0.25rem;
-  background-color: gray;
 }
 
 .weekContainer {
@@ -103,6 +112,11 @@
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 0.0875rem;
+}
+
+.daysContainer > p,
+.monthContainer > p {
+  font-family: var(--font-header);
 }
 
 .yearContainer {

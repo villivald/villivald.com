@@ -1,3 +1,5 @@
+import { CSSProperties } from "react";
+
 import TotalComponent from "./TotalComponent";
 import {
   yearsOfActivities,
@@ -31,6 +33,11 @@ export default function AllTimeContainer({
                 )}km/h\n⛰️${getTotalElevationGainOfPeriod(
                   activitiesOfYear(year, activities)
                 )}m`}
+                style={
+                  {
+                    "--distance": parseFloat(distance) / 12000,
+                  } as CSSProperties
+                }
               >
                 <span>{year}</span>
                 {distance} km

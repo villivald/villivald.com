@@ -1,3 +1,4 @@
+import { CSSProperties } from "react";
 import { isSameMonth } from "date-fns";
 
 import TotalComponent from "./TotalComponent";
@@ -36,6 +37,9 @@ export default function YearContainer({ today, activities }: ContainerProps) {
                 )}km/h\n⛰️${getTotalElevationGainOfPeriod(
                   activitiesOfMonth(index, today.getFullYear(), activities)
                 )}m`}
+                style={
+                  { "--distance": parseFloat(distance) / 1200 } as CSSProperties
+                }
               >
                 <span>{months[index].slice(0, 3)}</span>
                 {distance} km
