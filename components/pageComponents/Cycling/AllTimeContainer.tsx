@@ -28,11 +28,12 @@ export default function AllTimeContainer({
                 key={index}
                 data-thisyear={year === today.getFullYear()}
                 className={styles.yearItem}
-                data-content={`💨${getAverageSpeedOfPeriod(
+                data-content={`💨 ${getAverageSpeedOfPeriod(
                   activitiesOfYear(year, activities)
-                )}km/h\n⛰️${getTotalElevationGainOfPeriod(
+                )}km/h\n⛰️ ${getTotalElevationGainOfPeriod(
                   activitiesOfYear(year, activities)
                 )}m`}
+                data-color={parseFloat(distance) > 5000}
                 style={
                   {
                     "--distance": parseFloat(distance) / 12000,

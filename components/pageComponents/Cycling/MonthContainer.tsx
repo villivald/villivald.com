@@ -44,8 +44,9 @@ export default function MonthContainer({ today, activities }: ContainerProps) {
                 )}km/h\n⛰️${getTotalElevationGainOfPeriod(
                   activitiesOfDay(date, activities)
                 )}m`}
+                data-color={parseFloat(distance) > 40}
                 style={
-                  { "--distance": parseFloat(distance) / 120 } as CSSProperties
+                  { "--distance": parseFloat(distance) / 110 } as CSSProperties
                 }
               >
                 <span>{format(date, "dd")}</span>

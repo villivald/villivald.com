@@ -33,6 +33,39 @@
   );
 }
 
+.weekContainer > p[data-color="true"],
+.monthContainer > p[data-color="true"],
+.yearContainer > p[data-color="true"],
+.allTimeContainer > p[data-color="true"] {
+  color: var(--color-white);
+}
+
+.weekContainer > p > span,
+.monthContainer > p > span,
+.yearContainer > p > span,
+.allTimeContainer > p > span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-inline: 0.1rem;
+  color: currentcolor;
+  font-family: var(--font-header);
+}
+
+.weekContainer > p[data-today="true"] > span,
+.monthContainer > p[data-today="true"] > span,
+.yearContainer > p[data-thismonth="true"] > span,
+.allTimeContainer > p[data-thisyear="true"] > span {
+  background-color: var(--color-brand-yellow-saturated);
+}
+
+.weekContainer > p[data-color="true"][data-today="true"] span,
+.monthContainer > p[data-color="true"][data-today="true"] span,
+.yearContainer > p[data-color="true"][data-thismonth="true"] span,
+.allTimeContainer > p[data-color="true"][data-thisyear="true"] span {
+  color: var(--color-black);
+}
+
 .yearContainer > p,
 .allTimeContainer > p {
   width: 7rem;
@@ -53,7 +86,7 @@
   color: var(--color-white);
   padding: 0.25rem;
   white-space: pre-line;
-  font-size: 0.9375rem;
+  font-size: 0.875rem;
 }
 
 .weekContainer > p:not([data-blank="true"]):hover::before,
@@ -67,27 +100,14 @@
   background-color: var(--color-brand-grey);
 }
 
+.weekContainer > p[data-empty="false"],
+.monthContainer > p[data-empty="false"],
+.yearContainer > p[data-empty="false"] {
+  cursor: help;
+}
+
 .monthContainer > p[data-blank="true"] {
   background-color: transparent;
-}
-
-.weekContainer > p > span,
-.monthContainer > p > span,
-.yearContainer > p > span,
-.allTimeContainer > p > span {
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding-inline: 0.1rem;
-  color: currentcolor;
-  font-family: var(--font-header);
-}
-
-.weekContainer > p[data-today="true"] > span,
-.monthContainer > p[data-today="true"] > span,
-.yearContainer > p[data-thismonth="true"] > span,
-.allTimeContainer > p[data-thisyear="true"] > span {
-  background-color: var(--color-brand-yellow-saturated);
 }
 
 .mainContainer[data-theme="dark"] .weekContainer > p > span,
@@ -114,8 +134,7 @@
   gap: 0.0875rem;
 }
 
-.daysContainer > p,
-.monthContainer > p {
+.daysContainer > p {
   font-family: var(--font-header);
 }
 

@@ -32,13 +32,14 @@ export default function YearContainer({ today, activities }: ContainerProps) {
                   new Date(today.getFullYear(), index)
                 )}
                 data-empty={distance === "0.00"}
-                data-content={`💨${getAverageSpeedOfPeriod(
+                data-content={`💨 ${getAverageSpeedOfPeriod(
                   activitiesOfMonth(index, today.getFullYear(), activities)
-                )}km/h\n⛰️${getTotalElevationGainOfPeriod(
+                )}km/h\n⛰️ ${getTotalElevationGainOfPeriod(
                   activitiesOfMonth(index, today.getFullYear(), activities)
                 )}m`}
+                data-color={parseFloat(distance) > 600}
                 style={
-                  { "--distance": parseFloat(distance) / 1200 } as CSSProperties
+                  { "--distance": parseFloat(distance) / 1500 } as CSSProperties
                 }
               >
                 <span>{months[index].slice(0, 3)}</span>
