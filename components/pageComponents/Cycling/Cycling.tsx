@@ -4,6 +4,7 @@ import useSWR, { Fetcher } from "swr";
 import { useDynamicToday } from "./utils";
 import { Activity } from "./types";
 import { containers } from "./Containers";
+import Spinner from "../../Spinner";
 
 import { ThemeContext } from "../../../context";
 import styles from "../../../styles/Cycling.module.css";
@@ -17,14 +18,16 @@ export default function Cycling() {
 
   const { data, error } = useSWR<Activity[]>("/api/strava/activities", fetcher);
 
-  // TODO: Add error and loading state handling
   if (error) return <div>Failed to load</div>;
-  if (!data) return <div>Loading...</div>;
 
   return (
-    <div className={styles.mainContainer} data-theme={theme}>
+    <div
+      className={`${styles.mainContainer} ${!data ? styles.loading : ""}`}
+      data-theme={theme}
+    >
+      {!data && <Spinner />}
       {containers.map((Container, index) => (
-        <Container key={index} today={today} activities={data} />
+        <Container key={index} today={today} activities={data || []} />
       ))}
     </div>
   );

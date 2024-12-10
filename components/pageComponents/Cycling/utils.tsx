@@ -84,25 +84,25 @@ export const getDatesOfCurrentMonth = (baseDate: Date) => {
 
 // Activities from the current week - Monday to Sunday
 export const currentWeekActivities = (activities: Activity[]) =>
-  activities.filter((activity) => {
+  activities?.filter((activity) => {
     return isThisWeek(activity.activity_date, { weekStartsOn: 1 });
   });
 
 // Activities from the current month - 1st to last day of the month
 export const currentMonthActivities = (activities: Activity[]) =>
-  activities.filter((activity) => {
+  activities?.filter((activity) => {
     return isThisMonth(activity.activity_date);
   });
 
 // Activities from the current year - 1st January to 31st December
 export const currentYearActivities = (activities: Activity[]) =>
-  activities.filter((activity) => {
+  activities?.filter((activity) => {
     return isThisYear(activity.activity_date);
   });
 
 // Get the list of years with activities
 export const yearsOfActivities = (activities: Activity[]) =>
-  activities.reduce((years: number[], activity) => {
+  activities?.reduce((years: number[], activity) => {
     const year = getYear(activity.activity_date);
     if (!years.includes(year)) {
       years.push(year);
@@ -113,7 +113,7 @@ export const yearsOfActivities = (activities: Activity[]) =>
 export const getDistanceOfDay = (date: string, activities: Activity[]) => {
   return (
     parseFloat(
-      activities.filter((activity) =>
+      activities?.filter((activity) =>
         isSameDay(activity.activity_date, date)
       )[0]?.distance || "0"
     ) || 0
@@ -122,7 +122,7 @@ export const getDistanceOfDay = (date: string, activities: Activity[]) => {
 
 export const getTotalDistanceOfPeriod = (activities: Activity[]) => {
   return (
-    activities.reduce(
+    activities?.reduce(
       (total, activity) => total + parseFloat(activity.distance),
       0
     ) || 0
@@ -131,7 +131,7 @@ export const getTotalDistanceOfPeriod = (activities: Activity[]) => {
 
 export const getAverageSpeedOfPeriod = (activities: Activity[]) => {
   const totalDistance = parseFloat(getTotalDistanceOfPeriod(activities));
-  const totalTime = activities.reduce(
+  const totalTime = activities?.reduce(
     (total, activity) => total + activity.moving_time,
     0
   );
@@ -153,7 +153,7 @@ export const activitiesOfMonth = (
   year: number,
   activities: Activity[]
 ) =>
-  activities.filter((activity) => {
+  activities?.filter((activity) => {
     return (
       getYear(activity.activity_date) === year &&
       getMonth(activity.activity_date) === month
@@ -162,13 +162,13 @@ export const activitiesOfMonth = (
 
 // Activities from a specific day
 export const activitiesOfDay = (date: string, activities: Activity[]) =>
-  activities.filter((activity) => {
+  activities?.filter((activity) => {
     return isSameDay(activity.activity_date, date);
   });
 
 export const getTotalElevationGainOfPeriod = (activities: Activity[]) => {
   return (
-    activities.reduce((total, activity) => {
+    activities?.reduce((total, activity) => {
       const elevationGain = parseFloat(activity.total_elevation_gain);
       return total + (isNaN(elevationGain) ? 0 : elevationGain);
     }, 0) || 0
@@ -178,7 +178,7 @@ export const getTotalElevationGainOfPeriod = (activities: Activity[]) => {
 export const getMonthlyDistances = (activities: Activity[]) => {
   const monthlyDistances: { [key: number]: number } = {};
 
-  activities.forEach((activity) => {
+  activities?.forEach((activity) => {
     const monthIndex = getMonth(activity.activity_date);
     const distance = parseFloat(activity.distance) || 0;
 

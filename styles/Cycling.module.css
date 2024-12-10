@@ -1,10 +1,19 @@
 .mainContainer {
+  position: relative;
   min-height: 70vh;
+  max-width: 85vw;
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-self: center;
+  justify-items: center;
   gap: 5rem;
   padding-block: 1rem 2.5rem;
+}
+
+.mainContainer > div {
+  position: absolute;
+  top: calc(50% - 10rem);
+  z-index: 1;
 }
 
 .mainContainer section > div {
@@ -152,4 +161,18 @@
 .mainContainer[data-theme="dark"] h2,
 .mainContainer[data-theme="dark"] p {
   color: var(--color-white);
+}
+
+.loading::after {
+  content: "";
+  position: absolute;
+  width: 105%;
+  height: 98.5%;
+  background: var(--color-white40);
+  backdrop-filter: blur(0.125rem);
+}
+
+.loading > * {
+  pointer-events: none;
+  opacity: 0.5;
 }

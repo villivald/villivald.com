@@ -20,7 +20,7 @@ export default function AllTimeContainer({
       <h2>All Time</h2>
       <div>
         <div className={styles.allTimeContainer}>
-          {yearsOfActivities(activities).map((year, index) => {
+          {yearsOfActivities(activities)?.map((year, index) => {
             const distance = getYearlyDistance(year, activities);
 
             return (
