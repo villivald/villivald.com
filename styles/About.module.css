@@ -107,6 +107,28 @@ div[data-theme="dark"] > section:focus-visible .slides {
   height: 100%;
 }
 
+.slidesItem div[data-fullscreen="true"] {
+  position: absolute;
+}
+
+.closeButton {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--color-white);
+  background-image: url("/emojis/close.svg");
+  border: 0.25rem solid var(--color-brand-yellow);
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+}
+
+.closeButton:hover,
+.closeButton:active {
+  transform: scale(1.05);
+  box-shadow: 0.125rem 0.125rem var(--color-brand-yellow);
+}
+
 .slidesItem div:nth-child(1) {
   border-right: 0.5rem solid var(--color-brand-teal);
   border-bottom: 0.5rem solid var(--color-brand-teal);

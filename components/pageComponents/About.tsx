@@ -9,6 +9,7 @@ export default function About() {
   const theme = useContext(ThemeContext);
   const intl = useIntl();
   const [currentSlide, setCurrentSlide] = useState("2024");
+  const [clickedImage, setClickedImage] = useState<string | null>(null);
 
   const years = useMemo(() => {
     return ["2024", "2023", "2022", "2021", "2020", "2019"];
@@ -56,6 +57,10 @@ export default function About() {
     rightIris.style.setProperty("--y", `${y}%`);
   };
 
+  const handleImageClick = (imageId: string) => {
+    setClickedImage((prev) => (prev === imageId ? null : imageId));
+  };
+
   return (
     <div
       className={styles.mainContainer}
@@ -100,20 +105,42 @@ export default function About() {
                 ) : (
                   <div
                     key={index}
+                    onClick={() => handleImageClick(`${year}-${num}`)}
+                    data-fullscreen={clickedImage === `${year}-${num}`}
                     style={{
                       backgroundImage: `url(/about/${year}-${num}.avif)`,
                     }}
-                  />
+                  >
+                    {clickedImage === `${year}-${num}` && (
+                      <button
+                        aria-label={intl.formatMessage({
+                          id: "aria.closeFullscreen",
+                        })}
+                        className={styles.closeButton}
+                      ></button>
+                    )}
+                  </div>
                 )
               )}
               <div>{year}</div>
               {["4", "3", "2", "1"].map((num, index) => (
                 <div
                   key={index}
+                  onClick={() => handleImageClick(`${year}-${num}`)}
+                  data-fullscreen={clickedImage === `${year}-${num}`}
                   style={{
                     backgroundImage: `url(/about/${year}-${num}.avif)`,
                   }}
-                />
+                >
+                  {clickedImage === `${year}-${num}` && (
+                    <button
+                      aria-label={intl.formatMessage({
+                        id: "aria.closeFullscreen",
+                      })}
+                      className={styles.closeButton}
+                    ></button>
+                  )}
+                </div>
               ))}
             </div>
           ))}

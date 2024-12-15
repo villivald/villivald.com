@@ -156,6 +156,7 @@ const en = {
   "aria.statistics.category": "Category statistics for books read in",
   "aria.statistics.books": "Statistics for books read in last 5 years",
   "aria.skiplinks": "Skip links",
+  "aria.closeFullscreen": "Close fullscreen image",
 };
 
 export default en;

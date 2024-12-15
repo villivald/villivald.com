@@ -163,6 +163,7 @@ const fi = {
   "aria.statistics.books":
     "Tilasto kirjoista joita olen lukenut viimeisen 5 vuoden aikana",
   "aria.skiplinks": "Hyppää sisältöön linkit",
+  "aria.closeFullscreen": "Sulje koko näytön kuva",
 };
 
 export default fi;
