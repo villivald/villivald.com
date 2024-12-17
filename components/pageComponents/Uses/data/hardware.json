@@ -19,6 +19,12 @@
       "image": "iphone"
     },
     {
+      "name": "iPad 2019",
+      "link": "https://en.wikipedia.org/wiki/IPad_(7th_generation)",
+      "description": "Tablet",
+      "image": "ipad"
+    },
+    {
       "name": "Apple Watch Ultra",
       "link": "https://www.apple.com/fi/apple-watch-ultra/",
       "description": "Watch",

@@ -37,10 +37,10 @@
       "image": "obsidian"
     },
     {
-      "name": "Craft",
-      "link": "https://www.craft.do/",
-      "description": "Note taking app",
-      "image": "craft"
+      "name": "Fabric",
+      "link": "https://fabric.so/",
+      "description": "Workspace and smart organizer",
+      "image": "fabric"
     },
     {
       "name": "Fastmail",
@@ -89,12 +89,6 @@
       "link": "https://www.strava.com/athletes/42251423",
       "description": "Fitness app",
       "image": "strava"
-    },
-    {
-      "name": "Ivory",
-      "link": "https://tapbots.com/ivory/",
-      "description": "Mastodon client",
-      "image": "ivory"
     },
     {
       "name": "Grammarly",
