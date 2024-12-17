@@ -286,6 +286,15 @@ div[data-theme="dark"] > section:focus-visible .slides {
   .eyes {
     gap: 5rem;
   }
+
+  .sliderNav {
+    padding: 0.5rem 1.25rem;
+  }
+
+  .closeButton {
+    max-width: 2rem;
+    max-height: 2rem;
+  }
 }
 
 @media (prefers-reduced-motion) {
