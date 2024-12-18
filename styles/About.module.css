@@ -292,8 +292,7 @@ div[data-theme="dark"] > section:focus-visible .slides {
   }
 
   .closeButton {
-    max-width: 2rem;
-    max-height: 2rem;
+    display: none;
   }
 }
 
