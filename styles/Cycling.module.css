@@ -1,11 +1,9 @@
-:root {
+.mainContainer {
   --week-month-size: 6rem;
   --year-all-size: 7rem;
   --font-size-data: 1rem;
   --font-size-hover: 0.875rem;
-}
 
-.mainContainer {
   position: relative;
   min-height: 70vh;
   display: grid;
@@ -193,7 +191,7 @@
 }
 
 @media (width < 1475px) {
-  :root {
+  .mainContainer {
     --week-month-size: 5rem;
     --year-all-size: 6rem;
     --font-size-data: 0.875rem;
@@ -209,7 +207,7 @@
 }
 
 @media (width < 600px) {
-  :root {
+  .mainContainer {
     --week-month-size: 4.25rem;
     --year-all-size: 5rem;
     --font-size-data: 0.75rem;
@@ -226,7 +224,7 @@
 }
 
 @media (width < 500px) {
-  :root {
+  .mainContainer {
     --week-month-size: 3.5rem;
     --year-all-size: 4rem;
     --font-size-data: 0.625rem;
@@ -239,7 +237,7 @@
 }
 
 @media (width < 425px) {
-  :root {
+  .mainContainer {
     --week-month-size: 3rem;
     --year-all-size: 3.5rem;
     --font-size-data: 0.5rem;
