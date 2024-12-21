@@ -1,7 +1,13 @@
+:root {
+  --week-month-size: 6rem;
+  --year-all-size: 7rem;
+  --font-size-data: 1rem;
+  --font-size-hover: 0.875rem;
+}
+
 .mainContainer {
   position: relative;
   min-height: 70vh;
-  max-width: 85vw;
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-self: center;
@@ -34,8 +40,9 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  width: 6rem;
-  height: 6rem;
+  width: var(--week-month-size);
+  height: var(--week-month-size);
+  font-size: var(--font-size-data);
   padding: 0.25rem;
   background-color: oklch(
     from var(--color-brand-teal) calc(l - var(--distance) + 0.6) c h
@@ -77,8 +84,8 @@
 
 .yearContainer > p,
 .allTimeContainer > p {
-  width: 7rem;
-  height: 7rem;
+  width: var(--year-all-size);
+  height: var(--year-all-size);
 }
 
 .allTimeContainer > p:hover::before,
@@ -87,7 +94,7 @@
 .yearContainer > p:not([data-empty="true"]):hover::before {
   content: attr(data-content);
   position: absolute;
-  top: 7rem;
+  top: var(--year-all-size);
   width: 100%;
   height: auto;
   z-index: 1;
@@ -95,12 +102,12 @@
   color: var(--color-white);
   padding: 0.25rem;
   white-space: pre-line;
-  font-size: 0.875rem;
+  font-size: var(--font-size-hover);
 }
 
 .weekContainer > p:not([data-blank="true"]):hover::before,
 .monthContainer > p:not([data-blank="true"]):hover::before {
-  top: 6rem;
+  top: var(--week-month-size);
 }
 
 .weekContainer > p[data-empty="true"],
@@ -129,6 +136,7 @@
 .totalContainer {
   display: inline-block;
   padding: 0.25rem;
+  font-size: var(--font-size-data);
 }
 
 .weekContainer {
@@ -145,6 +153,7 @@
 
 .daysContainer > p {
   font-family: var(--font-header);
+  font-size: var(--font-size-data);
 }
 
 .yearContainer {
@@ -175,4 +184,73 @@
 .loading > * {
   pointer-events: none;
   opacity: 0.5;
+}
+
+@media (width > 1600px) {
+  .mainContainer {
+    min-width: 85vw;
+  }
+}
+
+@media (width < 1475px) {
+  :root {
+    --week-month-size: 5rem;
+    --year-all-size: 6rem;
+    --font-size-data: 0.875rem;
+    --font-size-hover: 0.75rem;
+  }
+}
+
+@media (width < 1275px) {
+  .mainContainer {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (width < 600px) {
+  :root {
+    --week-month-size: 4.25rem;
+    --year-all-size: 5rem;
+    --font-size-data: 0.75rem;
+    --font-size-hover: 0.625rem;
+  }
+
+  .mainContainer section > h2 {
+    font-size: var(--fontSize-header4);
+  }
+
+  .totalContainer > p {
+    font-size: 0.875rem;
+  }
+}
+
+@media (width < 500px) {
+  :root {
+    --week-month-size: 3.5rem;
+    --year-all-size: 4rem;
+    --font-size-data: 0.625rem;
+    --font-size-hover: 0.5rem;
+  }
+
+  .totalContainer > p {
+    font-size: 0.75rem;
+  }
+}
+
+@media (width < 425px) {
+  :root {
+    --week-month-size: 3rem;
+    --year-all-size: 3.5rem;
+    --font-size-data: 0.5rem;
+    --font-size-hover: 0.4375rem;
+  }
+
+  .mainContainer section > h2 {
+    font-size: var(--fontSize-header5);
+  }
+
+  .totalContainer > p {
+    font-size: 0.625rem;
+  }
 }
