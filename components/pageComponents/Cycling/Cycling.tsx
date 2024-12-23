@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import useSWR, { Fetcher } from "swr";
+import { FormattedMessage } from "react-intl";
 
 import { useDynamicToday } from "./utils";
 import { Activity } from "./types";
@@ -18,7 +19,7 @@ export default function Cycling() {
 
   const { data, error } = useSWR<Activity[]>("/api/strava/activities", fetcher);
 
-  if (error) return <div>Failed to load</div>;
+  if (error) return <FormattedMessage id="failedToLoad" />;
 
   return (
     <div

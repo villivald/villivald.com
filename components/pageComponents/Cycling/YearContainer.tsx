@@ -1,5 +1,6 @@
 import { CSSProperties } from "react";
 import { isSameMonth } from "date-fns";
+import { FormattedMessage } from "react-intl";
 
 import TotalComponent from "./TotalComponent";
 import {
@@ -16,7 +17,9 @@ import styles from "../../../styles/Cycling.module.css";
 export default function YearContainer({ today, activities }: ContainerProps) {
   return (
     <section>
-      <h2>Current Year</h2>
+      <h2>
+        <FormattedMessage id="currentYear" />
+      </h2>
       <div>
         <div className={styles.yearContainer}>
           {Object.keys(months).map((_key, index) => {
@@ -42,7 +45,9 @@ export default function YearContainer({ today, activities }: ContainerProps) {
                   { "--distance": parseFloat(distance) / 1500 } as CSSProperties
                 }
               >
-                <span>{months[index].slice(0, 3)}</span>
+                <span>
+                  <FormattedMessage id={`month.${months[index].slice(0, 3)}`} />
+                </span>
                 {distance} km
               </p>
             );

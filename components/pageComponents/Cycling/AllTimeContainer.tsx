@@ -1,4 +1,5 @@
 import { CSSProperties } from "react";
+import { FormattedMessage } from "react-intl";
 
 import TotalComponent from "./TotalComponent";
 import {
@@ -17,7 +18,9 @@ export default function AllTimeContainer({
 }: ContainerProps) {
   return (
     <section>
-      <h2>All Time</h2>
+      <h2>
+        <FormattedMessage id="allTime" />
+      </h2>
       <div>
         <div className={styles.allTimeContainer}>
           {yearsOfActivities(activities)?.map((year, index) => {

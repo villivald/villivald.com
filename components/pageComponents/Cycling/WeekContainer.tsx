@@ -1,5 +1,6 @@
 import { CSSProperties } from "react";
 import { format, isSameDay } from "date-fns";
+import { FormattedMessage } from "react-intl";
 
 import TotalComponent from "./TotalComponent";
 import {
@@ -16,7 +17,9 @@ import styles from "../../../styles/Cycling.module.css";
 export default function WeekContainer({ today, activities }: ContainerProps) {
   return (
     <section>
-      <h2>Current Week</h2>
+      <h2>
+        <FormattedMessage id="currentWeek" />
+      </h2>
       <div>
         <div className={styles.daysContainer}>
           {getDatesOfCurrentWeek(today).map((date, index) => (
@@ -44,7 +47,9 @@ export default function WeekContainer({ today, activities }: ContainerProps) {
                   { "--distance": parseFloat(distance) / 110 } as CSSProperties
                 }
               >
-                <span>{format(date, "E")}</span>
+                <span>
+                  <FormattedMessage id={`day.${format(date, "E")}`} />
+                </span>
                 {distance} km
               </p>
             );

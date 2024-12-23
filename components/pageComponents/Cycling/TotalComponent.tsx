@@ -1,3 +1,5 @@
+import { FormattedMessage } from "react-intl";
+
 import {
   getTotalDistanceOfPeriod,
   getAverageSpeedOfPeriod,
@@ -9,9 +11,18 @@ import styles from "../../../styles/Cycling.module.css";
 export default function TotalComponent({ params }: { params: Activity[] }) {
   return (
     <div className={styles.totalContainer}>
-      <p>Total distance: {getTotalDistanceOfPeriod(params)} km</p>
-      <p>Average speed: {getAverageSpeedOfPeriod(params)} km/h</p>
-      <p>Total elevation gain: {getTotalElevationGainOfPeriod(params)} m</p>
+      <p>
+        <FormattedMessage id="totalDistance" />:{" "}
+        {getTotalDistanceOfPeriod(params)} km
+      </p>
+      <p>
+        <FormattedMessage id="averageSpeed" />:{" "}
+        {getAverageSpeedOfPeriod(params)} km/h
+      </p>
+      <p>
+        <FormattedMessage id="totalElevationGain" />:{" "}
+        {getTotalElevationGainOfPeriod(params)} m
+      </p>
     </div>
   );
 }

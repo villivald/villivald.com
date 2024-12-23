@@ -69,6 +69,38 @@ const en = {
   watching: "Currently watching",
   sideProjects: "Side projects",
   interestingThings: "Interesting things",
+  cycling: "Cycling",
+  currentWeek: "Current Week",
+  currentMonth: "Current Month",
+  currentYear: "Current Year",
+  allTime: "All Time",
+  totalDistance: "Total distance",
+  averageSpeed: "Average speed",
+  totalElevationGain: "Total elevation gain",
+  failedToLoad: "Failed to load",
+
+  // Days of the week
+  "day.Mon": "Mon",
+  "day.Tue": "Tue",
+  "day.Wed": "Wed",
+  "day.Thu": "Thu",
+  "day.Fri": "Fri",
+  "day.Sat": "Sat",
+  "day.Sun": "Sun",
+
+  // Months
+  "month.Jan": "Jan",
+  "month.Feb": "Feb",
+  "month.Mar": "Mar",
+  "month.Apr": "Apr",
+  "month.May": "May",
+  "month.Jun": "Jun",
+  "month.Jul": "Jul",
+  "month.Aug": "Aug",
+  "month.Sep": "Sep",
+  "month.Oct": "Oct",
+  "month.Nov": "Nov",
+  "month.Dec": "Dec",
 
   // Page titles
   "title.home": "Home page",
@@ -82,6 +114,7 @@ const en = {
   "title.old": "Old versions of my website",
   "title.uses": "The tools I use",
   "title.now": "Now",
+  "title.cycling": "Cycling",
 
   // Meta descriptions
   "description.home": "Welcome to my website",
@@ -94,6 +127,8 @@ const en = {
   "description.workandstudy": "Information about my studies and work",
   "description.old": "Old versions of my website",
   "description.uses": "The tools and software that I use",
+  "description.now": "What I am currently doing",
+  "description.cycling": "Cycling statistics",
 
   // Alt texts
   "alt.old.1": "Screenshot of the first version of my website from 2019",
@@ -151,6 +186,8 @@ const en = {
   "aria.about": "Page with some images and information about me",
   "aria.contact": "Page with links to my mastodon, email and LinkedIn",
   "aria.old": "Page with links to the old versions of my website",
+  "aria.now": "Page with information about what I am currently doing",
+  "aria.cycling": "Page with my cycling statistics",
   "aria.randomLink": "Link to a random page on my website",
   "aria.statistics.language": "Language statistics for boks read in",
   "aria.statistics.category": "Category statistics for books read in",

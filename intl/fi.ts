@@ -71,6 +71,38 @@ const fi = {
   watching: "Katsomassa",
   sideProjects: "Harrasteprojektit",
   interestingThings: "Mielenkiintoisia asioita",
+  cycling: "Pyöräily",
+  currentWeek: "Kuluva viikko",
+  currentMonth: "Kuluva kuukausi",
+  currentYear: "Kuluva vuosi",
+  allTime: "Koko aika",
+  totalDistance: "Kokonaismatka",
+  averageSpeed: "Keskinopeus",
+  totalElevationGain: "Kokonaisnousu",
+  failedToLoad: "Lataus epäonnistui",
+
+  // Days of the week
+  "day.Mon": "Ma",
+  "day.Tue": "Ti",
+  "day.Wed": "Ke",
+  "day.Thu": "To",
+  "day.Fri": "Pe",
+  "day.Sat": "La",
+  "day.Sun": "Su",
+
+  // Months
+  "month.Jan": "Tam",
+  "month.Feb": "Hel",
+  "month.Mar": "Maa",
+  "month.Apr": "Huh",
+  "month.May": "Tou",
+  "month.Jun": "Kes",
+  "month.Jul": "Hei",
+  "month.Aug": "Elo",
+  "month.Sep": "Syy",
+  "month.Oct": "Lok",
+  "month.Nov": "Mar",
+  "month.Dec": "Jou",
 
   // Page titles
   "title.home": "Etusivu",
@@ -84,6 +116,7 @@ const fi = {
   "title.old": "Sivuston vanhat versiot",
   "title.uses": "Työkalut",
   "title.now": "Now",
+  "title.cycling": "Pyöräily",
 
   // Meta descriptions
   "description.home": "Tervetuloa verkkosivustolleni",
@@ -97,6 +130,8 @@ const fi = {
   "description.workandstudy": "Tietoa työstäni ja opiskelustani",
   "description.old": "Vanhat versiot minun verkkosivustosta",
   "description.uses": "Työkalut ja sovellukset joita käytän",
+  "description.now": "Mitä teen tällä hetkellä",
+  "description.cycling": "Pyöräilytilastot",
 
   // Alt texts
   "alt.old.1":
@@ -155,6 +190,8 @@ const fi = {
     "Sivu jossa on linkkejä minun mastodoniin, sähköpostiin ja LinkedIniin",
   "aria.old":
     "Sivu jossa on linkkejä vanhoihin versioihin minun verkkosivustosta",
+  "aria.now": "Sivu jossa on tietoa mitä teen tällä hetkellä",
+  "aria.cycling": "Sivu jossa on minun pyöräilytilastot",
   "aria.randomLink": "Linkki sattumanvaraiseen sivuun minun verkkosivustollani",
   "aria.statistics.language":
     "Kieli tilasto kirjoista joita olen lukenut vuonna",

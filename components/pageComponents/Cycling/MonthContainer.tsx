@@ -1,5 +1,6 @@
 import { CSSProperties } from "react";
 import { format, isSameDay } from "date-fns";
+import { FormattedMessage } from "react-intl";
 
 import TotalComponent from "./TotalComponent";
 import {
@@ -17,11 +18,15 @@ import styles from "../../../styles/Cycling.module.css";
 export default function MonthContainer({ today, activities }: ContainerProps) {
   return (
     <section>
-      <h2>Current Month</h2>
+      <h2>
+        <FormattedMessage id="currentMonth" />
+      </h2>
       <div>
         <div className={styles.daysContainer}>
           {weekDays.map((day, index) => (
-            <p key={index}>{day}</p>
+            <p key={index}>
+              <FormattedMessage id={`day.${day}`} />
+            </p>
           ))}
         </div>
         <div className={styles.monthContainer}>
