@@ -176,6 +176,7 @@
   width: 105%;
   height: 98.5%;
   background: var(--color-white40);
+  box-shadow: 0 0 1rem 1rem var(--color-white40);
   backdrop-filter: blur(0.125rem);
 }
 
@@ -238,8 +239,8 @@
 
 @media (width < 425px) {
   .mainContainer {
-    --week-month-size: 3rem;
-    --year-all-size: 3.5rem;
+    --week-month-size: 3.25rem;
+    --year-all-size: 3.75rem;
     --font-size-data: 0.5rem;
     --font-size-hover: 0.4375rem;
   }
