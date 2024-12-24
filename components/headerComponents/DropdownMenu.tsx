@@ -14,13 +14,14 @@ export default function DropdownMenu() {
   const menuItems = [
     "about",
     "blog",
-    "contact",
     "books",
-    "projects",
-    "workandstudy",
-    "uses",
-    "old",
+    "contact",
+    "cycling",
     "now",
+    "old",
+    "projects",
+    "uses",
+    "workandstudy",
   ];
 
   const handleBlur = (e: React.FocusEvent<HTMLDivElement>) => {

@@ -30,6 +30,10 @@
     radial-gradient(at 0% 0%, hsl(343deg 100% 76%) 0, transparent 50%);
 }
 
+.main > a:last-of-type {
+  display: none;
+}
+
 .main > a:focus-visible {
   outline: 0.25rem solid var(--color-brand-dark);
   outline-offset: 0.5rem;
@@ -49,7 +53,7 @@
   }
 
   .main > a:last-of-type {
-    display: none;
+    display: initial;
   }
 }
 
@@ -63,6 +67,6 @@
   }
 
   .main > a:last-of-type {
-    display: initial;
+    display: none;
   }
 }

@@ -12,6 +12,7 @@ import UsesGrid from "./gridComponents/UsesGrid";
 import ProjectsGrid from "./gridComponents/ProjectsGrid";
 import RandomGrid from "./gridComponents/RandomGrid";
 import NowGrid from "./gridComponents/NowGrid";
+import CyclingGrid from "./gridComponents/CyclingGrid";
 
 import { ThemeContext } from "../context";
 import styles from "../styles/Grid.module.css";
@@ -23,11 +24,12 @@ export default function Grid() {
 
   const links = [
     { href: "/now", component: <NowGrid /> },
+    { href: "/cycling", component: <CyclingGrid /> },
     { href: "/workandstudy", component: <WorkAndStudyGrid /> },
-    { href: "/blog", component: <BlogGrid /> },
     { href: "/uses", component: <UsesGrid /> },
     { href: "/books", component: <BooksGrid /> },
     { href: "/projects", component: <ProjectsGrid /> },
+    { href: "/blog", component: <BlogGrid /> },
     { href: "/about", component: <AboutGrid /> },
     { href: "/contact", component: <ContactGrid /> },
     { href: "/old", component: <OldGrid /> },

@@ -6,6 +6,16 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: Satoshi-Variable;
+  src: url("../public/Satoshi-Variable.woff2") format("woff2"),
+    url("../public/Satoshi-Variable.woff") format("woff"),
+    url("../public/Satoshi-Variable.ttf") format("truetype");
+  font-weight: 300 900;
+  font-display: swap;
+  font-style: normal;
+}
+
 :root {
   /* Colors */
   --color-brand-yellow: hsl(51deg 74% 60%);
@@ -27,6 +37,9 @@
   --color-white: hsl(0deg 0% 100%);
   --color-white40: hsla(0deg 0% 100% / 40%);
   --color-skin: hsl(24deg 71.4% 76.7%);
+  --color-wheat: hsl(46deg 57% 88%);
+  --color-almost-white: hsl(22deg 67% 98%);
+  --color-wine: hsl(348deg 48% 44%);
 
   /* Shades of black */
   --color-black: hsl(0deg 0% 0%);
@@ -41,6 +54,7 @@
 
   /* Self-hosted fonts */
   --font-brand: "Nabla", serif;
+  --font-sans: "Satoshi-Variable", "Helvetica Neue", sans-serif;
 
   /* Typescale */
   --fontSize-header1: 1.8rem;
