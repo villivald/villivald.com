@@ -2381,6 +2381,51 @@
       "category": "non-fiction"
     },
     {
+      "title": "Человек без свойств",
+      "author": "Музиль",
+      "date": "24.11.2024",
+      "image": "261.avif",
+      "rating": 4,
+      "language": "ru",
+      "category": "fiction"
+    },
+    {
+      "title": "Приморские партизаны",
+      "author": "Кашин",
+      "date": "29.11.2024",
+      "image": "262.avif",
+      "rating": 4,
+      "language": "ru",
+      "category": "fiction"
+    },
+    {
+      "title": "Факультет ненужных вещей",
+      "author": "Домбровский",
+      "date": "22.12.2024",
+      "image": "263.avif",
+      "rating": 4,
+      "language": "ru",
+      "category": "fiction"
+    },
+    {
+      "title": "Evgenia Ivanovna",
+      "author": "Леонов",
+      "date": "23.12.2024",
+      "image": "264.avif",
+      "rating": 4,
+      "language": "ru",
+      "category": "fiction"
+    },
+    {
+      "title": "Patriootti",
+      "author": "Navalnyi",
+      "date": "24.12.2024",
+      "image": "265.avif",
+      "rating": 4,
+      "language": "fi",
+      "category": "non-fiction"
+    },
+    {
       "title": "",
       "author": "",
       "date": "",
