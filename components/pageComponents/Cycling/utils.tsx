@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import {
-  isThisWeek,
   isThisMonth,
   isThisYear,
   isSameDay,
@@ -81,12 +80,6 @@ export const getDatesOfCurrentMonth = (baseDate: Date) => {
 
   return [...placeholders, ...monthDates];
 };
-
-// Activities from the current week - Monday to Sunday
-export const currentWeekActivities = (activities: Activity[]) =>
-  activities?.filter((activity) => {
-    return isThisWeek(activity.activity_date, { weekStartsOn: 1 });
-  });
 
 // Activities from the current month - 1st to last day of the month
 export const currentMonthActivities = (activities: Activity[]) =>
@@ -206,4 +199,17 @@ export const getYearlyDistance = (year: number, activities: Activity[]) => {
       return total;
     }, 0) || 0
   ).toFixed(2);
+};
+
+// Activities from the chosen week
+export const activitiesOfWeek = (baseDate: Date, activities: Activity[]) => {
+  const startOfCurrentWeek = startOfWeek(baseDate, { weekStartsOn: 1 });
+  const endOfCurrentWeek = endOfWeek(baseDate, { weekStartsOn: 1 });
+
+  return activities.filter((activity) => {
+    const activityDate = new Date(activity.activity_date);
+    return (
+      activityDate >= startOfCurrentWeek && activityDate <= endOfCurrentWeek
+    );
+  });
 };

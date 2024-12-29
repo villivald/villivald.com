@@ -1,37 +1,95 @@
-import { CSSProperties } from "react";
-import { format, isSameDay } from "date-fns";
+import Image from "next/image";
+import { CSSProperties, useState, useContext } from "react";
+import {
+  format,
+  isSameDay,
+  addDays,
+  subDays,
+  endOfWeek,
+  isThisWeek,
+} from "date-fns";
 import { FormattedMessage } from "react-intl";
 
 import TotalComponent from "./TotalComponent";
 import {
   getDatesOfCurrentWeek,
-  currentWeekActivities,
   getAverageSpeedOfPeriod,
   getTotalElevationGainOfPeriod,
   getDistanceOfDay,
   activitiesOfDay,
+  activitiesOfWeek,
 } from "./utils";
 import { ContainerProps } from "./types";
+
+import { ThemeContext } from "../../../context";
 import styles from "../../../styles/Cycling.module.css";
 
 export default function WeekContainer({ today, activities }: ContainerProps) {
+  const theme = useContext(ThemeContext);
+
+  const [currentBaseDate, setCurrentBaseDate] = useState(today);
+
+  const handlePreviousWeek = () => {
+    setCurrentBaseDate((prevDate) => subDays(prevDate, 7));
+  };
+
+  const handleNextWeek = () => {
+    setCurrentBaseDate((prevDate) => addDays(prevDate, 7));
+  };
+
+  const isCurrentWeek = isThisWeek(
+    endOfWeek(currentBaseDate, { weekStartsOn: 1 })
+  );
+
   return (
     <section>
-      <h2>
-        <FormattedMessage id="currentWeek" />
-      </h2>
+      <span className={styles.weekNavigation} data-theme={theme}>
+        <button onClick={handlePreviousWeek}>
+          <Image
+            src="/emojis/arrowLeft.svg"
+            alt="Previous week"
+            width={20}
+            height={20}
+          />
+        </button>
+
+        <h2>
+          {isCurrentWeek ? (
+            <FormattedMessage id="currentWeek" />
+          ) : (
+            `${format(
+              subDays(endOfWeek(currentBaseDate, { weekStartsOn: 1 }), 6),
+              "dd.MM"
+            )}
+            -
+            ${format(endOfWeek(currentBaseDate, { weekStartsOn: 1 }), "dd.MM")}`
+          )}
+        </h2>
+
+        <button onClick={handleNextWeek} disabled={isCurrentWeek}>
+          <Image
+            src="/emojis/arrowRight.svg"
+            alt="Next week"
+            width={20}
+            height={20}
+          />
+        </button>
+      </span>
+
       <div>
         <div className={styles.daysContainer}>
-          {getDatesOfCurrentWeek(today).map((date, index) => (
+          {getDatesOfCurrentWeek(currentBaseDate).map((date, index) => (
             <p key={index}>{format(date, "d")}</p>
           ))}
         </div>
+
         <div className={styles.weekContainer}>
-          {getDatesOfCurrentWeek(today).map((date, index) => {
+          {getDatesOfCurrentWeek(currentBaseDate).map((date, index) => {
             const distance = getDistanceOfDay(
               date,
-              currentWeekActivities(activities)
+              activitiesOfWeek(currentBaseDate, activities)
             );
+
             return (
               <p
                 key={index}
@@ -55,7 +113,10 @@ export default function WeekContainer({ today, activities }: ContainerProps) {
             );
           })}
         </div>
-        <TotalComponent params={currentWeekActivities(activities)} />
+
+        <TotalComponent
+          params={activitiesOfWeek(currentBaseDate, activities)}
+        />
       </div>
     </section>
   );
