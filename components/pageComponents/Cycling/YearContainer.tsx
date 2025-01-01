@@ -41,6 +41,9 @@ export default function YearContainer({ today, activities }: ContainerProps) {
                   activitiesOfMonth(index, today.getFullYear(), activities)
                 )}m`}
                 data-color={parseFloat(distance) > 600}
+                data-invertcolor={
+                  parseFloat(distance) < 150 && distance !== "0.00"
+                }
                 style={
                   { "--distance": parseFloat(distance) / 1500 } as CSSProperties
                 }

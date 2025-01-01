@@ -50,6 +50,9 @@ export default function MonthContainer({ today, activities }: ContainerProps) {
                   activitiesOfDay(date, activities)
                 )}m`}
                 data-color={parseFloat(distance) > 40}
+                data-invertcolor={
+                  parseFloat(distance) < 10 && distance !== "0.00"
+                }
                 style={
                   { "--distance": parseFloat(distance) / 110 } as CSSProperties
                 }

@@ -37,6 +37,7 @@ export default function AllTimeContainer({
                   activitiesOfYear(year, activities)
                 )}m`}
                 data-color={parseFloat(distance) > 5000}
+                data-invertcolor={parseFloat(distance) < 2500}
                 style={
                   {
                     "--distance": parseFloat(distance) / 12000,

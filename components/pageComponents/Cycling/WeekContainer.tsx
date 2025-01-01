@@ -37,9 +37,7 @@ export default function WeekContainer({ today, activities }: ContainerProps) {
     setCurrentBaseDate((prevDate) => addDays(prevDate, 7));
   };
 
-  const isCurrentWeek = isThisWeek(
-    endOfWeek(currentBaseDate, { weekStartsOn: 1 })
-  );
+  const isCurrentWeek = isThisWeek(currentBaseDate, { weekStartsOn: 1 });
 
   return (
     <section>
@@ -101,6 +99,9 @@ export default function WeekContainer({ today, activities }: ContainerProps) {
                   activitiesOfDay(date, activities)
                 )}m`}
                 data-color={parseFloat(distance) > 40}
+                data-invertcolor={
+                  parseFloat(distance) < 10 && distance !== "0.00"
+                }
                 style={
                   { "--distance": parseFloat(distance) / 110 } as CSSProperties
                 }

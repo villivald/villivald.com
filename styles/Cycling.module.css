@@ -131,6 +131,15 @@
   color: var(--color-black);
 }
 
+.mainContainer[data-theme="dark"] .weekContainer > p[data-invertcolor="true"],
+.mainContainer[data-theme="dark"] .monthContainer > p[data-invertcolor="true"],
+.mainContainer[data-theme="dark"] .yearContainer > p[data-invertcolor="true"],
+.mainContainer[data-theme="dark"]
+  .allTimeContainer
+  > p[data-invertcolor="true"] {
+  color: var(--color-black);
+}
+
 .totalContainer {
   display: inline-block;
   padding: 0.25rem;
@@ -161,7 +170,8 @@
 }
 
 .allTimeContainer {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
   gap: 0.0875rem;
 }
 
