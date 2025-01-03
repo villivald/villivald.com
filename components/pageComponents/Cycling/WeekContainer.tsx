@@ -41,7 +41,7 @@ export default function WeekContainer({ today, activities }: ContainerProps) {
 
   return (
     <section>
-      <span className={styles.weekNavigation} data-theme={theme}>
+      <span className={styles.navigation} data-theme={theme}>
         <button onClick={handlePreviousWeek}>
           <Image
             src="/emojis/arrowLeft.svg"

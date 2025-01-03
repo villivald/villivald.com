@@ -1,26 +1,71 @@
-import { CSSProperties } from "react";
-import { format, isSameDay } from "date-fns";
+import Image from "next/image";
+import { CSSProperties, useState, useContext } from "react";
+import { format, isSameDay, addMonths, subMonths } from "date-fns";
 import { FormattedMessage } from "react-intl";
 
 import TotalComponent from "./TotalComponent";
 import {
   weekDays,
   getDatesOfCurrentMonth,
-  currentMonthActivities,
+  activitiesOfMonth,
   getAverageSpeedOfPeriod,
   getTotalElevationGainOfPeriod,
   getDistanceOfDay,
   activitiesOfDay,
 } from "./utils";
 import { ContainerProps } from "./types";
+
+import { ThemeContext } from "../../../context";
 import styles from "../../../styles/Cycling.module.css";
 
 export default function MonthContainer({ today, activities }: ContainerProps) {
+  const theme = useContext(ThemeContext);
+
+  const [currentBaseDate, setCurrentBaseDate] = useState(today);
+
+  const currentMonth = currentBaseDate.getMonth();
+  const currentYear = currentBaseDate.getFullYear();
+
+  const handlePreviousMonth = () => {
+    setCurrentBaseDate((prevDate) => subMonths(prevDate, 1));
+  };
+
+  const handleNextMonth = () => {
+    setCurrentBaseDate((prevDate) => addMonths(prevDate, 1));
+  };
+
+  const isCurrentMonth = currentMonth === today.getMonth();
+
   return (
     <section>
-      <h2>
-        <FormattedMessage id="currentMonth" />
-      </h2>
+      <span className={styles.navigation} data-theme={theme}>
+        <button onClick={handlePreviousMonth}>
+          <Image
+            src="/emojis/arrowLeft.svg"
+            alt="Previous month"
+            width={20}
+            height={20}
+          />
+        </button>
+
+        <h2>
+          {isCurrentMonth ? (
+            <FormattedMessage id="currentMonth" />
+          ) : (
+            `${format(currentBaseDate, "MMM")} ${currentYear}`
+          )}
+        </h2>
+
+        <button onClick={handleNextMonth} disabled={isCurrentMonth}>
+          <Image
+            src="/emojis/arrowRight.svg"
+            alt="Next month"
+            width={20}
+            height={20}
+          />
+        </button>
+      </span>
+
       <div>
         <div className={styles.daysContainer}>
           {weekDays.map((day, index) => (
@@ -30,14 +75,14 @@ export default function MonthContainer({ today, activities }: ContainerProps) {
           ))}
         </div>
         <div className={styles.monthContainer}>
-          {getDatesOfCurrentMonth(today).map((date, index) => {
+          {getDatesOfCurrentMonth(currentBaseDate).map((date, index) => {
             if (!date) {
               return <p key={index} data-blank={true}></p>;
             }
 
             const distance = getDistanceOfDay(
               date,
-              currentMonthActivities(activities)
+              activitiesOfMonth(currentMonth, currentYear, activities)
             );
             return (
               <p
@@ -63,7 +108,9 @@ export default function MonthContainer({ today, activities }: ContainerProps) {
             );
           })}
         </div>
-        <TotalComponent params={currentMonthActivities(activities)} />
+        <TotalComponent
+          params={activitiesOfMonth(currentMonth, currentYear, activities)}
+        />
       </div>
     </section>
   );

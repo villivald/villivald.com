@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import {
-  isThisMonth,
   isThisYear,
   isSameDay,
   getYear,
@@ -80,12 +79,6 @@ export const getDatesOfCurrentMonth = (baseDate: Date) => {
 
   return [...placeholders, ...monthDates];
 };
-
-// Activities from the current month - 1st to last day of the month
-export const currentMonthActivities = (activities: Activity[]) =>
-  activities?.filter((activity) => {
-    return isThisMonth(activity.activity_date);
-  });
 
 // Activities from the current year - 1st January to 31st December
 export const currentYearActivities = (activities: Activity[]) =>
