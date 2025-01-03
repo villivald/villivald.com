@@ -34,6 +34,10 @@ export default function MonthContainer({ today, activities }: ContainerProps) {
     setCurrentBaseDate((prevDate) => addMonths(prevDate, 1));
   };
 
+  const handleBackToCurrentMonth = () => {
+    setCurrentBaseDate(today);
+  };
+
   const isCurrentMonth = currentMonth === today.getMonth();
 
   return (
@@ -64,6 +68,16 @@ export default function MonthContainer({ today, activities }: ContainerProps) {
             height={20}
           />
         </button>
+        {!isCurrentMonth && (
+          <button onClick={handleBackToCurrentMonth} disabled={isCurrentMonth}>
+            <Image
+              src="/emojis/reset.svg"
+              alt="Back to current month"
+              width={20}
+              height={20}
+            />
+          </button>
+        )}
       </span>
 
       <div>

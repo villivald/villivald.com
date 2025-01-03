@@ -37,6 +37,10 @@ export default function WeekContainer({ today, activities }: ContainerProps) {
     setCurrentBaseDate((prevDate) => addDays(prevDate, 7));
   };
 
+  const handleBackToCurrentWeek = () => {
+    setCurrentBaseDate(today);
+  };
+
   const isCurrentWeek = isThisWeek(currentBaseDate, { weekStartsOn: 1 });
 
   return (
@@ -72,6 +76,16 @@ export default function WeekContainer({ today, activities }: ContainerProps) {
             height={20}
           />
         </button>
+        {!isCurrentWeek && (
+          <button onClick={handleBackToCurrentWeek} disabled={isCurrentWeek}>
+            <Image
+              src="/emojis/reset.svg"
+              alt="Back to current week"
+              width={20}
+              height={20}
+            />
+          </button>
+        )}
       </span>
 
       <div>

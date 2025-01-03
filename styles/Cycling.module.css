@@ -232,6 +232,10 @@
   filter: invert(1);
 }
 
+.navigation[data-theme="dark"] > button:disabled > img {
+  filter: invert(1) opacity(0.5);
+}
+
 @media (width > 1600px) {
   .mainContainer {
     min-width: 85vw;
