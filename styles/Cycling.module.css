@@ -26,7 +26,8 @@
   gap: 0.5rem;
 }
 
-.mainContainer section > h2 {
+.mainContainer section > h2,
+.mainContainer section > span {
   margin-block-end: 1rem;
 }
 
@@ -266,7 +267,7 @@
     --font-size-hover: 0.625rem;
   }
 
-  .mainContainer section > h2 {
+  .mainContainer section h2 {
     font-size: var(--fontSize-header4);
   }
 
@@ -296,7 +297,7 @@
     --font-size-hover: 0.4375rem;
   }
 
-  .mainContainer section > h2 {
+  .mainContainer section h2 {
     font-size: var(--fontSize-header5);
   }
 

@@ -80,12 +80,6 @@ export const getDatesOfCurrentMonth = (baseDate: Date) => {
   return [...placeholders, ...monthDates];
 };
 
-// Activities from the current year - 1st January to 31st December
-export const currentYearActivities = (activities: Activity[]) =>
-  activities?.filter((activity) => {
-    return isThisYear(activity.activity_date);
-  });
-
 // Get the list of years with activities
 export const yearsOfActivities = (activities: Activity[]) =>
   activities?.reduce((years: number[], activity) => {
@@ -146,6 +140,19 @@ export const activitiesOfMonth = (
     );
   });
 
+// Activities from a specific week
+export const activitiesOfWeek = (baseDate: Date, activities: Activity[]) => {
+  const startOfCurrentWeek = startOfWeek(baseDate, { weekStartsOn: 1 });
+  const endOfCurrentWeek = endOfWeek(baseDate, { weekStartsOn: 1 });
+
+  return activities.filter((activity) => {
+    const activityDate = new Date(activity.activity_date);
+    return (
+      activityDate >= startOfCurrentWeek && activityDate <= endOfCurrentWeek
+    );
+  });
+};
+
 // Activities from a specific day
 export const activitiesOfDay = (date: string, activities: Activity[]) =>
   activities?.filter((activity) => {
@@ -192,17 +199,4 @@ export const getYearlyDistance = (year: number, activities: Activity[]) => {
       return total;
     }, 0) || 0
   ).toFixed(2);
-};
-
-// Activities from the chosen week
-export const activitiesOfWeek = (baseDate: Date, activities: Activity[]) => {
-  const startOfCurrentWeek = startOfWeek(baseDate, { weekStartsOn: 1 });
-  const endOfCurrentWeek = endOfWeek(baseDate, { weekStartsOn: 1 });
-
-  return activities.filter((activity) => {
-    const activityDate = new Date(activity.activity_date);
-    return (
-      activityDate >= startOfCurrentWeek && activityDate <= endOfCurrentWeek
-    );
-  });
 };
