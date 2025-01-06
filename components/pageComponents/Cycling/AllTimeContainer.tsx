@@ -4,11 +4,12 @@ import { FormattedMessage } from "react-intl";
 import TotalComponent from "./TotalComponent";
 import {
   yearsOfActivities,
-  getYearlyDistance,
   getAverageSpeedOfPeriod,
   getTotalElevationGainOfPeriod,
   activitiesOfYear,
+  getTotalDistanceOfPeriod,
 } from "./utils";
+
 import { ContainerProps } from "./types";
 import styles from "../../../styles/Cycling.module.css";
 
@@ -24,7 +25,9 @@ export default function AllTimeContainer({
       <div>
         <div className={styles.allTimeContainer}>
           {yearsOfActivities(activities)?.map((year, index) => {
-            const distance = getYearlyDistance(year, activities);
+            const distance = getTotalDistanceOfPeriod(
+              activitiesOfYear(year, activities)
+            );
 
             return (
               <p

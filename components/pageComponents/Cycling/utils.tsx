@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import {
-  isThisYear,
   isSameDay,
   getYear,
   getMonth,
@@ -90,6 +89,7 @@ export const yearsOfActivities = (activities: Activity[]) =>
     return years.sort();
   }, []);
 
+// Get distance of a specific day
 export const getDistanceOfDay = (date: string, activities: Activity[]) => {
   return (
     parseFloat(
@@ -100,6 +100,7 @@ export const getDistanceOfDay = (date: string, activities: Activity[]) => {
   ).toFixed(2);
 };
 
+// Get the total distance of a period
 export const getTotalDistanceOfPeriod = (activities: Activity[]) => {
   return (
     activities?.reduce(
@@ -109,6 +110,7 @@ export const getTotalDistanceOfPeriod = (activities: Activity[]) => {
   ).toFixed(2);
 };
 
+// Get the average speed of a period
 export const getAverageSpeedOfPeriod = (activities: Activity[]) => {
   const totalDistance = parseFloat(getTotalDistanceOfPeriod(activities));
   const totalTime = activities?.reduce(
@@ -119,6 +121,16 @@ export const getAverageSpeedOfPeriod = (activities: Activity[]) => {
   const averageSpeed = totalDistance / (totalTime / 3600) || 0;
 
   return averageSpeed.toFixed(2);
+};
+
+// Get the total elevation gain of a period
+export const getTotalElevationGainOfPeriod = (activities: Activity[]) => {
+  return (
+    activities?.reduce((total, activity) => {
+      const elevationGain = parseFloat(activity.total_elevation_gain);
+      return total + (isNaN(elevationGain) ? 0 : elevationGain);
+    }, 0) || 0
+  ).toFixed(0);
 };
 
 // Activities from a specific year
@@ -159,15 +171,7 @@ export const activitiesOfDay = (date: string, activities: Activity[]) =>
     return isSameDay(activity.activity_date, date);
   });
 
-export const getTotalElevationGainOfPeriod = (activities: Activity[]) => {
-  return (
-    activities?.reduce((total, activity) => {
-      const elevationGain = parseFloat(activity.total_elevation_gain);
-      return total + (isNaN(elevationGain) ? 0 : elevationGain);
-    }, 0) || 0
-  ).toFixed(0);
-};
-
+// Get distances for each month in a specific period
 export const getMonthlyDistances = (activities: Activity[]) => {
   const monthlyDistances: { [key: number]: number } = {};
 
@@ -188,15 +192,4 @@ export const getMonthlyDistances = (activities: Activity[]) => {
   });
 
   return result;
-};
-
-export const getYearlyDistance = (year: number, activities: Activity[]) => {
-  return (
-    activities.reduce((total, activity) => {
-      if (getYear(activity.activity_date) === year) {
-        return total + parseFloat(activity.distance);
-      }
-      return total;
-    }, 0) || 0
-  ).toFixed(2);
 };

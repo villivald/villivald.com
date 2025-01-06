@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import useSWR, { Fetcher } from "swr";
 import { FormattedMessage } from "react-intl";
+import useSWR, { Fetcher } from "swr";
 
 import { useDynamicToday } from "./utils";
 import { Activity } from "./types";
@@ -28,7 +28,12 @@ export default function Cycling() {
     >
       {!data && <Spinner />}
       {containers.map((Container, index) => (
-        <Container key={index} today={today} activities={data || []} />
+        <Container
+          key={index}
+          today={today}
+          theme={theme}
+          activities={data || []}
+        />
       ))}
     </div>
   );

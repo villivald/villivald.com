@@ -5,6 +5,7 @@ import {
   getAverageSpeedOfPeriod,
   getTotalElevationGainOfPeriod,
 } from "./utils";
+
 import { Activity } from "./types";
 import styles from "../../../styles/Cycling.module.css";
 

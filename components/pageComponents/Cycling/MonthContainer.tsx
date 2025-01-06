@@ -1,7 +1,7 @@
 import Image from "next/image";
-import { CSSProperties, useState, useContext } from "react";
+import { CSSProperties, useState } from "react";
+import { FormattedMessage, useIntl } from "react-intl";
 import { format, isSameDay, addMonths, subMonths } from "date-fns";
-import { FormattedMessage } from "react-intl";
 
 import TotalComponent from "./TotalComponent";
 import {
@@ -13,13 +13,16 @@ import {
   getDistanceOfDay,
   activitiesOfDay,
 } from "./utils";
-import { ContainerProps } from "./types";
 
-import { ThemeContext } from "../../../context";
+import { ContainerProps } from "./types";
 import styles from "../../../styles/Cycling.module.css";
 
-export default function MonthContainer({ today, activities }: ContainerProps) {
-  const theme = useContext(ThemeContext);
+export default function MonthContainer({
+  today,
+  theme,
+  activities,
+}: ContainerProps) {
+  const intl = useIntl();
 
   const [currentBaseDate, setCurrentBaseDate] = useState(today);
 
@@ -46,7 +49,7 @@ export default function MonthContainer({ today, activities }: ContainerProps) {
         <button onClick={handlePreviousMonth}>
           <Image
             src="/emojis/arrowLeft.svg"
-            alt="Previous month"
+            alt={intl.formatMessage({ id: "previousMonth" })}
             width={20}
             height={20}
           />
@@ -56,14 +59,14 @@ export default function MonthContainer({ today, activities }: ContainerProps) {
           {isCurrentMonth ? (
             <FormattedMessage id="currentMonth" />
           ) : (
-            `${format(currentBaseDate, "MMM")} ${currentYear}`
+            `${format(currentBaseDate, "MM")}/${currentYear}`
           )}
         </h2>
 
         <button onClick={handleNextMonth} disabled={isCurrentMonth}>
           <Image
             src="/emojis/arrowRight.svg"
-            alt="Next month"
+            alt={intl.formatMessage({ id: "nextMonth" })}
             width={20}
             height={20}
           />
@@ -72,7 +75,7 @@ export default function MonthContainer({ today, activities }: ContainerProps) {
           <button onClick={handleBackToCurrentMonth} disabled={isCurrentMonth}>
             <Image
               src="/emojis/reset.svg"
-              alt="Back to current month"
+              alt={intl.formatMessage({ id: "backToCurrentMonth" })}
               width={20}
               height={20}
             />

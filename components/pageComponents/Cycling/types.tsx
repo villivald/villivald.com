@@ -9,4 +9,5 @@ export type Activity = {
 export type ContainerProps = {
   today: Date;
   activities: Activity[];
+  theme: string;
 };

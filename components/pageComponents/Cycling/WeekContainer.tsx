@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { CSSProperties, useState, useContext } from "react";
+import { CSSProperties, useState } from "react";
+import { FormattedMessage, useIntl } from "react-intl";
 import {
   format,
   isSameDay,
@@ -8,7 +9,6 @@ import {
   endOfWeek,
   isThisWeek,
 } from "date-fns";
-import { FormattedMessage } from "react-intl";
 
 import TotalComponent from "./TotalComponent";
 import {
@@ -19,13 +19,16 @@ import {
   activitiesOfDay,
   activitiesOfWeek,
 } from "./utils";
-import { ContainerProps } from "./types";
 
-import { ThemeContext } from "../../../context";
+import { ContainerProps } from "./types";
 import styles from "../../../styles/Cycling.module.css";
 
-export default function WeekContainer({ today, activities }: ContainerProps) {
-  const theme = useContext(ThemeContext);
+export default function WeekContainer({
+  today,
+  theme,
+  activities,
+}: ContainerProps) {
+  const intl = useIntl();
 
   const [currentBaseDate, setCurrentBaseDate] = useState(today);
 
@@ -49,7 +52,7 @@ export default function WeekContainer({ today, activities }: ContainerProps) {
         <button onClick={handlePreviousWeek}>
           <Image
             src="/emojis/arrowLeft.svg"
-            alt="Previous week"
+            alt={intl.formatMessage({ id: "previousWeek" })}
             width={20}
             height={20}
           />
@@ -71,7 +74,7 @@ export default function WeekContainer({ today, activities }: ContainerProps) {
         <button onClick={handleNextWeek} disabled={isCurrentWeek}>
           <Image
             src="/emojis/arrowRight.svg"
-            alt="Next week"
+            alt={intl.formatMessage({ id: "nextWeek" })}
             width={20}
             height={20}
           />
@@ -80,7 +83,7 @@ export default function WeekContainer({ today, activities }: ContainerProps) {
           <button onClick={handleBackToCurrentWeek} disabled={isCurrentWeek}>
             <Image
               src="/emojis/reset.svg"
-              alt="Back to current week"
+              alt={intl.formatMessage({ id: "backToCurrentWeek" })}
               width={20}
               height={20}
             />

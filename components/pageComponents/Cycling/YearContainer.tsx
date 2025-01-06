@@ -1,7 +1,7 @@
 import Image from "next/image";
-import { CSSProperties, useState, useContext } from "react";
+import { CSSProperties, useState } from "react";
+import { FormattedMessage, useIntl } from "react-intl";
 import { isSameMonth, subYears, addYears } from "date-fns";
-import { FormattedMessage } from "react-intl";
 
 import TotalComponent from "./TotalComponent";
 import {
@@ -12,13 +12,16 @@ import {
   getTotalElevationGainOfPeriod,
   activitiesOfMonth,
 } from "./utils";
-import { ContainerProps } from "./types";
 
-import { ThemeContext } from "../../../context";
+import { ContainerProps } from "./types";
 import styles from "../../../styles/Cycling.module.css";
 
-export default function YearContainer({ today, activities }: ContainerProps) {
-  const theme = useContext(ThemeContext);
+export default function YearContainer({
+  today,
+  theme,
+  activities,
+}: ContainerProps) {
+  const intl = useIntl();
 
   const [currentBaseDate, setCurrentBaseDate] = useState(today);
 
@@ -44,7 +47,7 @@ export default function YearContainer({ today, activities }: ContainerProps) {
         <button onClick={handlePreviousYear}>
           <Image
             src="/emojis/arrowLeft.svg"
-            alt="Previous year"
+            alt={intl.formatMessage({ id: "previousYear" })}
             width={20}
             height={20}
           />
@@ -57,7 +60,7 @@ export default function YearContainer({ today, activities }: ContainerProps) {
         <button onClick={handleNextYear} disabled={isCurrentYear}>
           <Image
             src="/emojis/arrowRight.svg"
-            alt="Next year"
+            alt={intl.formatMessage({ id: "nextYear" })}
             width={20}
             height={20}
           />
@@ -66,7 +69,7 @@ export default function YearContainer({ today, activities }: ContainerProps) {
           <button onClick={handleBackToCurrentYear} disabled={isCurrentYear}>
             <Image
               src="/emojis/reset.svg"
-              alt="Back to current year"
+              alt={intl.formatMessage({ id: "backToCurrentYear" })}
               width={20}
               height={20}
             />
