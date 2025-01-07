@@ -264,6 +264,16 @@
     grid-template-columns: 1fr;
     gap: 2rem;
   }
+
+  .loading::after {
+    height: 98%;
+  }
+}
+
+@media (width < 700px) {
+  .loading::after {
+    width: 100%;
+  }
 }
 
 @media (width < 600px) {
