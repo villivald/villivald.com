@@ -2426,6 +2426,42 @@
       "category": "non-fiction"
     },
     {
+      "title": "Дни",
+      "author": "Шульгин",
+      "date": "02.01.2025",
+      "image": "266.avif",
+      "rating": 3,
+      "language": "ru",
+      "category": "non-fiction"
+    },
+    {
+      "title": "Мир и хохот",
+      "author": "Шульгин",
+      "date": "10.01.2025",
+      "image": "267.avif",
+      "rating": 2,
+      "language": "ru",
+      "category": "fiction"
+    },
+    {
+      "title": "Surun ja ilon kaupunki",
+      "author": "M. Waltari",
+      "date": "10.01.2025",
+      "image": "268.avif",
+      "rating": 3,
+      "language": "fi",
+      "category": "fiction"
+    },
+    {
+      "title": "Допинг. Запрещенные страницы",
+      "author": "Родченков",
+      "date": "13.01.2025",
+      "image": "269.avif",
+      "rating": 4,
+      "language": "ru",
+      "category": "non-fiction"
+    },
+    {
       "title": "",
       "author": "",
       "date": "",
