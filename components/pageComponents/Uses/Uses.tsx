@@ -90,7 +90,7 @@ export default function Uses() {
           height={32}
         />
         <FormattedMessage id="lastUpdated" />
-        <time dateTime="2024-12-17">17.12.2024</time>
+        <time dateTime="2025-01-18">18.01.2025</time>
       </p>
       <div data-theme={theme}>
         {dataToRender.map((item) => {
