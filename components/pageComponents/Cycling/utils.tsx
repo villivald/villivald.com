@@ -43,23 +43,16 @@ export const useDynamicToday = () => {
   return today;
 };
 
-// Get the dates of the current week - Monday to Sunday (e.g. 2024-11-12)
+// Get the dates of the current week - Monday to Sunday
 export const getDatesOfCurrentWeek = (baseDate: Date) => {
   const startOfCurrentWeek = startOfWeek(baseDate, { weekStartsOn: 1 });
-  const endOfCurrentWeek = endOfWeek(baseDate, { weekStartsOn: 1 });
 
-  const weekDates = [];
-  let currentDate = startOfCurrentWeek;
-
-  while (currentDate <= endOfCurrentWeek) {
-    weekDates.push(format(currentDate, "yyyy-MM-dd"));
-    currentDate = addDays(currentDate, 1);
-  }
-
-  return weekDates;
+  return Array.from({ length: 7 }).map((_, index) =>
+    format(addDays(startOfCurrentWeek, index), "yyyy-MM-dd")
+  );
 };
 
-// Get the dates of the current month - 1st to last day of the month (e.g. 2024-11-01)
+// Get the dates of the current month - 1st to last day of the month
 export const getDatesOfCurrentMonth = (baseDate: Date) => {
   const startOfCurrentMonth = startOfMonth(baseDate);
   const endOfCurrentMonth = endOfMonth(baseDate);
@@ -80,24 +73,23 @@ export const getDatesOfCurrentMonth = (baseDate: Date) => {
 };
 
 // Get the list of years with activities
-export const yearsOfActivities = (activities: Activity[]) =>
-  activities?.reduce((years: number[], activity) => {
-    const year = getYear(activity.activity_date);
-    if (!years.includes(year)) {
-      years.push(year);
-    }
-    return years.sort();
-  }, []);
+export const yearsOfActivities = (activities: Activity[]) => {
+  const years = new Set<number>();
+  activities?.forEach((activity) => years.add(getYear(activity.activity_date)));
+
+  return Array.from(years).sort();
+};
 
 // Get distance of a specific day
 export const getDistanceOfDay = (date: string, activities: Activity[]) => {
-  return (
-    parseFloat(
-      activities?.filter((activity) =>
-        isSameDay(activity.activity_date, date)
-      )[0]?.distance || "0"
-    ) || 0
-  ).toFixed(2);
+  const totalDistance = activities
+    .filter((activity) => isSameDay(activity.activity_date, date))
+    .reduce(
+      (total, activity) => total + parseFloat(activity.distance || "0"),
+      0
+    );
+
+  return totalDistance.toFixed(2);
 };
 
 // Get the total distance of a period
