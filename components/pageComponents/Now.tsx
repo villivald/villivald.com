@@ -41,7 +41,7 @@ export default function Now() {
             height={32}
           />
           <FormattedMessage id="lastUpdated" />
-          <time dateTime="2024-11-10">10.11.2024</time>
+          <time dateTime="2025-01-22">22.01.2025</time>
         </p>
       </section>
       <section>
@@ -59,8 +59,8 @@ export default function Now() {
             >
               cycle
             </Link>{" "}
-            at least 150 km per week. Sometimes it works. This week I will try
-            to cycle each day as an experiment and see how it goes.
+            at least 150 km per week. The last couple of weeks it worked out
+            pretty well.
           </p>
           <p lang="en">
             I have finally set up an office room at home and am working on
@@ -74,25 +74,25 @@ export default function Now() {
           <ul>
             <li lang="en">
               <Link
-                href="https://prestelpublishing.penguinrandomhouse.de/book/Leonardo-Frida-and-the-Others/Camille-Jouneaux/Prestel-com/e621930.rhd"
+                href="https://www.penguin.co.uk/books/438663/the-rodchenkov-affair-by-grigory-rodchenkov/9780753553350"
                 target="_blank"
                 rel="noopener noreferrer"
                 hrefLang="en"
               >
-                Leonardo, Frida and the Others
+                The Rodchenkov Affair
               </Link>{" "}
-              by Camille Jouneaux
+              by Grigory Rodchenkov
             </li>
             <li lang="en">
               <Link
-                href="https://en.wikipedia.org/wiki/The_Design_of_Everyday_Things"
+                href="https://en.wikipedia.org/wiki/War_(Woodward_book)"
                 target="_blank"
                 rel="noopener noreferrer"
                 hrefLang="en"
               >
-                The Design of Everyday Things
+                War
               </Link>{" "}
-              by Donald Norman
+              by Bob Woodward
             </li>
             <li lang="en">
               <Link
@@ -112,8 +112,8 @@ export default function Now() {
             <FormattedMessage id="watching" />
           </h2>
           <p lang="en">
-            Mostly YouTube, NBA - now that the season started a couple of
-            days/weeks ago, The Penguin, Loki, Agatha All Along.
+            Mostly YouTube, Dexter, Severance, Tulsa King. The Room Next Door
+            and Queen of Fucking Everything were nice too.
           </p>
         </article>
         <article>
@@ -143,8 +143,16 @@ export default function Now() {
             nothing concrete yet.
           </p>
           <p lang="en">
-            Working on some sort of Strava integration, so it is coming along,
-            though not sure what it will look like yet.
+            A Strava integration is finally{" "}
+            <Link
+              href="/cycling"
+              target="_blank"
+              rel="noopener noreferrer"
+              hrefLang="en"
+            >
+              live
+            </Link>
+            .
           </p>
         </article>
         <article>
@@ -160,7 +168,8 @@ export default function Now() {
             >
               Cleveland
             </Link>{" "}
-            has gone 11-0 so far, and that is something new.
+            has gone 11-0 so far, and that is something new. <br />
+            Upd. 22.01.25 - 33-6 💪
           </p>
         </article>
       </section>
