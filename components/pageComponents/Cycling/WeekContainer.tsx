@@ -64,7 +64,7 @@ export default function WeekContainer({
           ) : (
             `${format(
               subDays(endOfWeek(currentBaseDate, { weekStartsOn: 1 }), 6),
-              "dd.MM"
+              "dd.MM",
             )}
             -
             ${format(endOfWeek(currentBaseDate, { weekStartsOn: 1 }), "dd.MM")}`
@@ -102,7 +102,7 @@ export default function WeekContainer({
           {getDatesOfCurrentWeek(currentBaseDate).map((date, index) => {
             const distance = getDistanceOfDay(
               date,
-              activitiesOfWeek(currentBaseDate, activities)
+              activitiesOfWeek(currentBaseDate, activities),
             );
 
             return (
@@ -111,9 +111,9 @@ export default function WeekContainer({
                 data-today={isSameDay(date, today)}
                 data-empty={distance === "0.00"}
                 data-content={`💨${getAverageSpeedOfPeriod(
-                  activitiesOfDay(date, activities)
+                  activitiesOfDay(date, activities),
                 )}km/h\n⛰️${getTotalElevationGainOfPeriod(
-                  activitiesOfDay(date, activities)
+                  activitiesOfDay(date, activities),
                 )}m`}
                 data-color={parseFloat(distance) > 40}
                 data-invertcolor={

@@ -99,7 +99,7 @@ export default function MonthContainer({
 
             const distance = getDistanceOfDay(
               date,
-              activitiesOfMonth(currentMonth, currentYear, activities)
+              activitiesOfMonth(currentMonth, currentYear, activities),
             );
             return (
               <p
@@ -107,9 +107,9 @@ export default function MonthContainer({
                 data-today={isSameDay(date, today)}
                 data-empty={distance === "0.00"}
                 data-content={`💨${getAverageSpeedOfPeriod(
-                  activitiesOfDay(date, activities)
+                  activitiesOfDay(date, activities),
                 )}km/h\n⛰️${getTotalElevationGainOfPeriod(
-                  activitiesOfDay(date, activities)
+                  activitiesOfDay(date, activities),
                 )}m`}
                 data-color={parseFloat(distance) > 40}
                 data-invertcolor={

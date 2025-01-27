@@ -48,7 +48,7 @@ export const getDatesOfCurrentWeek = (baseDate: Date) => {
   const startOfCurrentWeek = startOfWeek(baseDate, { weekStartsOn: 1 });
 
   return Array.from({ length: 7 }).map((_, index) =>
-    format(addDays(startOfCurrentWeek, index), "yyyy-MM-dd")
+    format(addDays(startOfCurrentWeek, index), "yyyy-MM-dd"),
   );
 };
 
@@ -86,7 +86,7 @@ export const getDistanceOfDay = (date: string, activities: Activity[]) => {
     .filter((activity) => isSameDay(activity.activity_date, date))
     .reduce(
       (total, activity) => total + parseFloat(activity.distance || "0"),
-      0
+      0,
     );
 
   return totalDistance.toFixed(2);
@@ -97,7 +97,7 @@ export const getTotalDistanceOfPeriod = (activities: Activity[]) => {
   return (
     activities?.reduce(
       (total, activity) => total + parseFloat(activity.distance),
-      0
+      0,
     ) || 0
   ).toFixed(2);
 };
@@ -107,7 +107,7 @@ export const getAverageSpeedOfPeriod = (activities: Activity[]) => {
   const totalDistance = parseFloat(getTotalDistanceOfPeriod(activities));
   const totalTime = activities?.reduce(
     (total, activity) => total + activity.moving_time,
-    0
+    0,
   );
 
   const averageSpeed = totalDistance / (totalTime / 3600) || 0;
@@ -135,7 +135,7 @@ export const activitiesOfYear = (year: number, activities: Activity[]) =>
 export const activitiesOfMonth = (
   month: number,
   year: number,
-  activities: Activity[]
+  activities: Activity[],
 ) =>
   activities?.filter((activity) => {
     return (

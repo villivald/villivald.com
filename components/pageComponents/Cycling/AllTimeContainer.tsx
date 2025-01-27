@@ -26,7 +26,7 @@ export default function AllTimeContainer({
         <div className={styles.allTimeContainer}>
           {yearsOfActivities(activities)?.map((year, index) => {
             const distance = getTotalDistanceOfPeriod(
-              activitiesOfYear(year, activities)
+              activitiesOfYear(year, activities),
             );
 
             return (
@@ -35,9 +35,9 @@ export default function AllTimeContainer({
                 data-thisyear={year === today.getFullYear()}
                 className={styles.yearItem}
                 data-content={`💨 ${getAverageSpeedOfPeriod(
-                  activitiesOfYear(year, activities)
+                  activitiesOfYear(year, activities),
                 )}km/h\n⛰️ ${getTotalElevationGainOfPeriod(
-                  activitiesOfYear(year, activities)
+                  activitiesOfYear(year, activities),
                 )}m`}
                 data-color={parseFloat(distance) > 5000}
                 data-invertcolor={parseFloat(distance) < 2500}

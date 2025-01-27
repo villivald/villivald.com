@@ -42,11 +42,11 @@ export default function About() {
 
     // select the left and right iris elements
     const leftIris = document.querySelector(
-      `.${styles.leftIris}`
+      `.${styles.leftIris}`,
     ) as HTMLDivElement;
 
     const rightIris = document.querySelector(
-      `.${styles.rightIris}`
+      `.${styles.rightIris}`,
     ) as HTMLDivElement;
 
     // set css variables for the x and y coordinates of the pointer
@@ -120,7 +120,7 @@ export default function About() {
                       ></button>
                     )}
                   </div>
-                )
+                ),
               )}
               <div>{year}</div>
               {["4", "3", "2", "1"].map((num, index) => (

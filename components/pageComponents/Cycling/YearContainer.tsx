@@ -81,7 +81,7 @@ export default function YearContainer({
         <div className={styles.yearContainer}>
           {Object.keys(months).map((_key, index) => {
             const distance = getMonthlyDistances(
-              activitiesOfYear(currentYear, activities)
+              activitiesOfYear(currentYear, activities),
             )[index];
 
             return (
@@ -89,21 +89,21 @@ export default function YearContainer({
                 key={index}
                 data-thismonth={isSameMonth(
                   currentBaseDate,
-                  new Date(today.getFullYear(), index)
+                  new Date(today.getFullYear(), index),
                 )}
                 data-empty={distance === "0.00"}
                 data-content={`💨 ${getAverageSpeedOfPeriod(
                   activitiesOfMonth(
                     index,
                     currentBaseDate.getFullYear(),
-                    activities
-                  )
+                    activities,
+                  ),
                 )}km/h\n⛰️ ${getTotalElevationGainOfPeriod(
                   activitiesOfMonth(
                     index,
                     currentBaseDate.getFullYear(),
-                    activities
-                  )
+                    activities,
+                  ),
                 )}m`}
                 data-color={parseFloat(distance) > 600}
                 data-invertcolor={

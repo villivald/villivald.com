@@ -60,7 +60,7 @@ export default async function handler(req, res) {
               },
             ],
           }),
-        }
+        },
       );
 
       if (!updateResponse.ok) {
@@ -75,7 +75,7 @@ export default async function handler(req, res) {
 
     const activitiesResponse = await fetch(
       `https://www.strava.com/api/v3/athlete/activities`,
-      { headers: { Authorization: `Bearer ${validAccessToken}` } }
+      { headers: { Authorization: `Bearer ${validAccessToken}` } },
     );
 
     if (!activitiesResponse.ok) {
@@ -108,12 +108,12 @@ export default async function handler(req, res) {
     }
 
     const dbActivityIds = allActivities.map((activity) =>
-      activity.id.toString()
+      activity.id.toString(),
     );
     const newActivities = activitiesData.filter(
       (activity) =>
         !dbActivityIds.includes(activity.id.toString()) &&
-        (activity.type === "Ride" || activity.type === "VirtualRide")
+        (activity.type === "Ride" || activity.type === "VirtualRide"),
     );
 
     function formatDate(dateString) {
@@ -140,7 +140,7 @@ export default async function handler(req, res) {
           average_speed: activity.average_speed,
           total_elevation_gain: activity.total_elevation_gain,
           type: activity.type,
-        }))
+        })),
       );
 
       if (insertError) {
