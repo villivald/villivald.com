@@ -24,9 +24,9 @@ export default function Footer() {
       altText: "linkedinLogo",
     },
     {
-      name: "mastodon",
-      link: "https://notacult.social/@villivald",
-      altText: "mastodonLogo",
+      name: "bluesky",
+      link: "https://bsky.app/profile/villivald.bsky.social",
+      altText: "blueskyLogo",
     },
   ];
 

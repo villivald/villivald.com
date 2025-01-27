@@ -24,7 +24,7 @@
 - [Supabase](https://supabase.com/)
 - [Atropos.js](https://atroposjs.com/)
 - [Chart.js](https://www.chartjs.org/)
-- [TanStack Virtual](https://tanstack.com/virtual/latest) 
+- [TanStack Virtual](https://tanstack.com/virtual/latest)
 - [FormatJS](https://formatjs.io/)
 - [Date-fns](https://date-fns.org/)
 
@@ -44,7 +44,7 @@
 
 - Website: https://villivald.com/
 - Blog: https://create-react-app.com/
-- Mastodon: [@villivald](https://notacult.social/@villivald)
+- Bluesky: [@villivald](https://bsky.app/profile/villivald.bsky.social)
 - LinkedIn: [@villivald](https://linkedin.com/in/villivald)
 
 ## 🤝 Contributing

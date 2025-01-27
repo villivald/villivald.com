@@ -14,16 +14,16 @@ export default function Contact() {
     <div className={styles.mainContainer} data-theme={theme}>
       <div>
         <Link
-          href="https://notacult.social/@villivald"
+          href="https://bsky.app/profile/villivald.bsky.social"
           target="_blank"
           rel="noopener noreferrer"
           hrefLang="en"
         >
           <Image
-            src="/emojis/mastodon.svg"
-            width={500}
-            height={500}
-            alt={intl.formatMessage({ id: "contact.link.mastodon" })}
+            src="/emojis/bluesky.svg"
+            width={400}
+            height={400}
+            alt={intl.formatMessage({ id: "contact.link.bluesky" })}
           />
         </Link>
       </div>

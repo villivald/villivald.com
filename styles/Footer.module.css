@@ -62,6 +62,10 @@
   height: auto;
 }
 
+.footer > div > a > img[alt^="Bluesky"] {
+  padding: 0.25rem;
+}
+
 .footer > div > a > img[data-theme="true"] {
   filter: invert(1);
 }

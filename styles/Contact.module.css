@@ -25,6 +25,10 @@
   transition: all 0.5s ease;
 }
 
+.mainContainer img[alt^="Bluesky"] {
+  padding: 2rem;
+}
+
 .mainContainer img:hover {
   transform: scale(1.1);
 }
@@ -60,5 +64,6 @@
 @media (width <= 750px) {
   .mainContainer img {
     width: 25vw;
+    height: 25vw;
   }
 }

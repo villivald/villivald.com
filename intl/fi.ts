@@ -31,8 +31,8 @@ const fi = {
   "old.title.1": "Ensimmäinen versio minun verkkosivusta vuodelta 2019",
   "old.title.2": "Toinen iteratio oli julkaistu loppuvuodesta 2019",
   "old.title.3": "Reactilla tehty versio oli livenä vuodesta 2020 vuoteen 2023",
-  "contact.link.mastodon":
-    "Mastodon logo kuvake - linkki minun Mastodon profiiliini",
+  "contact.link.bluesky":
+    "Bluesky logo kuvake - linkki minun Bluesky profiiliini",
   "contact.link.mail": "Sähköposti kuvake - linkki minun sähköpostiini",
   "contact.link.linkedin":
     "LinkedIn logo kuvake - linkki minun LinkedIn profiiliini",
@@ -133,7 +133,7 @@ const fi = {
   "description.blog": "Viimeisimmät blogikirjoitukset",
   "description.books": "Kirjat joita olen lukenut viime aikoina",
   "description.statistics": "Tilastot kirjoista joita olen lukenut",
-  "description.contact": "Ota yhteyttä - Mastodon, sähköposti ja LinkedIn",
+  "description.contact": "Ota yhteyttä - Bluesky, sähköposti ja LinkedIn",
   "description.projects":
     "Viimeisimmät projektit - sekä työ- että harrasteprojektit",
   "description.workandstudy": "Tietoa työstäni ja opiskelustani",
@@ -161,7 +161,7 @@ const fi = {
   "alt.externalLink": "Ulkoisen linkin kuvake",
   "alt.githubLogo": "GitHub logo kuvake",
   "alt.linkedinLogo": "LinkedIn logo kuvake",
-  "alt.mastodonLogo": "Mastodon logo kuvake",
+  "alt.blueskyLogo": "Bluesky logo kuvake",
   "alt.koripallopaikat":
     "Basketball emoji kuvake - linkki minun koripalloon liittyvään verkkosivustoon",
   "alt.githubChart": "Kuvaaja joka näyttää minun GitHub kontribuutiot",
@@ -196,7 +196,7 @@ const fi = {
   "aria.projects": "Sivu jossa on lista sekä työ- että harrasteprojekteistani",
   "aria.about": "Sivu jossa on minun kuvia ja tietoa minusta",
   "aria.contact":
-    "Sivu jossa on linkkejä minun mastodoniin, sähköpostiin ja LinkedIniin",
+    "Sivu jossa on linkkejä minun bluesky:n, sähköpostiin ja LinkedIniin",
   "aria.old":
     "Sivu jossa on linkkejä vanhoihin versioihin minun verkkosivustosta",
   "aria.now": "Sivu jossa on tietoa mitä teen tällä hetkellä",
