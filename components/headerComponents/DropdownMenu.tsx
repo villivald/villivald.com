@@ -35,6 +35,8 @@ export default function DropdownMenu() {
       className={styles.dropdown}
       onClick={() => setMenuOpen(!menuOpen)}
       onBlur={handleBlur}
+      role="menu"
+      tabIndex={-1}
     >
       <button
         className={styles.dropdownButton}

@@ -17,7 +17,7 @@ export default function Blog() {
 
   async function fetchData() {
     const res = await fetch(
-      "https://dev.to/api/articles?username=villivald&per_page=3"
+      "https://dev.to/api/articles?username=villivald&per_page=3",
     );
     const json = await res.json();
     setData(json);

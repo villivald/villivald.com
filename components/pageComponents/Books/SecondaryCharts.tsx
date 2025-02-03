@@ -12,7 +12,7 @@ export default function CategoryCharts({ type }: { type: string }) {
   const formatData = (year: string, param: string) => {
     return data.books.filter(
       // @ts-ignore: Should check in the future
-      (book) => book.date.includes(year) && book[type] === param
+      (book) => book.date.includes(year) && book[type] === param,
     ).length;
   };
 

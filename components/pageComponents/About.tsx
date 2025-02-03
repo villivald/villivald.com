@@ -81,7 +81,7 @@ export default function About() {
         </div>
       </div>
 
-      <section className={styles.carousel} aria-label="carousel" tabIndex={0}>
+      <section className={styles.carousel} aria-label="carousel">
         <div className={styles.slides} id="slides">
           {years.map((year, index) => (
             <div
@@ -90,7 +90,6 @@ export default function About() {
               id={`slide-${++index}`}
               data-slide={`slide${index}`}
               aria-label={`slide ${index} of 5`}
-              tabIndex={0}
             >
               {["8", "7", "6", "5"].map((num, index) =>
                 year === "2024" && num === "8" ? (
@@ -110,6 +109,7 @@ export default function About() {
                     style={{
                       backgroundImage: `url(/about/${year}-${num}.avif)`,
                     }}
+                    role="button"
                   >
                     {clickedImage === `${year}-${num}` && (
                       <button
@@ -131,6 +131,7 @@ export default function About() {
                   style={{
                     backgroundImage: `url(/about/${year}-${num}.avif)`,
                   }}
+                  role="button"
                 >
                   {clickedImage === `${year}-${num}` && (
                     <button

@@ -78,6 +78,7 @@ export default function BlogCardList({ data }: DataArray) {
               onTouchStart={() => setLoadRandomPost(true)}
               onFocus={() => setLoadRandomPost(true)}
               tabIndex={0}
+              role="button"
             >
               <div className={styles.innerCard}>
                 <div className={styles.front}>?</div>
@@ -104,7 +105,7 @@ export default function BlogCardList({ data }: DataArray) {
                 </div>
               </div>
             </div>
-          )
+          ),
         )}
       </div>
     </>
