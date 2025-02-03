@@ -92,7 +92,7 @@ export default function About() {
               aria-label={`slide ${index} of 5`}
             >
               {["8", "7", "6", "5"].map((num, index) =>
-                year === "2024" && num === "8" ? (
+                year === "2024" && num === "9" ? (
                   <div key={index} className={styles.question}>
                     <Image
                       alt={intl.formatMessage({ id: "alt.questionMark" })}
