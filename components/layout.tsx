@@ -29,9 +29,9 @@ export default function Layout({ children, changeTheme, changeLocale }: Props) {
   return (
     <>
       <section
-        tabIndex={0}
         className={styles.skipLinks}
         aria-label={intl.formatMessage({ id: "aria.skiplinks" })}
+        tabIndex={-1}
       >
         <a href="#mainContent">
           <FormattedMessage id="skiplink.mainContent" />

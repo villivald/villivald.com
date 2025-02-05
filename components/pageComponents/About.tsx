@@ -105,11 +105,17 @@ export default function About() {
                   <div
                     key={index}
                     onClick={() => handleImageClick(`${year}-${num}`)}
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter") {
+                        handleImageClick(`${year}-${num}`);
+                      }
+                    }}
                     data-fullscreen={clickedImage === `${year}-${num}`}
                     style={{
                       backgroundImage: `url(/about/${year}-${num}.avif)`,
                     }}
                     role="button"
+                    tabIndex={-1}
                   >
                     {clickedImage === `${year}-${num}` && (
                       <button
@@ -127,11 +133,17 @@ export default function About() {
                 <div
                   key={index}
                   onClick={() => handleImageClick(`${year}-${num}`)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter") {
+                      handleImageClick(`${year}-${num}`);
+                    }
+                  }}
                   data-fullscreen={clickedImage === `${year}-${num}`}
                   style={{
                     backgroundImage: `url(/about/${year}-${num}.avif)`,
                   }}
                   role="button"
+                  tabIndex={-1}
                 >
                   {clickedImage === `${year}-${num}` && (
                     <button

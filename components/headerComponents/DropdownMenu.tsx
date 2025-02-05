@@ -30,11 +30,19 @@ export default function DropdownMenu() {
     }
   };
 
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault(); // Prevent default behavior to avoid quick toggle
+      setMenuOpen((prev) => !prev);
+    }
+  };
+
   return (
     <div
       className={styles.dropdown}
-      onClick={() => setMenuOpen(!menuOpen)}
+      onClick={() => setMenuOpen((prev) => !prev)}
       onBlur={handleBlur}
+      onKeyDown={handleKeyDown}
       role="menu"
       tabIndex={-1}
     >
@@ -57,8 +65,17 @@ export default function DropdownMenu() {
         data-open={menuOpen}
       >
         {menuItems.map((item) => (
-          <li key={item} role="menuitem">
-            <Link href={`/${item}`}>
+          <li
+            key={item}
+            role="menuitem"
+            tabIndex={0}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") {
+                window.location.href = `/${item}`;
+              }
+            }}
+          >
+            <Link href={`/${item}`} tabIndex={-1}>
               <Image
                 src={`/emojis/${item}.svg`}
                 data-name={item}
