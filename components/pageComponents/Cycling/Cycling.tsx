@@ -1,3 +1,4 @@
+import { GetServerSideProps } from "next";
 import { useContext } from "react";
 import { FormattedMessage } from "react-intl";
 import useSWR, { Fetcher } from "swr";
@@ -13,11 +14,22 @@ import styles from "../../../styles/Cycling.module.css";
 const fetcher: Fetcher<Activity[]> = (...args: Parameters<typeof fetch>) =>
   fetch(...args).then((res) => res.json());
 
-export default function Cycling() {
+export default function Cycling({
+  initialData = [],
+}: {
+  initialData?: Activity[];
+}) {
   const theme = useContext(ThemeContext);
   const today = useDynamicToday();
 
-  const { data, error } = useSWR<Activity[]>("/api/strava/activities", fetcher);
+  const { data = initialData, error } = useSWR<Activity[]>(
+    "/api/strava/activities",
+    fetcher,
+    {
+      fallbackData: initialData,
+      revalidateIfStale: true,
+    },
+  );
 
   if (error) return <FormattedMessage id="failedToLoad" />;
 
@@ -38,3 +50,10 @@ export default function Cycling() {
     </div>
   );
 }
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  const res = await fetch("/api/strava/activities");
+  const data = await res.json();
+
+  return { props: { initialData: data } };
+};
