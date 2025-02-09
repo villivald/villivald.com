@@ -22,23 +22,26 @@ export default function Cycling({
   const theme = useContext(ThemeContext);
   const today = useDynamicToday();
 
-  const { data = initialData, error } = useSWR<Activity[]>(
-    "/api/strava/activities",
-    fetcher,
-    {
-      fallbackData: initialData,
-      revalidateIfStale: true,
-    },
-  );
+  const {
+    data = initialData,
+    error,
+    isValidating,
+  } = useSWR<Activity[]>("/api/strava/activities", fetcher, {
+    fallbackData: initialData,
+    revalidateOnFocus: false,
+    revalidateIfStale: true,
+    revalidateOnReconnect: true,
+    dedupingInterval: 60 * 1000,
+  });
 
   if (error) return <FormattedMessage id="failedToLoad" />;
 
   return (
     <div
-      className={`${styles.mainContainer} ${!data ? styles.loading : ""}`}
+      className={`${styles.mainContainer} ${isValidating ? styles.loading : ""}`}
       data-theme={theme}
     >
-      {!data && <Spinner />}
+      {isValidating && <Spinner />}
       {containers.map((Container, index) => (
         <Container
           key={index}
