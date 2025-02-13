@@ -86,6 +86,7 @@ export default async function handler(req, res) {
 
     const activitiesData = await activitiesResponse.json();
 
+    // ** Fetching all activities in batches from Supabase **
     let allActivities = [];
     let from = 0;
     const batchSize = 1000;
@@ -98,7 +99,7 @@ export default async function handler(req, res) {
 
       if (error) {
         console.error("Error fetching data from database:", error);
-        return;
+        return res.status(500).json({ error: "Failed to fetch data from DB" });
       }
 
       allActivities = allActivities.concat(batchActivities);
@@ -107,54 +108,73 @@ export default async function handler(req, res) {
       from += batchSize;
     }
 
-    const dbActivityIds = allActivities.map((activity) =>
-      activity.id.toString(),
-    );
-    const newActivities = activitiesData.filter(
-      (activity) =>
-        !dbActivityIds.includes(activity.id.toString()) &&
-        (activity.type === "Ride" || activity.type === "VirtualRide"),
+    // Extract existing activity IDs for comparison
+    const dbActivityIds = new Set(
+      allActivities.map((activity) => activity.id.toString()),
     );
 
-    function formatDate(dateString) {
-      const options = {
-        year: "numeric",
-        month: "short",
-        day: "numeric",
-        hour: "numeric",
-        minute: "numeric",
-        second: "numeric",
-        hour12: true,
-      };
-      return new Date(dateString).toLocaleString("en-US", options);
-    }
+    // ** Filter new activities to add **
+    const newActivities = activitiesData
+      .filter(
+        (activity) =>
+          !dbActivityIds.has(activity.id.toString()) &&
+          (activity.type === "Ride" || activity.type === "VirtualRide"),
+      )
+      .map((activity) => ({
+        id: activity.id,
+        activity_date: activity.start_date,
+        distance: activity.distance / 1000,
+        elapsed_time: activity.elapsed_time,
+        moving_time: activity.moving_time,
+        average_speed: activity.average_speed,
+        total_elevation_gain: activity.total_elevation_gain,
+        type: activity.type,
+      }));
 
+    // ** Insert new activities if there are any **
     if (newActivities.length > 0) {
-      const { error: insertError } = await supabase.from("activities").insert(
-        newActivities.map((activity) => ({
-          id: activity.id,
-          activity_date: formatDate(activity.start_date),
-          distance: activity.distance / 1000,
-          elapsed_time: activity.elapsed_time,
-          moving_time: activity.moving_time,
-          average_speed: activity.average_speed,
-          total_elevation_gain: activity.total_elevation_gain,
-          type: activity.type,
-        })),
-      );
+      const { error: insertError } = await supabase
+        .from("activities")
+        .insert(newActivities);
 
       if (insertError) {
-        console.error("Error inserting new data:", insertError);
-      } else {
-        console.log("New activities added to the database.");
+        console.error("Error inserting new activities:", insertError);
+        return res
+          .status(500)
+          .json({ error: "Failed to insert new activities" });
       }
+      console.log(`Inserted ${newActivities.length} new activities.`);
     } else {
       console.log("No new activities to add.");
     }
 
-    res.status(200).json(allActivities);
+    // ** Refetch all activities in batches after inserting new ones **
+    let updatedActivities = [];
+    from = 0;
+
+    while (true) {
+      const { data: batchUpdatedActivities, error } = await supabase
+        .from("activities")
+        .select("*")
+        .range(from, from + batchSize - 1)
+        .order("activity_date", { ascending: false });
+
+      if (error) {
+        console.error("Error fetching updated activities:", error);
+        return res
+          .status(500)
+          .json({ error: "Failed to fetch updated activities" });
+      }
+
+      updatedActivities = updatedActivities.concat(batchUpdatedActivities);
+
+      if (batchUpdatedActivities.length < batchSize) break;
+      from += batchSize;
+    }
+
+    res.status(200).json(updatedActivities);
   } catch (error) {
-    console.error(error);
+    console.error("Unexpected error:", error);
     res.status(500).json({ error: "Internal Server Error" });
   }
 }
