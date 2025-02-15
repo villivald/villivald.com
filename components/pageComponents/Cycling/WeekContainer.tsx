@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { CSSProperties, useState } from "react";
+import { CSSProperties, useState, useEffect } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 import {
   format,
@@ -31,6 +31,10 @@ export default function WeekContainer({
   const intl = useIntl();
 
   const [currentBaseDate, setCurrentBaseDate] = useState(today);
+
+  useEffect(() => {
+    setCurrentBaseDate(today);
+  }, [today]);
 
   const handlePreviousWeek = () => {
     setCurrentBaseDate((prevDate) => subDays(prevDate, 7));
