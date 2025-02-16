@@ -2462,6 +2462,51 @@
       "category": "non-fiction"
     },
     {
+      "title": "Икс",
+      "author": "Быков",
+      "date": "15.01.2025",
+      "image": "270.avif",
+      "rating": 3,
+      "language": "ru",
+      "category": "fiction"
+    },
+    {
+      "title": "Жар-птица",
+      "author": "А. Козырев",
+      "date": "31.01.2025",
+      "image": "271.avif",
+      "rating": 3,
+      "language": "ru",
+      "category": "non-fiction"
+    },
+    {
+      "title": "War",
+      "author": "Woodward",
+      "date": "01.02.2025",
+      "image": "272.avif",
+      "rating": 4,
+      "language": "en",
+      "category": "non-fiction"
+    },
+    {
+      "title": "Некто Гитлер",
+      "author": "С. Хафнер",
+      "date": "12.02.2025",
+      "image": "273.avif",
+      "rating": 4,
+      "language": "ru",
+      "category": "non-fiction"
+    },
+    {
+      "title": "The Secret Lives of Colour",
+      "author": "St. Clair",
+      "date": "16.02.2025",
+      "image": "274.avif",
+      "rating": 3,
+      "language": "en",
+      "category": "non-fiction"
+    },
+    {
       "title": "",
       "author": "",
       "date": "",
