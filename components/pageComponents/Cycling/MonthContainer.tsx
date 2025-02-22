@@ -137,7 +137,7 @@ export default function MonthContainer({
                   >
                     {typeOfActivity === "Ride" ? (
                       <Image
-                        src="/emojis/park.svg"
+                        src="/emojis/tree.svg"
                         alt={intl.formatMessage({ id: "alt.outdoorRide" })}
                         width={20}
                         height={20}
