@@ -189,6 +189,8 @@ const fi = {
   "alt.library": "Kansalliskirjaston logo",
   "alt.construction": "Työmaa emoji kuvake",
   "alt.calendar": "Kalenteri emoji kuvake",
+  "alt.outdoorRide": "Ulkopyöräily emoji kuvake",
+  "alt.zwiftRide": "Sisäpyöräily (Zwift) emoji kuvake",
 
   // Aria labels
   "aria.workandstudy": "Sivu jossa on tietoa minun työstä ja opiskelusta",

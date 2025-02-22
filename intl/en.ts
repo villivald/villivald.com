@@ -188,6 +188,8 @@ const en = {
   "alt.library": "National Library logo",
   "alt.construction": "Under construction emoji icon",
   "alt.calendar": "Calendar emoji icon",
+  "alt.outdoorRide": "Outdoor ride emoji icon",
+  "alt.zwiftRide": "Outdoor (Zwift) ride emoji icon",
 
   // Aria labels
   "aria.workandstudy": "Page with information about my work and studies",

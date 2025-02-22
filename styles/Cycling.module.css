@@ -244,6 +244,13 @@
   filter: invert(1) opacity(0.5);
 }
 
+.activityType:has(img)[data-activityType]:last-child {
+  position: absolute;
+  right: 0;
+  left: unset;
+  background-color: transparent;
+}
+
 @media (width > 1600px) {
   .mainContainer {
     min-width: 85vw;
@@ -256,6 +263,11 @@
     --year-all-size: 6rem;
     --font-size-data: 0.875rem;
     --font-size-hover: 0.75rem;
+  }
+
+  .activityType > img {
+    width: 1rem;
+    height: 1rem;
   }
 }
 

@@ -12,6 +12,7 @@ import {
   getTotalElevationGainOfPeriod,
   getDistanceOfDay,
   activitiesOfDay,
+  getTypeOfActivity,
 } from "./utils";
 
 import { ContainerProps } from "./types";
@@ -101,6 +102,10 @@ export default function MonthContainer({
               date,
               activitiesOfMonth(currentMonth, currentYear, activities),
             );
+            const typeOfActivity = getTypeOfActivity(
+              date,
+              activitiesOfMonth(currentMonth, currentYear, activities),
+            );
             return (
               <p
                 key={index}
@@ -116,11 +121,36 @@ export default function MonthContainer({
                   parseFloat(distance) < 20 && distance !== "0.00"
                 }
                 style={
-                  { "--distance": parseFloat(distance) / 110 } as CSSProperties
+                  {
+                    "--distance": parseFloat(distance) / 110,
+                    position: "relative",
+                  } as CSSProperties
                 }
               >
                 <span>{format(date, "dd")}</span>
                 {distance} km
+                {typeOfActivity && (
+                  <span
+                    className={styles.activityType}
+                    data-activityType={typeOfActivity}
+                  >
+                    {typeOfActivity === "Ride" ? (
+                      <Image
+                        src="/emojis/park.svg"
+                        alt={intl.formatMessage({ id: "alt.outdoorRide" })}
+                        width={20}
+                        height={20}
+                      />
+                    ) : (
+                      <Image
+                        src="/emojis/zwift.svg"
+                        alt={intl.formatMessage({ id: "alt.zwiftRide" })}
+                        width={20}
+                        height={20}
+                      />
+                    )}
+                  </span>
+                )}
               </p>
             );
           })}

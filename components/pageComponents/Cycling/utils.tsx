@@ -92,6 +92,15 @@ export const getDistanceOfDay = (date: string, activities: Activity[]) => {
   return totalDistance.toFixed(2);
 };
 
+// Get type of activity of a specific day
+export const getTypeOfActivity = (date: string, activities: Activity[]) => {
+  const activity = activities
+    .filter((activity) => isSameDay(activity.activity_date, date))
+    .sort((a, b) => b.moving_time - a.moving_time)[0];
+
+  return activity?.type || "";
+};
+
 // Get the total moving time of a period
 export const getTotalMovingTimeOfPeriod = (activities: Activity[]) => {
   return (

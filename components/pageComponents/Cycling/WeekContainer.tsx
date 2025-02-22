@@ -18,6 +18,7 @@ import {
   getDistanceOfDay,
   activitiesOfDay,
   activitiesOfWeek,
+  getTypeOfActivity,
 } from "./utils";
 
 import { ContainerProps } from "./types";
@@ -108,6 +109,10 @@ export default function WeekContainer({
               date,
               activitiesOfWeek(currentBaseDate, activities),
             );
+            const typeOfActivity = getTypeOfActivity(
+              date,
+              activitiesOfWeek(currentBaseDate, activities),
+            );
 
             return (
               <p
@@ -124,13 +129,38 @@ export default function WeekContainer({
                   parseFloat(distance) < 20 && distance !== "0.00"
                 }
                 style={
-                  { "--distance": parseFloat(distance) / 110 } as CSSProperties
+                  {
+                    "--distance": parseFloat(distance) / 110,
+                    position: "relative",
+                  } as CSSProperties
                 }
               >
                 <span>
                   <FormattedMessage id={`day.${format(date, "E")}`} />
                 </span>
                 {distance} km
+                {typeOfActivity && (
+                  <span
+                    className={styles.activityType}
+                    data-activityType={typeOfActivity}
+                  >
+                    {typeOfActivity === "Ride" ? (
+                      <Image
+                        src="/emojis/tree.svg"
+                        alt={intl.formatMessage({ id: "alt.outdoorRide" })}
+                        width={20}
+                        height={20}
+                      />
+                    ) : (
+                      <Image
+                        src="/emojis/zwift.svg"
+                        alt={intl.formatMessage({ id: "alt.zwiftRide" })}
+                        width={20}
+                        height={20}
+                      />
+                    )}
+                  </span>
+                )}
               </p>
             );
           })}
