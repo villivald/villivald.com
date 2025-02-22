@@ -88,7 +88,10 @@ const fi = {
   totalDistance: "Kokonaismatka",
   averageSpeed: "Keskinopeus",
   totalElevationGain: "Kokonaisnousu",
+  totalMovingTime: "Kokonaisaika",
   failedToLoad: "Lataus epäonnistui",
+  hour: "t",
+  minute: "min",
 
   // Days of the week
   "day.Mon": "Ma",

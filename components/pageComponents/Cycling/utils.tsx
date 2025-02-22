@@ -92,6 +92,27 @@ export const getDistanceOfDay = (date: string, activities: Activity[]) => {
   return totalDistance.toFixed(2);
 };
 
+// Get the total moving time of a period
+export const getTotalMovingTimeOfPeriod = (activities: Activity[]) => {
+  return (
+    activities?.reduce((total, activity) => total + activity.moving_time, 0) ||
+    0
+  );
+};
+
+// Get the total moving time in hours and minutes
+export const getTotalMovingTimeInHoursAndMinutes = (
+  activities: Activity[],
+  hourString: string,
+  minuteString: string,
+) => {
+  const totalMovingTime = getTotalMovingTimeOfPeriod(activities);
+  const hours = Math.floor(totalMovingTime / 3600);
+  const minutes = Math.floor((totalMovingTime % 3600) / 60);
+
+  return `${hours} ${hourString} ${minutes} ${minuteString}`;
+};
+
 // Get the total distance of a period
 export const getTotalDistanceOfPeriod = (activities: Activity[]) => {
   return (
@@ -105,10 +126,7 @@ export const getTotalDistanceOfPeriod = (activities: Activity[]) => {
 // Get the average speed of a period
 export const getAverageSpeedOfPeriod = (activities: Activity[]) => {
   const totalDistance = parseFloat(getTotalDistanceOfPeriod(activities));
-  const totalTime = activities?.reduce(
-    (total, activity) => total + activity.moving_time,
-    0,
-  );
+  const totalTime = getTotalMovingTimeOfPeriod(activities);
 
   const averageSpeed = totalDistance / (totalTime / 3600) || 0;
 

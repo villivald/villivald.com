@@ -86,7 +86,10 @@ const en = {
   totalDistance: "Total distance",
   averageSpeed: "Average speed",
   totalElevationGain: "Total elevation gain",
+  totalMovingTime: "Total time",
   failedToLoad: "Failed to load",
+  hour: "h",
+  minute: "min",
 
   // Days of the week
   "day.Mon": "Mon",
