@@ -42,7 +42,8 @@ export default function MonthContainer({
     setCurrentBaseDate(today);
   };
 
-  const isCurrentMonth = currentMonth === today.getMonth();
+  const isCurrentMonth =
+    currentMonth === today.getMonth() && currentYear === today.getFullYear();
 
   return (
     <section>
