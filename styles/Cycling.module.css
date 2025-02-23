@@ -244,7 +244,7 @@
   filter: invert(1) opacity(0.5);
 }
 
-.activityType:has(img)[data-activityType]:last-child {
+.activityType:has(img)[data-activitytype]:last-child {
   position: absolute;
   right: 0;
   left: unset;

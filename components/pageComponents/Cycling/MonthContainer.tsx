@@ -48,7 +48,10 @@ export default function MonthContainer({
   return (
     <section>
       <span className={styles.navigation} data-theme={theme}>
-        <button onClick={handlePreviousMonth}>
+        <button
+          onClick={handlePreviousMonth}
+          disabled={currentYear === 2019 && currentMonth === 4}
+        >
           <Image
             src="/emojis/arrowLeft.svg"
             alt={intl.formatMessage({ id: "previousMonth" })}
@@ -133,7 +136,7 @@ export default function MonthContainer({
                 {typeOfActivity && (
                   <span
                     className={styles.activityType}
-                    data-activityType={typeOfActivity}
+                    data-activitytype={typeOfActivity}
                   >
                     {typeOfActivity === "Ride" ? (
                       <Image

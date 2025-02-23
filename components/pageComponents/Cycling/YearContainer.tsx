@@ -44,7 +44,7 @@ export default function YearContainer({
   return (
     <section>
       <span className={styles.navigation} data-theme={theme}>
-        <button onClick={handlePreviousYear}>
+        <button onClick={handlePreviousYear} disabled={currentYear === 2019}>
           <Image
             src="/emojis/arrowLeft.svg"
             alt={intl.formatMessage({ id: "previousYear" })}

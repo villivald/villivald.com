@@ -142,7 +142,7 @@ export default function WeekContainer({
                 {typeOfActivity && (
                   <span
                     className={styles.activityType}
-                    data-activityType={typeOfActivity}
+                    data-activitytype={typeOfActivity}
                   >
                     {typeOfActivity === "Ride" ? (
                       <Image
