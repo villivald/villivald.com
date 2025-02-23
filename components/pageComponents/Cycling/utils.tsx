@@ -34,11 +34,14 @@ export const useDynamicToday = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setToday(new Date());
+      const newDate = new Date();
+      if (!isSameDay(today, newDate)) {
+        setToday(newDate);
+      }
     }, 1000 * 60);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [today]);
 
   return today;
 };
