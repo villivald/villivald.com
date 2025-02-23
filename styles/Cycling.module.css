@@ -305,6 +305,11 @@
   .mainContainer section h2 {
     font-size: var(--fontSize-header4);
   }
+
+  .activityType > img {
+    width: 0.875rem;
+    height: 0.875rem;
+  }
 }
 
 @media (width < 500px) {
@@ -314,6 +319,11 @@
     --font-size-data: 0.625rem;
     --font-size-hover: 0.5rem;
     --totalContainer-font-size: 0.75rem;
+  }
+
+  .activityType > img {
+    width: 0.75rem;
+    height: 0.75rem;
   }
 }
 
