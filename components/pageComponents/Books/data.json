@@ -2426,6 +2426,14 @@
       "category": "non-fiction"
     },
     {
+      "title": "",
+      "author": "",
+      "date": "",
+      "image": "",
+      "rating": 0,
+      "year": 2024
+    },
+    {
       "title": "Дни",
       "author": "Шульгин",
       "date": "02.01.2025",
@@ -2512,7 +2520,7 @@
       "date": "",
       "image": "",
       "rating": 0,
-      "year": 2024
+      "year": 2025
     }
   ]
 }

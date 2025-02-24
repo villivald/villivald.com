@@ -8,7 +8,8 @@
 
 @font-face {
   font-family: Satoshi-Variable;
-  src: url("../public/Satoshi-Variable.woff2") format("woff2"),
+  src:
+    url("../public/Satoshi-Variable.woff2") format("woff2"),
     url("../public/Satoshi-Variable.woff") format("woff"),
     url("../public/Satoshi-Variable.ttf") format("truetype");
   font-weight: 300 900;
