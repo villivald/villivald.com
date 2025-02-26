@@ -79,10 +79,10 @@
       "image": "pocket"
     },
     {
-      "name": "Bookbeat",
-      "link": "https://www.bookbeat.com/",
+      "name": "Audible",
+      "link": "https://www.audible.com/",
       "description": "Audiobook app",
-      "image": "bookbeat"
+      "image": "audible"
     },
     {
       "name": "Strava",

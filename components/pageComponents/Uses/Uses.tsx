@@ -52,12 +52,12 @@ export default function Uses() {
       <figure>
         <Image
           src="/images/uses.avif"
-          alt="Workplace - laptop, external monitor, lamp, pens, notebook, etc."
+          alt="My workplace - laptop, external monitor, lamp, pens, notebook, etc."
           width={500}
           height={300}
           useMap="#workmap"
         />
-        <map name="workmap">
+        {/* <map name="workmap">
           <area
             shape="rect"
             coords="34,44,270,350"
@@ -76,7 +76,7 @@ export default function Uses() {
             alt="Cup of coffee"
             href="coffee.htm"
           />
-        </map>
+        </map> */}
       </figure>
       <p data-theme={theme}>
         <FormattedMessage id="usesText" />
@@ -90,7 +90,7 @@ export default function Uses() {
           height={32}
         />
         <FormattedMessage id="lastUpdated" />
-        <time dateTime="2025-01-18">18.01.2025</time>
+        <time dateTime="2025-02-26">26.02.2025</time>
       </p>
       <div data-theme={theme}>
         {dataToRender.map((item) => {
