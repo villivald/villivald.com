@@ -57,7 +57,7 @@ const booksDataSets = [
   { "2019": "#ffa600" },
 ];
 
-// Get the last two years dynamically
+// Get the last three years dynamically
 const availableYears = booksDataSets.map((year) => Object.keys(year)[0]);
 const lastThreeYears = availableYears.slice(0, 3);
 
