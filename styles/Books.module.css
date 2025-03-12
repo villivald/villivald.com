@@ -30,10 +30,10 @@
   flex-wrap: wrap;
 }
 
-.mainContainer div:has(.languageChart) {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 1rem;
+.mainContainer div:has(.doughnutChart) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 35ch), 1fr));
+  gap: 2rem;
 }
 
 .time[data-theme="dark"] {
@@ -89,17 +89,15 @@
   padding: 0.5rem;
 }
 
-.languageChart {
-  width: 20vw;
-  height: 20vw;
+.doughnutChart {
   justify-content: center;
 }
 
-.mainContainer[data-theme="dark"] .languageChart > h2 {
+.mainContainer[data-theme="dark"] .doughnutChart > h2 {
   color: var(--color-white);
 }
 
-.languageChart > h2 > span {
+.doughnutChart > h2 > span {
   color: var(--color-brand-green);
 }
 
@@ -244,20 +242,6 @@ main[data-theme="dark"] .button:focus-visible {
   }
 }
 
-@media (width <= 1250px) {
-  .mainContainer div:has(.languageChart) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    place-items: center;
-    gap: 3rem;
-  }
-
-  .languageChart {
-    width: 28vw;
-    height: 30vw;
-  }
-}
-
 @media (width <= 900px) {
   .booksContainer {
     padding-inline: 0;
@@ -275,18 +259,6 @@ main[data-theme="dark"] .button:focus-visible {
 
   .mainContainer canvas:last-of-type {
     display: inline !important;
-  }
-}
-
-@media (width <= 750px) {
-  .mainContainer div:has(.languageChart) {
-    grid-template-columns: 1fr;
-    gap: 4rem;
-  }
-
-  .languageChart {
-    width: 60vw;
-    height: 62vw;
   }
 }
 

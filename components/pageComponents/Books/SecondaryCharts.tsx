@@ -22,7 +22,7 @@ export default function CategoryCharts({ type }: { type: string }) {
     ).length;
   };
 
-  const years = ["2024", "2023", "2022", "2021", "2020"];
+  const years = ["2025", "2024", "2023", "2022", "2021", "2020", "2019"];
   const intl = useIntl();
 
   const labels =
@@ -47,7 +47,7 @@ export default function CategoryCharts({ type }: { type: string }) {
     <div>
       {years.map((year) => {
         return (
-          <div key={year} className={styles.languageChart}>
+          <div key={year} className={styles.doughnutChart}>
             <h2>
               {year} <span>(</span>
               {data.books.filter((book) => book.date.includes(year)).length}
