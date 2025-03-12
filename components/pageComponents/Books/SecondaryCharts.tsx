@@ -8,11 +8,17 @@ import styles from "../../../styles/Books.module.css";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
+interface Book {
+  date: string;
+  language?: string;
+  category?: string;
+}
+
 export default function CategoryCharts({ type }: { type: string }) {
   const formatData = (year: string, param: string) => {
     return data.books.filter(
-      // @ts-ignore: Should check in the future
-      (book) => book.date.includes(year) && book[type] === param,
+      (book: Book) =>
+        book.date.includes(year) && book[type as keyof Book] === param,
     ).length;
   };
 
