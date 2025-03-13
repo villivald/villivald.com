@@ -125,6 +125,18 @@ export const getTotalMovingTimeInHoursAndMinutes = (
   return `${hours} ${hourString} ${minutes} ${minuteString}`;
 };
 
+// Get the total moving time in hours, minutes and seconds
+export const getTotalMovingTimeInHoursMinutesAndSeconds = (
+  activities: Activity[],
+) => {
+  const totalMovingTime = getTotalMovingTimeOfPeriod(activities);
+  const hours = Math.floor(totalMovingTime / 3600);
+  const minutes = Math.floor((totalMovingTime % 3600) / 60);
+  const seconds = Math.floor(totalMovingTime % 60);
+
+  return `${hours}:${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
+};
+
 // Get the total distance of a period
 export const getTotalDistanceOfPeriod = (activities: Activity[]) => {
   return (

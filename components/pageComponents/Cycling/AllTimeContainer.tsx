@@ -8,6 +8,7 @@ import {
   getTotalElevationGainOfPeriod,
   activitiesOfYear,
   getTotalDistanceOfPeriod,
+  getTotalMovingTimeInHoursMinutesAndSeconds,
 } from "./utils";
 
 import { ContainerProps } from "./types";
@@ -38,7 +39,9 @@ export default function AllTimeContainer({
                   activitiesOfYear(year, activities),
                 )}km/h\n⛰️ ${getTotalElevationGainOfPeriod(
                   activitiesOfYear(year, activities),
-                )}m`}
+                )}m\n⏱️ ${getTotalMovingTimeInHoursMinutesAndSeconds(
+                  activitiesOfYear(year, activities),
+                )}`}
                 data-color={parseFloat(distance) > 5000}
                 data-invertcolor={parseFloat(distance) < 2500}
                 style={

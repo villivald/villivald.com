@@ -11,6 +11,7 @@ import {
   getAverageSpeedOfPeriod,
   getTotalElevationGainOfPeriod,
   activitiesOfMonth,
+  getTotalMovingTimeInHoursMinutesAndSeconds,
 } from "./utils";
 
 import { ContainerProps } from "./types";
@@ -104,7 +105,13 @@ export default function YearContainer({
                     currentBaseDate.getFullYear(),
                     activities,
                   ),
-                )}m`}
+                )}m\n⏱️ ${getTotalMovingTimeInHoursMinutesAndSeconds(
+                  activitiesOfMonth(
+                    index,
+                    currentBaseDate.getFullYear(),
+                    activities,
+                  ),
+                )}`}
                 data-color={parseFloat(distance) > 600}
                 data-invertcolor={
                   parseFloat(distance) < 250 && distance !== "0.00"

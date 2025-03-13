@@ -13,6 +13,7 @@ import {
   getDistanceOfDay,
   activitiesOfDay,
   getTypeOfActivity,
+  getTotalMovingTimeInHoursMinutesAndSeconds,
 } from "./utils";
 
 import { ContainerProps } from "./types";
@@ -119,7 +120,9 @@ export default function MonthContainer({
                   activitiesOfDay(date, activities),
                 )}km/h\n⛰️${getTotalElevationGainOfPeriod(
                   activitiesOfDay(date, activities),
-                )}m`}
+                )}m\n⏱️${getTotalMovingTimeInHoursMinutesAndSeconds(
+                  activitiesOfDay(date, activities),
+                )}`}
                 data-color={parseFloat(distance) > 40}
                 data-invertcolor={
                   parseFloat(distance) < 20 && distance !== "0.00"
