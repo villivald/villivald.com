@@ -134,6 +134,16 @@
   color: var(--color-black);
 }
 
+.mainContainer[data-theme="dark"] .weekContainer > p[data-color="true"] > span,
+.mainContainer[data-theme="dark"] .monthContainer > p[data-color="true"] > span,
+.mainContainer[data-theme="dark"] .yearContainer > p[data-color="true"] > span,
+.mainContainer[data-theme="dark"]
+  .allTimeContainer
+  > p[data-color="true"]
+  > span {
+  color: var(--color-white);
+}
+
 .mainContainer[data-theme="dark"] .weekContainer > p[data-invertcolor="true"],
 .mainContainer[data-theme="dark"] .monthContainer > p[data-invertcolor="true"],
 .mainContainer[data-theme="dark"] .yearContainer > p[data-invertcolor="true"],
