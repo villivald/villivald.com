@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext, useMemo } from "react";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -22,15 +22,6 @@ ChartJS.register(
   Tooltip,
   Legend,
 );
-
-const options = {
-  responsive: true,
-  plugins: {
-    legend: {
-      position: "top" as const,
-    },
-  },
-};
 
 const monthLabels = Array.from({ length: 12 }, (_, month) =>
   new Date(0, month).toLocaleString("en-US", { month: "long" }),
@@ -61,26 +52,62 @@ const booksDataSets = [
 const availableYears = booksDataSets.map((year) => Object.keys(year)[0]);
 const lastThreeYears = availableYears.slice(0, 3);
 
-const books = {
-  labels: monthLabels,
-  datasets: booksDataSets.map((year) => {
-    const yearLabel = Object.keys(year)[0];
-    return {
-      label: yearLabel,
-      data: handleData(yearLabel),
-      backgroundColor: Object.values(year)[0],
-      hidden: !lastThreeYears.includes(yearLabel),
-    };
-  }),
-};
-
 export default function BarChart() {
   const theme = useContext(ThemeContext);
   const intl = useIntl();
 
-  useEffect(() => {
-    ChartJS.defaults.color = theme === "dark" ? "#fff" : "#1c1d2b";
+  const getPrimaryThemeColor = (theme: string) => {
+    return theme === "dark" ? "#fff" : "hsl(236deg 21% 14%)";
+  };
+
+  const getSecondaryThemeColor = (theme: string) => {
+    return theme === "dark" ? "hsl(258deg 10% 50%)" : "hsl(258deg 10% 75%)";
+  };
+
+  const options = useMemo(() => {
+    return {
+      responsive: true,
+      plugins: {
+        legend: {
+          position: "top" as const,
+          labels: { color: getPrimaryThemeColor(theme) },
+        },
+        title: { color: getPrimaryThemeColor(theme) },
+        tooltip: {
+          titleColor: getPrimaryThemeColor(theme),
+          bodyColor: getPrimaryThemeColor(theme),
+          backgroundColor: getPrimaryThemeColor(
+            theme === "dark" ? "light" : "dark",
+          ),
+        },
+      },
+      scales: {
+        x: {
+          ticks: { color: getPrimaryThemeColor(theme) },
+          grid: { color: getSecondaryThemeColor(theme) },
+        },
+        y: {
+          ticks: { color: getPrimaryThemeColor(theme) },
+          grid: { color: getSecondaryThemeColor(theme) },
+        },
+      },
+    };
   }, [theme]);
+
+  const books = useMemo(() => {
+    return {
+      labels: monthLabels,
+      datasets: booksDataSets.map((year) => {
+        const yearLabel = Object.keys(year)[0];
+        return {
+          label: yearLabel,
+          data: handleData(yearLabel),
+          backgroundColor: Object.values(year)[0],
+          hidden: !lastThreeYears.includes(yearLabel),
+        };
+      }),
+    };
+  }, []);
 
   return (
     <Bar
