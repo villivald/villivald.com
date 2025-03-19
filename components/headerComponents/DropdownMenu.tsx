@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { useContext, useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
@@ -74,6 +75,10 @@ export default function DropdownMenu() {
                 window.location.href = `/${item}`;
               }
             }}
+            data-active={
+              usePathname() === `/${item}` ||
+              (usePathname() === "/statistics" && item === "books")
+            }
           >
             <Link href={`/${item}`} tabIndex={-1}>
               <Image
