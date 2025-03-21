@@ -42,7 +42,8 @@
   }
 
   .title:hover {
-    text-shadow: 0 -1.25rem 0 var(--color-brand-teal),
+    text-shadow:
+      0 -1.25rem 0 var(--color-brand-teal),
       0 1.25rem 0 var(--color-brand-red);
   }
 }
@@ -57,14 +58,16 @@
   }
 
   .title:hover {
-    text-shadow: 0 -1.25rem 0 var(--color-brand-teal),
+    text-shadow:
+      0 -1.25rem 0 var(--color-brand-teal),
       0 1.25rem 0 var(--color-brand-red);
   }
 }
 
 @media (width <= 700px) {
   .title:hover {
-    text-shadow: 0 -1rem 0 var(--color-brand-teal),
+    text-shadow:
+      0 -1rem 0 var(--color-brand-teal),
       0 1rem 0 var(--color-brand-red);
   }
 }
