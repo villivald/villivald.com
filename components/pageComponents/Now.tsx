@@ -41,7 +41,7 @@ export default function Now() {
             height={32}
           />
           <FormattedMessage id="lastUpdated" />
-          <time dateTime="2025-01-22">22.01.2025</time>
+          <time dateTime="2025-03-22">22.03.2025</time>
         </p>
       </section>
       <section>
@@ -59,12 +59,12 @@ export default function Now() {
             >
               cycle
             </Link>{" "}
-            at least 150 km per week. The last couple of weeks it worked out
-            pretty well.
+            with a bit more consistency and more structured training. Doing some
+            stretches on a daily basis for the first time in my life.
           </p>
           <p lang="en">
-            I have finally set up an office room at home and am working on
-            making it more ergonomic and functional.
+            Planning a motorhome trip to France in the summer with my wife as a
+            reincarnation of our previous intrerail trips.
           </p>
         </article>
         <article>
@@ -112,8 +112,8 @@ export default function Now() {
             <FormattedMessage id="watching" />
           </h2>
           <p lang="en">
-            Mostly YouTube, Dexter, Severance, Tulsa King. The Room Next Door
-            and Queen of Fucking Everything were nice too.
+            Mostly YouTube, Severance, and White Lotus. The Room Next Door and
+            Queen of Fucking Everything were nice too.
           </p>
         </article>
         <article>
@@ -122,7 +122,8 @@ export default function Now() {
           </h2>
           <p lang="en">
             Going pretty ok so far at the new job. Looking forward to a better
-            work-life balance.
+            work-life balance. Gaining more experience in the field, as well as
+            going out of my comfort zone.
           </p>
         </article>
         <article>
@@ -130,29 +131,17 @@ export default function Now() {
             <FormattedMessage id="sideProjects" />
           </h2>
           <p lang="en">
-            My{" "}
+            I am starting to think about another rebuild of my personal website
+            as I am going through the{" "}
             <Link
-              href="https://github.com/villivald/cyclist.fi"
+              href="https://piccalil.li/complete-css/"
               target="_blank"
               rel="noopener noreferrer"
               hrefLang="en"
             >
-              cycling-related project
+              Complete CSS
             </Link>{" "}
-            remains in somewhat limbo at the moment. New ideas come and go, but
-            nothing concrete yet.
-          </p>
-          <p lang="en">
-            A Strava integration is finally{" "}
-            <Link
-              href="/cycling"
-              target="_blank"
-              rel="noopener noreferrer"
-              hrefLang="en"
-            >
-              live
-            </Link>
-            .
+            course.
           </p>
         </article>
         <article>
@@ -168,8 +157,9 @@ export default function Now() {
             >
               Cleveland
             </Link>{" "}
-            has gone 11-0 so far, and that is something new. <br />
-            Upd. 22.01.25 - 33-6 💪
+            has gone 11-0 so far, and it is something new. <br />
+            Upd. 22.01.25 - 33-6 💪 <br />
+            Upd. 22.03.25 - 56-14 🚀
           </p>
         </article>
       </section>
