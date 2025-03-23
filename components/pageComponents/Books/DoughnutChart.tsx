@@ -32,7 +32,7 @@ const options = {
   plugins: {
     legend: {
       position: "top" as const,
-      onClick: function (e: any, legendItem: any, legend: any) {
+      onClick: function (_e: never, legendItem: any, legend: any) {
         const index = legendItem.index;
         const ci = legend.chart;
 

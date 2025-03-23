@@ -16,6 +16,13 @@ interface DataArray {
   data: DataObject[];
 }
 
+interface PostObject {
+  id: number;
+  title?: string;
+  canonical_url?: string;
+  cover_image?: string;
+}
+
 export default function BlogCardList({ data }: DataArray) {
   const [randomPostData, setRandomPostData] = useState([]);
   const [loadRandomPost, setLoadRandomPost] = useState(false);
@@ -29,7 +36,7 @@ export default function BlogCardList({ data }: DataArray) {
   }
 
   useEffect(() => {
-    loadRandomPost && fetchRandomPost();
+    if (loadRandomPost) fetchRandomPost();
   }, [loadRandomPost]);
 
   const formattedData = data && [
@@ -55,13 +62,15 @@ export default function BlogCardList({ data }: DataArray) {
         <FormattedMessage id="blogPosts" />
       </h1>
       <div className={styles.blogList}>
-        {Object.values(formattedData).map((post: any) =>
+        {Object.values(formattedData).map((post: PostObject) =>
           post.title ? (
             <div key={post.id} className={styles.blogCard} data-theme={theme}>
               <a href={post.canonical_url} hrefLang="en">
                 <Image
                   priority
-                  src={post.cover_image}
+                  src={
+                    post.cover_image || "https://via.placeholder.com/400x200"
+                  }
                   alt="" // set alt to empty string to avoid screen readers spell the image related text twice
                   height={200}
                   width={400}

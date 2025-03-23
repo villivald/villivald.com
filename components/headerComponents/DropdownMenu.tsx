@@ -11,6 +11,7 @@ export default function DropdownMenu() {
   const theme = useContext(ThemeContext);
   const [menuOpen, setMenuOpen] = useState(false);
   const intl = useIntl();
+  const pathname = usePathname();
 
   const menuItems = [
     "about",
@@ -76,8 +77,8 @@ export default function DropdownMenu() {
               }
             }}
             data-active={
-              usePathname() === `/${item}` ||
-              (usePathname() === "/statistics" && item === "books")
+              pathname === `/${item}` ||
+              (pathname === "/statistics" && item === "books")
             }
           >
             <Link href={`/${item}`} tabIndex={-1}>
