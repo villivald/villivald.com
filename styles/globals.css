@@ -124,6 +124,13 @@
   margin: 0;
 }
 
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
 /*
   Typographic tweaks!
   3. Add accessible line-height
@@ -175,6 +182,10 @@ h6 {
 #root,
 #__next {
   isolation: isolate;
+}
+
+@view-transition {
+  navigation: auto;
 }
 
 p,
