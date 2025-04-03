@@ -72,7 +72,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <div className={`${crete.variable} ${amiko.variable} ${istok.variable}`}>
-      <ThemeContext.Provider value={theme}>
+      <ThemeContext value={theme}>
         <IntlProvider
           locale={locale}
           messages={translations[locale]}
@@ -82,7 +82,7 @@ export default function App({ Component, pageProps }: AppProps) {
             <Component {...pageProps} />
           </Layout>
         </IntlProvider>
-      </ThemeContext.Provider>
+      </ThemeContext>
       <Analytics />
     </div>
   );
