@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { useMemo, useCallback, useRef, useContext } from "react";
+import { useRef, useContext } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 import { useVirtualizer } from "@tanstack/react-virtual";
 
@@ -26,12 +26,12 @@ export default function Books() {
   const router = useRouter();
   const intl = useIntl();
 
-  const sortedBooks: Book[] = useMemo(() => [...data.books].reverse(), []);
+  const sortedBooks: Book[] = [...data.books].reverse();
 
-  const yearBooks = useCallback((year: string) => {
+  const yearBooks = (year: string) => {
     const books = data.books.filter((book) => book.date.includes(year)).length;
     return books;
-  }, []);
+  };
 
   const virtualizer = useVirtualizer({
     count: sortedBooks.length,
