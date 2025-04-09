@@ -25,7 +25,7 @@ export default function Footer() {
     },
     {
       name: "bluesky",
-      link: "https://bsky.app/profile/villivald.bsky.social",
+      link: "https://bsky.app/profile/villivald.com",
       altText: "blueskyLogo",
     },
   ];

@@ -44,7 +44,7 @@
 
 - Website: https://villivald.com/
 - Blog: https://create-react-app.com/
-- Bluesky: [@villivald](https://bsky.app/profile/villivald.bsky.social)
+- Bluesky: [@villivald](https://bsky.app/profile/villivald.com)
 - LinkedIn: [@villivald](https://linkedin.com/in/villivald)
 
 ## 🤝 Contributing

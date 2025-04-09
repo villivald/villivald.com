@@ -14,7 +14,7 @@ export default function Contact() {
     <div className={styles.mainContainer} data-theme={theme}>
       <div>
         <Link
-          href="https://bsky.app/profile/villivald.bsky.social"
+          href="https://bsky.app/profile/villivald.com"
           target="_blank"
           rel="noopener noreferrer"
           hrefLang="en"
