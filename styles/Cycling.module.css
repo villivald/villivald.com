@@ -134,12 +134,21 @@
   color: var(--color-black);
 }
 
-.mainContainer[data-theme="dark"] .weekContainer > p[data-color="true"] > span,
-.mainContainer[data-theme="dark"] .monthContainer > p[data-color="true"] > span,
-.mainContainer[data-theme="dark"] .yearContainer > p[data-color="true"] > span,
+.mainContainer[data-theme="dark"]
+  .weekContainer
+  > p[data-color="true"]:not([data-today="true"])
+  > span,
+.mainContainer[data-theme="dark"]
+  .monthContainer
+  > p[data-color="true"]:not([data-today="true"])
+  > span,
+.mainContainer[data-theme="dark"]
+  .yearContainer
+  > p[data-color="true"]:not([data-thismonth="true"])
+  > span,
 .mainContainer[data-theme="dark"]
   .allTimeContainer
-  > p[data-color="true"]
+  > p[data-color="true"]:not([data-thisyear="true"])
   > span {
   color: var(--color-white);
 }
