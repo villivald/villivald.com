@@ -215,21 +215,21 @@ main[data-theme="dark"] .button:focus-visible {
 .button:first-child[data-active="false"] {
   transform: perspective(1.75rem) rotateY(2deg);
   box-shadow:
-    -4px 0 0 2px hsla(0deg 0% 0% / 30%),
-    0 0 1px 2px hsla(0deg 0% 0% / 70%),
-    inset 0 2px 0 hsla(0deg 0% 100% / 60%),
-    inset 0 -1px 0 1px hsla(0deg 0% 0% / 30%),
-    0 8px 10px hsla(0deg 0% 0% / 15%);
+    -4px 0 0 2px hsl(0deg 0% 0% / 30%),
+    0 0 1px 2px hsl(0deg 0% 0% / 70%),
+    inset 0 2px 0 hsl(0deg 0% 100% / 60%),
+    inset 0 -1px 0 1px hsl(0deg 0% 0% / 30%),
+    0 8px 10px hsl(0deg 0% 0% / 15%);
 }
 
 .button:last-child[data-active="false"] {
   transform: perspective(1.75rem) rotateY(358deg);
   box-shadow:
-    4px 0 0 2px hsla(0deg 0% 0% / 30%),
-    0 0 1px 2px hsla(0deg 0% 0% / 70%),
-    inset 0 2px 0 hsla(0deg 0% 100% / 60%),
-    inset 0 -1px 0 1px hsla(0deg 0% 0% / 30%),
-    0 8px 10px hsla(0deg 0% 0% / 15%);
+    4px 0 0 2px hsl(0deg 0% 0% / 30%),
+    0 0 1px 2px hsl(0deg 0% 0% / 70%),
+    inset 0 2px 0 hsl(0deg 0% 100% / 60%),
+    inset 0 -1px 0 1px hsl(0deg 0% 0% / 30%),
+    0 8px 10px hsl(0deg 0% 0% / 15%);
 }
 
 .mainContainer > canvas:last-of-type {

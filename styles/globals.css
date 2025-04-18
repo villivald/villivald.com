@@ -22,12 +22,12 @@
   --color-brand-yellow: hsl(51deg 74% 60%);
   --color-brand-yellow-saturated: hsl(55deg 100% 60%);
   --color-brand-green: hsl(141deg 40% 65%);
-  --color-brand-green50: hsla(141deg 40% 65% / 50%);
+  --color-brand-green50: hsl(141deg 40% 65% / 50%);
   --color-brand-teal: hsl(187deg 52% 22%);
-  --color-brand-teal30: hsla(187deg 52% 22% / 30%);
+  --color-brand-teal30: hsl(187deg 52% 22% / 30%);
   --color-brand-red: hsl(10deg 94% 60%);
-  --color-brand-red30: hsla(10deg 94% 60% / 30%);
-  --color-brand-violet30: hsla(258deg 100% 60% / 30%);
+  --color-brand-red30: hsl(10deg 94% 60% / 30%);
+  --color-brand-violet30: hsl(258deg 100% 60% / 30%);
   --color-brand-grey30: hsl(258deg 10% 30%);
   --color-brand-grey50: hsl(258deg 10% 50%);
   --color-brand-grey: hsl(258deg 10% 80%);
@@ -36,7 +36,7 @@
   --color-brand-dark: hsl(236deg 21% 14%);
   --color-brand-dark80: hsl(236deg 21% 26%);
   --color-white: hsl(0deg 0% 100%);
-  --color-white40: hsla(0deg 0% 100% / 40%);
+  --color-white40: hsl(0deg 0% 100% / 40%);
   --color-skin: hsl(24deg 71.4% 76.7%);
   --color-wheat: hsl(46deg 57% 88%);
   --color-almost-white: hsl(22deg 67% 98%);
@@ -44,14 +44,14 @@
 
   /* Shades of black */
   --color-black: hsl(0deg 0% 0%);
-  --color-black-75: hsla(0deg 0% 0% / 75%);
-  --color-black-38: hsla(0deg 0% 0% / 38%);
-  --color-black-20: hsla(0deg 0% 0% / 20%);
-  --color-black-14: hsla(0deg 0% 0% / 14%);
-  --color-black-12: hsla(0deg 0% 0% / 12%);
-  --color-black-10: hsla(0deg 0% 0% / 10%);
-  --color-black-8: hsla(0deg 0% 0% / 8%);
-  --color-black-4: hsla(0deg 0% 0% / 4%);
+  --color-black-75: hsl(0deg 0% 0% / 75%);
+  --color-black-38: hsl(0deg 0% 0% / 38%);
+  --color-black-20: hsl(0deg 0% 0% / 20%);
+  --color-black-14: hsl(0deg 0% 0% / 14%);
+  --color-black-12: hsl(0deg 0% 0% / 12%);
+  --color-black-10: hsl(0deg 0% 0% / 10%);
+  --color-black-8: hsl(0deg 0% 0% / 8%);
+  --color-black-4: hsl(0deg 0% 0% / 4%);
 
   /* Self-hosted fonts */
   --font-brand: "Nabla", serif;
