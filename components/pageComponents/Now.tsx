@@ -41,7 +41,7 @@ export default function Now() {
             height={32}
           />
           <FormattedMessage id="lastUpdated" />
-          <time dateTime="2025-03-22">22.03.2025</time>
+          <time dateTime="2025-04-20">20.04.2025</time>
         </p>
       </section>
       <section>
@@ -112,8 +112,7 @@ export default function Now() {
             <FormattedMessage id="watching" />
           </h2>
           <p lang="en">
-            Mostly YouTube, Severance, and White Lotus. The Room Next Door and
-            Queen of Fucking Everything were nice too.
+            YouTube, Black Mirror, The Handmaid&#39;s Tale, The Studio.
           </p>
         </article>
         <article>
@@ -143,23 +142,35 @@ export default function Now() {
             </Link>{" "}
             course.
           </p>
+          <p lang="en">
+            My{" "}
+            <Link
+              href="https://github.com/villivald/cyclist.fi"
+              target="_blank"
+              rel="noopener noreferrer"
+              hrefLang="en"
+            >
+              cycling-related project
+            </Link>{" "}
+            is finally starting to take some shape. Looking forward to going
+            live this spring.
+          </p>
         </article>
         <article>
           <h2>
             <FormattedMessage id="interestingThings" />
           </h2>
           <p lang="en">
+            Never knew that{" "}
             <Link
-              href="https://www.nba.com/cavaliers/"
+              href="https://en.wikipedia.org/wiki/Common_wood_pigeon"
               target="_blank"
               rel="noopener noreferrer"
               hrefLang="en"
             >
-              Cleveland
+              wood pigeons
             </Link>{" "}
-            has gone 11-0 so far, and it is something new. <br />
-            Upd. 22.01.25 - 33-6 💪 <br />
-            Upd. 22.03.25 - 56-14 🚀
+            exist before I moved to the current place.
           </p>
         </article>
       </section>
