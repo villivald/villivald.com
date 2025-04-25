@@ -1,13 +1,12 @@
+import { useVirtualizer } from "@tanstack/react-virtual";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { useRef, useContext } from "react";
+import { useContext, useRef } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
-import { useVirtualizer } from "@tanstack/react-virtual";
-
-import data from "./data.json";
 
 import { ThemeContext } from "../../../context";
 import styles from "../../../styles/Books.module.css";
+import data from "./data.json";
 
 type Book = {
   title: string;

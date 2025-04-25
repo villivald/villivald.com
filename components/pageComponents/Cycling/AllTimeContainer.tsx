@@ -1,18 +1,17 @@
 import { CSSProperties } from "react";
 import { FormattedMessage } from "react-intl";
 
-import TotalComponent from "./TotalComponent";
-import {
-  yearsOfActivities,
-  getAverageSpeedOfPeriod,
-  getTotalElevationGainOfPeriod,
-  activitiesOfYear,
-  getTotalDistanceOfPeriod,
-  getTotalMovingTimeInHoursMinutesAndSeconds,
-} from "./utils";
-
-import { ContainerProps } from "./types";
 import styles from "../../../styles/Cycling.module.css";
+import TotalComponent from "./TotalComponent";
+import { ContainerProps } from "./types";
+import {
+  activitiesOfYear,
+  getAverageSpeedOfPeriod,
+  getTotalDistanceOfPeriod,
+  getTotalElevationGainOfPeriod,
+  getTotalMovingTimeInHoursMinutesAndSeconds,
+  yearsOfActivities,
+} from "./utils";
 
 export default function AllTimeContainer({
   today,

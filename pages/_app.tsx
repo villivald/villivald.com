@@ -1,15 +1,14 @@
+import "../styles/globals.css";
+
+import { Analytics } from "@vercel/analytics/react";
 import type { AppProps } from "next/app";
 import { Amiko, Crete_Round, Istok_Web } from "next/font/google";
-import { Analytics } from "@vercel/analytics/react";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { IntlProvider } from "react-intl";
 
 import Layout from "../components/layout";
-
 import { ThemeContext } from "../context";
 import { translations } from "../intl";
-
-import "../styles/globals.css";
 
 const crete = Crete_Round({
   subsets: ["latin"],

@@ -1,5 +1,5 @@
-import { get } from "@vercel/edge-config";
 import { createClient } from "@supabase/supabase-js";
+import { get } from "@vercel/edge-config";
 
 export default async function handler(req, res) {
   try {

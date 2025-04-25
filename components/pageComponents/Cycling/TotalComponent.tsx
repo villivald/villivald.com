@@ -1,14 +1,13 @@
 import { FormattedMessage, useIntl } from "react-intl";
 
+import styles from "../../../styles/Cycling.module.css";
+import { Activity } from "./types";
 import {
-  getTotalDistanceOfPeriod,
   getAverageSpeedOfPeriod,
+  getTotalDistanceOfPeriod,
   getTotalElevationGainOfPeriod,
   getTotalMovingTimeInHoursAndMinutes,
 } from "./utils";
-
-import { Activity } from "./types";
-import styles from "../../../styles/Cycling.module.css";
 
 export default function TotalComponent({ params }: { params: Activity[] }) {
   const intl = useIntl();

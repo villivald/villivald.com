@@ -1,21 +1,20 @@
+import { addYears, isSameMonth, subYears } from "date-fns";
 import Image from "next/image";
 import { CSSProperties, useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
-import { isSameMonth, subYears, addYears } from "date-fns";
 
-import TotalComponent from "./TotalComponent";
-import {
-  months,
-  activitiesOfYear,
-  getMonthlyDistances,
-  getAverageSpeedOfPeriod,
-  getTotalElevationGainOfPeriod,
-  activitiesOfMonth,
-  getTotalMovingTimeInHoursMinutesAndSeconds,
-} from "./utils";
-
-import { ContainerProps } from "./types";
 import styles from "../../../styles/Cycling.module.css";
+import TotalComponent from "./TotalComponent";
+import { ContainerProps } from "./types";
+import {
+  activitiesOfMonth,
+  activitiesOfYear,
+  getAverageSpeedOfPeriod,
+  getMonthlyDistances,
+  getTotalElevationGainOfPeriod,
+  getTotalMovingTimeInHoursMinutesAndSeconds,
+  months,
+} from "./utils";
 
 export default function YearContainer({
   today,

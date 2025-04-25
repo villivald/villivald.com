@@ -1,5 +1,5 @@
-import { FlatCompat } from "@eslint/eslintrc";
 import css from "@eslint/css";
+import { FlatCompat } from "@eslint/eslintrc";
 
 const compat = new FlatCompat({ baseDirectory: import.meta.dirname });
 
@@ -17,7 +17,11 @@ const eslintConfig = [
       "plugin:jsx-a11y/recommended",
       "plugin:prettier/recommended",
     ],
-    plugins: ["jsx-a11y", "prettier"],
+    plugins: ["jsx-a11y", "prettier", "simple-import-sort"],
+    rules: {
+      "simple-import-sort/imports": "error",
+      "simple-import-sort/exports": "error",
+    },
   }),
 ];
 

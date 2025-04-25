@@ -1,21 +1,20 @@
 import Link from "next/link";
-import { useState, useContext } from "react";
+import { useContext, useState } from "react";
 import { useIntl } from "react-intl";
-
-import BooksGrid from "./gridComponents/BooksGrid";
-import BlogGrid from "./gridComponents/BlogGrid";
-import OldGrid from "./gridComponents/OldGrid";
-import ContactGrid from "./gridComponents/ContactGrid";
-import AboutGrid from "./gridComponents/AboutGrid";
-import WorkAndStudyGrid from "./gridComponents/WorkAndStudyGrid";
-import UsesGrid from "./gridComponents/UsesGrid";
-import ProjectsGrid from "./gridComponents/ProjectsGrid";
-import RandomGrid from "./gridComponents/RandomGrid";
-import NowGrid from "./gridComponents/NowGrid";
-import CyclingGrid from "./gridComponents/CyclingGrid";
 
 import { ThemeContext } from "../context";
 import styles from "../styles/Grid.module.css";
+import AboutGrid from "./gridComponents/AboutGrid";
+import BlogGrid from "./gridComponents/BlogGrid";
+import BooksGrid from "./gridComponents/BooksGrid";
+import ContactGrid from "./gridComponents/ContactGrid";
+import CyclingGrid from "./gridComponents/CyclingGrid";
+import NowGrid from "./gridComponents/NowGrid";
+import OldGrid from "./gridComponents/OldGrid";
+import ProjectsGrid from "./gridComponents/ProjectsGrid";
+import RandomGrid from "./gridComponents/RandomGrid";
+import UsesGrid from "./gridComponents/UsesGrid";
+import WorkAndStudyGrid from "./gridComponents/WorkAndStudyGrid";
 
 export default function Grid() {
   const [randomLink, setRandomLink] = useState("");

@@ -1,15 +1,16 @@
-import { useEffect, useState } from "react";
 import {
-  isSameDay,
-  getYear,
-  getMonth,
-  startOfWeek,
-  endOfWeek,
-  startOfMonth,
-  endOfMonth,
   addDays,
+  endOfMonth,
+  endOfWeek,
   format,
+  getMonth,
+  getYear,
+  isSameDay,
+  startOfMonth,
+  startOfWeek,
 } from "date-fns";
+import { useEffect, useState } from "react";
+
 import { Activity } from "./types";
 
 export const months: { [key: number]: string } = {

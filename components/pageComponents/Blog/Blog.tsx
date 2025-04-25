@@ -1,9 +1,8 @@
-import { useState, useEffect } from "react";
-
-import BlogCardList from "./BlogCardList";
-import Spinner from "../../Spinner";
+import { useEffect, useState } from "react";
 
 import styles from "../../../styles/Blog.module.css";
+import Spinner from "../../Spinner";
+import BlogCardList from "./BlogCardList";
 
 interface BlogPost {
   id: number;

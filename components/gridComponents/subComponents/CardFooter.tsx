@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { FormattedMessage, useIntl } from "react-intl";
 import { useContext } from "react";
+import { FormattedMessage, useIntl } from "react-intl";
 
 import { ThemeContext } from "../../../context";
 import styles from "../../../styles/grid/SubComponents.module.css";

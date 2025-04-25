@@ -2,12 +2,11 @@ import { useRouter } from "next/router";
 import { Fragment, useContext } from "react";
 import { FormattedMessage } from "react-intl";
 
+import { ThemeContext } from "../../../context";
+import styles from "../../../styles/Books.module.css";
 import BarChart from "./BarChart";
 import DoughnutChart from "./DoughnutChart";
 import SecondaryCharts from "./SecondaryCharts";
-
-import { ThemeContext } from "../../../context";
-import styles from "../../../styles/Books.module.css";
 
 export default function Statistics() {
   const router = useRouter();

@@ -1,12 +1,11 @@
 import Link from "next/link";
 import { useContext } from "react";
 
-import DropdownMenu from "./DropdownMenu";
-import ThemeToggle from "./ThemeToggle";
-import LanguageSwitch from "./LanguageSwitch";
-
 import { ThemeContext } from "../../context";
 import styles from "../../styles/Header.module.css";
+import DropdownMenu from "./DropdownMenu";
+import LanguageSwitch from "./LanguageSwitch";
+import ThemeToggle from "./ThemeToggle";
 
 type Props = {
   changeTheme: () => void;

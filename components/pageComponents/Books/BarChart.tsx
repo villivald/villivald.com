@@ -1,18 +1,18 @@
-import { useContext } from "react";
 import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
   BarElement,
+  CategoryScale,
+  Chart as ChartJS,
+  Legend,
+  LinearScale,
   Title,
   Tooltip,
-  Legend,
 } from "chart.js";
+import { useContext } from "react";
 import { Bar } from "react-chartjs-2";
 import { useIntl } from "react-intl";
 
-import data from "./data.json";
 import { ThemeContext } from "../../../context";
+import data from "./data.json";
 
 ChartJS.register(
   CategoryScale,

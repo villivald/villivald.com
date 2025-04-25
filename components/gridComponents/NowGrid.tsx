@@ -1,7 +1,7 @@
 import { useState } from "react";
-import CardFooter from "./subComponents/CardFooter";
 
 import styles from "../../styles/grid/NowGrid.module.css";
+import CardFooter from "./subComponents/CardFooter";
 
 export default function NowGrid() {
   const [eye, setEye] = useState<string>("open");

@@ -1,15 +1,14 @@
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import { useContext } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import HeadComponent from "./pageComponents/Head";
-import Header from "./headerComponents/Header";
-import Footer from "./Footer";
-
 import { ThemeContext } from "../context";
 import styles from "../styles/Layout.module.css";
+import Footer from "./Footer";
+import Header from "./headerComponents/Header";
+import HeadComponent from "./pageComponents/Head";
 
 type Props = {
   children: React.ReactNode;

@@ -1,11 +1,10 @@
-import { useState } from "react";
-import Image from "next/image";
 import Atropos from "atropos/react";
+import Image from "next/image";
+import { useState } from "react";
 import { useIntl } from "react-intl";
 
-import CardFooter from "./subComponents/CardFooter";
-
 import styles from "../../styles/grid/UsesGrid.module.css";
+import CardFooter from "./subComponents/CardFooter";
 
 export default function UsesGrid() {
   const [isOpen, setIsOpen] = useState(false);

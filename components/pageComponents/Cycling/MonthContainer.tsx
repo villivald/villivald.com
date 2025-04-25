@@ -1,23 +1,22 @@
+import { addMonths, format, isSameDay, subMonths } from "date-fns";
 import Image from "next/image";
 import { CSSProperties, useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
-import { format, isSameDay, addMonths, subMonths } from "date-fns";
 
+import styles from "../../../styles/Cycling.module.css";
 import TotalComponent from "./TotalComponent";
+import { ContainerProps } from "./types";
 import {
-  weekDays,
-  getDatesOfCurrentMonth,
+  activitiesOfDay,
   activitiesOfMonth,
   getAverageSpeedOfPeriod,
-  getTotalElevationGainOfPeriod,
+  getDatesOfCurrentMonth,
   getDistanceOfDay,
-  activitiesOfDay,
-  getTypeOfActivity,
+  getTotalElevationGainOfPeriod,
   getTotalMovingTimeInHoursMinutesAndSeconds,
+  getTypeOfActivity,
+  weekDays,
 } from "./utils";
-
-import { ContainerProps } from "./types";
-import styles from "../../../styles/Cycling.module.css";
 
 export default function MonthContainer({
   today,

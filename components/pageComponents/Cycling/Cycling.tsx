@@ -3,13 +3,12 @@ import { useContext } from "react";
 import { FormattedMessage } from "react-intl";
 import useSWR, { Fetcher } from "swr";
 
-import { useDynamicToday } from "./utils";
-import { Activity } from "./types";
-import { containers } from "./Containers";
-import Spinner from "../../Spinner";
-
 import { ThemeContext } from "../../../context";
 import styles from "../../../styles/Cycling.module.css";
+import Spinner from "../../Spinner";
+import { containers } from "./Containers";
+import { Activity } from "./types";
+import { useDynamicToday } from "./utils";
 
 const fetcher: Fetcher<Activity[]> = (...args: Parameters<typeof fetch>) =>
   fetch(...args).then((res) => res.json());

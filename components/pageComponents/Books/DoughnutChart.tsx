@@ -1,10 +1,10 @@
+import { ArcElement, Chart as ChartJS, Legend, Tooltip } from "chart.js";
 import { useContext, useEffect, useRef } from "react";
-import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import { Doughnut } from "react-chartjs-2";
 import { useIntl } from "react-intl";
 
-import data from "./data.json";
 import { ThemeContext } from "../../../context";
+import data from "./data.json";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 

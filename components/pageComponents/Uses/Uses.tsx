@@ -5,10 +5,9 @@ import { FormattedMessage, useIntl } from "react-intl";
 
 import { ThemeContext } from "../../../context";
 import styles from "../../../styles/Uses.module.css";
-
 import hardware from "./data/hardware.json";
-import software from "./data/software.json";
 import other from "./data/other.json";
+import software from "./data/software.json";
 
 interface CSSPropertiesWithVars extends CSSProperties {
   "--url"?: string;

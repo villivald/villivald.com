@@ -1,11 +1,9 @@
 import { useContext } from "react";
 import { useIntl } from "react-intl";
 
-import Work from "../components/pageComponents/WorkAndStudy/Work";
 import Uni from "../components/pageComponents/WorkAndStudy/Uni";
-
+import Work from "../components/pageComponents/WorkAndStudy/Work";
 import { ThemeContext } from "../context";
-
 import styles from "../styles/WorkAndStudy.module.css";
 
 export default function WorkAndStudy() {

@@ -1,8 +1,7 @@
 import { useIntl } from "react-intl";
 
-import CardFooter from "./subComponents/CardFooter";
-
 import styles from "../../styles/grid/BooksGrid.module.css";
+import CardFooter from "./subComponents/CardFooter";
 
 export default function BooksGrid() {
   const intl = useIntl();

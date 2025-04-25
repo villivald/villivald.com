@@ -1,6 +1,5 @@
-import CardFooter from "./subComponents/CardFooter";
-
 import styles from "../../styles/grid/CyclingGrid.module.css";
+import CardFooter from "./subComponents/CardFooter";
 
 export default function CyclingGrid() {
   return (

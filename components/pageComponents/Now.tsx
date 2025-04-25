@@ -1,5 +1,5 @@
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 import { useContext } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 

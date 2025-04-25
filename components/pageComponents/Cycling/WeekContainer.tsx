@@ -1,29 +1,28 @@
-import Image from "next/image";
-import { CSSProperties, useState, useEffect } from "react";
-import { FormattedMessage, useIntl } from "react-intl";
 import {
+  addDays,
+  endOfWeek,
   format,
   isSameDay,
-  addDays,
-  subDays,
-  endOfWeek,
   isThisWeek,
+  subDays,
 } from "date-fns";
+import Image from "next/image";
+import { CSSProperties, useEffect, useState } from "react";
+import { FormattedMessage, useIntl } from "react-intl";
 
+import styles from "../../../styles/Cycling.module.css";
 import TotalComponent from "./TotalComponent";
+import { ContainerProps } from "./types";
 import {
-  getDatesOfCurrentWeek,
-  getAverageSpeedOfPeriod,
-  getTotalElevationGainOfPeriod,
-  getDistanceOfDay,
   activitiesOfDay,
   activitiesOfWeek,
-  getTypeOfActivity,
+  getAverageSpeedOfPeriod,
+  getDatesOfCurrentWeek,
+  getDistanceOfDay,
+  getTotalElevationGainOfPeriod,
   getTotalMovingTimeInHoursMinutesAndSeconds,
+  getTypeOfActivity,
 } from "./utils";
-
-import { ContainerProps } from "./types";
-import styles from "../../../styles/Cycling.module.css";
 
 export default function WeekContainer({
   today,

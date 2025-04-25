@@ -1,11 +1,11 @@
-import Image from "next/image";
+import "atropos/css";
+
 import Atropos from "atropos/react";
+import Image from "next/image";
 import { useIntl } from "react-intl";
 
-import CardFooter from "./subComponents/CardFooter";
-
-import "atropos/css";
 import styles from "../../styles/grid/BlogGrid.module.css";
+import CardFooter from "./subComponents/CardFooter";
 
 export default function BlogGrid() {
   const intl = useIntl();

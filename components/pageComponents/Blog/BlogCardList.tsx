@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { useState, useEffect, useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { FormattedMessage } from "react-intl";
 
 import { ThemeContext } from "../../../context";
