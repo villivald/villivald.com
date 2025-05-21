@@ -1,13 +1,19 @@
 {
   "hardware": [
     {
-      "name": "iMac 24\" 2021",
+      "name": "MacBook Pro M4 Pro",
+      "link": "https://www.apple.com/fi/macbook-pro/",
+      "description": "My work laptop",
+      "image": "macbookpro"
+    },
+    {
+      "name": "iMac M1",
       "link": "https://www.apple.com/imac-24/",
       "description": "My main computer",
       "image": "imac"
     },
     {
-      "name": "MacBook Air 13\" 2024",
+      "name": "MacBook Air M3",
       "link": "https://www.apple.com/macbook-air/",
       "description": "My work computer",
       "image": "macbook13"
