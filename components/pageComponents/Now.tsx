@@ -41,7 +41,7 @@ export default function Now() {
             height={32}
           />
           <FormattedMessage id="lastUpdated" />
-          <time dateTime="2025-04-20">20.04.2025</time>
+          <time dateTime="2025-06-01">01.06.2025</time>
         </p>
       </section>
       <section>
@@ -96,14 +96,14 @@ export default function Now() {
             </li>
             <li lang="en">
               <Link
-                href="https://en.wikipedia.org/wiki/Andrei_Lankov"
+                href="https://en.wikipedia.org/wiki/The_Sleepwalkers:_How_Europe_Went_to_War_in_1914"
                 target="_blank"
                 rel="noopener noreferrer"
                 hrefLang="en"
               >
-                Books on North & South Korea
+                The Sleepwalkers
               </Link>{" "}
-              by Andrei Lankov
+              by Christopher Clark
             </li>
           </ul>
         </article>
@@ -111,9 +111,7 @@ export default function Now() {
           <h2>
             <FormattedMessage id="watching" />
           </h2>
-          <p lang="en">
-            YouTube, Black Mirror, The Handmaid&#39;s Tale, The Studio.
-          </p>
+          <p lang="en">YouTube, Your Friends & Neighbors, The Studio</p>
         </article>
         <article>
           <h2>
@@ -140,7 +138,16 @@ export default function Now() {
             >
               Complete CSS
             </Link>{" "}
-            course.
+            and{" "}
+            <Link
+              href="https://www.road-to-next.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              hrefLang="en"
+            >
+              The Road to Next
+            </Link>{" "}
+            courses.
           </p>
           <p lang="en">
             My{" "}
@@ -153,7 +160,7 @@ export default function Now() {
               cycling-related project
             </Link>{" "}
             is finally starting to take some shape. Looking forward to going
-            live this spring.
+            live in early summer.
           </p>
         </article>
         <article>
@@ -170,7 +177,8 @@ export default function Now() {
             >
               wood pigeons
             </Link>{" "}
-            exist before I moved to the current place.
+            (evil twins of common pigeons) exist before I moved to the current
+            place.
           </p>
         </article>
       </section>
