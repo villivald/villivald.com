@@ -2372,15 +2372,6 @@
       "category": "non-fiction"
     },
     {
-      "title": "Ничего хорошего",
-      "author": "Кашин",
-      "date": "15.11.2024",
-      "image": "260.avif",
-      "rating": 4,
-      "language": "ru",
-      "category": "non-fiction"
-    },
-    {
       "title": "Человек без свойств",
       "author": "Музиль",
       "date": "24.11.2024",
@@ -2592,6 +2583,33 @@
       "date": "16.05.2025",
       "image": "283.avif",
       "rating": 3,
+      "language": "en",
+      "category": "non-fiction"
+    },
+    {
+      "title": "Ничего хорошего",
+      "author": "Кашин",
+      "date": "29.05.2025",
+      "image": "260.avif",
+      "rating": 4,
+      "language": "ru",
+      "category": "non-fiction"
+    },
+    {
+      "title": "The Last Tsar",
+      "author": "Hasegawa",
+      "date": "31.05.2025",
+      "image": "284.avif",
+      "rating": 4,
+      "language": "en",
+      "category": "non-fiction"
+    },
+    {
+      "title": "Original Sin",
+      "author": "J. Tapper",
+      "date": "10.06.2025",
+      "image": "285.avif",
+      "rating": 4,
       "language": "en",
       "category": "non-fiction"
     },
