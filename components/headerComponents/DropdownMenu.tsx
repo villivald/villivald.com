@@ -14,13 +14,13 @@ export default function DropdownMenu() {
   const pathname = usePathname();
 
   const menuItems = [
-    "about",
     "blog",
     "books",
     "contact",
     "cycling",
     "now",
     "old",
+    "photobooth",
     "projects",
     "uses",
     "workandstudy",

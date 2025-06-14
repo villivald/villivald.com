@@ -48,10 +48,6 @@
   transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 
-.darkMenu img[data-name="about"] {
-  filter: invert(1);
-}
-
 /* Display the dropdown menu on hover or focus */
 .darkMenu[data-open="true"],
 .lightMenu[data-open="true"] {

@@ -1,5 +1,5 @@
 const fi = {
-  about: "Info",
+  photobooth: "Photo booth",
   books: "Kirjat",
   blog: "Blogi",
   blogPosts: "Viimeisimmät blogikirjoitukset",

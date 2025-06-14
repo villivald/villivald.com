@@ -3,16 +3,16 @@ import { useContext, useEffect, useMemo, useState } from "react";
 import { useIntl } from "react-intl";
 
 import { ThemeContext } from "../../context";
-import styles from "../../styles/About.module.css";
+import styles from "../../styles/PhotoBooth.module.css";
 
-export default function About() {
+export default function PhotoBooth() {
   const theme = useContext(ThemeContext);
   const intl = useIntl();
-  const [currentSlide, setCurrentSlide] = useState("2024");
+  const [currentSlide, setCurrentSlide] = useState("2025");
   const [clickedImage, setClickedImage] = useState<string | null>(null);
 
   const years = useMemo(() => {
-    return ["2024", "2023", "2022", "2021", "2020", "2019"];
+    return ["2025", "2024", "2023", "2022", "2021", "2020", "2019"];
   }, []);
 
   useEffect(() => {
@@ -92,7 +92,7 @@ export default function About() {
               aria-label={`slide ${index} of 5`}
             >
               {["8", "7", "6", "5"].map((num, index) =>
-                year === "2024" && num === "9" ? (
+                year === "2025" ? (
                   <div key={index} className={styles.question}>
                     <Image
                       alt={intl.formatMessage({ id: "alt.questionMark" })}
@@ -112,7 +112,7 @@ export default function About() {
                     }}
                     data-fullscreen={clickedImage === `${year}-${num}`}
                     style={{
-                      backgroundImage: `url(/about/${year}-${num}.avif)`,
+                      backgroundImage: `url(/photobooth/${year}-${num}.avif)`,
                     }}
                     role="button"
                     tabIndex={-1}
@@ -129,32 +129,43 @@ export default function About() {
                 ),
               )}
               <div>{year}</div>
-              {["4", "3", "2", "1"].map((num, index) => (
-                <div
-                  key={index}
-                  onClick={() => handleImageClick(`${year}-${num}`)}
-                  onKeyDown={(e) => {
-                    if (e.key === "Enter") {
-                      handleImageClick(`${year}-${num}`);
-                    }
-                  }}
-                  data-fullscreen={clickedImage === `${year}-${num}`}
-                  style={{
-                    backgroundImage: `url(/about/${year}-${num}.avif)`,
-                  }}
-                  role="button"
-                  tabIndex={-1}
-                >
-                  {clickedImage === `${year}-${num}` && (
-                    <button
-                      aria-label={intl.formatMessage({
-                        id: "aria.closeFullscreen",
-                      })}
-                      className={styles.closeButton}
-                    ></button>
-                  )}
-                </div>
-              ))}
+              {["4", "3", "2", "1"].map((num, index) =>
+                year === "2025" && num === "4" ? (
+                  <div key={index} className={styles.question}>
+                    <Image
+                      alt={intl.formatMessage({ id: "alt.questionMark" })}
+                      width={200}
+                      height={200}
+                      src={"/emojis/question.svg"}
+                    />
+                  </div>
+                ) : (
+                  <div
+                    key={index}
+                    onClick={() => handleImageClick(`${year}-${num}`)}
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter") {
+                        handleImageClick(`${year}-${num}`);
+                      }
+                    }}
+                    data-fullscreen={clickedImage === `${year}-${num}`}
+                    style={{
+                      backgroundImage: `url(/photobooth/${year}-${num}.avif)`,
+                    }}
+                    role="button"
+                    tabIndex={-1}
+                  >
+                    {clickedImage === `${year}-${num}` && (
+                      <button
+                        aria-label={intl.formatMessage({
+                          id: "aria.closeFullscreen",
+                        })}
+                        className={styles.closeButton}
+                      ></button>
+                    )}
+                  </div>
+                ),
+              )}
             </div>
           ))}
         </div>

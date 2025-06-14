@@ -1,5 +1,5 @@
 import NowComponent from "../components/pageComponents/Now";
 
-export default function About() {
+export default function Now() {
   return <NowComponent />;
 }

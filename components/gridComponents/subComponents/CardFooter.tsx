@@ -25,7 +25,9 @@ export default function CardFooter({ emoji, text }: Props) {
         <Image
           src={`/emojis/${emoji}.svg`}
           alt={`emoji icon - ${emoji}`}
-          data-theme={theme === "dark" && text === "about"}
+          data-theme={
+            theme === "dark" && (text === "cycling" || text === "now")
+          }
           width={24}
           height={24}
         />

@@ -4,13 +4,13 @@ import { useIntl } from "react-intl";
 
 import { ThemeContext } from "../context";
 import styles from "../styles/Grid.module.css";
-import AboutGrid from "./gridComponents/AboutGrid";
 import BlogGrid from "./gridComponents/BlogGrid";
 import BooksGrid from "./gridComponents/BooksGrid";
 import ContactGrid from "./gridComponents/ContactGrid";
 import CyclingGrid from "./gridComponents/CyclingGrid";
 import NowGrid from "./gridComponents/NowGrid";
 import OldGrid from "./gridComponents/OldGrid";
+import PhotoBoothGrid from "./gridComponents/PhotoBoothGrid";
 import ProjectsGrid from "./gridComponents/ProjectsGrid";
 import RandomGrid from "./gridComponents/RandomGrid";
 import UsesGrid from "./gridComponents/UsesGrid";
@@ -29,7 +29,7 @@ export default function Grid() {
     { href: "/books", component: <BooksGrid /> },
     { href: "/projects", component: <ProjectsGrid /> },
     { href: "/blog", component: <BlogGrid /> },
-    { href: "/about", component: <AboutGrid /> },
+    { href: "/photobooth", component: <PhotoBoothGrid /> },
     { href: "/contact", component: <ContactGrid /> },
     { href: "/old", component: <OldGrid /> },
   ];

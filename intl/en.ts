@@ -1,5 +1,5 @@
 const en = {
-  about: "About",
+  photobooth: "Photo booth",
   books: "Books",
   blog: "Blog",
   blogPosts: "The latest blog posts",
