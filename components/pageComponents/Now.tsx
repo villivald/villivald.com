@@ -41,7 +41,7 @@ export default function Now() {
             height={32}
           />
           <FormattedMessage id="lastUpdated" />
-          <time dateTime="2025-06-01">01.06.2025</time>
+          <time dateTime="2025-06-15">15.06.2025</time>
         </p>
       </section>
       <section>
@@ -74,14 +74,14 @@ export default function Now() {
           <ul>
             <li lang="en">
               <Link
-                href="https://www.penguin.co.uk/books/438663/the-rodchenkov-affair-by-grigory-rodchenkov/9780753553350"
+                href="https://en.wikipedia.org/wiki/Original_Sin_(Tapper_and_Thompson_book)"
                 target="_blank"
                 rel="noopener noreferrer"
                 hrefLang="en"
               >
-                The Rodchenkov Affair
+                Original Sin
               </Link>{" "}
-              by Grigory Rodchenkov
+              by Jake Tapper & Alex Thompson
             </li>
             <li lang="en">
               <Link
@@ -111,7 +111,10 @@ export default function Now() {
           <h2>
             <FormattedMessage id="watching" />
           </h2>
-          <p lang="en">YouTube, Your Friends & Neighbors, The Studio</p>
+          <p lang="en">
+            YouTube, Your Friends & Neighbors, The Studio. Rewatching Twin Peaks
+            (all seasons & movie) from the beginning.
+          </p>
         </article>
         <article>
           <h2>
