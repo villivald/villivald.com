@@ -30,6 +30,13 @@ export default function Uses() {
     other,
   ];
 
+  const handleMouseMove = (event: React.MouseEvent<HTMLLIElement>) => {
+    const target = event.currentTarget;
+
+    target.style.setProperty("--mouse-x", `${event.clientX}px`);
+    target.style.setProperty("--mouse-y", `${event.clientY}px`);
+  };
+
   const renderList = (items: UsesDataCollection[]) => {
     return items.map((item: UsesDataCollection) => (
       <li
@@ -40,8 +47,11 @@ export default function Uses() {
           } as CSSPropertiesWithVars
         }
         translate="no"
+        onMouseMove={handleMouseMove}
       >
-        <Link href={item.link}>{item.name}</Link>
+        <Link href={item.link} target="_blank" rel="noopener noreferrer">
+          {item.name}
+        </Link>
       </li>
     ));
   };

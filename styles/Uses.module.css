@@ -71,13 +71,17 @@
 .mainContainer > div > div > ul > li:hover::after,
 .mainContainer > div > div > ul a:focus-visible::after {
   content: "";
-  position: absolute;
+  position: fixed;
+  left: var(--mouse-x);
+  top: var(--mouse-y);
   width: 200px;
   height: 200px;
   background-image: var(--url);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 200px;
+  z-index: 1;
+  pointer-events: none;
 }
 
 .mainContainer > div > div:first-of-type > ul {
