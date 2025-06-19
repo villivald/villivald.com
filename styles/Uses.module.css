@@ -104,7 +104,7 @@
 
 @counter-style software-emoji {
   system: cyclic;
-  symbols: 💡 👾 🧑‍🎨 🗒️ 📝 💎 🧵 ✉️ 📧 💬 🎶 🎸 📻 📚 🏋️‍♀️ ✍️ 🕵️‍♂️ 🗂️;
+  symbols: 💡 👾 ◎ 🧑‍🎨 🗒️ 📝 💎 🧵 ✉️ 📧 💬 🎶 🎸 📻 📚 🏋️‍♀️ ✍️ 🕵️‍♂️ 🗂️;
   suffix: " ";
 }
 

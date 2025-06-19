@@ -13,6 +13,12 @@
       "image": "arc"
     },
     {
+      "name": "Zen Browser",
+      "link": "https://zen-browser.app/",
+      "description": "Work browser",
+      "image": "zen"
+    },
+    {
       "name": "Figma",
       "link": "https://www.figma.com/",
       "description": "Design tool",
