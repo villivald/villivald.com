@@ -146,21 +146,17 @@ export default function WeekContainer({
                     className={styles.activityType}
                     data-activitytype={typeOfActivity}
                   >
-                    {typeOfActivity === "Ride" ? (
-                      <Image
-                        src="/emojis/tree.svg"
-                        alt={intl.formatMessage({ id: "alt.outdoorRide" })}
-                        width={20}
-                        height={20}
-                      />
-                    ) : (
-                      <Image
-                        src="/emojis/zwift.svg"
-                        alt={intl.formatMessage({ id: "alt.zwiftRide" })}
-                        width={20}
-                        height={20}
-                      />
-                    )}
+                    <Image
+                      src={`/emojis/${typeOfActivity === "Ride" ? "tree" : "zwift"}.svg`}
+                      alt={intl.formatMessage({
+                        id:
+                          typeOfActivity === "Ride"
+                            ? "alt.outdoorRide"
+                            : "alt.zwiftRide",
+                      })}
+                      width={20}
+                      height={20}
+                    />
                   </span>
                 )}
               </p>

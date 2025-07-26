@@ -25,8 +25,8 @@ export default function AllTimeContainer({
       <div>
         <div className={styles.allTimeContainer}>
           {yearsOfActivities(activities)?.map((year, index) => {
-            const distance = getTotalDistanceOfPeriod(
-              activitiesOfYear(year, activities),
+            const distance = parseFloat(
+              getTotalDistanceOfPeriod(activitiesOfYear(year, activities)),
             );
 
             return (
@@ -41,11 +41,11 @@ export default function AllTimeContainer({
                 )}m\n⏱️ ${getTotalMovingTimeInHoursMinutesAndSeconds(
                   activitiesOfYear(year, activities),
                 )}`}
-                data-color={parseFloat(distance) > 5000}
-                data-invertcolor={parseFloat(distance) < 2500}
+                data-color={distance > 5000}
+                data-invertcolor={distance < 2500}
                 style={
                   {
-                    "--distance": parseFloat(distance) / 12000,
+                    "--distance": distance / 12000,
                   } as CSSProperties
                 }
               >
