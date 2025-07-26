@@ -2614,6 +2614,33 @@
       "category": "non-fiction"
     },
     {
+      "title": "The Showman",
+      "author": "Shuster",
+      "date": "20.06.2025",
+      "image": "286.avif",
+      "rating": 4,
+      "language": "en",
+      "category": "non-fiction"
+    },
+    {
+      "title": "Незамеченное поколение",
+      "author": "Проскурина-Янович",
+      "date": "24.06.2025",
+      "image": "287.avif",
+      "rating": 5,
+      "language": "ru",
+      "category": "non-fiction"
+    },
+    {
+      "title": "Роман с кокаином",
+      "author": "М. Агеев",
+      "date": "28.06.2025",
+      "image": "288.avif",
+      "rating": 3,
+      "language": "ru",
+      "category": "fiction"
+    },
+    {
       "title": "",
       "author": "",
       "date": "",
