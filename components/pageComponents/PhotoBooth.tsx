@@ -92,7 +92,7 @@ export default function PhotoBooth() {
               aria-label={`slide ${index} of 5`}
             >
               {["8", "7", "6", "5"].map((num, index) =>
-                year === "2025" ? (
+                year === "2025" && (num === "8" || num === "7") ? (
                   <div key={index} className={styles.question}>
                     <Image
                       alt={intl.formatMessage({ id: "alt.questionMark" })}
@@ -129,43 +129,32 @@ export default function PhotoBooth() {
                 ),
               )}
               <div>{year}</div>
-              {["4", "3", "2", "1"].map((num, index) =>
-                year === "2025" && num === "4" ? (
-                  <div key={index} className={styles.question}>
-                    <Image
-                      alt={intl.formatMessage({ id: "alt.questionMark" })}
-                      width={200}
-                      height={200}
-                      src={"/emojis/question.svg"}
-                    />
-                  </div>
-                ) : (
-                  <div
-                    key={index}
-                    onClick={() => handleImageClick(`${year}-${num}`)}
-                    onKeyDown={(e) => {
-                      if (e.key === "Enter") {
-                        handleImageClick(`${year}-${num}`);
-                      }
-                    }}
-                    data-fullscreen={clickedImage === `${year}-${num}`}
-                    style={{
-                      backgroundImage: `url(/photobooth/${year}-${num}.avif)`,
-                    }}
-                    role="button"
-                    tabIndex={-1}
-                  >
-                    {clickedImage === `${year}-${num}` && (
-                      <button
-                        aria-label={intl.formatMessage({
-                          id: "aria.closeFullscreen",
-                        })}
-                        className={styles.closeButton}
-                      ></button>
-                    )}
-                  </div>
-                ),
-              )}
+              {["4", "3", "2", "1"].map((num, index) => (
+                <div
+                  key={index}
+                  onClick={() => handleImageClick(`${year}-${num}`)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter") {
+                      handleImageClick(`${year}-${num}`);
+                    }
+                  }}
+                  data-fullscreen={clickedImage === `${year}-${num}`}
+                  style={{
+                    backgroundImage: `url(/photobooth/${year}-${num}.avif)`,
+                  }}
+                  role="button"
+                  tabIndex={-1}
+                >
+                  {clickedImage === `${year}-${num}` && (
+                    <button
+                      aria-label={intl.formatMessage({
+                        id: "aria.closeFullscreen",
+                      })}
+                      className={styles.closeButton}
+                    ></button>
+                  )}
+                </div>
+              ))}
             </div>
           ))}
         </div>
