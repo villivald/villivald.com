@@ -10,7 +10,7 @@ import {
   startOfMonth,
   startOfWeek,
 } from "date-fns";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 import { Activity } from "./types";
 
@@ -62,7 +62,7 @@ export const getDatesOfCurrentMonth = (baseDate: Date) => {
   const startOfCurrentMonth = startOfMonth(baseDate);
   const endOfCurrentMonth = endOfMonth(baseDate);
 
-  const monthDates = [];
+  const monthDates = [] as (string | null)[];
   let currentDate = startOfCurrentMonth;
 
   // Add placeholders for days before the start of the month
@@ -251,15 +251,21 @@ export const useLoadingStates = (
   isValidating: boolean,
   today: Date,
 ) => {
-  const mostRecentActivity = getMostRecentActivityDate(activities);
+  const mostRecentActivity = useMemo(
+    () => getMostRecentActivityDate(activities),
+    [activities],
+  );
 
   return {
     // For week view: show loading for days after most recent activity in current week
     shouldShowWeekDayLoading: (date: string) => {
-      if (!isValidating || !mostRecentActivity) return false;
+      if (!isValidating) return false;
 
       const dateObj = new Date(date);
       const isCurrentWeek = isThisWeek(dateObj, { weekStartsOn: 1 });
+
+      // If we have no activities yet, allow loading markers for current week
+      if (!mostRecentActivity) return isCurrentWeek && dateObj >= today;
 
       // Only show loading for current week dates after most recent activity
       if (!isCurrentWeek) return false;
@@ -273,12 +279,15 @@ export const useLoadingStates = (
       currentMonth: number,
       currentYear: number,
     ) => {
-      if (!isValidating || !mostRecentActivity) return false;
+      if (!isValidating) return false;
 
       const dateObj = new Date(date);
       const isCurrentMonth =
         currentMonth === today.getMonth() &&
         currentYear === today.getFullYear();
+
+      // If we have no activities yet, allow loading markers for current month
+      if (!mostRecentActivity) return isCurrentMonth && dateObj >= today;
 
       // Only show loading for current month dates after most recent activity
       if (!isCurrentMonth) return false;
@@ -294,9 +303,5 @@ export const useLoadingStates = (
 
     // For all-time view: show subtle loading indicator
     shouldShowAllTimeLoading: () => isValidating,
-
-    // Check if we should show the main page loading (only on initial load with no data)
-    shouldShowMainLoading: () =>
-      isValidating && (!activities || activities.length === 0),
   };
 };

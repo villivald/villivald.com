@@ -3,18 +3,79 @@ import { get } from "@vercel/edge-config";
 
 export default async function handler(req, res) {
   try {
-    // Validate required environment variables
-    const requiredEnvVars = {
-      SUPABASE_SUPABASE_URL: process.env.SUPABASE_SUPABASE_URL,
-      SUPABASE_SUPABASE_SERVICE_ROLE_KEY:
-        process.env.SUPABASE_SUPABASE_SERVICE_ROLE_KEY,
-      STRAVA_CLIENT_ID: process.env.STRAVA_CLIENT_ID,
-      STRAVA_CLIENT_SECRET: process.env.STRAVA_CLIENT_SECRET,
-      EDGE_CONFIG_ID: process.env.EDGE_CONFIG_ID,
-      VERCEL_API_TOKEN: process.env.VERCEL_API_TOKEN,
-    };
+    const { dbOnly, skipSync, mode } = req.query || {};
+    const isDbOnly =
+      dbOnly === "1" ||
+      dbOnly === "true" ||
+      skipSync === "1" ||
+      skipSync === "true" ||
+      mode === "db";
 
-    const missingEnvVars = Object.entries(requiredEnvVars)
+    // Validate required environment variables
+    const SUPABASE_URL = process.env.SUPABASE_SUPABASE_URL;
+    const SUPABASE_SERVICE_ROLE_KEY =
+      process.env.SUPABASE_SUPABASE_SERVICE_ROLE_KEY;
+
+    if (!SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY) {
+      console.error("Missing required Supabase environment variables");
+      return res.status(500).json({
+        error: "Server configuration error",
+        details: "Missing Supabase environment variables",
+      });
+    }
+
+    const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY);
+
+    // Fast path: DB-only return of activities without Strava sync
+    if (isDbOnly) {
+      try {
+        let allActivities = [];
+        let from = 0;
+        const batchSize = 1000;
+
+        while (true) {
+          const { data: batchActivities, error } = await supabase
+            .from("activities")
+            .select("*")
+            .range(from, from + batchSize - 1)
+            .order("activity_date", { ascending: false });
+
+          if (error) {
+            console.error("Error fetching activities batch:", error);
+            return res.status(500).json({
+              error: "Failed to fetch activities",
+              details: "Database query failed",
+            });
+          }
+
+          allActivities = allActivities.concat(batchActivities);
+
+          if (batchActivities.length < batchSize) break;
+          from += batchSize;
+        }
+
+        return res.status(200).json(allActivities);
+      } catch (fetchError) {
+        console.error("Error fetching activities:", fetchError);
+        return res.status(500).json({
+          error: "Failed to fetch activities",
+          details: "Database operation failed",
+        });
+      }
+    }
+
+    // Full sync path requires Strava and Edge Config vars
+    const STRAVA_CLIENT_ID = process.env.STRAVA_CLIENT_ID;
+    const STRAVA_CLIENT_SECRET = process.env.STRAVA_CLIENT_SECRET;
+    const EDGE_CONFIG_ID = process.env.EDGE_CONFIG_ID;
+    const VERCEL_API_TOKEN = process.env.VERCEL_API_TOKEN;
+
+    const missingEnvVars = [
+      ["STRAVA_CLIENT_ID", STRAVA_CLIENT_ID],
+      ["STRAVA_CLIENT_SECRET", STRAVA_CLIENT_SECRET],
+      ["EDGE_CONFIG_ID", EDGE_CONFIG_ID],
+      ["VERCEL_API_TOKEN", VERCEL_API_TOKEN],
+    ]
       .filter(([, value]) => !value)
       .map(([key]) => key);
 
@@ -49,10 +110,6 @@ export default async function handler(req, res) {
     }
 
     const currentTime = Math.floor(Date.now() / 1000);
-    const supabase = createClient(
-      requiredEnvVars.SUPABASE_SUPABASE_URL,
-      requiredEnvVars.SUPABASE_SUPABASE_SERVICE_ROLE_KEY,
-    );
 
     let validAccessToken = accessToken;
 
@@ -63,8 +120,8 @@ export default async function handler(req, res) {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
-            client_id: requiredEnvVars.STRAVA_CLIENT_ID,
-            client_secret: requiredEnvVars.STRAVA_CLIENT_SECRET,
+            client_id: STRAVA_CLIENT_ID,
+            client_secret: STRAVA_CLIENT_SECRET,
             grant_type: "refresh_token",
             refresh_token: refreshToken,
           }),
@@ -84,11 +141,11 @@ export default async function handler(req, res) {
         // Update edge config with new tokens
         try {
           const updateResponse = await fetch(
-            `https://api.vercel.com/v1/edge-config/${requiredEnvVars.EDGE_CONFIG_ID}/items`,
+            `https://api.vercel.com/v1/edge-config/${EDGE_CONFIG_ID}/items`,
             {
               method: "PATCH",
               headers: {
-                Authorization: `Bearer ${requiredEnvVars.VERCEL_API_TOKEN}`,
+                Authorization: `Bearer ${VERCEL_API_TOKEN}`,
                 "Content-Type": "application/json",
               },
               body: JSON.stringify({

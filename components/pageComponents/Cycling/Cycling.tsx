@@ -1,6 +1,6 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { FormattedMessage } from "react-intl";
-import useSWR, { Fetcher } from "swr";
+import useSWR, { Fetcher, useSWRConfig } from "swr";
 
 import { ThemeContext } from "../../../context";
 import styles from "../../../styles/Cycling.module.css";
@@ -22,12 +22,16 @@ export default function Cycling({
 }) {
   const theme = useContext(ThemeContext);
   const today = useDynamicToday();
+  const { mutate } = useSWRConfig();
 
+  const dbOnlyUrl = "/api/strava/activities?dbOnly=1";
+
+  // Fast DB-only data source for immediate render
   const {
     data = initialData,
     error,
-    isValidating,
-  } = useSWR<Activity[]>("/api/strava/activities", fetcher, {
+    isValidating: isDbValidating,
+  } = useSWR<Activity[]>(dbOnlyUrl, fetcher, {
     fallbackData: initialData,
     revalidateOnFocus: false,
     revalidateIfStale: true,
@@ -35,16 +39,61 @@ export default function Cycling({
     dedupingInterval: 60 * 1000,
   });
 
-  const loadingStates = useLoadingStates(data || [], isValidating, today);
+  // Background full sync to refresh DB, then revalidate fast data
+  const [isSyncing, setIsSyncing] = useState(false);
+  const [hasSynced, setHasSynced] = useState(false);
+
+  useEffect(() => {
+    let cancelled = false;
+
+    const runFullSync = async () => {
+      if (cancelled || hasSynced) return;
+
+      setIsSyncing(true);
+      try {
+        await fetch("/api/strava/activities");
+        if (!cancelled) {
+          await mutate(dbOnlyUrl);
+          setHasSynced(true);
+        }
+      } catch {
+        // ignore
+      } finally {
+        if (!cancelled) {
+          setIsSyncing(false);
+        }
+      }
+    };
+
+    // Only run full sync after we have some initial data and haven't synced yet
+    if (data && data.length > 0 && !hasSynced) {
+      runFullSync();
+    }
+
+    return () => {
+      cancelled = true;
+      setIsSyncing(false);
+    };
+  }, [mutate, data, hasSynced]);
+
+  const loadingStates = useLoadingStates(
+    data || [],
+    isSyncing, // Only show cell loading indicators during sync, not during initial DB validation
+    today,
+  );
+
+  // Show initial spinner if we're validating and have no data yet
+  const shouldShowInitialSpinner =
+    isDbValidating && (!data || data.length === 0);
 
   if (error) return <FormattedMessage id="failedToLoad" />;
 
   return (
     <div
-      className={`${styles.mainContainer} ${loadingStates.shouldShowMainLoading() ? styles.loading : ""}`}
+      className={`${styles.mainContainer} ${shouldShowInitialSpinner ? styles.loading : ""}`}
       data-theme={theme}
     >
-      {loadingStates.shouldShowMainLoading() && <Spinner />}
+      {shouldShowInitialSpinner && <Spinner />}
       <WeekContainer
         today={today}
         theme={theme}
