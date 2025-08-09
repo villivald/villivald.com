@@ -6,6 +6,7 @@ import {
   getMonth,
   getYear,
   isSameDay,
+  isThisWeek,
   startOfMonth,
   startOfWeek,
 } from "date-fns";
@@ -227,4 +228,75 @@ export const getMonthlyDistances = (activities: Activity[]) => {
   });
 
   return result;
+};
+
+// Get the most recent activity date
+export const getMostRecentActivityDate = (activities: Activity[]) => {
+  if (!activities || activities.length === 0) return null;
+
+  const sortedActivities = activities
+    .slice()
+    .sort(
+      (a, b) =>
+        new Date(b.activity_date).getTime() -
+        new Date(a.activity_date).getTime(),
+    );
+
+  return new Date(sortedActivities[0].activity_date);
+};
+
+// Hook to determine loading states for different time periods
+export const useLoadingStates = (
+  activities: Activity[],
+  isValidating: boolean,
+  today: Date,
+) => {
+  const mostRecentActivity = getMostRecentActivityDate(activities);
+
+  return {
+    // For week view: show loading for days after most recent activity in current week
+    shouldShowWeekDayLoading: (date: string) => {
+      if (!isValidating || !mostRecentActivity) return false;
+
+      const dateObj = new Date(date);
+      const isCurrentWeek = isThisWeek(dateObj, { weekStartsOn: 1 });
+
+      // Only show loading for current week dates after most recent activity
+      if (!isCurrentWeek) return false;
+
+      return dateObj > mostRecentActivity;
+    },
+
+    // For month view: show loading for current month days after most recent activity
+    shouldShowMonthDayLoading: (
+      date: string,
+      currentMonth: number,
+      currentYear: number,
+    ) => {
+      if (!isValidating || !mostRecentActivity) return false;
+
+      const dateObj = new Date(date);
+      const isCurrentMonth =
+        currentMonth === today.getMonth() &&
+        currentYear === today.getFullYear();
+
+      // Only show loading for current month dates after most recent activity
+      if (!isCurrentMonth) return false;
+
+      return dateObj > mostRecentActivity;
+    },
+
+    // For year view: show loading indicator only for current year
+    shouldShowYearLoading: (year: number) => {
+      if (!isValidating) return false;
+      return year === today.getFullYear();
+    },
+
+    // For all-time view: show subtle loading indicator
+    shouldShowAllTimeLoading: () => isValidating,
+
+    // Check if we should show the main page loading (only on initial load with no data)
+    shouldShowMainLoading: () =>
+      isValidating && (!activities || activities.length === 0),
+  };
 };

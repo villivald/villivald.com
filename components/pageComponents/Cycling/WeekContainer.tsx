@@ -12,7 +12,7 @@ import { FormattedMessage, useIntl } from "react-intl";
 
 import styles from "../../../styles/Cycling.module.css";
 import TotalComponent from "./TotalComponent";
-import { ContainerProps } from "./types";
+import { WeekContainerProps } from "./types";
 import {
   activitiesOfDay,
   activitiesOfWeek,
@@ -28,7 +28,8 @@ export default function WeekContainer({
   today,
   theme,
   activities,
-}: ContainerProps) {
+  shouldShowWeekDayLoading,
+}: WeekContainerProps) {
   const intl = useIntl();
 
   const [currentBaseDate, setCurrentBaseDate] = useState(today);
@@ -114,9 +115,12 @@ export default function WeekContainer({
               activitiesOfWeek(currentBaseDate, activities),
             );
 
+            const cellIsLoading = shouldShowWeekDayLoading(date);
+
             return (
               <p
                 key={index}
+                className={cellIsLoading ? styles.cellLoading : ""}
                 data-today={isSameDay(date, today)}
                 data-empty={distance === "0.00"}
                 data-content={`💨${getAverageSpeedOfPeriod(

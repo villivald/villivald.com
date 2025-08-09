@@ -5,7 +5,7 @@ import { FormattedMessage, useIntl } from "react-intl";
 
 import styles from "../../../styles/Cycling.module.css";
 import TotalComponent from "./TotalComponent";
-import { ContainerProps } from "./types";
+import { MonthContainerProps } from "./types";
 import {
   activitiesOfDay,
   activitiesOfMonth,
@@ -22,7 +22,8 @@ export default function MonthContainer({
   today,
   theme,
   activities,
-}: ContainerProps) {
+  shouldShowMonthDayLoading,
+}: MonthContainerProps) {
   const intl = useIntl();
 
   const [currentBaseDate, setCurrentBaseDate] = useState(today);
@@ -110,9 +111,17 @@ export default function MonthContainer({
               date,
               activitiesOfMonth(currentMonth, currentYear, activities),
             );
+
+            const cellIsLoading = shouldShowMonthDayLoading(
+              date,
+              currentMonth,
+              currentYear,
+            );
+
             return (
               <p
                 key={index}
+                className={cellIsLoading ? styles.cellLoading : ""}
                 data-today={isSameDay(date, today)}
                 data-empty={distance === "0.00"}
                 data-content={`💨${getAverageSpeedOfPeriod(

@@ -36,6 +36,7 @@
   --color-brand-dark: hsl(236deg 21% 14%);
   --color-brand-dark80: hsl(236deg 21% 26%);
   --color-white: hsl(0deg 0% 100%);
+  --color-white10: hsl(0deg 0% 100% / 10%);
   --color-white40: hsl(0deg 0% 100% / 40%);
   --color-skin: hsl(24deg 71.4% 76.7%);
   --color-wheat: hsl(46deg 57% 88%);

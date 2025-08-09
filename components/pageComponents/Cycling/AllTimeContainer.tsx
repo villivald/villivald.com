@@ -3,7 +3,7 @@ import { FormattedMessage } from "react-intl";
 
 import styles from "../../../styles/Cycling.module.css";
 import TotalComponent from "./TotalComponent";
-import { ContainerProps } from "./types";
+import { AllTimeContainerProps } from "./types";
 import {
   activitiesOfYear,
   getAverageSpeedOfPeriod,
@@ -16,14 +16,17 @@ import {
 export default function AllTimeContainer({
   today,
   activities,
-}: ContainerProps) {
+  shouldShowAllTimeLoading,
+}: AllTimeContainerProps) {
   return (
     <section>
       <h2>
         <FormattedMessage id="allTime" />
       </h2>
       <div>
-        <div className={styles.allTimeContainer}>
+        <div
+          className={`${styles.allTimeContainer} ${shouldShowAllTimeLoading() ? styles.containerLoading : ""}`}
+        >
           {yearsOfActivities(activities)?.map((year, index) => {
             const distance = parseFloat(
               getTotalDistanceOfPeriod(activitiesOfYear(year, activities)),

@@ -5,7 +5,7 @@ import { FormattedMessage, useIntl } from "react-intl";
 
 import styles from "../../../styles/Cycling.module.css";
 import TotalComponent from "./TotalComponent";
-import { ContainerProps } from "./types";
+import { YearContainerProps } from "./types";
 import {
   activitiesOfMonth,
   activitiesOfYear,
@@ -20,7 +20,8 @@ export default function YearContainer({
   today,
   theme,
   activities,
-}: ContainerProps) {
+  shouldShowYearLoading,
+}: YearContainerProps) {
   const intl = useIntl();
 
   const [currentBaseDate, setCurrentBaseDate] = useState(today);
@@ -78,15 +79,23 @@ export default function YearContainer({
       </span>
 
       <div>
-        <div className={styles.yearContainer}>
+        <div
+          className={`${styles.yearContainer} ${isCurrentYear && shouldShowYearLoading(currentYear) ? styles.containerLoading : ""}`}
+        >
           {Object.keys(months).map((_key, index) => {
             const distance = getMonthlyDistances(
               activitiesOfYear(currentYear, activities),
             )[index];
 
+            const cellIsLoading =
+              isCurrentYear &&
+              shouldShowYearLoading(currentYear) &&
+              index === today.getMonth();
+
             return (
               <p
                 key={index}
+                className={cellIsLoading ? styles.cellLoading : ""}
                 data-thismonth={isSameMonth(
                   currentBaseDate,
                   new Date(today.getFullYear(), index),
