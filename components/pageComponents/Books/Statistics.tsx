@@ -1,12 +1,16 @@
+import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
 import { Fragment, useContext } from "react";
 import { FormattedMessage } from "react-intl";
 
 import { ThemeContext } from "../../../context";
 import styles from "../../../styles/Books.module.css";
-import BarChart from "./BarChart";
-import DoughnutChart from "./DoughnutChart";
-import SecondaryCharts from "./SecondaryCharts";
+
+const BarChart = dynamic(() => import("./BarChart"), { ssr: false });
+const DoughnutChart = dynamic(() => import("./DoughnutChart"), { ssr: false });
+const SecondaryCharts = dynamic(() => import("./SecondaryCharts"), {
+  ssr: false,
+});
 
 export default function Statistics() {
   const router = useRouter();

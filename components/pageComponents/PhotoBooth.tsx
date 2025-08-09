@@ -106,7 +106,7 @@ export default function PhotoBooth() {
                     key={index}
                     onClick={() => handleImageClick(`${year}-${num}`)}
                     onKeyDown={(e) => {
-                      if (e.key === "Enter") {
+                      if (e.key === "Enter" || e.key === " ") {
                         handleImageClick(`${year}-${num}`);
                       }
                     }}
@@ -115,7 +115,7 @@ export default function PhotoBooth() {
                       backgroundImage: `url(/photobooth/${year}-${num}.avif)`,
                     }}
                     role="button"
-                    tabIndex={-1}
+                    tabIndex={0}
                   >
                     {clickedImage === `${year}-${num}` && (
                       <button
@@ -134,7 +134,7 @@ export default function PhotoBooth() {
                   key={index}
                   onClick={() => handleImageClick(`${year}-${num}`)}
                   onKeyDown={(e) => {
-                    if (e.key === "Enter") {
+                    if (e.key === "Enter" || e.key === " ") {
                       handleImageClick(`${year}-${num}`);
                     }
                   }}
@@ -143,7 +143,7 @@ export default function PhotoBooth() {
                     backgroundImage: `url(/photobooth/${year}-${num}.avif)`,
                   }}
                   role="button"
-                  tabIndex={-1}
+                  tabIndex={0}
                 >
                   {clickedImage === `${year}-${num}` && (
                     <button

@@ -33,16 +33,14 @@ export default function DropdownMenu() {
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
-    if (e.key === "Enter" || e.key === " ") {
-      e.preventDefault(); // Prevent default behavior to avoid quick toggle
-      setMenuOpen((prev) => !prev);
+    if (e.key === "Escape") {
+      setMenuOpen(false);
     }
   };
 
   return (
     <div
       className={styles.dropdown}
-      onClick={() => setMenuOpen((prev) => !prev)}
       onBlur={handleBlur}
       onKeyDown={handleKeyDown}
       role="menu"
@@ -55,12 +53,15 @@ export default function DropdownMenu() {
         data-theme={theme}
         data-open={menuOpen}
         aria-label={intl.formatMessage({ id: "menu" })}
+        aria-controls="dropdown-menu"
+        onClick={() => setMenuOpen((prev) => !prev)}
       >
         <span>
           <FormattedMessage id="menu" />
         </span>
       </button>
       <ul
+        id="dropdown-menu"
         role="menu"
         aria-hidden={!menuOpen}
         className={theme === "dark" ? styles.darkMenu : styles.lightMenu}
@@ -70,18 +71,20 @@ export default function DropdownMenu() {
           <li
             key={item}
             role="menuitem"
-            tabIndex={0}
-            onKeyDown={(e) => {
-              if (e.key === "Enter") {
-                window.location.href = `/${item}`;
-              }
-            }}
             data-active={
               pathname === `/${item}` ||
               (pathname === "/statistics" && item === "books")
             }
           >
-            <Link href={`/${item}`} tabIndex={-1}>
+            <Link
+              href={`/${item}`}
+              aria-current={
+                pathname === `/${item}` ||
+                (pathname === "/statistics" && item === "books")
+                  ? "page"
+                  : undefined
+              }
+            >
               <Image
                 src={`/emojis/${item}.svg`}
                 data-name={item}

@@ -54,6 +54,7 @@ export default function Grid() {
       <Link
         href={randomLink}
         onMouseOver={() => getRandomLink()}
+        onFocus={() => getRandomLink()}
         aria-label={intl.formatMessage({ id: "aria.randomLink" })}
       >
         <RandomGrid />
