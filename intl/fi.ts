@@ -215,6 +215,8 @@ const fi = {
     "Tilasto kirjoista joita olen lukenut viimeisen 5 vuoden aikana",
   "aria.skiplinks": "Hyppää sisältöön linkit",
   "aria.closeFullscreen": "Sulje koko näytön kuva",
+  "aria.switchToLight": "Vaihda vaaleaseen teemaan",
+  "aria.switchToDark": "Vaihda tummaan teemaan",
 };
 
 export default fi;

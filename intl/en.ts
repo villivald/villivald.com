@@ -208,6 +208,8 @@ const en = {
   "aria.statistics.books": "Statistics for books read in last 5 years",
   "aria.skiplinks": "Skip links",
   "aria.closeFullscreen": "Close fullscreen image",
+  "aria.switchToLight": "Switch to light theme",
+  "aria.switchToDark": "Switch to dark theme",
 };
 
 export default en;

@@ -32,44 +32,68 @@ const options = {
   plugins: {
     legend: {
       position: "top" as const,
-      onClick: function (_e: never, legendItem: any, legend: any) {
-        const index = legendItem.index;
+      onClick: function (
+        _e: unknown,
+        legendItem: import("chart.js").LegendItem,
+        legend: { chart: ChartJS },
+      ) {
+        const idx =
+          typeof legendItem.index === "number" ? legendItem.index : null;
+        if (idx === null) return;
+
         const ci = legend.chart;
 
         // Get meta data for the dataset
         const meta = ci.getDatasetMeta(0);
 
         // Toggle visibility for the clicked segment
-        const alreadyHidden = meta.data[index].hidden || false;
-        meta.data[index].hidden = !alreadyHidden;
+        const arc = meta.data[idx] as unknown as
+          | { hidden?: boolean }
+          | undefined;
+        if (!arc) return;
+        const alreadyHidden = arc.hidden ?? false;
+        arc.hidden = !alreadyHidden;
 
         // Update the chart
         ci.update();
       },
       labels: {
-        generateLabels: function (chart: any) {
-          const data = chart.data;
-          if (data.labels.length && data.datasets.length) {
-            return data.labels.map((label: string, i: number) => {
-              const meta = chart.getDatasetMeta(0);
-              const ds = data.datasets[0];
-              const arc = meta.data[i];
-              const hidden = arc && arc.hidden;
+        generateLabels: function (chart: ChartJS<"doughnut">) {
+          const labels = (chart.data.labels ?? []) as string[];
+          if (labels.length && chart.data.datasets.length) {
+            const ds = chart.data.datasets[0] as unknown as {
+              backgroundColor: string | string[];
+              borderColor: string | string[];
+              borderWidth: number;
+            };
+            const meta = chart.getDatasetMeta(0);
+
+            return labels.map((label: string, i: number) => {
+              const arc = meta.data[i] as unknown as { hidden?: boolean };
+              const hidden = arc?.hidden;
 
               return {
                 text: label,
-                fillStyle: ds.backgroundColor[i],
-                strokeStyle: ds.borderColor[i],
+                fillStyle: Array.isArray(ds.backgroundColor)
+                  ? ds.backgroundColor[i]
+                  : ds.backgroundColor,
+                strokeStyle: Array.isArray(ds.borderColor)
+                  ? ds.borderColor[i]
+                  : ds.borderColor,
                 lineWidth: ds.borderWidth,
                 hidden: hidden,
                 index: i,
                 // Add line-through style for hidden items
-                fontColor: chart.options.plugins.legend.labels.color,
+                fontColor: (
+                  chart.options as unknown as {
+                    plugins?: { legend?: { labels?: { color?: string } } };
+                  }
+                )?.plugins?.legend?.labels?.color,
                 textDecoration: hidden ? "line-through" : undefined,
-              };
+              } as import("chart.js").LegendItem;
             });
           }
-          return [];
+          return [] as import("chart.js").LegendItem[];
         },
       },
     },
@@ -114,7 +138,7 @@ export default function DoughnutChart() {
       booksDataSets.forEach((yearObj, index) => {
         const year = Object.keys(yearObj)[0];
         if (!lastThreeYears.includes(year) && meta.data[index]) {
-          (meta.data[index] as any).hidden = true;
+          (meta.data[index] as unknown as { hidden?: boolean }).hidden = true;
         }
       });
 

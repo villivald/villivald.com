@@ -13,7 +13,11 @@ export default function ThemeToggle({ changeTheme, theme }: Props) {
 
   return (
     <button
-      aria-label="changeThemeButton"
+      aria-label={
+        theme === "dark"
+          ? intl.formatMessage({ id: "aria.switchToLight" })
+          : intl.formatMessage({ id: "aria.switchToDark" })
+      }
       onClick={changeTheme}
       className={styles.button}
       data-theme={theme}

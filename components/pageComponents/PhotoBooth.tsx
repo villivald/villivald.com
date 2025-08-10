@@ -18,17 +18,75 @@ export default function PhotoBooth() {
   useEffect(() => {
     const slideCarousel = document.getElementById("slides");
 
-    slideCarousel?.addEventListener("scroll", () => {
+    const handleScroll = () => {
       // Get the width of each slide and the current scroll position
-      const slideWidth = slideCarousel?.offsetWidth;
-      const scrollLeft = slideCarousel?.scrollLeft;
+      const slideWidth = slideCarousel?.offsetWidth ?? 0;
+      const scrollLeft = slideCarousel?.scrollLeft ?? 0;
 
       // Calculate which slide is currently in view
       const currentSlideIndex = Math.round(scrollLeft / slideWidth);
 
-      setCurrentSlide(years[currentSlideIndex]);
-    });
-  }, [years]);
+      setCurrentSlide(years[currentSlideIndex] ?? years[0]);
+    };
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key !== "ArrowRight" && e.key !== "ArrowLeft") return;
+      e.preventDefault();
+
+      const currentIndex = years.indexOf(currentSlide);
+      const delta = e.key === "ArrowRight" ? 1 : -1;
+      const nextIndex = Math.min(
+        Math.max(currentIndex + delta, 0),
+        years.length - 1,
+      );
+
+      const target = document.getElementById(`slide-${nextIndex + 1}`);
+      target?.scrollIntoView({
+        behavior: "smooth",
+        inline: "start",
+        block: "nearest",
+      });
+    };
+
+    slideCarousel?.addEventListener("scroll", handleScroll);
+    slideCarousel?.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      slideCarousel?.removeEventListener("scroll", handleScroll);
+      slideCarousel?.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [years, currentSlide]);
+
+  // Ensure focus is not left inside an inert (non-current) slide when slide changes
+  useEffect(() => {
+    const slidesRoot = document.getElementById("slides");
+    if (!slidesRoot) return;
+
+    const activeElement = document.activeElement as HTMLElement | null;
+    if (!activeElement) return;
+
+    const inertAncestor = activeElement.closest(
+      `.${styles.slidesItem}[inert]`,
+    ) as HTMLElement | null;
+
+    if (inertAncestor) {
+      const currentSlideElement = slidesRoot.querySelector(
+        `.${styles.slidesItem}[data-year="${currentSlide}"]`,
+      ) as HTMLElement | null;
+
+      const firstTile = currentSlideElement?.querySelector(
+        'div[role="button"]',
+      ) as HTMLElement | null;
+
+      const yearNav = document.getElementById(
+        currentSlide,
+      ) as HTMLElement | null;
+
+      (firstTile ?? yearNav)?.focus();
+    }
+  }, [currentSlide]);
+
+  // Keyboard navigation handled via a DOM listener scoped to focused elements inside the carousel
 
   const handleEyeMove = (e: React.PointerEvent<HTMLDivElement>) => {
     // get the x and y coordinates of the pointer
@@ -82,14 +140,22 @@ export default function PhotoBooth() {
       </div>
 
       <section className={styles.carousel} aria-label="carousel">
-        <div className={styles.slides} id="slides">
+        <div
+          className={styles.slides}
+          id="slides"
+          role="region"
+          aria-roledescription="carousel"
+          aria-label="Photo years"
+        >
           {years.map((year, index) => (
             <div
               key={index}
               className={styles.slidesItem}
               id={`slide-${++index}`}
               data-slide={`slide${index}`}
-              aria-label={`slide ${index} of 5`}
+              data-year={year}
+              inert={currentSlide !== year}
+              aria-label={`slide ${index} of ${years.length}`}
             >
               {["8", "7", "6", "5"].map((num, index) =>
                 year === "2025" && (num === "8" || num === "7") ? (
@@ -106,7 +172,7 @@ export default function PhotoBooth() {
                     key={index}
                     onClick={() => handleImageClick(`${year}-${num}`)}
                     onKeyDown={(e) => {
-                      if (e.key === "Enter") {
+                      if (e.key === "Enter" || e.key === " ") {
                         handleImageClick(`${year}-${num}`);
                       }
                     }}
@@ -115,7 +181,7 @@ export default function PhotoBooth() {
                       backgroundImage: `url(/photobooth/${year}-${num}.avif)`,
                     }}
                     role="button"
-                    tabIndex={-1}
+                    tabIndex={currentSlide === year ? 0 : -1}
                   >
                     {clickedImage === `${year}-${num}` && (
                       <button
@@ -134,7 +200,7 @@ export default function PhotoBooth() {
                   key={index}
                   onClick={() => handleImageClick(`${year}-${num}`)}
                   onKeyDown={(e) => {
-                    if (e.key === "Enter") {
+                    if (e.key === "Enter" || e.key === " ") {
                       handleImageClick(`${year}-${num}`);
                     }
                   }}
@@ -143,7 +209,7 @@ export default function PhotoBooth() {
                     backgroundImage: `url(/photobooth/${year}-${num}.avif)`,
                   }}
                   role="button"
-                  tabIndex={-1}
+                  tabIndex={currentSlide === year ? 0 : -1}
                 >
                   {clickedImage === `${year}-${num}` && (
                     <button

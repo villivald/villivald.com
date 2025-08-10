@@ -11,7 +11,7 @@ const nextConfig: NextConfig = {
         hostname: "res.cloudinary.com",
       },
       {
-        protocol: "http",
+        protocol: "https",
         hostname: "ghchart.rshah.org",
       },
       {

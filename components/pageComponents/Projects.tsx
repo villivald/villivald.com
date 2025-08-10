@@ -25,7 +25,7 @@ export default function Projects() {
           </Link>
         </p>
         <Image
-          src="http://ghchart.rshah.org/30a14e/villivald"
+          src="https://ghchart.rshah.org/30a14e/villivald"
           width={663}
           height={104}
           alt={intl.formatMessage({ id: "alt.githubChart" })}
