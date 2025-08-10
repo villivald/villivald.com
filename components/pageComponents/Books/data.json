@@ -2641,6 +2641,33 @@
       "category": "fiction"
     },
     {
+      "title": "Большой стиль",
+      "author": "Кашин",
+      "date": "03.08.2025",
+      "image": "289.avif",
+      "rating": 4,
+      "language": "ru",
+      "category": "non-fiction"
+    },
+    {
+      "title": "The Secret Diary of Laura Palmer",
+      "author": "J. Lynch",
+      "date": "04.08.2025",
+      "image": "290.avif",
+      "rating": 3,
+      "language": "en",
+      "category": "fiction"
+    },
+    {
+      "title": "Похождения бравого солдата Швейка",
+      "author": "Гашек",
+      "date": "07.08.2025",
+      "image": "291.avif",
+      "rating": 4,
+      "language": "ru",
+      "category": "fiction"
+    },
+    {
       "title": "",
       "author": "",
       "date": "",
