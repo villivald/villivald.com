@@ -2668,6 +2668,42 @@
       "category": "fiction"
     },
     {
+      "title": "The Secret History of Twin Peaks",
+      "author": "M. Frost",
+      "date": "13.08.2025",
+      "image": "292.avif",
+      "rating": 5,
+      "language": "ru",
+      "category": "fiction"
+    },
+    {
+      "title": "Twin Peaks: The Final Dossier",
+      "author": "M. Frost",
+      "date": "20.08.2025",
+      "image": "293.avif",
+      "rating": 5,
+      "language": "en",
+      "category": "fiction"
+    },
+    {
+      "title": "Suuri valhe vammaisuudesta",
+      "author": "S. Tawast, R. Leinonen",
+      "date": "23.08.2025",
+      "image": "294.avif",
+      "rating": 3,
+      "language": "fi",
+      "category": "non-fiction"
+    },
+    {
+      "title": "Careless People",
+      "author": "S. Wynn-Williams",
+      "date": "24.08.2025",
+      "image": "295.avif",
+      "rating": 4,
+      "language": "en",
+      "category": "non-fiction"
+    },
+    {
       "title": "",
       "author": "",
       "date": "",
