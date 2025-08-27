@@ -41,7 +41,7 @@ export default function Now() {
             height={32}
           />
           <FormattedMessage id="lastUpdated" />
-          <time dateTime="2025-06-15">15.06.2025</time>
+          <time dateTime="2025-08-27">27.08.2025</time>
         </p>
       </section>
       <section>
@@ -51,20 +51,25 @@ export default function Now() {
           </h2>
           <p lang="en">
             Trying to{" "}
+            <Link href="/cycling" hrefLang="en">
+              cycle
+            </Link>{" "}
+            with a bit more consistency and more{" "}
             <Link
               href="https://www.strava.com/athletes/42251423"
               target="_blank"
               rel="noopener noreferrer"
               hrefLang="en"
             >
-              cycle
-            </Link>{" "}
-            with a bit more consistency and more structured training. Doing some
-            stretches on a daily basis for the first time in my life.
+              structured training
+            </Link>
+            . Doing some stretches on a daily basis for the first time in my
+            life.
           </p>
           <p lang="en">
-            Planning a motorhome trip to France in the summer with my wife as a
-            reincarnation of our previous intrerail trips.
+            We did a motorhome trip to France 🇫🇷 this summer. Also briefly
+            visited Germany 🇩🇪, Luxembourg 🇱🇺, Belgium 🇧🇪, Switzerland 🇨🇭 and
+            Liechtenstein 🇱🇮.
           </p>
         </article>
         <article>
@@ -85,14 +90,14 @@ export default function Now() {
             </li>
             <li lang="en">
               <Link
-                href="https://en.wikipedia.org/wiki/War_(Woodward_book)"
+                href="https://en.wikipedia.org/wiki/Careless_People"
                 target="_blank"
                 rel="noopener noreferrer"
                 hrefLang="en"
               >
-                War
+                Careless People
               </Link>{" "}
-              by Bob Woodward
+              by Sarah Wynn-Williams
             </li>
             <li lang="en">
               <Link
@@ -111,10 +116,7 @@ export default function Now() {
           <h2>
             <FormattedMessage id="watching" />
           </h2>
-          <p lang="en">
-            YouTube, Your Friends & Neighbors, The Studio. Rewatching Twin Peaks
-            (all seasons & movie) from the beginning.
-          </p>
+          <p lang="en">YouTube, new Dexter, The Studio.</p>
         </article>
         <article>
           <h2>
@@ -163,7 +165,7 @@ export default function Now() {
               cycling-related project
             </Link>{" "}
             is finally starting to take some shape. Looking forward to going
-            live in early summer.
+            live in the next few months. New ideas come and go.
           </p>
         </article>
         <article>
@@ -171,17 +173,8 @@ export default function Now() {
             <FormattedMessage id="interestingThings" />
           </h2>
           <p lang="en">
-            Never knew that{" "}
-            <Link
-              href="https://en.wikipedia.org/wiki/Common_wood_pigeon"
-              target="_blank"
-              rel="noopener noreferrer"
-              hrefLang="en"
-            >
-              wood pigeons
-            </Link>{" "}
-            (evil twins of common pigeons) exist before I moved to the current
-            place.
+            Data roaming prices in Switzerland are just ridiculous for EU
+            citizens.
           </p>
         </article>
       </section>
