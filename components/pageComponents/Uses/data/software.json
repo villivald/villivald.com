@@ -7,10 +7,10 @@
       "image": "vscode"
     },
     {
-      "name": "Arc Browser",
-      "link": "https://arc.net/",
-      "description": "Main Browser",
-      "image": "arc"
+      "name": "Cursor",
+      "link": "https://cursor.com/",
+      "description": "AI code editor",
+      "image": "cursor"
     },
     {
       "name": "Zen Browser",
