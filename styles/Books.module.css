@@ -155,6 +155,7 @@ main[data-theme="dark"] .totalPill {
   display: grid;
   transition: all 0.25s ease;
   margin-block-end: 2rem;
+  height: 300px;
 }
 
 .booksContainer > figure:hover,
