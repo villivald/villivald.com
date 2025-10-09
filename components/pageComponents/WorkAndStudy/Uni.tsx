@@ -94,7 +94,7 @@ export default function Uni({ styles, theme, intl }: Props) {
       <div>
         <div className={styles.emojiContainer}>
           <h1>
-            <FormattedMessage id="coursesAndCertificates" />
+            <FormattedMessage id="courses" />
           </h1>
           <Image
             src="/emojis/writing.svg"
@@ -104,74 +104,41 @@ export default function Uni({ styles, theme, intl }: Props) {
           />
         </div>
 
-        <div>
-          <div className={styles.emojiContainer}>
-            <Image
-              data-theme={theme}
-              src="/emojis/comet.svg"
-              alt={intl.formatMessage({ id: "alt.comet" })}
-              width={24}
-              height={24}
-            />
-            <h2>
-              <FormattedMessage id="courses" />
-            </h2>
-          </div>
+        <ul>
+          <li>
+            <Link
+              href="https://frontendmasters.com/u/villivald/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Frontend Masters
+            </Link>
+          </li>
 
-          <ul>
-            <li>
-              <Link href="https://frontendmasters.com/u/villivald/">
-                Frontend Masters
-              </Link>
-            </li>
+          <li>
+            Complete CSS{" "}
+            <Link href="./complete_css.pdf" target="_blank">
+              (PDF, 35 KB)
+            </Link>
+          </li>
 
-            <li>
-              <Link href="https://www.coursera.org/account/accomplishments/certificate/XXH88UHKWCNW">
-                Coursera
-              </Link>
-            </li>
+          <li>
+            Road to Next{" "}
+            <Link href="./road_to_next.pdf" target="_blank">
+              (PDF, 68 KB)
+            </Link>
+          </li>
 
-            <li>
-              <Link href="https://www.linkedin.com/in/villivald/">
-                <FormattedMessage id="other" />
-              </Link>
-            </li>
-          </ul>
-        </div>
-
-        <div>
-          <div className={styles.emojiContainer}>
-            <Image
-              src="/emojis/fire.svg"
-              alt={intl.formatMessage({ id: "alt.fire" })}
-              width={24}
-              height={24}
-            />
-            <h2>
-              <FormattedMessage id="certificates" />
-            </h2>
-          </div>
-
-          <ul>
-            <li>
-              <Link href="https://www.udemy.com/certificate/UC-5abfefff-c2bc-491a-8d81-8610171f981c/">
-                TypeScript
-              </Link>
-            </li>
-
-            <li>
-              <Link href="https://www.freecodecamp.org/villivald">
-                freeCodeCamp
-              </Link>
-            </li>
-
-            <li>
-              <Link href="https://www.linkedin.com/in/villivald/">
-                <FormattedMessage id="other" />
-              </Link>
-            </li>
-          </ul>
-        </div>
+          <li>
+            <Link
+              href="https://www.udemy.com/certificate/UC-5abfefff-c2bc-491a-8d81-8610171f981c/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              TypeScript | Udemy
+            </Link>
+          </li>
+        </ul>
       </div>
     </div>
   );

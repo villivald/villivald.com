@@ -37,9 +37,9 @@ export default function Work({ styles, theme, intl }: Props) {
         <ul>
           <li>2024 →</li>
           <li>
-            <FormattedMessage id="softwareDeveloper" />
+            <FormattedMessage id="fullStackDeveloper" />
           </li>
-          <li>React, Meteor, Javascript, MongoDB, HTML, CSS</li>
+          <li>React, Meteor, Javascript, Node.js, MongoDB, HTML, CSS</li>
         </ul>
       </div>
 
@@ -62,7 +62,9 @@ export default function Work({ styles, theme, intl }: Props) {
           <li>
             <FormattedMessage id="frontendDeveloper" />
           </li>
-          <li>React, Javascript, HTML, CSS, Redux, Cypress, Figma & A11y</li>
+          <li>
+            React, Next.js, Javascript, HTML, CSS, Redux, Cypress, Figma & A11y
+          </li>
         </ul>
       </div>
 
@@ -70,11 +72,19 @@ export default function Work({ styles, theme, intl }: Props) {
         <div className={styles.emojiContainer}>
           <section>
             <Image
-              src="/images/construction.svg"
-              width={200}
-              height={155}
-              alt={intl.formatMessage({ id: "alt.construction" })}
+              src="/preview/qd.avif"
+              width={210}
+              height={175}
+              alt={intl.formatMessage({ id: "alt.previewIds" })}
             />
+            <Link
+              href="https://qualitydesk.com/en/software/"
+              hrefLang="x-default"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              QualityDesk App
+            </Link>
           </section>
         </div>
       </div>
@@ -92,6 +102,8 @@ export default function Work({ styles, theme, intl }: Props) {
               <Link
                 href="https://tunnisteportaali.kansalliskirjasto.fi/"
                 hrefLang="x-default"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <FormattedMessage id="identifierServices.public" />
               </Link>

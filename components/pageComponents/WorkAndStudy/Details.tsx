@@ -22,7 +22,7 @@ export const Details = ({
         <div>
           <p data-theme={theme}>{text}</p>
           <p>
-            <a data-theme={theme} href={link}>
+            <a data-theme={theme} href={link} target="_blank" rel="noreferrer">
               {description}
             </a>
           </p>

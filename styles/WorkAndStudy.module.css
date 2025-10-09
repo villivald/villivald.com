@@ -10,7 +10,7 @@
   color: var(--color-white);
 }
 
-.mainContainer[data-theme="dark"] img:is([alt^="Comet"], [alt^="Floppy"]) {
+.mainContainer[data-theme="dark"] img:is([alt^="Floppy"]) {
   filter: invert(1);
 }
 
@@ -34,6 +34,7 @@
   padding: 2rem;
   border-radius: 1rem;
   min-height: 50vh;
+  gap: 2rem;
 }
 
 .toggle > details > div {
@@ -212,6 +213,7 @@ main[data-theme="dark"] .mainContainer a:focus-visible {
 @media (width <= 900px) {
   .mainContainer > div {
     grid-template-columns: 1fr;
+    grid-template-rows: auto;
     place-items: stretch;
   }
 }
