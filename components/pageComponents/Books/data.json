@@ -2731,6 +2731,33 @@
       "category": "non-fiction"
     },
     {
+      "title": "The Secret of Secrets",
+      "author": "D. Brown",
+      "date": "09.10.2025",
+      "image": "299.avif",
+      "rating": 2,
+      "language": "en",
+      "category": "fiction"
+    },
+    {
+      "title": "Американские каникулы",
+      "author": "Лимонов",
+      "date": "11.10.2025",
+      "image": "300.avif",
+      "rating": 4,
+      "language": "ru",
+      "category": "fiction"
+    },
+    {
+      "title": "Благими намерениями",
+      "author": "К. Лученко",
+      "date": "12.10.2025",
+      "image": "301.avif",
+      "rating": 5,
+      "language": "ru",
+      "category": "non-fiction"
+    },
+    {
       "title": "",
       "author": "",
       "date": "",
