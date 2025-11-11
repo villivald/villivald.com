@@ -2,8 +2,9 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   experimental: {
-    reactCompiler: true,
+    viewTransition: true,
   },
+  reactCompiler: true,
   images: {
     remotePatterns: [
       {
@@ -29,9 +30,6 @@ const nextConfig: NextConfig = {
     ],
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
   },
 };
 

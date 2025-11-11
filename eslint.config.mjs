@@ -1,7 +1,9 @@
 import css from "@eslint/css";
-import { FlatCompat } from "@eslint/eslintrc";
-
-const compat = new FlatCompat({ baseDirectory: import.meta.dirname });
+import next from "eslint-config-next";
+import nextCoreWebVitals from "eslint-config-next/core-web-vitals";
+import nextTypescript from "eslint-config-next/typescript";
+import prettierPlugin from "eslint-plugin-prettier";
+import simpleImportSort from "eslint-plugin-simple-import-sort";
 
 const eslintConfig = [
   {
@@ -9,20 +11,26 @@ const eslintConfig = [
     language: "css/css",
     ...css.configs.recommended,
   },
-  ...compat.config({
-    extends: [
-      "next/core-web-vitals",
-      "next/typescript",
-      "prettier",
-      "plugin:jsx-a11y/recommended",
-      "plugin:prettier/recommended",
-    ],
-    plugins: ["jsx-a11y", "prettier", "simple-import-sort"],
+  ...nextCoreWebVitals,
+  ...nextTypescript,
+  {
+    ignores: [".next/**", "node_modules/**"],
+  },
+  ...next,
+  {
+    plugins: {
+      "simple-import-sort": simpleImportSort,
+      prettier: prettierPlugin,
+      css: css,
+    },
     rules: {
       "simple-import-sort/imports": "error",
       "simple-import-sort/exports": "error",
+      "prettier/prettier": "error",
+      "react-hooks/set-state-in-effect": "off",
+      "css/no-invalid-properties": "off",
     },
-  }),
+  },
 ];
 
 export default eslintConfig;
