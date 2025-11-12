@@ -41,7 +41,7 @@ export default function Now() {
             height={32}
           />
           <FormattedMessage id="lastUpdated" />
-          <time dateTime="2025-08-27">27.08.2025</time>
+          <time dateTime="2025-11-12">12.11.2025</time>
         </p>
       </section>
       <section>
@@ -116,17 +116,15 @@ export default function Now() {
           <h2>
             <FormattedMessage id="watching" />
           </h2>
-          <p lang="en">YouTube, new Dexter, The Studio.</p>
+          <p lang="en">
+            YouTube, Only Murders in the Building, All Her Fault, Pluribus.
+          </p>
         </article>
         <article>
           <h2>
             <FormattedMessage id="work" />
           </h2>
-          <p lang="en">
-            Going pretty ok so far at the new job. Looking forward to a better
-            work-life balance. Gaining more experience in the field, as well as
-            going out of my comfort zone.
-          </p>
+          <p lang="en">Some updates coming soon.</p>
         </article>
         <article>
           <h2>
@@ -157,15 +155,14 @@ export default function Now() {
           <p lang="en">
             My{" "}
             <Link
-              href="https://github.com/villivald/cyclist.fi"
+              href="https://cyclist.fi"
               target="_blank"
               rel="noopener noreferrer"
               hrefLang="en"
             >
-              cycling-related project
+              cycling-related project (cyclist.fi)
             </Link>{" "}
-            is finally starting to take some shape. Looking forward to going
-            live in the next few months. New ideas come and go.
+            is finally live. More features are in the works.
           </p>
         </article>
         <article>
