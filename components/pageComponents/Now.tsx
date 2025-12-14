@@ -41,7 +41,7 @@ export default function Now() {
             height={32}
           />
           <FormattedMessage id="lastUpdated" />
-          <time dateTime="2025-11-12">12.11.2025</time>
+          <time dateTime="2025-12-14">14.12.2025</time>
         </p>
       </section>
       <section>
@@ -50,26 +50,14 @@ export default function Now() {
             <FormattedMessage id="doing" />
           </h2>
           <p lang="en">
-            Trying to{" "}
-            <Link href="/cycling" hrefLang="en">
-              cycle
-            </Link>{" "}
-            with a bit more consistency and more{" "}
-            <Link
-              href="https://www.strava.com/athletes/42251423"
-              target="_blank"
-              rel="noopener noreferrer"
-              hrefLang="en"
-            >
-              structured training
-            </Link>
-            . Doing some stretches on a daily basis for the first time in my
-            life.
+            We did a motorhome trip to France 🇫🇷 this summer. Also briefly
+            visited Germany 🇩🇪, Luxembourg 🇱🇺, Belgium 🇧🇪, Switzerland 🇨🇭, and
+            Liechtenstein 🇱🇮.
           </p>
           <p lang="en">
-            We did a motorhome trip to France 🇫🇷 this summer. Also briefly
-            visited Germany 🇩🇪, Luxembourg 🇱🇺, Belgium 🇧🇪, Switzerland 🇨🇭 and
-            Liechtenstein 🇱🇮.
+            Going on a work trip to the USA next week. Excited to see some
+            places outside New York where we have been before. An extremely long
+            flight looks a bit terrifying, though.
           </p>
         </article>
         <article>
@@ -77,6 +65,17 @@ export default function Now() {
             <FormattedMessage id="bookSuggestions" />
           </h2>
           <ul>
+            <li lang="en">
+              <Link
+                href="https://en.wikipedia.org/wiki/Nuclear_War:_A_Scenario"
+                target="_blank"
+                rel="noopener noreferrer"
+                hrefLang="en"
+              >
+                Nuclear War
+              </Link>{" "}
+              by Annie Jacobsen
+            </li>
             <li lang="en">
               <Link
                 href="https://en.wikipedia.org/wiki/Original_Sin_(Tapper_and_Thompson_book)"
@@ -99,17 +98,6 @@ export default function Now() {
               </Link>{" "}
               by Sarah Wynn-Williams
             </li>
-            <li lang="en">
-              <Link
-                href="https://en.wikipedia.org/wiki/The_Sleepwalkers:_How_Europe_Went_to_War_in_1914"
-                target="_blank"
-                rel="noopener noreferrer"
-                hrefLang="en"
-              >
-                The Sleepwalkers
-              </Link>{" "}
-              by Christopher Clark
-            </li>
           </ul>
         </article>
         <article>
@@ -117,14 +105,18 @@ export default function Now() {
             <FormattedMessage id="watching" />
           </h2>
           <p lang="en">
-            YouTube, Only Murders in the Building, All Her Fault, Pluribus.
+            YouTube, Pluribus, Doctor Who, Monster, Devil in Disguise, Man vs
+            Baby.
           </p>
         </article>
         <article>
           <h2>
             <FormattedMessage id="work" />
           </h2>
-          <p lang="en">Some updates coming soon.</p>
+          <p lang="en">
+            Started a new position as an Application Coordinator this week. More
+            news soon!
+          </p>
         </article>
         <article>
           <h2>
