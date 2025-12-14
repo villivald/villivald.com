@@ -2785,6 +2785,51 @@
       "category": "non-fiction"
     },
     {
+      "title": "Убийство часового",
+      "author": "Лимонов",
+      "date": "16.11.2025",
+      "image": "305.avif",
+      "rating": 3,
+      "language": "ru",
+      "category": "non-fiction"
+    },
+    {
+      "title": "Эмигрантские тетради",
+      "author": "Ф. Челноков",
+      "date": "18.11.2025",
+      "image": "306.avif",
+      "rating": 3,
+      "language": "ru",
+      "category": "non-fiction"
+    },
+    {
+      "title": "Nuclear War: A Scenario",
+      "author": "A. Jacobsen",
+      "date": "27.11.2025",
+      "image": "307.avif",
+      "rating": 4,
+      "language": "en",
+      "category": "non-fiction"
+    },
+    {
+      "title": "Морфология сказки",
+      "author": "Пропп",
+      "date": "28.11.2025",
+      "image": "308.avif",
+      "rating": 4,
+      "language": "ru",
+      "category": "non-fiction"
+    },
+    {
+      "title": "1913. Лето целого века",
+      "author": "Илиес",
+      "date": "13.12.2025",
+      "image": "309.avif",
+      "rating": 4,
+      "language": "ru",
+      "category": "non-fiction"
+    },
+    {
       "title": "",
       "author": "",
       "date": "",
