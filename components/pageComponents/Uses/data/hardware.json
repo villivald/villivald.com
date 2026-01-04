@@ -31,6 +31,12 @@
       "image": "watch"
     },
     {
+      "name": "AirPods Max",
+      "link": "https://www.apple.com/airpods-max/",
+      "description": "Headphones",
+      "image": "airpodsmax"
+    },
+    {
       "name": "AirPods Pro",
       "link": "https://www.apple.com/airpods-pro/",
       "description": "Earbuds",
