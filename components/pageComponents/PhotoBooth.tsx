@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { useContext, useEffect, useMemo, useState } from "react";
 import { useIntl } from "react-intl";
 
@@ -157,43 +156,32 @@ export default function PhotoBooth() {
               inert={currentSlide !== year}
               aria-label={`slide ${index} of ${years.length}`}
             >
-              {["8", "7", "6", "5"].map((num, index) =>
-                year === "2025" && (num === "8" || num === "7") ? (
-                  <div key={index} className={styles.question}>
-                    <Image
-                      alt={intl.formatMessage({ id: "alt.questionMark" })}
-                      width={200}
-                      height={200}
-                      src={"/emojis/question.svg"}
-                    />
-                  </div>
-                ) : (
-                  <div
-                    key={index}
-                    onClick={() => handleImageClick(`${year}-${num}`)}
-                    onKeyDown={(e) => {
-                      if (e.key === "Enter" || e.key === " ") {
-                        handleImageClick(`${year}-${num}`);
-                      }
-                    }}
-                    data-fullscreen={clickedImage === `${year}-${num}`}
-                    style={{
-                      backgroundImage: `url(/photobooth/${year}-${num}.avif)`,
-                    }}
-                    role="button"
-                    tabIndex={currentSlide === year ? 0 : -1}
-                  >
-                    {clickedImage === `${year}-${num}` && (
-                      <button
-                        aria-label={intl.formatMessage({
-                          id: "aria.closeFullscreen",
-                        })}
-                        className={styles.closeButton}
-                      ></button>
-                    )}
-                  </div>
-                ),
-              )}
+              {["8", "7", "6", "5"].map((num, index) => (
+                <div
+                  key={index}
+                  onClick={() => handleImageClick(`${year}-${num}`)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                      handleImageClick(`${year}-${num}`);
+                    }
+                  }}
+                  data-fullscreen={clickedImage === `${year}-${num}`}
+                  style={{
+                    backgroundImage: `url(/photobooth/${year}-${num}.avif)`,
+                  }}
+                  role="button"
+                  tabIndex={currentSlide === year ? 0 : -1}
+                >
+                  {clickedImage === `${year}-${num}` && (
+                    <button
+                      aria-label={intl.formatMessage({
+                        id: "aria.closeFullscreen",
+                      })}
+                      className={styles.closeButton}
+                    ></button>
+                  )}
+                </div>
+              ))}
               <div>{year}</div>
               {["4", "3", "2", "1"].map((num, index) => (
                 <div
