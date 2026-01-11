@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import styles from "../../../styles/WorkAndStudy.module.css";
 
 type DetailsProps = {
@@ -22,9 +24,14 @@ export const Details = ({
         <div>
           <p data-theme={theme}>{text}</p>
           <p>
-            <a data-theme={theme} href={link} target="_blank" rel="noreferrer">
+            <Link
+              data-theme={theme}
+              href={link}
+              target="_blank"
+              rel="noreferrer"
+            >
               {description}
-            </a>
+            </Link>
           </p>
         </div>
       </details>

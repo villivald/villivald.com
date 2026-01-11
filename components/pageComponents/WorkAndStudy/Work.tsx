@@ -5,10 +5,15 @@ import { FormattedMessage } from "react-intl";
 type Props = {
   theme: string;
   styles: { [key: string]: string };
-  intl: { formatMessage: (id: { id: string }) => string };
+  intl: {
+    locale: string;
+    formatMessage: (id: { id: string }) => string;
+  };
 };
 
 export default function Work({ styles, theme, intl }: Props) {
+  const locale = intl.locale || "en";
+
   return (
     <div className={styles.workContainer}>
       <div className={styles.emojiContainer}>
@@ -26,6 +31,26 @@ export default function Work({ styles, theme, intl }: Props) {
       <div>
         <div className={styles.emojiContainer}>
           <Image
+            src="/images/apotti.avif"
+            alt={intl.formatMessage({ id: "alt.apotti" })}
+            width={24}
+            height={24}
+          />
+          <h2>Apotti</h2>
+        </div>
+
+        <ul>
+          <li>2025 →</li>
+          <li>
+            <FormattedMessage id="softwareDeveloper" />
+          </li>
+          <li>Epic EHR, Hyperspace, MyChart</li>
+        </ul>
+      </div>
+
+      <div>
+        <div className={styles.emojiContainer}>
+          <Image
             src="/images/qualitydesk.png"
             alt={intl.formatMessage({ id: "alt.qualitydesk" })}
             width={24}
@@ -35,7 +60,7 @@ export default function Work({ styles, theme, intl }: Props) {
         </div>
 
         <ul>
-          <li>2024 →</li>
+          <li>2024 → 2025</li>
           <li>
             <FormattedMessage id="fullStackDeveloper" />
           </li>
@@ -72,18 +97,39 @@ export default function Work({ styles, theme, intl }: Props) {
         <div className={styles.emojiContainer}>
           <section>
             <Image
-              src="/preview/qd.avif"
+              src="/preview/preview_qd.avif"
               width={210}
               height={175}
-              alt={intl.formatMessage({ id: "alt.previewIds" })}
+              alt={intl.formatMessage({ id: "alt.previewQd" })}
             />
             <Link
-              href="https://qualitydesk.com/en/software/"
+              href={`https://qualitydesk.com/${locale}`}
               hrefLang="x-default"
               target="_blank"
               rel="noopener noreferrer"
             >
               QualityDesk App
+            </Link>
+          </section>
+        </div>
+      </div>
+
+      <div>
+        <div className={styles.emojiContainer}>
+          <section>
+            <Image
+              src="/preview/preview_apotti.avif"
+              width={210}
+              height={175}
+              alt={intl.formatMessage({ id: "alt.previewApotti" })}
+            />
+            <Link
+              href={`https://www.apotti.fi/${locale === "fi" ? "" : "en"}`}
+              hrefLang="x-default"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Apotti
             </Link>
           </section>
         </div>
@@ -100,7 +146,7 @@ export default function Work({ styles, theme, intl }: Props) {
                 alt={intl.formatMessage({ id: "alt.previewIds" })}
               />
               <Link
-                href="https://tunnisteportaali.kansalliskirjasto.fi/"
+                href={`https://tunnisteportaali.kansalliskirjasto.fi/?lng=${locale}`}
                 hrefLang="x-default"
                 target="_blank"
                 rel="noopener noreferrer"
