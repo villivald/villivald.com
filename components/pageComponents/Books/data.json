@@ -2854,6 +2854,50 @@
       "image": "",
       "rating": 0,
       "year": 2025
+    },
+    {
+      "title": "The Dark Side of the Earth",
+      "author": "M. Zygar",
+      "date": "20.01.2026",
+      "image": "312.avif",
+      "rating": 3,
+      "language": "en",
+      "category": "non-fiction"
+    },
+    {
+      "title": "Москва майская",
+      "author": "Лимонов",
+      "date": "07.02.2026",
+      "image": "313.avif",
+      "rating": 5,
+      "language": "ru",
+      "category": "fiction"
+    },
+    {
+      "title": "Empire of AI",
+      "author": "K. Hao",
+      "date": "21.02.2026",
+      "image": "314.avif",
+      "rating": 2,
+      "language": "en",
+      "category": "non-fiction"
+    },
+    {
+      "title": "Храм войны",
+      "author": "И. Венявкин",
+      "date": "07.03.2026",
+      "image": "315.avif",
+      "rating": 4,
+      "language": "ru",
+      "category": "non-fiction"
+    },
+    {
+      "title": "",
+      "author": "",
+      "date": "",
+      "image": "",
+      "rating": 0,
+      "year": 2026
     }
   ]
 }

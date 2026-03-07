@@ -13,6 +13,7 @@ const booksPerYear = (year: string) => {
 };
 
 const booksDataSets = [
+  { "2026": "#008000" },
   { "2025": "#f58231" },
   { "2024": "#bc5090" },
   { "2023": "#003f5c" },

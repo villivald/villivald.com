@@ -132,7 +132,7 @@ export default function Books() {
           height={32}
         />
         <FormattedMessage id="lastUpdated" />
-        <time dateTime="2026-01-04">04.01.2026</time>
+        <time dateTime="2026-03-07">07.03.2026</time>
       </p>
 
       {/* Filters */}

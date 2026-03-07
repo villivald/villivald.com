@@ -234,12 +234,16 @@ main[data-theme="dark"] .totalPill {
   color: var(--color-brand-grey30);
 }
 
+.year2026 {
+  background-color: var(--color-almost-white);
+}
+
 .year2025 {
-  background-color: var(--color-white);
+  background-color: var(--color-brand-green);
 }
 
 .year2024 {
-  background-color: var(--color-brand-green);
+  background-color: var(--color-white);
 }
 
 .year2023 {
