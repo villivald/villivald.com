@@ -13,6 +13,12 @@
       "image": "zwift"
     },
     {
+      "name": "Nintendo Switch 2",
+      "link": "https://en.wikipedia.org/wiki/Nintendo_Switch_2",
+      "description": "Gaming console",
+      "image": "switch"
+    },
+    {
       "name": "Oakley Aro7 Road",
       "link": "https://www.oakley.com/en-eu/product/FOS901512?variant=193517978204&sizeL",
       "description": "Helmet",

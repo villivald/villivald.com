@@ -49,10 +49,10 @@
       "image": "fabric"
     },
     {
-      "name": "Fastmail",
-      "link": "https://fastmail.com/",
+      "name": "Tuta",
+      "link": "https://tuta.com/",
       "description": "Email client",
-      "image": "fastmail"
+      "image": "tuta"
     },
     {
       "name": "Spark",
@@ -107,12 +107,6 @@
       "link": "https://bitwarden.com/",
       "description": "Password manager",
       "image": "bitwarden"
-    },
-    {
-      "name": "Raindrop",
-      "link": "https://raindrop.io/",
-      "description": "Bookmark manager",
-      "image": "raindrop"
     }
   ]
 }
