@@ -98,7 +98,7 @@ export default function Work({ styles, theme, intl }: Props) {
           <section>
             <Image
               src="/preview/preview_qd.avif"
-              width={210}
+              width={235}
               height={175}
               alt={intl.formatMessage({ id: "alt.previewQd" })}
             />
@@ -119,7 +119,7 @@ export default function Work({ styles, theme, intl }: Props) {
           <section>
             <Image
               src="/preview/preview_apotti.avif"
-              width={210}
+              width={235}
               height={175}
               alt={intl.formatMessage({ id: "alt.previewApotti" })}
             />
@@ -141,7 +141,7 @@ export default function Work({ styles, theme, intl }: Props) {
             <section>
               <Image
                 src="/preview/preview_ids.avif"
-                width={210}
+                width={235}
                 height={175}
                 alt={intl.formatMessage({ id: "alt.previewIds" })}
               />
