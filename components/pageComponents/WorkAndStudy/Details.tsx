@@ -22,7 +22,7 @@ export const Details = ({
       <details>
         <summary data-theme={theme}>{title}</summary>
         <div>
-          <p data-theme={theme}>{text}</p>
+          {text && <p data-theme={theme}>{text}</p>}
           <p>
             <Link
               data-theme={theme}

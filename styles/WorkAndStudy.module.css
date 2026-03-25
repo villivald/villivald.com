@@ -1,3 +1,5 @@
+/* eslint-disable css/use-baseline */
+
 .mainContainer {
   min-height: 70vh;
   display: flex;
@@ -41,6 +43,24 @@
   margin-left: 3.6rem;
 }
 
+@supports (interpolate-size: allow-keywords) {
+  ::details-content {
+    transition:
+      height 0.5s ease,
+      content-visibility 0.5s ease allow-discrete;
+    height: 0;
+    overflow: clip;
+  }
+
+  :root {
+    interpolate-size: allow-keywords;
+  }
+
+  [open]::details-content {
+    height: auto;
+  }
+}
+
 .mainContainer > div > div {
   display: grid;
   grid-template-rows: 1fr 2fr 2fr;
@@ -53,6 +73,10 @@
 
 .mainContainer > div > div:first-of-type {
   justify-self: flex-start;
+}
+
+.mainContainer > div > div > div:has(.emojiContainer) {
+  min-height: 175px;
 }
 
 .emojiContainer {
@@ -90,6 +114,10 @@ main[data-theme="dark"] .mainContainer a:focus-visible {
 
 .toggle > details > summary::-webkit-details-marker {
   display: none;
+}
+
+.toggle > details > summary::marker {
+  content: "";
 }
 
 .toggle > details summary::before,
