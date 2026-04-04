@@ -2892,6 +2892,33 @@
       "category": "non-fiction"
     },
     {
+      "title": "This Is for Everyone",
+      "author": "Tim Berners-Lee",
+      "date": "10.03.2026",
+      "image": "316.avif",
+      "rating": 5,
+      "language": "en",
+      "category": "non-fiction"
+    },
+    {
+      "title": "Simulaatioteoria",
+      "author": "Sissi Enestam",
+      "date": "22.03.2026",
+      "image": "317.avif",
+      "rating": 3,
+      "language": "fi",
+      "category": "non-fiction"
+    },
+    {
+      "title": "Ластики",
+      "author": "Роб-Грийе",
+      "date": "04.04.2026",
+      "image": "318.avif",
+      "rating": 3,
+      "language": "ru",
+      "category": "non-fiction"
+    },
+    {
       "title": "",
       "author": "",
       "date": "",
