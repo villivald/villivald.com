@@ -41,7 +41,7 @@ export default function Now() {
             height={32}
           />
           <FormattedMessage id="lastUpdated" />
-          <time dateTime="2025-12-14">14.12.2025</time>
+          <time dateTime="2026-04-05">05.04.2026</time>
         </p>
       </section>
       <section>
@@ -50,14 +50,8 @@ export default function Now() {
             <FormattedMessage id="doing" />
           </h2>
           <p lang="en">
-            We did a motorhome trip to France 🇫🇷 this summer. Also briefly
-            visited Germany 🇩🇪, Luxembourg 🇱🇺, Belgium 🇧🇪, Switzerland 🇨🇭, and
-            Liechtenstein 🇱🇮.
-          </p>
-          <p lang="en">
-            Going on a work trip to the USA next week. Excited to see some
-            places outside New York where we have been before. An extremely long
-            flight looks a bit terrifying, though.
+            Not much going on lately, honestly. I have been busy with work and
+            kind of sick for most of early spring.
           </p>
         </article>
         <article>
@@ -65,6 +59,17 @@ export default function Now() {
             <FormattedMessage id="bookSuggestions" />
           </h2>
           <ul>
+            <li lang="en">
+              <Link
+                href="https://en.wikipedia.org/wiki/This_Is_for_Everyone"
+                target="_blank"
+                rel="noopener noreferrer"
+                hrefLang="en"
+              >
+                This Is for Everyone
+              </Link>{" "}
+              by Tim Berners-Lee
+            </li>
             <li lang="en">
               <Link
                 href="https://en.wikipedia.org/wiki/Nuclear_War:_A_Scenario"
@@ -75,17 +80,6 @@ export default function Now() {
                 Nuclear War
               </Link>{" "}
               by Annie Jacobsen
-            </li>
-            <li lang="en">
-              <Link
-                href="https://en.wikipedia.org/wiki/Original_Sin_(Tapper_and_Thompson_book)"
-                target="_blank"
-                rel="noopener noreferrer"
-                hrefLang="en"
-              >
-                Original Sin
-              </Link>{" "}
-              by Jake Tapper & Alex Thompson
             </li>
             <li lang="en">
               <Link
@@ -105,8 +99,8 @@ export default function Now() {
             <FormattedMessage id="watching" />
           </h2>
           <p lang="en">
-            YouTube, Pluribus, Doctor Who, Monster, Devil in Disguise, Man vs
-            Baby.
+            YouTube, road cycling, The Pitt, Jury Duty, and also rewatching Twin
+            Peaks (it is happening again ➰).
           </p>
         </article>
         <article>
@@ -114,8 +108,9 @@ export default function Now() {
             <FormattedMessage id="work" />
           </h2>
           <p lang="en">
-            Started a new position as an Application Coordinator this week. More
-            news soon!
+            I started as an Application Coordinator at a local health tech
+            company late last year. There is a huge amount to learn, but it is a
+            great opportunity.
           </p>
         </article>
         <article>
@@ -123,38 +118,21 @@ export default function Now() {
             <FormattedMessage id="sideProjects" />
           </h2>
           <p lang="en">
-            I am starting to think about another rebuild of my personal website
-            as I am going through the{" "}
-            <Link
-              href="https://piccalil.li/complete-css/"
-              target="_blank"
-              rel="noopener noreferrer"
-              hrefLang="en"
-            >
-              Complete CSS
-            </Link>{" "}
-            and{" "}
-            <Link
-              href="https://www.road-to-next.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              hrefLang="en"
-            >
-              The Road to Next
-            </Link>{" "}
-            courses.
-          </p>
-          <p lang="en">
-            My{" "}
+            At the moment, I am actively working on my cycling-related project -{" "}
             <Link
               href="https://cyclist.fi"
               target="_blank"
               rel="noopener noreferrer"
               hrefLang="en"
             >
-              cycling-related project (cyclist.fi)
-            </Link>{" "}
-            is finally live. More features are in the works.
+              CYCLIST.FI
+            </Link>
+            {". "}
+            Several new features are coming soon.
+          </p>
+          <p lang="en">
+            I have also started thinking about updating/rebuilding this website,
+            but I am not sure when I will find the time.
           </p>
         </article>
         <article>
@@ -162,8 +140,8 @@ export default function Now() {
             <FormattedMessage id="interestingThings" />
           </h2>
           <p lang="en">
-            Data roaming prices in Switzerland are just ridiculous for EU
-            citizens.
+            The job market in Finland seems to be the worst it is been in a
+            while.
           </p>
         </article>
       </section>
