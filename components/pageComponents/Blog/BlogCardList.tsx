@@ -24,15 +24,27 @@ interface PostObject {
 }
 
 export default function BlogCardList({ data }: DataArray) {
-  const [randomPostData, setRandomPostData] = useState([]);
+  const [randomPosts, setRandomPosts] = useState<DataObject[]>([]);
   const [loadRandomPost, setLoadRandomPost] = useState(false);
 
   const theme = useContext(ThemeContext);
 
   async function fetchRandomPost() {
     const res = await fetch("https://dev.to/api/articles?username=villivald");
-    const json = await res.json();
-    setRandomPostData(json.slice(3, -1));
+    const json: DataObject[] = await res.json();
+    const randomPostData = json.slice(3, -1);
+
+    const shuffledPosts = [...randomPostData];
+
+    for (let i = shuffledPosts.length - 1; i > 0; i -= 1) {
+      const randomIndex = Math.floor(Math.random() * (i + 1));
+      [shuffledPosts[i], shuffledPosts[randomIndex]] = [
+        shuffledPosts[randomIndex],
+        shuffledPosts[i],
+      ];
+    }
+
+    setRandomPosts(shuffledPosts.slice(0, 6));
   }
 
   useEffect(() => {
@@ -50,11 +62,6 @@ export default function BlogCardList({ data }: DataArray) {
     { id: 6 },
     data[2],
   ];
-
-  // get 6 random posts from the randomPost array
-  const randomPosts: DataObject[] = [...randomPostData]
-    .sort(() => 0.5 - Math.random())
-    .slice(0, 6);
 
   return (
     <>
@@ -79,15 +86,18 @@ export default function BlogCardList({ data }: DataArray) {
               </a>
             </div>
           ) : (
-            <div
+            <a
               key={post.id}
               className={styles.animatedCard}
               data-theme={theme}
+              href={
+                randomPosts[post.id - 1]?.canonical_url ??
+                "https://dev.to/villivald"
+              }
+              hrefLang="en"
               onMouseEnter={() => setLoadRandomPost(true)}
               onTouchStart={() => setLoadRandomPost(true)}
               onFocus={() => setLoadRandomPost(true)}
-              tabIndex={0}
-              role="button"
             >
               <div className={styles.innerCard}>
                 <div className={styles.front}>?</div>
@@ -95,11 +105,9 @@ export default function BlogCardList({ data }: DataArray) {
                   key={randomPosts[post.id - 1]?.id}
                   className={[styles.blogCard, styles.back].join(" ")}
                 >
-                  <a
-                    href={randomPosts[post.id - 1]?.canonical_url}
-                    hrefLang="en"
-                  >
+                  <div className={styles.backContent}>
                     <Image
+                      className={styles.backImage}
                       priority
                       src={
                         randomPosts[post.id - 1]?.cover_image ||
@@ -110,10 +118,10 @@ export default function BlogCardList({ data }: DataArray) {
                       width={400}
                     />
                     <h2>{randomPosts[post.id - 1]?.title}</h2>
-                  </a>
+                  </div>
                 </div>
               </div>
-            </div>
+            </a>
           ),
         )}
       </div>

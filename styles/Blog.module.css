@@ -49,7 +49,15 @@
   height: auto;
 }
 
+.backImage {
+  width: auto;
+  height: auto;
+}
+
 .animatedCard {
+  display: block;
+  color: inherit;
+  text-decoration: none;
   perspective: 1000px;
   min-height: 17rem;
 }
@@ -74,24 +82,9 @@
   transform: rotateY(180deg);
 }
 
-.blogCard:focus-within,
-.animatedCard:focus-visible {
-  outline: 0.25rem solid var(--color-brand-dark);
-  outline-offset: 0.5rem;
-  border-radius: 0.5rem;
-}
-
-.blogCard:focus-within a {
-  outline: none;
-}
-
-.blogCard[data-theme="dark"]:focus-within,
-.animatedCard[data-theme="dark"]:focus-visible {
-  outline-color: var(--color-white);
-}
-
 .front,
 .back {
+  display: grid;
   position: absolute;
   width: 100%;
   height: 95%;
@@ -115,6 +108,37 @@
   transform: rotateY(180deg);
 }
 
+.blogCard:focus-within,
+.animatedCard:focus-visible .back {
+  outline: 0.25rem solid var(--color-brand-dark);
+  outline-offset: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.blogCard:focus-within a {
+  outline: none;
+}
+
+.animatedCard:focus-visible {
+  outline: none;
+}
+
+.blogCard[data-theme="dark"]:focus-within,
+.animatedCard[data-theme="dark"]:focus-visible .back {
+  outline-color: var(--color-white);
+}
+
+.backContent {
+  display: grid;
+  gap: 1rem;
+  align-content: start;
+}
+
+.animatedCard:hover .backContent h2,
+.animatedCard:focus-visible .backContent h2 {
+  text-decoration: underline;
+}
+
 @media (width <= 800px) {
   .blogCard,
   .front,
@@ -129,14 +153,15 @@
     grid-template-rows: repeat(5, 1fr);
   }
 
-  .blogList > div:nth-child(2),
-  .blogList > div:nth-child(3),
-  .blogList > div:nth-child(6),
-  .blogList > div:nth-child(7) {
+  .blogList > :nth-child(2),
+  .blogList > :nth-child(3),
+  .blogList > :nth-child(6),
+  .blogList > :nth-child(7) {
     display: none;
   }
 
-  .blogCard a img {
+  .blogCard a img,
+  .backImage {
     width: 100%;
     height: 100%;
   }
