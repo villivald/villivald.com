@@ -10,6 +10,25 @@ import Layout from "../components/layout";
 import { ThemeContext } from "../context";
 import { translations } from "../intl";
 
+const THEME_STORAGE_KEY = "theme-preference";
+export type Theme = "light" | "dark";
+
+const getSystemTheme = (): Theme =>
+  window.matchMedia?.("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+
+const readStoredTheme = (): Theme | null => {
+  try {
+    const storedTheme = localStorage.getItem(THEME_STORAGE_KEY);
+    return storedTheme === "light" || storedTheme === "dark"
+      ? storedTheme
+      : null;
+  } catch {
+    return null;
+  }
+};
+
 const crete = Crete_Round({
   subsets: ["latin"],
   variable: "--font-header",
@@ -33,18 +52,8 @@ const istok = Istok_Web({
 
 export default function App({ Component, pageProps }: AppProps) {
   // Theme state
-  const [theme, setTheme] = useState("light");
-
-  // Check for user's preferred theme from OS or browser
-  useEffect(() => {
-    const userPrefersDark =
-      window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-    if (userPrefersDark) {
-      setTheme("dark");
-    }
-  }, []);
+  const [theme, setTheme] = useState<Theme>("light");
+  const [isThemeHydrated, setIsThemeHydrated] = useState(false);
 
   // Translations state
   const en: keyof typeof translations = "en";
@@ -52,17 +61,28 @@ export default function App({ Component, pageProps }: AppProps) {
 
   const [locale, setLocale] = useState<keyof typeof translations>(en);
 
+  useEffect(() => {
+    const resolvedTheme = readStoredTheme() ?? getSystemTheme();
+    setTheme(resolvedTheme);
+    setIsThemeHydrated(true);
+  }, []);
+
+  useEffect(() => {
+    if (!isThemeHydrated) return;
+
+    try {
+      localStorage.setItem(THEME_STORAGE_KEY, theme);
+    } catch {
+      // Ignore storage write issues (e.g. private mode restrictions).
+    }
+  }, [isThemeHydrated, theme]);
+
   // Handles theme change
-  const changeTheme = () => setTheme(theme === "light" ? "dark" : "light");
+  const changeTheme = () =>
+    setTheme((previousTheme) => (previousTheme === "light" ? "dark" : "light"));
 
   // Handles language change
   const changeLocale = () => setLocale(locale === en ? fi : en);
-
-  // Handles translation errors
-  const handleTranslationError = (error: Error) => {
-    // Prevent excessive logging)
-    return error;
-  };
 
   // Sets the document language (hack, need to think of a better way)
   useEffect(() => {
@@ -72,11 +92,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <div className={`${crete.variable} ${amiko.variable} ${istok.variable}`}>
       <ThemeContext value={theme}>
-        <IntlProvider
-          locale={locale}
-          messages={translations[locale]}
-          onError={handleTranslationError}
-        >
+        <IntlProvider locale={locale} messages={translations[locale]}>
           <Layout changeTheme={changeTheme} changeLocale={changeLocale}>
             <Component {...pageProps} />
           </Layout>

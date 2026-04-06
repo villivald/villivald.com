@@ -202,7 +202,7 @@ const fi = {
   "aria.books":
     "Sivu jossa on lista kirjoista joita olen lukenut viime aikoina",
   "aria.projects": "Sivu jossa on lista sekä työ- että harrasteprojekteistani",
-  "aria.about": "Sivu jossa on minun kuvia ja tietoa minusta",
+  "aria.photobooth": "Sivu jossa on minun kuvia ja tietoa minusta",
   "aria.contact":
     "Sivu jossa on linkkejä minun bluesky:n, sähköpostiin ja LinkedIniin",
   "aria.old":

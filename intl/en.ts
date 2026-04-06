@@ -200,7 +200,7 @@ const en = {
   "aria.uses": "Page with the list of tools and software that I use",
   "aria.books": "Page with the list of books that I have read lately",
   "aria.projects": "Page with the list of both my pet and work projects",
-  "aria.about": "Page with some images and information about me",
+  "aria.photobooth": "Page with some images and information about me",
   "aria.contact": "Page with links to my bluesky, email and LinkedIn",
   "aria.old": "Page with links to the old versions of my website",
   "aria.now": "Page with information about what I am currently doing",

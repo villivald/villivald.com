@@ -1,3 +1,5 @@
 import { createContext } from "react";
 
-export const ThemeContext = createContext("light");
+import { Theme } from "../pages/_app";
+
+export const ThemeContext = createContext<Theme>("light");
