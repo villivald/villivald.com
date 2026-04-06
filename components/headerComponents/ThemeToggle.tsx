@@ -1,11 +1,12 @@
 import Image from "next/image";
 import { useIntl } from "react-intl";
 
+import { Theme } from "../../pages/_app";
 import styles from "../../styles/ThemeToggle.module.css";
 
 type Props = {
   changeTheme: () => void;
-  theme: string;
+  theme: Theme;
 };
 
 export default function ThemeToggle({ changeTheme, theme }: Props) {

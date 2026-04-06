@@ -11,7 +11,10 @@ import { ThemeContext } from "../context";
 import { translations } from "../intl";
 
 const THEME_STORAGE_KEY = "theme-preference";
+const LOCALE_STORAGE_KEY = "locale-preference";
+
 export type Theme = "light" | "dark";
+export type Locale = keyof typeof translations;
 
 const getSystemTheme = (): Theme =>
   window.matchMedia?.("(prefers-color-scheme: dark)").matches
@@ -24,6 +27,22 @@ const readStoredTheme = (): Theme | null => {
     return storedTheme === "light" || storedTheme === "dark"
       ? storedTheme
       : null;
+  } catch {
+    return null;
+  }
+};
+
+const getSystemLocale = (): Locale => {
+  const preferredLocale =
+    navigator.languages?.[0] ?? navigator.language ?? navigator.languages?.[1];
+
+  return preferredLocale?.toLowerCase().startsWith("fi") ? "fi" : "en";
+};
+
+const readStoredLocale = (): Locale | null => {
+  try {
+    const storedLocale = localStorage.getItem(LOCALE_STORAGE_KEY);
+    return storedLocale === "en" || storedLocale === "fi" ? storedLocale : null;
   } catch {
     return null;
   }
@@ -56,15 +75,19 @@ export default function App({ Component, pageProps }: AppProps) {
   const [isThemeHydrated, setIsThemeHydrated] = useState(false);
 
   // Translations state
-  const en: keyof typeof translations = "en";
-  const fi: keyof typeof translations = "fi";
-
-  const [locale, setLocale] = useState<keyof typeof translations>(en);
+  const [locale, setLocale] = useState<Locale>("en");
+  const [isLocaleHydrated, setIsLocaleHydrated] = useState(false);
 
   useEffect(() => {
     const resolvedTheme = readStoredTheme() ?? getSystemTheme();
     setTheme(resolvedTheme);
     setIsThemeHydrated(true);
+  }, []);
+
+  useEffect(() => {
+    const resolvedLocale = readStoredLocale() ?? getSystemLocale();
+    setLocale(resolvedLocale);
+    setIsLocaleHydrated(true);
   }, []);
 
   useEffect(() => {
@@ -77,23 +100,40 @@ export default function App({ Component, pageProps }: AppProps) {
     }
   }, [isThemeHydrated, theme]);
 
+  useEffect(() => {
+    if (!isLocaleHydrated) return;
+
+    try {
+      localStorage.setItem(LOCALE_STORAGE_KEY, locale);
+    } catch {
+      // Ignore storage write issues (e.g. private mode restrictions).
+    }
+  }, [isLocaleHydrated, locale]);
+
   // Handles theme change
   const changeTheme = () =>
     setTheme((previousTheme) => (previousTheme === "light" ? "dark" : "light"));
 
   // Handles language change
-  const changeLocale = () => setLocale(locale === en ? fi : en);
+  const changeLocale = () =>
+    setLocale((previousLocale) => (previousLocale === "en" ? "fi" : "en"));
 
-  // Sets the document language (hack, need to think of a better way)
+  // Keep the document language synchronized with active locale.
   useEffect(() => {
-    document.documentElement.lang = locale;
+    if (document.documentElement.lang !== locale) {
+      document.documentElement.lang = locale;
+    }
   }, [locale]);
 
   return (
     <div className={`${crete.variable} ${amiko.variable} ${istok.variable}`}>
       <ThemeContext value={theme}>
         <IntlProvider locale={locale} messages={translations[locale]}>
-          <Layout changeTheme={changeTheme} changeLocale={changeLocale}>
+          <Layout
+            changeTheme={changeTheme}
+            changeLocale={changeLocale}
+            locale={locale}
+          >
             <Component {...pageProps} />
           </Layout>
         </IntlProvider>

@@ -1,23 +1,22 @@
 import Image from "next/image";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { useIntl } from "react-intl";
 
 import { ThemeContext } from "../../context";
+import { Locale } from "../../pages/_app";
 import styles from "../../styles/Switch.module.css";
 
 type Props = {
   changeLocale: () => void;
+  locale: Locale;
 };
 
-export default function LanguageSwitch({ changeLocale }: Props) {
-  const [checked, setChecked] = useState(false);
+export default function LanguageSwitch({ changeLocale, locale }: Props) {
   const theme = useContext(ThemeContext);
   const intl = useIntl();
+  const isFinnish = locale === "fi";
 
-  const handleChange = () => {
-    setChecked(!checked);
-    changeLocale();
-  };
+  const handleChange = () => changeLocale();
 
   return (
     <>
@@ -25,7 +24,7 @@ export default function LanguageSwitch({ changeLocale }: Props) {
         <button
           aria-label={intl.formatMessage({ id: "alt.languageSwitcher" })}
           onClick={handleChange}
-          data-checked={checked}
+          data-checked={isFinnish}
         ></button>
       </p>
       <p className={styles.languageSwitch}>
@@ -39,7 +38,7 @@ export default function LanguageSwitch({ changeLocale }: Props) {
           />
         </span>
         <Image
-          className={checked ? styles.arrowRight : styles.arrowLeft}
+          className={isFinnish ? styles.arrowRight : styles.arrowLeft}
           data-theme={theme}
           src="/images/arrow.svg"
           alt={intl.formatMessage({ id: "alt.languageArrow" })}
@@ -56,7 +55,7 @@ export default function LanguageSwitch({ changeLocale }: Props) {
             id="switch"
             type="checkbox"
             role="switch"
-            checked={checked}
+            checked={isFinnish}
             onChange={handleChange}
             aria-label={intl.formatMessage({
               id: "alt.languageSwitcher",

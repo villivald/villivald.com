@@ -5,6 +5,7 @@ import { useContext } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
 import { ThemeContext } from "../context";
+import { Locale } from "../pages/_app";
 import styles from "../styles/Layout.module.css";
 import Footer from "./Footer";
 import Header from "./headerComponents/Header";
@@ -14,9 +15,15 @@ type Props = {
   children: React.ReactNode;
   changeTheme: () => void;
   changeLocale: () => void;
+  locale: Locale;
 };
 
-export default function Layout({ children, changeTheme, changeLocale }: Props) {
+export default function Layout({
+  children,
+  changeTheme,
+  changeLocale,
+  locale,
+}: Props) {
   const theme = useContext(ThemeContext);
   const router = useRouter();
   const intl = useIntl();
@@ -39,7 +46,11 @@ export default function Layout({ children, changeTheme, changeLocale }: Props) {
           <FormattedMessage id="skiplink.contactsLinks" />
         </a>
       </section>
-      <Header changeTheme={changeTheme} changeLocale={changeLocale} />
+      <Header
+        changeTheme={changeTheme}
+        changeLocale={changeLocale}
+        locale={locale}
+      />
       <main
         id="mainContent"
         className={styles.main}
