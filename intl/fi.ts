@@ -121,7 +121,7 @@ const fi = {
 
   // Page titles
   "title.home": "Etusivu",
-  "title.about": "Minusta",
+  "title.about": "Photo booth",
   "title.blog": "Blogi",
   "title.books": "Kirjat",
   "title.statistics": "Kirjatilastot",
@@ -135,7 +135,7 @@ const fi = {
 
   // Meta descriptions
   "description.home": "Tervetuloa verkkosivustolleni",
-  "description.about": "Tietoa minusta",
+  "description.about": "Valokuvaosio",
   "description.blog": "Viimeisimmät blogikirjoitukset",
   "description.books": "Kirjat joita olen lukenut viime aikoina",
   "description.statistics": "Tilastot kirjoista joita olen lukenut",
