@@ -2916,6 +2916,51 @@
       "image": "318.avif",
       "rating": 3,
       "language": "ru",
+      "category": "fiction"
+    },
+    {
+      "title": "A City on Mars",
+      "author": "Weinersmith",
+      "date": "15.04.2026",
+      "image": "319.avif",
+      "rating": 3,
+      "language": "en",
+      "category": "non-fiction"
+    },
+    {
+      "title": "Федиатрия",
+      "author": "Катасонов",
+      "date": "23.04.2026",
+      "image": "320.avif",
+      "rating": 2,
+      "language": "ru",
+      "category": "non-fiction"
+    },
+    {
+      "title": "Расходящиеся тропы",
+      "author": "Сенников",
+      "date": "30.04.2026",
+      "image": "321.avif",
+      "rating": 3,
+      "language": "ru",
+      "category": "non-fiction"
+    },
+    {
+      "title": "Homelands",
+      "author": "Garton Ash",
+      "date": "28.05.2026",
+      "image": "322.avif",
+      "rating": 4,
+      "language": "en",
+      "category": "non-fiction"
+    },
+    {
+      "title": "Соучастники",
+      "author": "Прокопенко",
+      "date": "30.05.2026",
+      "image": "323.avif",
+      "rating": 4,
+      "language": "ru",
       "category": "non-fiction"
     },
     {
