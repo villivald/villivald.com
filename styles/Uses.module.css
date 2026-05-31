@@ -96,18 +96,21 @@
   list-style-type: other-emoji;
 }
 
+/* eslint-disable-next-line css/use-baseline */
 @counter-style hardware-emoji {
   system: cyclic;
   symbols: 💻 🖥️ 📱 🍏 ⌚️ 🎧 🎙️ 💍 ⌨️ 🖱️ 🐭 🐁;
   suffix: " ";
 }
 
+/* eslint-disable-next-line css/use-baseline */
 @counter-style software-emoji {
   system: cyclic;
-  symbols: 💡 👾 ◎ 🧑‍🎨 🗒️ 📝 💎 🧵 ✉️ 📧 💬 🎶 🎸 📻 📚 🏋️‍♀️ ✍️ 🕵️‍♂️ 🗂️;
+  symbols: 💡 👾 ◎ 🧑‍🎨 🗒️ 📝 💎 ✉️ 📧 💬 🎶 🎸 📻 📚 🏋️‍♀️ ✍️ 🕵️‍♂️ 🗂️;
   suffix: " ";
 }
 
+/* eslint-disable-next-line css/use-baseline */
 @counter-style other-emoji {
   system: cyclic;
   symbols: 🚴‍♂️ 🤖 🎮 ⛑️ 🪑 🎒 💼 🍼 💧 📝 📓 🖋️ ✒️;

@@ -1,3 +1,4 @@
+/* eslint-disable-next-line css/use-baseline */
 @property --a {
   syntax: "<angle>";
   inherits: false;
@@ -66,8 +67,10 @@
 
 .phone,
 .phone:hover {
-  transition: transform 0.5s var(--easing-normal),
-    outline 1s var(--easing-normal), box-shadow 1.5s var(--easing-normal);
+  transition:
+    transform 0.5s var(--easing-normal),
+    outline 1s var(--easing-normal),
+    box-shadow 1.5s var(--easing-normal);
 }
 
 .phone:hover {

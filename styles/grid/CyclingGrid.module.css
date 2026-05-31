@@ -27,7 +27,9 @@
   font-size: min(90cqi, 18rem);
   color: hsl(from var(--color-wine) h s l / 75%);
   text-shadow: 1rem 0 0 hsl(from var(--color-brand-teal) h s l / 75%);
-  transition: text-shadow 0.5s ease, padding-top 0.5s ease;
+  transition:
+    text-shadow 0.5s ease,
+    padding-top 0.5s ease;
 }
 
 .container > div {

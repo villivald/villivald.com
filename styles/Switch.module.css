@@ -113,7 +113,9 @@
   height: 0.85rem;
   background-color: var(--color-black-38);
   vertical-align: top;
-  transition: background-color 0.2s, opacity 0.2s;
+  transition:
+    background-color 0.2s,
+    opacity 0.2s;
 }
 
 .switch > span[data-theme="dark"]::before {
@@ -130,9 +132,13 @@
   width: 1.25rem;
   height: 1.25rem;
   background-image: url("/emojis/eng.svg");
-  box-shadow: 0 3px 1px -2px var(--color-black-20),
-    0 2px 2px 0 var(--color-black-14), 0 1px 5px 0 var(--color-black-12);
-  transition: background-color 0.2s, transform 0.2s;
+  box-shadow:
+    0 3px 1px -2px var(--color-black-20),
+    0 2px 2px 0 var(--color-black-14),
+    0 1px 5px 0 var(--color-black-12);
+  transition:
+    background-color 0.2s,
+    transform 0.2s;
 }
 
 .switch > span::after,

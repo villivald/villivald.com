@@ -26,12 +26,9 @@
 .parent[data-isopen="true"] {
   width: 100%;
   height: 100%;
-  border-radius: 0 !important;
-  background-image: radial-gradient(
-      at 40% 20%,
-      hsl(28deg 100% 74%) 0,
-      transparent 50%
-    ),
+  border-radius: 0;
+  background-image:
+    radial-gradient(at 40% 20%, hsl(28deg 100% 74%) 0, transparent 50%),
     radial-gradient(at 80% 0%, hsl(189deg 100% 56%) 0, transparent 50%),
     radial-gradient(at 0% 50%, hsl(355deg 100% 93%) 0, transparent 50%),
     radial-gradient(at 80% 50%, hsl(340deg 100% 76%) 0, transparent 50%),

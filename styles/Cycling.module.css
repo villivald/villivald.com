@@ -214,6 +214,8 @@
   margin-block-start: 0.5rem;
   background: var(--color-white40);
   box-shadow: 0 0 1rem 1rem var(--color-white40);
+
+  /* eslint-disable-next-line css/use-baseline */
   backdrop-filter: blur(0.125rem);
 }
 
@@ -344,6 +346,7 @@
   filter: invert(1) opacity(0.5);
 }
 
+/* eslint-disable-next-line css/use-baseline */
 .activityType:has(img)[data-activitytype]:last-child {
   position: absolute;
   right: 0;

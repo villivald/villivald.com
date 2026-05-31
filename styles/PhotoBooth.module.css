@@ -63,6 +63,8 @@
   display: flex;
   margin: 1rem auto;
   overflow-x: scroll;
+
+  /* eslint-disable-next-line css/use-baseline */
   scrollbar-width: none;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
