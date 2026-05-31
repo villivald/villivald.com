@@ -119,7 +119,7 @@ const en = {
 
   // Page titles
   "title.home": "Home page",
-  "title.about": "About me",
+  "title.photobooth": "About me",
   "title.blog": "Blog",
   "title.books": "Books",
   "title.statistics": "Books statistics",
@@ -133,7 +133,7 @@ const en = {
 
   // Meta descriptions
   "description.home": "Welcome to my website",
-  "description.about": "Information about me",
+  "description.photobooth": "Information about me",
   "description.blog": "The latest blog posts",
   "description.books": "The books I have read lately",
   "description.statistics": "Statistics for the books I have read",
