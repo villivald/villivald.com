@@ -7,10 +7,10 @@
       "image": "vscode"
     },
     {
-      "name": "Cursor",
-      "link": "https://cursor.com/",
-      "description": "AI code editor",
-      "image": "cursor"
+      "name": "ChatGPT",
+      "link": "https://chat.openai.com/",
+      "description": "AI assistant",
+      "image": "chatgpt"
     },
     {
       "name": "Zen Browser",
@@ -89,12 +89,6 @@
       "link": "https://www.strava.com/athletes/42251423",
       "description": "Fitness app",
       "image": "strava"
-    },
-    {
-      "name": "Grammarly",
-      "link": "https://www.grammarly.com/",
-      "description": "Writing assistant",
-      "image": "grammarly"
     },
     {
       "name": "Bitwarden",

@@ -13,16 +13,22 @@
       "image": "zwift"
     },
     {
-      "name": "Nintendo Switch 2",
-      "link": "https://en.wikipedia.org/wiki/Nintendo_Switch_2",
-      "description": "Gaming console",
-      "image": "switch"
-    },
-    {
       "name": "Oakley Aro7 Road",
       "link": "https://www.oakley.com/en-eu/product/FOS901512?variant=193517978204&sizeL",
       "description": "Helmet",
       "image": "oakley"
+    },
+    {
+      "name": "MAAP X QUOC M3 Pro",
+      "link": "https://maap.cc/eu/products/maap-x-quoc-m3-musk",
+      "description": "Cycling shoes",
+      "image": "maap"
+    },
+    {
+      "name": "Nintendo Switch 2",
+      "link": "https://en.wikipedia.org/wiki/Nintendo_Switch_2",
+      "description": "Gaming console",
+      "image": "switch"
     },
     {
       "name": "Herman Miller Mirra 2",
@@ -41,12 +47,6 @@
       "link": "https://www.fjallraven.com/eu/en-gb/bags-gear/backpacks-bags/shoulder-bags/high-coast-totepack/",
       "description": "Totepack",
       "image": "totepack"
-    },
-    {
-      "name": "Hydro Flask",
-      "link": "https://www.hydroflask.com/21-oz-standard-mouth",
-      "description": "Water bottle",
-      "image": "flask"
     },
     {
       "name": "Owala FreeSip",
