@@ -158,7 +158,7 @@ export default function PhotoBooth() {
               aria-label={`slide ${index} of ${years.length}`}
             >
               {["8", "7", "6", "5"].map((num, index) =>
-                year === "2026" ? (
+                year === "2026" && num != "5" ? (
                   <div key={index} className={styles.question}>
                     <Image
                       alt={intl.formatMessage({ id: "alt.questionMark" })}
